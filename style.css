@@ -40,3 +40,15 @@ footer {
     width: 100%;
     bottom: 0;
 }
+.logo {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
