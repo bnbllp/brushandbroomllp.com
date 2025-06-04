@@ -42,12 +42,12 @@ footer {
 }
 .logo {
     height: 40px;
-    width: auto;
-    max-width: 15px;
+    width: 15px;
+    max-width: 150px;
     margin-right: 10px;
-    object-fit: contain;
+    object-fit: flex;
 }
-@media (max-width: 50px) {
+@media (max-width: 150px) {
     .logo {
         height: 30px;
     }
