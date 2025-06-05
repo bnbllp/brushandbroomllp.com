@@ -261,3 +261,13 @@ footer a:hover {
 .home-page h1, .testimonial-page h1, .services-page h1, .contact-page h1 {
     font-family: 'Bangers', cursive;
 }
+h1, h2, h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 28px; /* Match your Home page size */
+    line-height: 1.4;
+}
+body, p, a, li, button, input, textarea {
+    font-family: 'Open Sans', sans-serif; /* Or Comic Neue */
+    font-size: 16px;
+    line-height: 1.5;
+}
