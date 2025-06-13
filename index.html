@@ -6,6 +6,28 @@
   <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla"/>
   <title>Brush & Broom LLP</title>
   <img src="logo.PNG" alt="Brush and Broom LLP logo" width="150">
+ /* Fixes for large images */
+.quote-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.quote-images img {
+  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.quote-images img:hover {
+  transform: scale(1.03);
+}
   <style>
     :root {
       --orange: #ff7a24;
