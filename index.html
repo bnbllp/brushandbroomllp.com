@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Brush & Broom LLP - Painting, Cleaning, Power Washing in Walla Walla">
+  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla"/>
   <title>Brush & Broom LLP</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="logo.png" type="image/png">
   <style>
     :root {
-      --orange: #ff6a00;
-      --blue: #0077cc;
-      --green: #2dc653;
-      --light-bg: #fff8f0;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+      --orange: #ff7a24;
+      --blue: #2499ff;
+      --green: #28c76f;
+      --bg-dark: #111827;
+      --text-light: #f9f9f9;
     }
 
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--light-bg);
-      color: #333;
-      line-height: 1.6;
+      background: var(--bg-dark);
+      color: var(--text-light);
     }
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background: #fff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: var(--bg-dark);
+      border-bottom: 2px solid var(--green);
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    header img {
+      height: 60px;
+      margin-right: 15px;
     }
 
-    .logo img {
-      height: 50px;
+    header h1 {
+      font-size: 1.8em;
+      color: var(--text-light);
+      font-family: serif;
     }
 
     .hero {
@@ -51,40 +46,31 @@
       padding: 60px 20px 30px;
     }
 
-    .tagline {
-      background: #fff3e0;
-      color: var(--orange);
-      display: inline-block;
-      padding: 6px 14px;
-      border-radius: 30px;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: 2.7em;
-      font-weight: 900;
-      background: linear-gradient(to right, var(--blue), var(--orange), var(--green));
+    .hero h2 {
+      font-size: 3em;
+      background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
+      font-weight: 900;
     }
 
-    .subtext {
-      font-size: 1.1em;
+    .hero p {
       max-width: 600px;
-      margin: 0 auto 30px;
+      margin: auto;
+      font-size: 1.1em;
     }
 
     .cta {
-      background: linear-gradient(to right, var(--orange), var(--green));
+      background: linear-gradient(to right, var(--green), var(--orange));
       color: white;
       padding: 15px 30px;
-      border-radius: 30px;
+      border-radius: 40px;
       font-size: 1.1em;
       text-decoration: none;
       display: inline-block;
-      font-weight: 700;
+      margin-top: 25px;
+      font-weight: bold;
       transition: 0.3s;
     }
 
@@ -92,21 +78,21 @@
       opacity: 0.9;
     }
 
-    .coffee-line {
-      font-size: 0.95em;
-      margin-top: 8px;
-      color: #555;
-    }
-
     .section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
+    .section h3 {
+      font-size: 2em;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
     .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
+      margin: 0 12px;
       color: var(--blue);
+      text-decoration: none;
       font-weight: bold;
     }
 
@@ -114,37 +100,46 @@
       max-width: 500px;
       margin: 30px auto;
       text-align: left;
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
     }
 
     form input, form textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: #111;
+      color: white;
     }
 
     form button {
-      background: var(--green);
+      background: var(--orange);
       color: white;
+      padding: 12px 24px;
       border: none;
-      padding: 12px 20px;
+      border-radius: 6px;
       font-size: 1em;
-      border-radius: 8px;
       cursor: pointer;
     }
 
     footer {
-      background: #f0f0f0;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      color: #555;
+      background: #0f172a;
+      color: #aaa;
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
+      .hero h2 {
+        font-size: 2.2em;
+      }
+
+      header h1 {
+        font-size: 1.4em;
       }
     }
   </style>
@@ -152,36 +147,31 @@
 <body>
 
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Brush & Broom Logo" />
-      <h2 style="color: var(--blue);">Brush & Broom LLP</h2>
-    </div>
+    <img src="logo.png" alt="Brush & Broom LLP Logo">
+    <h1>Brush & Broom LLP</h1>
   </header>
 
   <section class="hero">
-    <div class="tagline">Walla Walla's Favorite Crew</div>
-    <h1>Painting.<br>Cleaning.<br>Power Washing.</h1>
-    <p class="subtext">
-      Local, reliable, and just the right amount of fun. We’re Walla Walla’s go-to crew for spotless deep cleans, bold paint jobs, and high-power transformations—with personality.
-    </p>
+    <h2>Painting. Cleaning. Power Washing.</h2>
+    <p>We’re Walla Walla’s go-to crew for spotless deep cleans, bold paint jobs, and high-power transformations—with personality. Want it done right, with a splash of charm? That’s us.</p>
     <a href="#quote" class="cta">Get a Free Quote</a>
-    <div class="coffee-line">☕ before we run out of coffee!</div>
+    <p style="margin-top: 10px;">☕ before we run out of coffee!</p>
   </section>
 
   <section class="section" id="quote">
-    <h2 style="color: var(--green);">Request a Quote</h2>
-    <p>We'll get back to you quickly — via email or text!</p>
+    <h3>Request a Quote</h3>
+    <p>We’ll follow up via email or text. Quick and easy.</p>
     <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="email" name="Email" placeholder="Your Email" required>
       <input type="tel" name="Phone" placeholder="Your Phone Number">
-      <textarea name="Message" rows="5" placeholder="Tell us what you need..." required></textarea>
+      <textarea name="Message" rows="5" placeholder="Tell us what you need…" required></textarea>
       <button type="submit">Send Request</button>
     </form>
   </section>
 
   <section class="section">
-    <h2 style="color: var(--blue);">Find Us Online</h2>
+    <h3>Find Us Online</h3>
     <div class="social-links">
       <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
       <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
@@ -191,7 +181,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Brush & Broom LLP · Walla Walla, WA · 509-200-4873 · bnbllp@brushandbroomllp.com
+    &copy; 2025 Brush & Broom LLP · 509-200-4873 · bnbllp@brushandbroomllp.com
   </footer>
 
 </body>
