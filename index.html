@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Brush & Broom LLP - Painting, Cleaning, Power Washing in Walla Walla">
   <title>Brush & Broom LLP</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="logo.png" type="image/png" />
   <style>
     :root {
-      --accent: #ff6600;
-      --pink: #f72585;
-      --purple: #7209b7;
-      --blue: #3a0ca3;
+      --orange: #ff6a00;
+      --blue: #0077cc;
       --green: #2dc653;
+      --light-bg: #fff8f0;
     }
 
     * {
@@ -24,7 +22,7 @@
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fff8f0;
+      background: var(--light-bg);
       color: #333;
       line-height: 1.6;
     }
@@ -55,21 +53,21 @@
 
     .tagline {
       background: #fff3e0;
-      color: #d84315;
+      color: var(--orange);
       display: inline-block;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 30px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       font-weight: 600;
     }
 
     h1 {
-      font-size: 2.5em;
-      background: linear-gradient(to right, var(--pink), var(--blue), var(--green));
+      font-size: 2.7em;
+      font-weight: 900;
+      background: linear-gradient(to right, var(--blue), var(--orange), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-weight: 800;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .subtext {
@@ -79,7 +77,7 @@
     }
 
     .cta {
-      background: linear-gradient(to right, #ff6a00, #ee0979);
+      background: linear-gradient(to right, var(--orange), var(--green));
       color: white;
       padding: 15px 30px;
       border-radius: 30px;
@@ -156,7 +154,7 @@
   <header>
     <div class="logo">
       <img src="logo.png" alt="Brush & Broom Logo" />
-      <h2>Brush & Broom LLP</h2>
+      <h2 style="color: var(--blue);">Brush & Broom LLP</h2>
     </div>
   </header>
 
@@ -171,7 +169,7 @@
   </section>
 
   <section class="section" id="quote">
-    <h2>Request a Quote</h2>
+    <h2 style="color: var(--green);">Request a Quote</h2>
     <p>We'll get back to you quickly — via email or text!</p>
     <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
       <input type="text" name="Name" placeholder="Your Name" required>
@@ -183,7 +181,7 @@
   </section>
 
   <section class="section">
-    <h2>Find Us Online</h2>
+    <h2 style="color: var(--blue);">Find Us Online</h2>
     <div class="social-links">
       <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
       <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
