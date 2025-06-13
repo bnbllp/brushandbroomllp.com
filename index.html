@@ -1,83 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Brush & Broom LLP - Painting, Cleaning, Power Washing in Walla Walla">
+  <title>Brush & Broom LLP</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <style>
+    :root {
+      --accent: #ff6600;
+      --pink: #f72585;
+      --purple: #7209b7;
+      --blue: #3a0ca3;
+      --green: #2dc653;
+    }
 
-  <!-- SEO Tags -->
-  <title>Walla Walla Painting & Cleaning Services | Brush & Broom LLP</title>
-  <meta name="description" content="Professional painting, cleaning, power washing, and home maintenance services in Walla Walla, WA. Licensed, reliable, and locally owned.">
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Brush & Broom LLP",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Walla Walla",
-      "addressRegion": "WA",
-      "postalCode": "99362"
-    },
-    "telephone": "+1-509-200-4873",
-    "email": "bnbllp@brushandbroomllp.com",
-    "url": "https://www.brushandbroomllp.com",
-    "description": "Professional painting, cleaning, power washing, and home maintenance services in Walla Walla, WA."
-  }
-  </script>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      line-height: 1.6;
+    }
 
-  <!-- Your stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brush and Broom LLP: Your go-to for epic painting, deep cleaning, and power washing in Walla Walla! Get a free quote and let’s make your place shine!">
-    <title>Home - Brush and Broom LLP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bangers&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .tagline {
+      background: #fff3e0;
+      color: #d84315;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 30px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      background: linear-gradient(to right, var(--pink), var(--blue), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .cta {
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.1em;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      opacity: 0.9;
+    }
+
+    .coffee-line {
+      font-size: 0.95em;
+      margin-top: 8px;
+      color: #555;
+    }
+
+    .section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Brush and Broom LLP</h1>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main id="main">
-        <div class="hero">
-            <h2>Paint It, Clean It, Blast It!</h2>
-            <p>We’re your local wizards of painting, cleaning, and power washing—affordable and ready to work some magic in Walla Walla!</p>
-            <a href="contact.html" class="cta">Get a Free Quote (Before We Run Out of CAFFEINE!)</a>
-        </div>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Brush & Broom Logo" />
+      <h2>Brush & Broom LLP</h2>
+    </div>
+  </header>
 
-        <div class="intro">
-            <h2>Welcome to the Fun Side of Cleaning!</h2>
-            <p>At Brush and Broom LLP, we’re not just your average paint-slingers and dirt-busters. We bring premium residential painting, deep cleaning, and power washing services to Walla Walla and beyond—with a sprinkle of humor and a whole lot of elbow grease. Ready to transform your space? Let’s get quirky with it!</p>
-        </div>
+  <section class="hero">
+    <div class="tagline">Walla Walla's Favorite Crew</div>
+    <h1>Painting.<br>Cleaning.<br>Power Washing.</h1>
+    <p class="subtext">
+      Local, reliable, and just the right amount of fun. We’re Walla Walla’s go-to crew for spotless deep cleans, bold paint jobs, and high-power transformations—with personality.
+    </p>
+    <a href="#quote" class="cta">Get a Free Quote</a>
+    <div class="coffee-line">☕ before we run out of coffee!</div>
+  </section>
 
-        <section class="gallery">
-            <img src="Side by side before and after.png" alt="Before and After Painting Magic">
-            <img src="cleaning side by side.png" alt="Deep Cleaning Wizardry">
-            <img src="Repaint and deep clean .png" alt="Cabinet Repaint and Monochromatic Accent Wall">
-        </section>
-    </main>
+  <section class="section" id="quote">
+    <h2>Request a Quote</h2>
+    <p>We'll get back to you quickly — via email or text!</p>
+    <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="tel" name="Phone" placeholder="Your Phone Number">
+      <textarea name="Message" rows="5" placeholder="Tell us what you need..." required></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
 
-    <footer>
-        <p>Contact us: <a href="mailto:[email protected]">[bnbllp@brushandbroomllp.com]</a> | 509-200-4873</p>
-        <address>
-            Walla Walla, WA 99362<br>
-            Hours: Mon-Fri 8 AM - 5 PM<br>
-            Licensed & Insured (Yes, We’re Legit!)
-        </address>
-    </footer>
+  <section class="section">
+    <h2>Find Us Online</h2>
+    <div class="social-links">
+      <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
+      <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
+      <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank">Nextdoor</a>
+      <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank">Google Reviews</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Brush & Broom LLP · Walla Walla, WA · 509-200-4873 · bnbllp@brushandbroomllp.com
+  </footer>
+
 </body>
 </html>
