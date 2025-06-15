@@ -15,7 +15,7 @@
       --green: #2ecc71;
       --pink: #ff6584;
       --skyblue: #6ecbff;
-      --bg-dark: #121c2d;
+      --bg-dark: #121212;
       --light: #ffffff;
       --gray: #f2f2f2;
     }
@@ -32,18 +32,17 @@
     }
 
     header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  /* Changed background from solid black to gradient */
-  background: linear-gradient(to right, #000000, #1c1c1c);
-  border-bottom: 3px solid var(--green);
-}
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(to right, #000000, #1c1c1c);
+      border-bottom: 3px solid var(--green);
+    }
 
     header img {
-      height: 80px;
+      height: 60px;
     }
 
     .top-left {
@@ -57,7 +56,7 @@
     }
 
     .top-center h1 {
-      font-size: 2em;
+      font-size: 1.5em;
       margin: 0;
     }
 
@@ -70,10 +69,10 @@
     .service-top-btn {
       text-decoration: none;
       font-weight: bold;
-      padding: 12px 20px;
+      padding: 8px 14px;
       border-radius: 20px;
       color: white;
-      font-size: 1em;
+      font-size: 0.9em;
       transition: background-color 0.3s ease;
     }
 
@@ -89,41 +88,48 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 60px 20px 30px;
     }
 
     .hero h2 {
-      font-size: 3.5em;
+      font-size: 2.8em;
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 1.3em;
-      max-width: 800px;
-      margin: 0 auto 30px;
-    }
-
-    .cta {
+    .cta,
+    .text-btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 30px;
+      margin-top: 15px;
+      padding: 12px 25px;
       border-radius: 30px;
-      background-color: var(--orange);
-      color: white;
       font-weight: bold;
       text-decoration: none;
       border: 2px solid white;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
       transition: 0.3s ease;
-      font-size: 1.1em;
+    }
+
+    .cta {
+      background-color: var(--orange);
+      color: white;
     }
 
     .cta:hover {
       background: var(--green);
+    }
+
+    .text-btn {
+      background-color: var(--blue);
+      color: white;
+      margin-left: 10px;
+    }
+
+    .text-btn:hover {
+      background: var(--skyblue);
     }
 
     .section-light {
@@ -165,12 +171,11 @@
     .service-box a {
       display: inline-block;
       margin: 10px 0;
-      padding: 12px 22px;
+      padding: 10px 20px;
       text-decoration: none;
       color: white;
       border-radius: 25px;
       font-weight: bold;
-      font-size: 1.1em;
     }
 
     .section-dark {
@@ -182,17 +187,27 @@
 
     form {
       max-width: 600px;
-      margin: auto;
-      padding: 20px;
+      margin: 30px auto;
+      padding: 30px;
+      background: #1e1e1e;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
 
     form input,
     form textarea {
       width: 100%;
-      padding: 15px;
+      padding: 12px;
       margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      color: #000;
+      font-size: 1em;
+    }
+
+    form button {
+      width: 100%;
       font-size: 1.1em;
     }
 
@@ -200,7 +215,7 @@
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin-top: 25px;
+      margin-top: 30px;
       flex-wrap: wrap;
     }
 
@@ -213,16 +228,13 @@
       font-style: italic;
       margin: 20px auto;
       max-width: 600px;
-      font-size: 1.2em;
-      line-height: 1.5;
     }
 
     .footer {
-      padding: 60px 20px;
+      padding: 40px 20px;
       background: linear-gradient(to right, #000, #1c1c1c);
       text-align: center;
       color: #ccc;
-      font-size: 1em;
     }
 
     .footer-icons {
@@ -233,11 +245,11 @@
     }
 
     .footer-icons img {
-      height: 40px;
+      height: 35px;
     }
 
-    .footer img[alt="Company Logo"] {
-      height: 80px;
+    .footer img {
+      height: 75px;
     }
 
     @media (max-width: 768px) {
@@ -247,15 +259,15 @@
       }
 
       .hero h2 {
-        font-size: 2.5em;
+        font-size: 2em;
       }
 
       .top-center h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
 
       form {
-        padding: 10px;
+        padding: 20px;
       }
 
       .quote-imgs img {
@@ -270,6 +282,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="top-left">
       <img src="logo.PNG" alt="Brush and Broom LLP Logo" />
@@ -278,12 +291,11 @@
       <h1>Brush & Broom LLP</h1>
     </div>
     <nav class="top-right" aria-label="Primary">
-      <a href="tel:5092004873" class="service-top-btn pink-btn">Call Us</a>
       <a href="interior-painting.html" class="service-top-btn orange-btn">Interior</a>
       <a href="exterior-painting.html" class="service-top-btn blue-btn">Exterior</a>
       <a href="move-cleaning.html" class="service-top-btn green-btn">Move-Out</a>
       <a href="power-washing.html" class="service-top-btn sky-btn">Power Wash</a>
-      <a href="deep-cleaning.html" class="service-top-btn green-btn">Deep Cleaning</a>
+      <a href="deep-cleaning.html" class="service-top-btn pink-btn">Deep Cleaning</a>
     </nav>
   </header>
 
@@ -291,15 +303,8 @@
     <section class="hero">
       <h2>Painting. Cleaning. Curb Appeal.</h2>
       <p>We help Walla Walla homes and businesses shine inside and out with quality painting, cleaning, siding, flooring, and pressure washing.</p>
-      <a href="#quote" class="cta">Get a Free Estimate</a>
-      <!-- Remove from header navigation: -->
-<!-- <a href="tel:5092004873" class="service-top-btn pink-btn">Call Us</a> -->
-
-<!-- In hero section, below Get a Free Estimate button -->
-<div class="hero-cta-buttons" style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
-  <a href="tel:5092004873" class="cta" style="background-color: var(--pink); border-color: white;">Call Us</a>
-  <a href="sms:5092004873" class="cta" style="background-color: var(--blue); border-color: white;">Text Us</a>
-</div>
+      <a href="#quote" class="cta">Get a Free Estimate</a><br />
+      <a href="tel:5092004873" class="text-btn">Call or Text Us</a>
     </section>
 
     <section class="section-light" id="services">
@@ -321,14 +326,14 @@
           <p>We deep clean so you can move on stress-free.</p>
         </div>
         <div class="service-box">
-  <img src="deep-clean-icon.PNG" alt="Deep Cleaning Icon" />
-  <a href="deep-cleaning.html" class="green-btn">Deep Cleaning</a>
-  <p>Thorough cleaning to refresh every corner of your space.</p>
-</div>
-        <div class="service-box">
           <img src="power-wash-icon.PNG" alt="Power Washing Icon" />
           <a href="power-washing.html" class="sky-btn">Power Washing</a>
           <p>Driveways, siding, decks — sparkling clean in no time.</p>
+        </div>
+        <div class="service-box">
+          <img src="deep-clean-icon.PNG" alt="Deep Cleaning Icon" />
+          <a href="deep-cleaning.html" class="pink-btn">Deep Cleaning</a>
+          <p>Thorough cleaning from top to bottom — ideal for any season.</p>
         </div>
       </div>
     </section>
@@ -336,8 +341,9 @@
     <section id="quote" class="section-dark">
       <h2>Free Quote</h2>
       <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
         <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
         <button type="submit" class="cta">Send Message</button>
       </form>
@@ -367,5 +373,6 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP – All rights reserved.</p>
   </footer>
+
 </body>
 </html>
