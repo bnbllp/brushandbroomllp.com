@@ -134,20 +134,23 @@
       cursor: pointer;
     }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 15px;
-}
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
 
-.social-links a svg {
-  transition: transform 0.2s ease;
-}
+    .social-links a svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--text-light);
+      transition: transform 0.2s ease, fill 0.3s;
+    }
 
-.social-links a:hover svg {
-  transform: scale(1.1);
-}
+    .social-links a:hover svg {
+      transform: scale(1.1);
+      fill: var(--green);
     }
 
     blockquote {
@@ -208,29 +211,23 @@
   </section>
 
   <section class="section">
-  <h3>Find Us Online</h3>
-  <div class="social-links">
-    <!-- Facebook (unchanged) -->
+    <h3>Find Us Online</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61571531374537" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.876v-6.987H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z"/></svg>
+      </a>
+      <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank" aria-label="Yelp">
+        <svg viewBox="0 0 100 100"><path fill="#d32323" d="M49.6 13.6c-2.6 6.3 6.6 17.8 13.2 22.9s8.5 7.6 3.3 9.7-17 .6-23.7-.9-10.1-1.4-9.1-6.6 4.4-17.7 6.6-23.2 4.3-3.3 10.2-2zM24.4 28.3c5.4-2.5 15.5 6.5 19 12.9s5.2 9.4-.3 11.3-15.2-.8-19-3.6-4.8-3.9-2.5-8.9 3.4-9.3 2.8-11.7zM13.6 58.4c-1.1-6 9.5-15.1 16.5-17.8s9.6-3.2 11.7 1 1.5 15.1-.9 21.2-2.4 8.1-7.9 5.9-18.1-4.7-19.4-10.3zM34.3 80.6c2.9-5.4 15.3-9.9 22-11s8.2-.6 8.6 4.7.2 17.9-.2 23.4-3.2 4.3-9.8 1.1-18.7-9.7-20.5-12.3-1.6-2.4 0-6.9zM73.6 69.8c-5.8 2.5-17.8-5-22.4-9.8s-7-7.3-3.8-10.7 15.4-5.2 22.5-6.2 5.2-.3 8 3.6 5.4 14.7 4.3 15.4z"/></svg>
+      </a>
+      <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank" aria-label="Nextdoor">
+        <svg viewBox="0 0 512 512"><path fill="#00B246" d="M256 32l-224 160v256h128v-96h192v96h128v-256L256 32zm0 64l160 112v224H336v-80H176v80H96V208l160-112z"/></svg>
+      </a>
+      <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank" aria-label="Google Reviews">
+        <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.1 0 5.8 1.2 7.9 3.2l5.9-5.9C33.5 3.3 29.1 1 24 1 14.8 1 7.1 6.6 3.4 14.4l6.9 5.4C12.6 14 17.9 9.5 24 9.5z"/><path fill="#34A853" d="M24 46.5c5.1 0 9.5-1.7 13.1-4.5l-6.4-5.2c-2 1.3-4.6 2.1-6.7 2.1-6.1 0-11.4-4.5-13.3-10.6l-6.9 5.3C7.1 41.4 14.8 46.5 24 46.5z"/><path fill="#4A90E2" d="M46.5 24c0-1.6-.1-2.9-.4-4.3H24v8.1h12.6c-.5 2.7-2.1 5-4.5 6.5l6.4 5.2C42.4 36.2 46.5 30.7 46.5 24z"/><path fill="#FBBC05" d="M10.7 28.3c-.5-1.3-.7-2.6-.7-4 0-1.4.3-2.7.7-4L3.8 14.4C2.7 16.8 2 19.3 2 22c0 2.7.7 5.2 1.8 7.6l6.9-5.3z"/></svg>
+      </a>
+    </div>
+  </section>
 
-    <!-- Yelp Icon (official burst icon) -->
-    <a href="https://www.yelp.com/..." target="_blank" aria-label="Yelp">
-      <svg width="28" height="28" viewBox="0 0 100 100" fill="#d32323">
-        <!-- Yelp icon path -->
-        <path d="M49.6 13.6c-2.6 6.3 6.6 17.8 13.2 22.9s8.5 7.6 3.3 9.7-17 .6-23.7-.9-10.1-1.4-9.1-6.6 4.4-17.7 6.6-23.2 4.3-3.3 10.2-2zM24.4 28.3c5.4-2.5 15.5 6.5 19 12.9s5.2 9.4-.3 11.3-15.2-.8-19-3.6-4.8-3.9-2.5-8.9 3.4-9.3 2.8-11.7zM13.6 58.4c-1.1-6 9.5-15.1 16.5-17.8s9.6-3.2 11.7 1 1.5 15.1-.9 21.2-2.4 8.1-7.9 5.9-18.1-4.7-19.4-10.3zM34.3 80.6c2.9-5.4 15.3-9.9 22-11s8.2-.6 8.6 4.7.2 17.9-.2 23.4-3.2 4.3-9.8 1.1-18.7-9.7-20.5-12.3-1.6-2.4 0-6.9zM73.6 69.8c-5.8 2.5-17.8-5-22.4-9.8s-7-7.3-3.8-10.7 15.4-5.2 22.5-6.2 5.2-.3 8 3.6 5.4 14.7 4.3 15.4z"/>
-      </svg>
-    </a>
-
-    <!-- Nextdoor Icon (official house-logo) -->
-    <a href="https://nextdoor.com/..." target="_blank" aria-label="Nextdoor">
-      <svg width="28" height="28" viewBox="0 0 512 512" fill="#00B246">
-        <!-- Nextdoor door/house glyph -->
-        <path d="M256 32l-224 160v256h128v-96h192v96h128v-256L256 32zm0 64l160 112v224H336v-80H176v80H96V208l160-112z"/>
-      </svg>
-    </a>
-
-    <!-- Google Reviews (unchanged) -->
-  </div>
-</section>
   <section class="section" id="reviews">
     <h3>What Our Customers Are Saying</h3>
     <blockquote>
