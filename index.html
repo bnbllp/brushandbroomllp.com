@@ -42,7 +42,7 @@
     }
 
     header img {
-      height: 60px;
+      height: 80px;
     }
 
     .top-left {
@@ -56,7 +56,7 @@
     }
 
     .top-center h1 {
-      font-size: 1.5em;
+      font-size: 2em;
       margin: 0;
     }
 
@@ -69,10 +69,10 @@
     .service-top-btn {
       text-decoration: none;
       font-weight: bold;
-      padding: 8px 14px;
+      padding: 12px 20px;
       border-radius: 20px;
       color: white;
-      font-size: 0.9em;
+      font-size: 1em;
       transition: background-color 0.3s ease;
     }
 
@@ -88,22 +88,28 @@
 
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     .hero h2 {
-      font-size: 2.8em;
+      font-size: 3.5em;
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      max-width: 800px;
+      margin: 0 auto 30px;
     }
 
     .cta {
       display: inline-block;
       margin-top: 20px;
-      padding: 12px 25px;
+      padding: 14px 30px;
       border-radius: 30px;
       background-color: var(--orange);
       color: white;
@@ -112,6 +118,7 @@
       border: 2px solid white;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
       transition: 0.3s ease;
+      font-size: 1.1em;
     }
 
     .cta:hover {
@@ -157,11 +164,12 @@
     .service-box a {
       display: inline-block;
       margin: 10px 0;
-      padding: 10px 20px;
+      padding: 12px 22px;
       text-decoration: none;
       color: white;
       border-radius: 25px;
       font-weight: bold;
+      font-size: 1.1em;
     }
 
     .section-dark {
@@ -180,10 +188,11 @@
     form input,
     form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 15px;
       margin-bottom: 15px;
       border: none;
       border-radius: 5px;
+      font-size: 1.1em;
     }
 
     .quote-imgs {
@@ -203,17 +212,16 @@
       font-style: italic;
       margin: 20px auto;
       max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.5;
     }
 
     .footer {
-      padding: 40px 20px;
+      padding: 60px 20px;
       background: linear-gradient(to right, #000, #1c1c1c);
       text-align: center;
       color: #ccc;
-    }
-
-    .footer-logo {
-      height: 80px;
+      font-size: 1em;
     }
 
     .footer-icons {
@@ -224,7 +232,11 @@
     }
 
     .footer-icons img {
-      height: 35px;
+      height: 40px;
+    }
+
+    .footer img[alt="Company Logo"] {
+      height: 80px;
     }
 
     @media (max-width: 768px) {
@@ -234,11 +246,11 @@
       }
 
       .hero h2 {
-        font-size: 2em;
+        font-size: 2.5em;
       }
 
       .top-center h1 {
-        font-size: 1.2em;
+        font-size: 1.5em;
       }
 
       form {
@@ -257,7 +269,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="top-left">
       <img src="logo.PNG" alt="Brush and Broom LLP Logo" />
@@ -331,7 +342,7 @@
   </main>
 
   <footer class="footer">
-    <img src="logo.PNG" alt="Company Logo" class="footer-logo" /><br><br>
+    <img src="logo.PNG" alt="Company Logo" /><br><br>
     <h2>Follow & Review Us</h2>
     <div class="footer-icons">
       <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank"><img src="facebook_icon.PNG" alt="Facebook"></a>
@@ -341,6 +352,5 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP – All rights reserved.</p>
   </footer>
-
 </body>
 </html>
