@@ -340,13 +340,27 @@
 
     <section id="quote" class="section-dark">
       <h2>Free Quote</h2>
-      <form>
-        <input type="text" name="name" placeholder="Your Full Name" required />
-        <input type="email" name="email" placeholder="Your Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
-        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-        <button type="submit" class="cta">Send Message</button>
-      </form>
+   <form>
+  <input type="text" name="name" placeholder="Your Full Name" required />
+  <input type="email" name="email" placeholder="Your Email Address" required />
+  <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
+
+  <fieldset style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 10px; background: #f9f9f9; color: #000;">
+    <legend style="font-weight: bold; margin-bottom: 10px;">Which services are you interested in?</legend>
+    <label><input type="checkbox" name="services" value="Interior Painting"> Interior Painting</label><br />
+    <label><input type="checkbox" name="services" value="Exterior Painting"> Exterior Painting</label><br />
+    <label><input type="checkbox" name="services" value="Cabinet Finishing"> Cabinet Finishing</label><br />
+    <label><input type="checkbox" name="services" value="Door and Trim Painting"> Door & Window Trim Painting</label><br />
+    <label><input type="checkbox" name="services" value="Move-out Cleaning"> Move-in/Out Cleaning</label><br />
+    <label><input type="checkbox" name="services" value="Deep Cleaning"> Initial Deep Cleaning</label><br />
+    <label><input type="checkbox" name="services" value="Power Washing"> Power Washing</label><br />
+    <label><input type="checkbox" name="services" value="Vinyl Siding"> Vinyl Siding</label><br />
+    <label><input type="checkbox" name="services" value="Flooring"> Flooring</label>
+  </fieldset>
+
+  <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+  <button type="submit" class="cta">Send Message</button>
+</form>
       <div class="quote-imgs">
         <img src="Interior painting.PNG" alt="Interior Accent Painting" />
         <img src="cleaning side by side.png" alt="Turnover Cleaning Before and After" />
