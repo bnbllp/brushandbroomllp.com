@@ -439,23 +439,59 @@
 
       <h2 style="margin-top: 60px;">Instant Online Estimate (Beta)</h2>
 
-      <form id="estimateTool" aria-label="Online estimate calculator" oninput="calculateEstimate()" style="background: #1e1e1e; padding: 30px; border-radius: 15px; color: white;">
-        <fieldset>
-          <legend>Select Services for Estimate</legend>
+    <section id="estimate" class="section-dark">
+  <h2>Get a Free Estimate</h2>
+  <form id="estimateForm" oninput="updateEstimate()">
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Your Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" />
 
-          <label><input type="checkbox" name="services" value="2" class="service-checkbox"> Interior Painting</label>
-          <label><input type="checkbox" name="services" value="2.5" class="service-checkbox"> Exterior Painting</label>
-          <label><input type="checkbox" name="services" value="0.8" class="service-checkbox"> Deep Cleaning</label>
-          <label><input type="checkbox" name="services" value="1" class="service-checkbox"> Move-Out Cleaning</label>
-          <label><input type="checkbox" name="services" value="1.5" class="service-checkbox"> Power Washing</label>
-          <label><input type="checkbox" name="services" value="3" class="service-checkbox"> Flooring</label>
-        </fieldset>
+    <fieldset>
+      <legend>Select Services</legend>
+      <label><input type="checkbox" name="services" value="2" /> Interior Painting</label><br />
+      <label><input type="checkbox" name="services" value="2.5" /> Exterior Painting</label><br />
+      <label><input type="checkbox" name="services" value="1" /> Move-Out Cleaning</label><br />
+      <label><input type="checkbox" name="services" value="1.5" /> Power Washing</label><br />
+      <label><input type="checkbox" name="services" value="0.8" /> Deep Cleaning</label><br />
+      <label><input type="checkbox" name="services" value="3" /> Flooring</label>
+    </fieldset>
 
-        <label for="squareFeet">Square Footage (for painting/flooring):</label>
-        <input type="number" id="squareFeet" placeholder="e.g. 1000" min="0" />
+    <label for="squareFeet">Square Footage:</label>
+    <input type="number" id="squareFeet" name="squareFeet" placeholder="e.g. 1000" min="0" />
 
-        <strong>Estimated Total: $<span id="estimateResult">0.00</span></strong>
-      </form>
+    <fieldset>
+      <legend>Optional Add-Ons</legend>
+      <label><input type="checkbox" name="addons" value="100" /> Baseboard Painting ($100)</label><br />
+      <label><input type="checkbox" name="addons" value="150" /> Cabinet Refinishing ($150)</label><br />
+      <label><input type="checkbox" name="addons" value="75" /> Garage Power Wash ($75)</label>
+    </fieldset>
+
+    <p><strong>Estimated Total: $<span id="estimateTotal">0.00</span></strong></p>
+
+    <textarea name="message" rows="4" placeholder="Additional details or questions..."></textarea>
+
+    <button type="submit" class="cta">Send Estimate Request</button>
+  </form>
+
+  <script>
+    function updateEstimate() {
+      const sqft = parseFloat(document.getElementById('squareFeet').value) || 0;
+      let total = 0;
+
+      // Sum selected services (rate * sqft)
+      document.querySelectorAll('input[name="services"]:checked').forEach(service => {
+        total += parseFloat(service.value) * sqft;
+      });
+
+      // Add addons
+      document.querySelectorAll('input[name="addons"]:checked').forEach(addon => {
+        total += parseFloat(addon.value);
+      });
+
+      document.getElementById('estimateTotal').innerText = total.toFixed(2);
+    }
+  </script>
+</section>
 
       <div class="quote-imgs" aria-label="Project photos">
         <img src="Interior painting.PNG" alt="Interior Accent Painting" />
