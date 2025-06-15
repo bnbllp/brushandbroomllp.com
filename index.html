@@ -37,7 +37,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background: linear-gradient(to right, #000000, #1c1c1c);
+      background-color: var(--bg-dark);
       border-bottom: 3px solid var(--green);
     }
 
@@ -186,7 +186,7 @@
     }
 
     form {
-      max-width: 600px;
+      max-width: 650px;
       margin: 30px auto;
       padding: 30px;
       background: #1e1e1e;
@@ -204,6 +204,26 @@
       background: #fff;
       color: #000;
       font-size: 1em;
+    }
+
+    form fieldset {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #f9f9f9;
+      color: #000;
+    }
+
+    form legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.95em;
     }
 
     form button {
@@ -232,7 +252,7 @@
 
     .footer {
       padding: 40px 20px;
-      background: linear-gradient(to right, #000, #1c1c1c);
+      background-color: var(--bg-dark);
       text-align: center;
       color: #ccc;
     }
@@ -249,7 +269,7 @@
     }
 
     .footer img {
-      height: 75px;
+      height: 100px;
     }
 
     @media (max-width: 768px) {
@@ -340,27 +360,25 @@
 
     <section id="quote" class="section-dark">
       <h2>Free Quote</h2>
-   <form>
-  <input type="text" name="name" placeholder="Your Full Name" required />
-  <input type="email" name="email" placeholder="Your Email Address" required />
-  <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
-
-  <fieldset style="margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 10px; background: #f9f9f9; color: #000;">
-    <legend style="font-weight: bold; margin-bottom: 10px;">Which services are you interested in?</legend>
-    <label><input type="checkbox" name="services" value="Interior Painting"> Interior Painting</label><br />
-    <label><input type="checkbox" name="services" value="Exterior Painting"> Exterior Painting</label><br />
-    <label><input type="checkbox" name="services" value="Cabinet Finishing"> Cabinet Finishing</label><br />
-    <label><input type="checkbox" name="services" value="Door and Trim Painting"> Door & Window Trim Painting</label><br />
-    <label><input type="checkbox" name="services" value="Move-out Cleaning"> Move-in/Out Cleaning</label><br />
-    <label><input type="checkbox" name="services" value="Deep Cleaning"> Initial Deep Cleaning</label><br />
-    <label><input type="checkbox" name="services" value="Power Washing"> Power Washing</label><br />
-    <label><input type="checkbox" name="services" value="Vinyl Siding"> Vinyl Siding</label><br />
-    <label><input type="checkbox" name="services" value="Flooring"> Flooring</label>
-  </fieldset>
-
-  <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-  <button type="submit" class="cta">Send Message</button>
-</form>
+      <form>
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
+        <fieldset>
+          <legend>Which services are you interested in?</legend>
+          <label><input type="checkbox" name="services" value="Interior Painting"> Interior Painting</label>
+          <label><input type="checkbox" name="services" value="Exterior Painting"> Exterior Painting</label>
+          <label><input type="checkbox" name="services" value="Cabinet Finishing"> Cabinet Finishing</label>
+          <label><input type="checkbox" name="services" value="Door and Trim Painting"> Door & Window Trim Painting</label>
+          <label><input type="checkbox" name="services" value="Move-out Cleaning"> Move-in/Out Cleaning</label>
+          <label><input type="checkbox" name="services" value="Deep Cleaning"> Initial Deep Cleaning</label>
+          <label><input type="checkbox" name="services" value="Power Washing"> Power Washing</label>
+          <label><input type="checkbox" name="services" value="Vinyl Siding"> Vinyl Siding</label>
+          <label><input type="checkbox" name="services" value="Flooring"> Flooring</label>
+        </fieldset>
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="cta">Send Message</button>
+      </form>
       <div class="quote-imgs">
         <img src="Interior painting.PNG" alt="Interior Accent Painting" />
         <img src="cleaning side by side.png" alt="Turnover Cleaning Before and After" />
