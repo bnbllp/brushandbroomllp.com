@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Interior painting services by Brush & Broom LLP in Walla Walla, WA. Clean lines, vibrant finishes, and detail-driven craftsmanship.">
+  <meta name="keywords" content="interior painting Walla Walla, residential painting, room painting, wall painting, ceiling trim, Brush and Broom LLP">
+  <meta name="author" content="Brush & Broom LLP">
+  <title>Interior Painting | Brush & Broom LLP – Walla Walla, WA</title>
+  <style>
+    :root {
+      --orange: #ff7a24;
+      --blue: #2499ff;
+      --green: #28c76f;
+      --bg-dark: #111827;
+      --light: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--light);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 3px solid var(--green);
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 1.7em;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .cta {
+      background: var(--orange);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .cta:hover {
+      background: var(--green);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-light {
+      background-color: var(--light);
+      color: #000;
+    }
+
+    .images-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .images-row img {
+      max-width: 100%;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #111;
+      border: 1px solid #444;
+      color: white;
+      border-radius: 6px;
+    }
+
+    form button {
+      background: var(--blue);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: #aaa;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 700px) {
+      .hero h2 {
+        font-size: 2.2em;
+      }
+
+      header h1 {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo">
+    <h1>Brush & Broom LLP – Interior Painting (509) <a href="tel:5092004873" style="color: var(--light); text-decoration: underline;">200-4873</a></h1>
+  </header>
+
+  <section class="hero">
+    <h2>Interior Painting Done Right</h2>
+    <p>Clean lines. Vibrant finishes. Trusted by families and businesses across Walla Walla, Brush & Broom LLP delivers high-quality interior painting that transforms your space. Whether it’s walls, ceilings, doors, or trim — we treat every surface like a canvas.</p>
+    <a href="#quote" class="cta">Get a Free Interior Painting Quote</a>
+  </section>
+
+  <section class="section-light">
+    <h2>What We Offer</h2>
+    <p>We bring detail-oriented craftsmanship and premium products to every project.</p>
+    <ul style="max-width: 700px; margin: 30px auto; text-align: left; font-size: 1.1em;">
+      <li>✔️ Full-room interior painting (walls, ceilings, and trim)</li>
+      <li>✔️ Cabinet, door, and baseboard painting</li>
+      <li>✔️ Drywall patching & surface prep</li>
+      <li>✔️ Color consulting & finish matching</li>
+      <li>✔️ Clean edges & meticulous cleanup</li>
+    </ul>
+
+    <div class="images-row">
+      <img src="Interior painting.PNG" alt="Finished Interior Wall">
+      <img src="cleaning side by side.png" alt="Clean Room Post Paint">
+      <img src="Side by side before and after.png" alt="Before and After Interior Painting">
+    </div>
+  </section>
+
+  <section id="quote">
+    <h2>Request Your Quote</h2>
+    <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <input type="tel" name="Phone" placeholder="Phone Number">
+      <textarea name="Message" rows="5" placeholder="Tell us about your painting needs…" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Brush & Broom LLP · <a href="tel:5092004873" style="color: #aaa; text-decoration: underline;">509-200-4873</a> · bnbllp@brushandbroomllp.com
+  </footer>
+</body>
+</html>
