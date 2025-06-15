@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Interior painting services by Brush & Broom LLP in Walla Walla, WA. Clean lines, vibrant finishes, and detail-driven craftsmanship.">
-  <meta name="keywords" content="interior painting Walla Walla, residential painting, room painting, wall painting, ceiling trim, Brush and Broom LLP">
-  <meta name="author" content="Brush & Broom LLP">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Interior Painting services by Brush & Broom LLP in Walla Walla, WA. Quality wall, ceiling, trim, and door painting." />
+  <meta name="keywords" content="Interior Painting Walla Walla, wall painting, trim painting, ceiling painting, Brush and Broom LLP" />
+  <meta name="author" content="Brush & Broom LLP" />
   <title>Interior Painting | Brush & Broom LLP – Walla Walla, WA</title>
   <style>
     :root {
@@ -15,182 +15,187 @@
       --bg-dark: #111827;
       --light: #f9f9f9;
     }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg-dark);
       color: var(--light);
     }
-
     header {
       display: flex;
       align-items: center;
       padding: 20px;
       border-bottom: 3px solid var(--green);
+      background-color: #0f172a;
+      flex-wrap: wrap;
     }
-
     header img {
       height: 60px;
       margin-right: 15px;
     }
-
     header h1 {
       font-size: 1.7em;
+      margin: 0;
+      flex-grow: 1;
     }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px 30px;
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-left: auto;
     }
-
-    .hero h2 {
-      font-size: 3em;
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--orange);
+    }
+    .call-button {
+      background-color: var(--orange);
+      color: white;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      margin-left: 20px;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+    .call-button:hover {
+      background-color: var(--green);
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-size: 2.8em;
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
+      margin-bottom: 15px;
+      text-align: center;
     }
-
-    .hero p {
+    p {
       font-size: 1.2em;
-      max-width: 700px;
-      margin: auto;
+      line-height: 1.6;
+      margin-bottom: 25px;
     }
-
     .cta {
+      display: block;
+      width: max-content;
       background: var(--orange);
       color: white;
-      padding: 12px 25px;
+      padding: 14px 30px;
       border-radius: 30px;
-      display: inline-block;
-      margin-top: 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s ease;
+      margin: 30px auto 15px;
+      text-align: center;
+      transition: background 0.3s ease;
     }
-
     .cta:hover {
       background: var(--green);
     }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .section-light {
-      background-color: var(--light);
-      color: #000;
-    }
-
-    .images-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .images-row img {
-      max-width: 100%;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-
-    form {
-      max-width: 500px;
-      margin: 30px auto;
-      background: #1f2937;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: left;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      background: #111;
-      border: 1px solid #444;
-      color: white;
-      border-radius: 6px;
-    }
-
-    form button {
+    .back-home {
+      display: block;
+      width: max-content;
       background: var(--blue);
       color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px auto 40px;
+      text-align: center;
+      transition: background 0.3s ease;
     }
-
+    .back-home:hover {
+      background: var(--green);
+    }
     footer {
       text-align: center;
       background: #0f172a;
       color: #aaa;
       padding: 20px;
       font-size: 0.9em;
+      margin-top: 60px;
     }
-
     @media (max-width: 700px) {
-      .hero h2 {
+      h2 {
         font-size: 2.2em;
       }
-
       header h1 {
         font-size: 1.3em;
+      }
+      nav {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+      }
+      nav a, .call-button {
+        margin-left: 0;
+        font-size: 0.9em;
+      }
+      header {
+        justify-content: center;
+        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo">
-    <h1>Brush & Broom LLP – Interior Painting (509) <a href="tel:5092004873" style="color: var(--light); text-decoration: underline;">200-4873</a></h1>
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+    <h1>Brush & Broom LLP</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move-In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+    </nav>
+    <a href="tel:5092004873" class="call-button" aria-label="Call Brush and Broom LLP">Call Us</a>
   </header>
 
-  <section class="hero">
-    <h2>Interior Painting Done Right</h2>
-    <p>Clean lines. Vibrant finishes. Trusted by families and businesses across Walla Walla, Brush & Broom LLP delivers high-quality interior painting that transforms your space. Whether it’s walls, ceilings, doors, or trim — we treat every surface like a canvas.</p>
-    <a href="#quote" class="cta">Get a Free Interior Painting Quote</a>
-  </section>
+  <main>
+    <h2>Interior Painting</h2>
+    <p>
+      Our Interior Painting service covers walls, ceilings, trim, doors, and more. We use top-quality paints that are low odor and durable to give your home a fresh, clean look.
+    </p>
+    <p>
+      From detailed prep work — including patching, sanding, and priming — to the final coat, our experienced painters ensure smooth, flawless finishes that last. Whether updating one room or the entire interior, Brush & Broom LLP guarantees professionalism and respect for your home.
+    </p>
+    <p>
+      Let us bring your vision to life with colors and finishes that enhance your living space.
+    </p>
 
-  <section class="section-light">
-    <h2>What We Offer</h2>
-    <p>We bring detail-oriented craftsmanship and premium products to every project.</p>
-    <ul style="max-width: 700px; margin: 30px auto; text-align: left; font-size: 1.1em;">
-      <li>✔️ Full-room interior painting (walls, ceilings, and trim)</li>
-      <li>✔️ Cabinet, door, and baseboard painting</li>
-      <li>✔️ Drywall patching & surface prep</li>
-      <li>✔️ Color consulting & finish matching</li>
-      <li>✔️ Clean edges & meticulous cleanup</li>
-    </ul>
+    <a href="#quote" class="cta">Request a Free Quote</a>
 
-    <div class="images-row">
-      <img src="Interior painting.PNG" alt="Finished Interior Wall">
-      <img src="cleaning side by side.png" alt="Clean Room Post Paint">
-      <img src="Side by side before and after.png" alt="Before and After Interior Painting">
-    </div>
-  </section>
+    <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
 
-  <section id="quote">
-    <h2>Request Your Quote</h2>
-    <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="tel" name="Phone" placeholder="Phone Number">
-      <textarea name="Message" rows="5" placeholder="Tell us about your painting needs…" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <section id="quote" style="margin-top: 40px;">
+      <h2>Request a Quote</h2>
+      <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain" style="max-width: 500px; margin: 20px auto; text-align: left;">
+        <input type="text" name="Name" placeholder="Your Name" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
+        <input type="email" name="Email" placeholder="Your Email" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
+        <input type="tel" name="Phone" placeholder="Phone Number" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
+        <textarea name="Message" rows="5" placeholder="Tell us what you need…" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;"></textarea>
+        <button type="submit" style="background: var(--blue); color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 1em; cursor: pointer;">Send</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 Brush & Broom LLP · <a href="tel:5092004873" style="color: #aaa; text-decoration: underline;">509-200-4873</a> · bnbllp@brushandbroomllp.com
+    &copy; 2025 Brush & Broom LLP · 509-200-4873 · bnbllp@brushandbroomllp.com
   </footer>
 </body>
 </html>
