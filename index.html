@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla, WA">
-  <meta name="keywords" content="painting, cleaning, power washing, Walla Walla, Brush and Broom LLP">
-  <title>Brush & Broom LLP, Walla Walla, WA</title>
+  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla"/>
+  <title>Brush & Broom LLP, Walla Walla, Wa 509-200-4873</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     :root {
       --orange: #ff7a24;
@@ -26,16 +27,19 @@
       display: flex;
       align-items: center;
       padding: 20px;
+      background: var(--bg-dark);
       border-bottom: 2px solid var(--green);
     }
 
     header img {
       height: 60px;
       margin-right: 15px;
+      animation: fadeIn 1s ease-in-out;
     }
 
     header h1 {
       font-size: 1.8em;
+      color: var(--text-light);
       font-family: serif;
     }
 
@@ -49,7 +53,9 @@
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
       font-weight: 900;
+      animation: fadeInDown 1.2s ease-out;
     }
 
     .hero p {
@@ -69,10 +75,13 @@
       margin-top: 25px;
       font-weight: bold;
       transition: 0.3s;
+      animation: pulse 2s infinite;
     }
 
     .cta:hover {
       opacity: 0.9;
+      animation: none;
+      box-shadow: 0 0 12px #fff;
     }
 
     .section {
@@ -83,6 +92,7 @@
     .section h3 {
       font-size: 2em;
       color: var(--green);
+      margin-bottom: 10px;
     }
 
     .quote-images {
@@ -94,24 +104,27 @@
     }
 
     .quote-images img {
-      width: 100%;
+      max-width: 100%;
       max-width: 400px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
+      height: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
     .quote-images img:hover {
       transform: scale(1.03);
+      filter: brightness(1.1);
+      box-shadow: 0 0 10px var(--blue);
     }
 
     form {
       max-width: 500px;
       margin: 30px auto;
+      text-align: left;
       background: #1f2937;
       padding: 20px;
       border-radius: 10px;
-      text-align: left;
     }
 
     form input, form textarea {
@@ -122,6 +135,12 @@
       border-radius: 6px;
       background: #111;
       color: white;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--green);
+      box-shadow: 0 0 8px var(--green);
     }
 
     form button {
@@ -141,13 +160,6 @@
       font-weight: bold;
     }
 
-    blockquote {
-      max-width: 700px;
-      margin: 30px auto;
-      font-style: italic;
-      color: #ccc;
-    }
-
     footer {
       text-align: center;
       padding: 20px;
@@ -160,69 +172,93 @@
       .hero h2 {
         font-size: 2.2em;
       }
-
       header h1 {
         font-size: 1.4em;
       }
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .scroll-reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.PNG" alt="Brush and Broom LLP Logo">
-    <h1>Brush & Broom LLP</h1>
-  </header>
+<header class="scroll-reveal">
+  <img src="logo.png" alt="Brush & Broom LLP Logo">
+  <h1>Brush & Broom LLP</h1>
+</header>
 
-  <section class="hero">
-    <h2>Painting. Cleaning. Power Washing.</h2>
-    <p>We’re Walla Walla’s go-to crew for spotless deep cleans, bold paint jobs, and high-power transformations—with personality. Want it done right, with a splash of charm? That’s us.</p>
-    <a href="#quote" class="cta">Get a Free Quote</a>
-    <p style="margin-top: 10px;">☕ Before we run out of caffeine!</p>
-  </section>
+<section class="hero scroll-reveal">
+  <h2>Painting. Cleaning. Power Washing.</h2>
+  <p>We’re Walla Walla’s go-to crew for spotless deep cleans, bold paint jobs, and high-power transformations—with personality. Want it done right, with a splash of charm? That’s us.</p>
+  <a href="#quote" class="cta">Get a Free Quote</a>
+  <p style="margin-top: 10px;">☕ Before we run out of caffeine!</p>
+</section>
 
-  <section class="section" id="quote">
-    <h3>Request a Quote</h3>
-    <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
-      <input type="text" name="Name" placeholder="Your Name" required>
-      <input type="email" name="Email" placeholder="Your Email" required>
-      <input type="tel" name="Phone" placeholder="Your Phone Number">
-      <textarea name="Message" rows="5" placeholder="Tell us what you need…" required></textarea>
-      <button type="submit">Send Request</button>
-    </form>
+<section class="section scroll-reveal" id="quote">
+  <h3>Request a Quote</h3>
+  <p>We’ll follow up via email or text. Quick and easy.</p>
+  <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Phone" placeholder="Your Phone Number">
+    <textarea name="Message" rows="5" placeholder="Tell us what you need…" required></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+</section>
 
-    <div class="quote-images">
-      <img src="Side by side before and after.png" alt="Exterior Painting Results">
-      <img src="cleaning side by side.png" alt="Deep Cleaning Before and After">
-      <img src="Interior painting.PNG" alt="Interior Painting Comparison">
-    </div>
-  </section>
+<section class="section scroll-reveal">
+  <h3>Our Work</h3>
+  <div class="quote-images">
+    <img src="Side by side before and after.png" alt="Exterior Repaints">
+    <img src="cleaning side by side.png" alt="Move-In Cleans">
+    <img src="Interior painting.PNG" alt="Interior Painting">
+  </div>
+</section>
 
-  <section class="section">
-    <h3>Find Us Online</h3>
-    <div class="social-links">
-      <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
-      <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
-      <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank">Nextdoor</a>
-      <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank">Google Reviews</a>
-    </div>
-  </section>
+<section class="section scroll-reveal">
+  <h3>Find Us Online</h3>
+  <div class="social-links">
+    <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
+    <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
+    <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank">Nextdoor</a>
+    <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank">Google Reviews</a>
+  </div>
+</section>
 
-  <section class="section" id="reviews">
-    <h3>What Our Customers Are Saying</h3>
-    <blockquote>
-      “Exterior hadn't been touched in over 30 years! They tackled every nook and cranny with persistence and flair. We're telling everyone!”
-      <br>— <strong>Shernie W.</strong>
-    </blockquote>
-    <blockquote>
-      “They repainted some sun-faded entryway doors for us. Excellent job, great attention to detail. We don't usually do this—but yes, we recommend them.”
-      <br>— <strong>Jerry C.</strong>
-    </blockquote>
-  </section>
+<section class="section scroll-reveal" id="reviews">
+  <h3>What Our Customers Are Saying</h3>
+  <blockquote style="max-width: 700px; margin: 30px auto; font-style: italic; color: #ccc;">
+    “Exterior hadn't been touched in over 30 years! They tackled every nook and cranny with persistence and flair. We're telling everyone!”<br>— <strong>Shernie W.</strong>
+  </blockquote>
+  <blockquote style="max-width: 700px; margin: 30px auto; font-style: italic; color: #ccc;">
+    “They repainted some sun-faded entryway doors for us. Excellent job, great attention to detail. We don't usually do this—but yes, we recommend them.”<br>— <strong>Jerry C.</strong>
+  </blockquote>
+</section>
 
-  <footer>
-    &copy; 2025 Brush & Broom LLP · 509-200-4873 · bnbllp@brushandbroomllp.com
-  </footer>
+<footer>
+  &copy; 2025 Brush & Broom LLP · 509-200-4873 · bnbllp@brushandbroomllp.com
+</footer>
+
+<script>
+  ScrollReveal().reveal('.scroll-reveal', {
+    delay: 100,
+    duration: 1000,
+    easing: 'ease-out',
+    origin: 'bottom',
+    distance: '30px',
+    reset: false,
+    interval: 200
+  });
+</script>
 
 </body>
 </html>
