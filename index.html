@@ -25,9 +25,11 @@
 
     header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 20px;
       border-bottom: 3px solid var(--green);
+      flex-wrap: wrap;
     }
 
     header img {
@@ -36,7 +38,22 @@
     }
 
     header h1 {
-      font-size: 1.7em;
+      font-size: 1.5em;
+      flex: 1;
+    }
+
+    .call-button {
+      background-color: var(--green);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-button:hover {
+      background-color: var(--orange);
     }
 
     .hero {
@@ -54,7 +71,7 @@
 
     .hero p {
       font-size: 1.1em;
-      max-width: 600px;
+      max-width: 700px;
       margin: auto;
     }
 
@@ -67,7 +84,7 @@
       margin-top: 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     .cta:hover {
@@ -80,7 +97,7 @@
     }
 
     .section-light {
-      background-color: #f9f9f9;
+      background-color: var(--light);
       color: #000;
     }
 
@@ -160,6 +177,7 @@
       justify-content: center;
       gap: 20px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     .social-icons img {
@@ -189,12 +207,14 @@
     }
 
     @media (max-width: 700px) {
-      .hero h2 {
-        font-size: 2.2em;
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
       }
 
-      header h1 {
-        font-size: 1.3em;
+      .hero h2 {
+        font-size: 2.2em;
       }
 
       .service-box {
@@ -207,16 +227,14 @@
 
   <header>
     <img src="logo.PNG" alt="Brush & Broom LLP Logo">
-<h1>Brush & Broom LLP – Painting & Cleaning Services in Walla Walla (509)200-4873</h1>
+    <h1>Brush & Broom LLP – Painting & Cleaning in Walla Walla</h1>
+    <a href="tel:5092004873" class="call-button">Call Us: (509) 200-4873</a>
   </header>
 
   <section class="hero">
     <h2>Painting. Cleaning. Power Washing.</h2>
-    <p>At Brush & Broom LLP, we provide top-quality painting, cleaning, power washing, flooring, and siding services to homes and businesses throughout Walla Walla, WA and surrounding areas. With years of hands-on experience, we deliver detailed, reliable work and customer care you can count on.</p>
-
-Whether you need a full home makeover or just a fresh coat of paint, our family-run business shows up with integrity, good humor, and a commitment to excellence. No job is too big or too small — we do it all with a personal touch.
-
-Looking for a trusted team to refresh your property inside and out? Choose Brush & Broom LLP — where clean meets color, and every detail matters.
+    <p>We provide top-quality painting, cleaning, power washing, flooring, and siding services to homes and businesses throughout Walla Walla, WA. With years of experience, we deliver detailed, reliable work and customer care you can count on.</p>
+    <p>Looking for a trusted team to refresh your property inside and out? Choose Brush & Broom LLP — where clean meets color, and every detail matters.</p>
     <a href="#quote" class="cta">Request a Free Quote</a>
   </section>
 
@@ -226,27 +244,27 @@ Looking for a trusted team to refresh your property inside and out? Choose Brush
       <div class="service-box">
         <img src="interior-paint-icon.PNG" alt="Interior Painting">
         <h3 class="service-title-orange">Interior Painting</h3>
-        <p>Clean lines and vibrant finishes. We handle walls, ceilings, trim—flawlessly.</p>
+        <p>Clean lines and vibrant finishes. Walls, ceilings, trim—flawlessly done.</p>
       </div>
       <div class="service-box">
         <img src="exterior-paint-icon.png" alt="Exterior Painting">
         <h3 class="service-title-blue">Exterior Painting</h3>
-        <p>Durable and bold—perfect curb appeal that protects your home from the elements.</p>
+        <p>Bold, weatherproof finishes. Curb appeal meets durability.</p>
       </div>
       <div class="service-box">
         <img src="move-clean-icon.PNG" alt="Move-In/Out Cleaning">
         <h3 class="service-title-green">Move-In/Out Cleaning</h3>
-        <p>We deep clean empty homes, so you can focus on the moving part—not the mess.</p>
+        <p>Deep cleaning for empty homes so you can focus on the move, not the mess.</p>
       </div>
       <div class="service-box">
         <img src="deep-clean-icon.PNG" alt="Deep Cleaning">
         <h3 class="service-title-orange">Deep Cleaning</h3>
-        <p>Every corner, every crevice. We go beyond surface cleaning and leave it spotless.</p>
+        <p>Every corner, every crevice. Beyond surface cleaning, we leave it spotless.</p>
       </div>
       <div class="service-box">
         <img src="power-wash-icon.PNG" alt="Power Washing">
         <h3 class="service-title-blue">Power Washing</h3>
-        <p>We remove grime from siding, sidewalks, fences, and more—fast and effectively.</p>
+        <p>Grime removal from siding, sidewalks, fences—fast and effective.</p>
       </div>
     </div>
   </section>
@@ -272,7 +290,7 @@ Looking for a trusted team to refresh your property inside and out? Choose Brush
     <h2>What Customers Are Saying</h2>
     <blockquote>“They tackled every inch of our home like pros. It looked brand new when they were done. Highly recommend!” — Shernie W.</blockquote>
     <blockquote>“Attention to detail and clear communication. They made our home feel fresh again.” — Jerry C.</blockquote>
-    <blockquote>"Brush & Broom LLP gave my vacant home a fast, expert refresh with paint and cleaning. Friendly, efficient, and great to work with." - Pamela M.</blockquote>
+    <blockquote>"Brush & Broom LLP gave my vacant home a fast, expert refresh with paint and cleaning. Friendly, efficient, and great to work with." — Pamela M.</blockquote>
   </section>
 
   <section>
@@ -286,7 +304,7 @@ Looking for a trusted team to refresh your property inside and out? Choose Brush
   </section>
 
   <footer>
-    &copy; 2025 Brush & Broom LLP · 509-200-4873 · bnbllp@brushandbroomllp.com
+    &copy; 2025 Brush & Broom LLP · (509) 200-4873 · <a href="mailto:bnbllp@brushandbroomllp.com" style="color:#aaa;">bnbllp@brushandbroomllp.com</a>
   </footer>
 </body>
 </html>
