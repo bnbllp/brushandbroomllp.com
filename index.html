@@ -358,27 +358,61 @@
       </div>
     </section>
 
-    <section id="quote" class="section-dark">
-      <h2>Free Quote</h2>
-      <form>
-        <input type="text" name="name" placeholder="Your Full Name" required />
-        <input type="email" name="email" placeholder="Your Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number (Optional)" />
-        <fieldset>
-          <legend>Which services are you interested in?</legend>
-          <label><input type="checkbox" name="services" value="Interior Painting"> Interior Painting</label>
-          <label><input type="checkbox" name="services" value="Exterior Painting"> Exterior Painting</label>
-          <label><input type="checkbox" name="services" value="Cabinet Finishing"> Cabinet Finishing</label>
-          <label><input type="checkbox" name="services" value="Door and Trim Painting"> Door & Window Trim Painting</label>
-          <label><input type="checkbox" name="services" value="Move-out Cleaning"> Move-in/Out Cleaning</label>
-          <label><input type="checkbox" name="services" value="Deep Cleaning"> Initial Deep Cleaning</label>
-          <label><input type="checkbox" name="services" value="Power Washing"> Power Washing</label>
-          <label><input type="checkbox" name="services" value="Vinyl Siding"> Vinyl Siding</label>
-          <label><input type="checkbox" name="services" value="Flooring"> Flooring</label>
-        </fieldset>
-        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-        <button type="submit" class="cta">Send Message</button>
-      </form>
+   <section id="quote" class="section-dark">
+  <h2>Get a Free Quote</h2>
+  <form>
+    <input type="text" name="name" placeholder="Your Full Name" required />
+    <input type="email" name="email" placeholder="Your Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" />
+    <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    <button type="submit" class="cta">Send Message</button>
+  </form>
+
+  <br><br>
+
+  <h2>Instant Online Estimate (Beta)</h2>
+  <form oninput="calculateEstimate()" id="estimateTool" style="background: #1e1e1e; padding: 30px; border-radius: 15px; color: white;">
+    <label for="serviceType">Service Type:</label>
+    <select id="serviceType">
+      <option value="2">Interior Painting</option>
+      <option value="2.5">Exterior Painting</option>
+      <option value="0.8">Deep Cleaning</option>
+      <option value="1">Move-Out Cleaning</option>
+      <option value="1.5">Power Washing</option>
+      <option value="3">Flooring</option>
+    </select>
+
+    <br><br>
+
+    <label for="squareFeet">Square Footage:</label>
+    <input type="number" id="squareFeet" placeholder="e.g. 1000" />
+
+    <br><br>
+
+    <label>Optional Add-ons:</label><br>
+    <label><input type="checkbox" value="100" class="addon"> Baseboard Painting ($100)</label><br>
+    <label><input type="checkbox" value="150" class="addon"> Cabinet Refinishing ($150)</label><br>
+    <label><input type="checkbox" value="75" class="addon"> Garage Power Wash ($75)</label>
+
+    <br><br>
+
+    <strong>Estimated Total: $<span id="estimateResult">0.00</span></strong>
+  </form>
+
+  <script>
+    function calculateEstimate() {
+      const rate = parseFloat(document.getElementById("serviceType").value || 0);
+      const sqft = parseFloat(document.getElementById("squareFeet").value || 0);
+      let baseEstimate = rate * sqft;
+
+      document.querySelectorAll(".addon:checked").forEach(cb => {
+        baseEstimate += parseFloat(cb.value);
+      });
+
+      document.getElementById("estimateResult").innerText = baseEstimate.toFixed(2);
+    }
+  </script>
+</section>
       <div class="quote-imgs">
         <img src="Interior painting.PNG" alt="Interior Accent Painting" />
         <img src="cleaning side by side.png" alt="Turnover Cleaning Before and After" />
