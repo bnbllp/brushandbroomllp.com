@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla"/>
-  <title>Brush & Broom LLP – Walla Walla, WA</title>
+  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing in Walla Walla, WA">
+  <meta name="keywords" content="painting, cleaning, power washing, Walla Walla, Brush and Broom LLP">
+  <title>Brush & Broom LLP, Walla Walla, WA</title>
   <style>
     :root {
       --orange: #ff7a24;
@@ -19,14 +20,12 @@
       font-family: 'Segoe UI', sans-serif;
       background: var(--bg-dark);
       color: var(--text-light);
-      scroll-behavior: smooth;
     }
 
     header {
       display: flex;
       align-items: center;
       padding: 20px;
-      background: var(--bg-dark);
       border-bottom: 2px solid var(--green);
     }
 
@@ -38,7 +37,6 @@
     header h1 {
       font-size: 1.8em;
       font-family: serif;
-      color: var(--text-light);
     }
 
     .hero {
@@ -47,12 +45,11 @@
     }
 
     .hero h2 {
-      font-size: 2.5em;
-      font-weight: 900;
+      font-size: 3em;
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
+      font-weight: 900;
     }
 
     .hero p {
@@ -62,13 +59,13 @@
     }
 
     .cta {
-      display: inline-block;
       background: linear-gradient(to right, var(--green), var(--orange));
       color: white;
       padding: 15px 30px;
       border-radius: 40px;
       font-size: 1.1em;
       text-decoration: none;
+      display: inline-block;
       margin-top: 25px;
       font-weight: bold;
       transition: 0.3s;
@@ -86,7 +83,6 @@
     .section h3 {
       font-size: 2em;
       color: var(--green);
-      margin-bottom: 10px;
     }
 
     .quote-images {
@@ -98,11 +94,11 @@
     }
 
     .quote-images img {
-      max-width: 400px;
       width: 100%;
+      max-width: 400px;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .quote-images img:hover {
@@ -112,10 +108,10 @@
     form {
       max-width: 500px;
       margin: 30px auto;
-      text-align: left;
       background: #1f2937;
       padding: 20px;
       border-radius: 10px;
+      text-align: left;
     }
 
     form input, form textarea {
@@ -138,6 +134,20 @@
       cursor: pointer;
     }
 
+    .social-links a {
+      margin: 0 12px;
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    blockquote {
+      max-width: 700px;
+      margin: 30px auto;
+      font-style: italic;
+      color: #ccc;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -148,7 +158,7 @@
 
     @media (max-width: 600px) {
       .hero h2 {
-        font-size: 2em;
+        font-size: 2.2em;
       }
 
       header h1 {
@@ -160,7 +170,7 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Brush and Broom LLP logo">
+    <img src="logo.PNG" alt="Brush and Broom LLP Logo">
     <h1>Brush & Broom LLP</h1>
   </header>
 
@@ -173,7 +183,6 @@
 
   <section class="section" id="quote">
     <h3>Request a Quote</h3>
-    <p>We’ll follow up via email or text. Quick and easy.</p>
     <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
       <input type="text" name="Name" placeholder="Your Name" required>
       <input type="email" name="Email" placeholder="Your Email" required>
@@ -183,29 +192,29 @@
     </form>
 
     <div class="quote-images">
-      <img src="Side by side before and after.png" alt="Exterior repaint work">
-      <img src="cleaning side by side.png" alt="Move-in cleaning transformation">
-      <img src="Interior painting.PNG" alt="Interior painting before and after">
+      <img src="Side by side before and after.png" alt="Exterior Painting Results">
+      <img src="cleaning side by side.png" alt="Deep Cleaning Before and After">
+      <img src="Interior painting.PNG" alt="Interior Painting Comparison">
     </div>
   </section>
 
   <section class="section">
     <h3>Find Us Online</h3>
     <div class="social-links">
-      <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a> |
-      <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a> |
-      <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank">Nextdoor</a> |
+      <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank">Facebook</a>
+      <a href="https://www.yelp.com/search?find_desc=Brush+And+Broom+Llp&find_loc=Walla+Walla%2C+WA+99362" target="_blank">Yelp</a>
+      <a href="https://nextdoor.com/pages/brush-and-broom-llp-walla-walla-wa/" target="_blank">Nextdoor</a>
       <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank">Google Reviews</a>
     </div>
   </section>
 
   <section class="section" id="reviews">
     <h3>What Our Customers Are Saying</h3>
-    <blockquote style="max-width: 700px; margin: 30px auto; font-style: italic; color: #ccc;">
+    <blockquote>
       “Exterior hadn't been touched in over 30 years! They tackled every nook and cranny with persistence and flair. We're telling everyone!”
       <br>— <strong>Shernie W.</strong>
     </blockquote>
-    <blockquote style="max-width: 700px; margin: 30px auto; font-style: italic; color: #ccc;">
+    <blockquote>
       “They repainted some sun-faded entryway doors for us. Excellent job, great attention to detail. We don't usually do this—but yes, we recommend them.”
       <br>— <strong>Jerry C.</strong>
     </blockquote>
