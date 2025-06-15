@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta name="description" content="Expert painting, cleaning, siding, and power washing in Walla Walla, WA. Brush & Broom LLP delivers top-notch results with a splash of charm." />
   <meta name="keywords" content="painting Walla Walla, cleaning services, pressure washing, move-out cleaning, siding installation, Brush and Broom LLP" />
   <meta name="author" content="Brush & Broom LLP" />
@@ -17,6 +17,10 @@
       --bg-dark: #0e1526;
       --light: #ffffff;
       --gray: #f2f2f2;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -38,7 +42,6 @@
 
     header img {
       height: 60px;
-      margin-right: 15px;
     }
 
     .top-left {
@@ -58,6 +61,7 @@
 
     .top-right {
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
     }
 
@@ -78,12 +82,12 @@
     .sky-btn { background: var(--skyblue); }
 
     .service-top-btn:hover {
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     .hero h2 {
@@ -92,12 +96,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1em;
+      margin-bottom: 20px;
     }
 
     .cta {
@@ -126,8 +125,8 @@
     .services {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
       justify-content: center;
+      gap: 25px;
       max-width: 1200px;
       margin: auto;
     }
@@ -138,7 +137,7 @@
       border-radius: 10px;
       padding: 25px;
       max-width: 280px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .service-box img {
@@ -154,6 +153,40 @@
       color: white;
       border-radius: 25px;
       font-weight: bold;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .quote-imgs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .quote-imgs img {
+      width: 180px;
+      border-radius: 10px;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 600px;
     }
 
     .footer {
@@ -174,25 +207,10 @@
       height: 35px;
     }
 
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .quote-imgs {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 25px;
-      flex-wrap: wrap;
-    }
-
-    .quote-imgs img {
-      width: 180px;
-      border-radius: 10px;
+    @media (max-width: 600px) {
+      .top-right {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -200,82 +218,84 @@
 
   <header>
     <div class="top-left">
-      <img src="logo.PNG" alt="Logo">
+      <img src="logo.PNG" alt="Brush and Broom LLP Logo" />
     </div>
     <div class="top-center">
       <h1>Brush & Broom LLP</h1>
     </div>
-    <div class="top-right">
+    <nav class="top-right" aria-label="Primary">
       <a href="tel:5092004873" class="service-top-btn pink-btn">Call Us</a>
       <a href="interior-painting.html" class="service-top-btn orange-btn">Interior</a>
       <a href="exterior-painting.html" class="service-top-btn blue-btn">Exterior</a>
       <a href="move-cleaning.html" class="service-top-btn green-btn">Move-Out</a>
       <a href="power-washing.html" class="service-top-btn sky-btn">Power Wash</a>
-    </div>
+    </nav>
   </header>
 
-  <section class="hero">
-    <h2>Painting. Cleaning. Curb Appeal.</h2>
-    <p>We help Walla Walla homes and businesses shine inside and out with quality painting, cleaning, siding, flooring, and pressure washing.</p>
-    <a href="#quote" class="cta">Get a Free Estimate</a>
-  </section>
+  <main>
+    <section class="hero">
+      <h2>Painting. Cleaning. Curb Appeal.</h2>
+      <p>We help Walla Walla homes and businesses shine inside and out with quality painting, cleaning, siding, flooring, and pressure washing.</p>
+      <a href="#quote" class="cta">Get a Free Estimate</a>
+    </section>
 
-  <section class="section-light" id="services">
-    <h2>What We Do</h2>
-    <div class="services">
-      <div class="service-box">
-        <img src="interior-paint-icon.PNG" alt="Interior Painting">
-        <a href="interior-painting.html" class="orange-btn">Interior Painting</a>
-        <p>Walls, ceilings, trim — precision work that transforms your space.</p>
+    <section class="section-light" id="services">
+      <h2>What We Do</h2>
+      <div class="services">
+        <div class="service-box">
+          <img src="interior-paint-icon.PNG" alt="Interior Painting Icon" />
+          <a href="interior-painting.html" class="orange-btn">Interior Painting</a>
+          <p>Walls, ceilings, trim — precision work that transforms your space.</p>
+        </div>
+        <div class="service-box">
+          <img src="exterior-paint-icon.png" alt="Exterior Painting Icon" />
+          <a href="exterior-painting.html" class="blue-btn">Exterior Painting</a>
+          <p>Bold colors and weatherproof finishes for serious curb appeal.</p>
+        </div>
+        <div class="service-box">
+          <img src="move-clean-icon.PNG" alt="Move-Out Cleaning Icon" />
+          <a href="move-cleaning.html" class="green-btn">Move-Out Cleaning</a>
+          <p>We deep clean so you can move on stress-free.</p>
+        </div>
+        <div class="service-box">
+          <img src="power-wash-icon.PNG" alt="Power Washing Icon" />
+          <a href="power-washing.html" class="sky-btn">Power Washing</a>
+          <p>Driveways, siding, decks — sparkling clean in no time.</p>
+        </div>
       </div>
-      <div class="service-box">
-        <img src="exterior-paint-icon.png" alt="Exterior Painting">
-        <a href="exterior-painting.html" class="blue-btn">Exterior Painting</a>
-        <p>Bold colors and weatherproof finishes for serious curb appeal.</p>
-      </div>
-      <div class="service-box">
-        <img src="move-clean-icon.PNG" alt="Move-Out Cleaning">
-        <a href="move-cleaning.html" class="green-btn">Move-Out Cleaning</a>
-        <p>We deep clean so you can move on stress-free.</p>
-      </div>
-      <div class="service-box">
-        <img src="power-wash-icon.PNG" alt="Power Washing">
-        <a href="power-washing.html" class="sky-btn">Power Washing</a>
-        <p>Driveways, siding, decks — sparkling clean in no time.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="quote">
-    <h2>Free Quote</h2>
-    <form style="max-width: 600px; margin: auto;">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
-      <button type="submit" class="cta">Send Message</button>
-    </form>
-    <div class="quote-imgs">
-      <img src="Interior painting.PNG" alt="Interior Monochromatic Accents" />
-      <img src="cleaning side by side.png" alt="Move-in/out Turnover Cleanings" />
-      <img src="Side by side before and after.png" alt="Exterior Make-overs and Refreshers" />
-    </div>
-  </section>
+    <section id="quote" class="section-dark">
+      <h2>Free Quote</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+      <div class="quote-imgs">
+        <img src="Interior painting.PNG" alt="Interior Accent Painting" />
+        <img src="cleaning side by side.png" alt="Turnover Cleaning Before and After" />
+        <img src="Side by side before and after.png" alt="Exterior Cleaning Results" />
+      </div>
+    </section>
 
-  <section class="section-light">
-    <h2>What Customers Say</h2>
-    <blockquote>"They were fast, professional, and made our whole house look amazing." – Jane R.</blockquote>
-    <hr />
-    <blockquote>"I can't believe how clean it was after they left. 10/10 would hire again." – Mike S.</blockquote>
-  </section>
+    <section class="section-light">
+      <h2>What Customers Say</h2>
+      <blockquote>"They were fast, professional, and made our whole house look amazing." – Jane R.</blockquote>
+      <hr />
+      <blockquote>"I can't believe how clean it was after they left. 10/10 would hire again." – Mike S.</blockquote>
+    </section>
+  </main>
 
   <footer class="footer">
-    <img src="logo.PNG" alt="Logo" style="height: 50px;"><br><br>
+    <img src="logo.PNG" alt="Company Logo" style="height: 50px;" /><br><br>
     <p>Follow Us:</p>
-    <div class="footer-icons">
-      <a href="https://www.facebook.com" target="_blank"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-      <a href="https://www.yelp.com" target="_blank"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-      <a href="https://www.nextdoor.com" target="_blank"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-      <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank"><img src="google_icon.PNG" alt="Google" /></a>
+    <div class="footer-icons" aria-label="Social media links">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://www.yelp.com" target="_blank" aria-label="Yelp"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://www.nextdoor.com" target="_blank" aria-label="Nextdoor"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://g.page/r/CczrjqYCPIx3EAE/review" target="_blank" aria-label="Google"><img src="google_icon.PNG" alt="Google Reviews" /></a>
     </div>
     <p>&copy; 2025 Brush & Broom LLP – All rights reserved.</p>
   </footer>
