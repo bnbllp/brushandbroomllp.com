@@ -196,37 +196,46 @@
       }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const colors = [
-        '#FF7A24', '#2499FF', '#28C76F', '#AA66CC', '#33CCCC', '#FF4081', 
-        '#00E5FF', '#FFD740', '#7C4DFF', '#FF5252', '#00C853', '#2962FF', 
-        '#FF6D00', '#D500F9', '#64DD17', '#0091EA', '#FF1744', '#00BFA5'
-      ];
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const colors = [
+      '#FF7A24', '#2499FF', '#28C76F', '#AA66CC', '#33CCCC', '#FF4081',
+      '#00E5FF', '#FFD740', '#7C4DFF', '#FF5252', '#00C853', '#2962FF',
+      '#FF6D00', '#D500F9', '#64DD17', '#0091EA', '#FF1744', '#00BFA5'
+    ];
 
-      // Random color function
-      function getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
-      }
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
 
-      // Assign random background colors to all nav links and buttons
-      const buttons = [...document.querySelectorAll('nav a, .cta-buttons a, .quote-form button')];
+    const buttons = [...document.querySelectorAll('nav a, .cta-buttons a, .quote-form button')];
+
+    function updateButtonColors() {
       buttons.forEach(btn => {
         const color = getRandomColor();
         btn.style.backgroundColor = color;
         btn.style.color = 'white';
-        btn.style.border = 'none';
-        btn.style.boxShadow = `0 3px 10px ${color}90`;
-        
-        btn.addEventListener('mouseenter', () => {
-          btn.style.filter = 'brightness(85%)';
-        });
-        btn.addEventListener('mouseleave', () => {
-          btn.style.filter = 'brightness(100%)';
-        });
+        btn.style.boxShadow = `0 3px 10px ${color}80`;
+      });
+    }
+
+    // Initial call
+    updateButtonColors();
+
+    // Update every 3 seconds
+    setInterval(updateButtonColors, 3000);
+
+    // Optional hover effect
+    buttons.forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        btn.style.filter = 'brightness(85%)';
+      });
+      btn.addEventListener('mouseleave', () => {
+        btn.style.filter = 'brightness(100%)';
       });
     });
-  </script>
+  });
+</script>
 </head>
 <body>
   <header>
