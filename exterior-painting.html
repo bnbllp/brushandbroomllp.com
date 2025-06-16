@@ -1,226 +1,89 @@
+<!-- exterior-painting.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Exterior painting services by Brush & Broom LLP in Walla Walla, WA. Freshen up your home's curb appeal today!" />
-  <meta name="keywords" content="Exterior painting, house painting, siding paint, Brush and Broom LLP, Walla Walla" />
-  <meta name="author" content="Brush & Broom LLP" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional exterior painting services in Walla Walla by Brush & Broom LLP. Reliable, clean, long-lasting finishes." />
+  <meta name="keywords" content="Exterior Painting, House Painting, Brush and Broom, Walla Walla Painter" />
   <title>Exterior Painting | Brush & Broom LLP – Walla Walla, WA</title>
-  <style>
-    :root {
-      --colors: #ff7a24, #28c76f, #2499ff, #aa66cc, #33cccc, #f44336, #ffc107, #3f51b5, #e91e63, #4caf50;
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111827;
-      color: #f9f9f9;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background-color: #0f172a;
-      padding: 20px;
-      border-bottom: 3px solid #2499ff;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-    header h1 {
-      font-size: 1.7em;
-      margin: 0;
-      flex-grow: 1;
-    }
-    .nav-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-    }
-    .nav-buttons a {
-      background-color: hsl(calc(360 * var(--i) / 10), 70%, 50%);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .nav-buttons a:hover {
-      background-color: white;
-      color: #111827;
-    }
-    h2 {
-      font-size: 2.6em;
-      text-align: center;
-      background: linear-gradient(to right, #28c76f, #2499ff, #ff7a24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 40px;
-    }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      animation: fadeIn 1.5s ease;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .cta, .back-home {
-      display: block;
-      width: max-content;
-      margin: 20px auto;
-      text-align: center;
-      font-weight: bold;
-      padding: 14px 28px;
-      text-decoration: none;
-      color: white;
-      border-radius: 30px;
-    }
-    .cta {
-      background-color: #28c76f;
-    }
-    .cta:hover {
-      background-color: #ff7a24;
-    }
-    .back-home {
-      background-color: #2499ff;
-    }
-    .back-home:hover {
-      background-color: #28c76f;
-    }
-    .quote-section {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 12px;
-      margin-top: 40px;
-    }
-    .quote-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1em;
-    }
-    .quote-form button {
-      background: #2499ff;
-      color: white;
-      border: none;
-      padding: 14px;
-      font-size: 1.1em;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .quote-form button:hover {
-      background: #ff7a24;
-    }
-    footer {
-      text-align: center;
-      background: #0f172a;
-      padding: 20px;
-      color: #ccc;
-      font-size: 0.9em;
-    }
-    footer a {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: bold;
-      margin: 5px;
-      text-decoration: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="colors.js" defer></script>
 </head>
 <body>
+  <div class="bg-slideshow"></div>
+
   <header>
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
     <h1>Brush & Broom LLP</h1>
-    <div class="nav-buttons">
-      <a href="index.html" style="--i:0;">Home</a>
-      <a href="interior-painting.html" style="--i:1;">Interior Painting</a>
-      <a href="deep-cleaning.html" style="--i:2;">Deep Cleaning</a>
-      <a href="move-cleaning.html" style="--i:3;">Move In/Out</a>
-      <a href="flooring.html" style="--i:4;">Flooring</a>
-      <a href="siding.html" style="--i:5;">Siding</a>
-      <a href="power-washing.html" style="--i:6;">Power Washing</a>
-    </div>
+    <nav>
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </nav>
   </header>
 
-  <main>
-    <h2>Exterior Painting</h2>
-    <p>
-      Want to boost your home's curb appeal? Our exterior painting services are perfect for homeowners looking to revitalize the look of their property.
-    </p>
-    <p>
-      We handle everything from prep and power washing to priming and painting. Whether it's siding, trim, porches, garages, or fences—we’ll make it shine.
-    </p>
-    <p>
-      Brush & Broom LLP uses weather-resistant paints and top-notch tools to ensure a beautiful, long-lasting finish.
-    </p>
+  <div class="logo-container">
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  </div>
 
-    <a href="#quote" class="cta">Get a Free Painting Quote</a>
-    <a href="index.html" class="back-home">← Back to Home</a>
+  <section class="hero">
+    <h2>Exterior Painting That Lasts</h2>
+    <p>We specialize in full exterior transformations – from prep to finish. Expect clean lines, durable coatings, and curb appeal that speaks for itself.</p>
+    <div class="cta-buttons">
+      <a href="#quote">Get a Free Estimate</a>
+      <a href="tel:5092004873">Call Us</a>
+    </div>
+  </section>
 
-    <section class="quote-section" id="quote">
-      <h2>Request an Exterior Painting Estimate</h2>
-      <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+  <section id="quote" class="quote-form">
+    <h3>Get Your Free Quote</h3>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <input type="email" name="email" placeholder="Email Address" />
+      <select name="services[]" multiple required>
+        <option value="Exterior Painting" selected>Exterior Painting</option>
+        <option value="Interior Painting">Interior Painting</option>
+        <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
+        <option value="Deep Cleaning">Deep Cleaning</option>
+        <option value="Power Washing">Power Washing</option>
+        <option value="Siding">Siding</option>
+        <option value="Flooring">Flooring</option>
+      </select>
+      <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
+      <button type="submit">Get Estimate</button>
+    </form>
+  </section>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
+  <section class="photo-showcase">
+    <h3>Before & After Results</h3>
+    <img src="Side by side before and after.png" alt="Exterior painting transformation" />
+    <img src="exterior2.jpg" alt="Fresh painted siding" />
+    <img src="exterior3.jpg" alt="Final coat and trim work" />
+  </section>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="Optional if using phone">
-
-        <label for="type">Type of Painting:</label>
-        <select id="type" name="type" required>
-          <option value="Full Exterior">Full Exterior</option>
-          <option value="Siding Only">Siding Only</option>
-          <option value="Trim Only">Trim Only</option>
-          <option value="Fences/Decks">Fences / Decks</option>
-        </select>
-
-        <label for="timeline">Timeline:</label>
-        <select id="timeline" name="timeline">
-          <option value="ASAP">ASAP</option>
-          <option value="1–2 weeks">1–2 Weeks</option>
-          <option value="1–2 months">1–2 Months</option>
-          <option value="Just looking">Just Getting Quotes</option>
-        </select>
-
-        <label for="comments">Comments or Special Instructions:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else..."></textarea>
-
-        <button type="submit">Submit Estimate Request</button>
-      </form>
-    </section>
-  </main>
+  <section class="testimonials">
+    <h3>What Our Customers Say</h3>
+    <blockquote>"Our home looks brand new after Brush & Broom painted it! Incredible attention to detail." – T. Nelson</blockquote>
+    <blockquote>"Affordable, fast, and professional. I’m so impressed with the quality." – R. Bryant</blockquote>
+  </section>
 
   <footer>
     <div>
-      <a href="tel:5092004873" style="background-color:#ff69b4; color:white;">📞 Call Us</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color:#33ccff; color:white;">📧 Email Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
     </div>
-    &copy; 2025 Brush & Broom LLP
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
 </body>
 </html>
