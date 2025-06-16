@@ -185,7 +185,16 @@
       width: 180px;
       border-radius: 10px;
     }
-
+/* Animation setup */
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.slide-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
     blockquote {
       font-style: italic;
       margin: 20px auto;
@@ -310,5 +319,21 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP – All rights reserved.</p>
   </footer>
+<script>
+  const slideElements = document.querySelectorAll('.slide-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  slideElements.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
