@@ -50,11 +50,6 @@
       border-bottom: 4px solid #28c76f;
     }
 
-    header img {
-      height: 60px;
-      margin-right: 15px;
-    }
-
     header h1 {
       font-size: 1.8em;
       margin: 0;
@@ -75,6 +70,18 @@
       text-decoration: none;
       color: white;
       display: inline-block;
+    }
+
+    .logo-container {
+      text-align: center;
+      padding: 20px 0 10px;
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 4px solid #28c76f;
+    }
+
+    .logo-container img {
+      height: 130px;
+      max-width: 90%;
     }
 
     .hero {
@@ -213,17 +220,7 @@
         flex-direction: column;
         align-items: flex-start;
       }
-.logo-container {
-  text-align: center;
-  padding: 20px 0 10px;
-  background: rgba(15, 23, 42, 0.85);
-  border-bottom: 4px solid #28c76f;
-}
 
-.logo-container img {
-  height: 130px;
-  max-width: 90%;
-}
       nav {
         justify-content: center;
         width: 100%;
@@ -269,14 +266,9 @@
 <body>
   <div class="bg-slideshow"></div>
 
- <header>
-  <h1>Brush & Broom LLP</h1>
-  <nav>...</nav>
-</header>
-
-<div class="logo-container">
-  <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
-</div>
+  <header>
+    <h1>Brush & Broom LLP</h1>
+    <nav>
       <a href="interior-painting.html">Interior Painting</a>
       <a href="exterior-painting.html">Exterior Painting</a>
       <a href="move-cleaning.html">Move In/Out Cleaning</a>
@@ -286,6 +278,10 @@
       <a href="siding.html">Siding</a>
     </nav>
   </header>
+
+  <div class="logo-container">
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  </div>
 
   <section class="hero">
     <h2>Painting. Cleaning. Power Washing. Flooring. Done Right.</h2>
