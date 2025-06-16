@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Flooring installation and repair services by Brush & Broom LLP. Vinyl plank, laminate, tile, and more in Walla Walla, WA." />
+  <meta name="keywords" content="Flooring installation, vinyl plank, laminate, tile floors, Brush and Broom LLP, Walla Walla flooring" />
+  <meta name="author" content="Brush & Broom LLP" />
+  <title>Flooring Services | Brush & Broom LLP</title>
+  <style>
+    :root {
+      --bg-dark: #111827;
+      --light: #f9f9f9;
+      --orange: #ff7a24;
+      --green: #28c76f;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--light);
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #0f172a;
+      border-bottom: 3px solid var(--green);
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    header h1 {
+      font-size: 1.6em;
+      margin: 0;
+      color: white;
+    }
+
+    .top-button-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .nav-button {
+      padding: 10px 18px;
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .nav-button:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    .call-button {
+      background-color: var(--orange);
+      color: white;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .call-button:hover {
+      background-color: var(--green);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 2.6em;
+      background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .cta, .back-home {
+      display: block;
+      width: max-content;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 30px auto 15px;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .cta {
+      background: var(--orange);
+    }
+
+    .cta:hover {
+      background: var(--green);
+    }
+
+    .back-home {
+      background: #2499ff;
+    }
+
+    .back-home:hover {
+      background: var(--green);
+    }
+
+    .quote-section {
+      background-color: #1e293b;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+
+    .quote-form select[multiple] {
+      height: 100px;
+    }
+
+    .quote-form button {
+      background: var(--green);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+
+    .quote-form button:hover {
+      background: var(--orange);
+    }
+
+    .radio-group label {
+      margin-right: 15px;
+    }
+
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: #aaa;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 60px;
+    }
+
+    footer a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    @media (max-width: 700px) {
+      h2 {
+        font-size: 2.2em;
+      }
+      header h1 {
+        font-size: 1.3em;
+      }
+      .top-button-nav {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+    <h1>Brush & Broom LLP</h1>
+    <a href="tel:5092004873" class="call-button">Call Us</a>
+  </header>
+
+  <nav class="top-button-nav">
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="interior-painting.html" class="nav-button">Interior</a>
+    <a href="exterior-painting.html" class="nav-button">Exterior</a>
+    <a href="move-cleaning.html" class="nav-button">Move-Out</a>
+    <a href="deep-cleaning.html" class="nav-button">Deep Clean</a>
+    <a href="power-washing.html" class="nav-button">Power Wash</a>
+    <a href="flooring.html" class="nav-button">Flooring</a>
+    <a href="siding.html" class="nav-button">Siding</a>
+  </nav>
+
+  <main>
+    <h2>Flooring Services</h2>
+    <p>We offer high-quality flooring installation and repair, including luxury vinyl plank (LVP), laminate, tile, and more. Whether you're renovating or updating one room, our expert team ensures a clean, precise job.</p>
+    <p>We handle subfloor prep, leveling, removal of old flooring, and installation with attention to detail and durable results. All our materials are selected to provide style, comfort, and long-lasting performance.</p>
+    <p>Let us transform your floors with craftsmanship you can stand on!</p>
+
+    <a href="#quote" class="cta">Request a Free Flooring Quote</a>
+    <a href="index.html" class="back-home">← Back to Home</a>
+
+    <section class="quote-section" id="quote">
+      <h2>Free Flooring Estimate</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Optional if using phone">
+
+        <label for="sqft">Approximate Square Footage:</label>
+        <input type="number" id="sqft" name="square_footage" placeholder="e.g. 800" required>
+
+        <label for="type">Type of Flooring:</label>
+        <select id="type" name="flooring_type" required>
+          <option value="">Select...</option>
+          <option value="Vinyl Plank (LVP)">Vinyl Plank (LVP)</option>
+          <option value="Laminate">Laminate</option>
+          <option value="Tile">Tile</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label>Preferred Contact Method:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contact_method" value="Phone Call"> Call</label>
+          <label><input type="radio" name="contact_method" value="Text"> Text</label>
+          <label><input type="radio" name="contact_method" value="Email"> Email</label>
+        </div>
+
+        <label for="timeline">Project Timeline:</label>
+        <select id="timeline" name="timeline">
+          <option value="ASAP">ASAP</option>
+          <option value="1–2 weeks">1–2 Weeks</option>
+          <option value="1–2 months">1–2 Months</option>
+          <option value="Just getting quotes">Just Getting Quotes</option>
+        </select>
+
+        <label for="comments">Comments or Special Requests:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..."></textarea>
+
+        <button type="submit">Get My Free Estimate</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" style="background-color: hotpink; color: white;">📞 Call Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color: #33ccff; color: white;">📧 Email Us</a>
+    </div>
+    &copy; 2025 Brush & Broom LLP
+  </footer>
+
+  <script>
+    const colors = [
+      '#ff7a24', '#2499ff', '#28c76f', '#aa66cc',
+      '#33cccc', '#ff4d4d', '#ffcc00', '#6f42c1',
+      '#20c997', '#fd7e14', '#17a2b8'
+    ];
+
+    const buttons = document.querySelectorAll('.nav-button');
+
+    function changeColors() {
+      buttons.forEach(btn => {
+        btn.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      changeColors();
+      setInterval(changeColors, 3000);
+    });
+  </script>
+</body>
+</html>
