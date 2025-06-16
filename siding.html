@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vinyl siding installation and replacement in Walla Walla, WA by Brush & Broom LLP." />
-  <meta name="keywords" content="siding, vinyl siding, house exterior, installation, replacement, Walla Walla" />
+  <meta name="description" content="Vinyl and Exterior Siding Services by Brush & Broom LLP in Walla Walla, WA" />
+  <meta name="keywords" content="siding, vinyl siding, exterior renovation, Walla Walla, Brush and Broom LLP" />
   <meta name="author" content="Brush & Broom LLP" />
-  <title>Siding | Brush & Broom LLP</title>
+  <title>Siding Services | Brush & Broom LLP</title>
   <style>
+    :root {
+      --text-light: #f9f9f9;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #f9f9f9;
-      background: rgba(15, 23, 42, 0.85);
+      color: var(--text-light);
       overflow-x: hidden;
     }
     .bg-slideshow {
@@ -31,32 +34,57 @@
       75%      { background-image: url('bg4.jpg'); }
     }
     header {
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.85);
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       border-bottom: 4px solid #28c76f;
     }
     header h1 {
+      font-size: 1.8em;
       margin: 0;
-      font-size: 2em;
-      color: #fff;
+      flex-grow: 1;
     }
-    .content {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    nav a {
+      padding: 10px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+    .logo-container {
       text-align: center;
+      padding: 20px 0 10px;
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 4px solid #28c76f;
     }
-    .content h2 {
+    .logo-container img {
+      height: 130px;
+      max-width: 90%;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      backdrop-filter: brightness(0.8);
+    }
+    .hero h2 {
       font-size: 2.5em;
       background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .content p {
+    .hero p {
       font-size: 1.2em;
-      line-height: 1.6;
-      margin: 20px 0;
+      max-width: 700px;
+      margin: 20px auto;
     }
     .cta-buttons {
       margin-top: 30px;
@@ -71,24 +99,108 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
+    }
+    footer {
+      text-align: center;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 25px 10px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .footer-contact {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      margin: 5px;
+    }
+    .social-icons img {
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(
+        "nav a, .cta-buttons a, .footer-contact"
+      );
+      const colors = [
+        "#FF7A24", "#2499FF", "#28C76F", "#AA66CC", "#33CCCC", "#FF4081",
+        "#00E5FF", "#FFD740", "#7C4DFF", "#FF5252", "#00C853", "#2962FF",
+        "#FF6D00", "#D500F9", "#64DD17", "#0091EA", "#FF1744", "#00BFA5",
+        "#E91E63", "#FF9800", "#4CAF50", "#3F51B5", "#795548", "#CDDC39"
+      ];
+      function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      function updateColors() {
+        buttons.forEach((btn) => {
+          const color = getRandomColor();
+          btn.style.backgroundColor = color;
+          btn.style.boxShadow = `0 3px 10px ${color}80`;
+        });
+      }
+      updateColors();
+      setInterval(updateColors, 3000);
+    });
+  </script>
 </head>
+
 <body>
   <div class="bg-slideshow"></div>
+
   <header>
     <h1>Brush & Broom LLP</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </nav>
   </header>
-  <section class="content">
-    <h2>Professional Siding Installation & Repairs</h2>
-    <p>Give your home the protection and curb appeal it deserves with our expert siding services. We specialize in vinyl siding installs, replacements, and repairs — built to handle the Walla Walla weather while boosting your home’s energy efficiency and value.</p>
-    <p>Whether you're upgrading old siding or building from scratch, our team delivers clean, long-lasting results. We work quickly, safely, and always with your satisfaction in mind.</p>
+
+  <div class="logo-container">
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  </div>
+
+  <section class="hero">
+    <h2>Expert Siding Installation & Repair</h2>
+    <p>Protect your home with durable, beautiful vinyl siding. We handle installations, repairs, and upgrades with expert precision.</p>
     <div class="cta-buttons">
       <a href="index.html#quote">Get a Free Estimate</a>
       <a href="tel:5092004873">Call Us</a>
     </div>
   </section>
+
+  <footer>
+    <div>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
 </body>
 </html>
