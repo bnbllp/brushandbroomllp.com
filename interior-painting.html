@@ -7,7 +7,6 @@
   <meta name="keywords" content="Interior Painting Walla Walla, wall painting, trim painting, ceiling painting, Brush and Broom LLP" />
   <meta name="author" content="Brush & Broom LLP" />
   <title>Interior Painting | Brush & Broom LLP – Walla Walla, WA</title>
-  <link rel="icon" href="favicon.ico" />
   <style>
     :root {
       --orange: #ff7a24;
@@ -71,6 +70,29 @@
     .call-button:hover {
       background-color: var(--green);
     }
+    .service-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 20px 10px;
+    }
+    .service-buttons a {
+      background-color: var(--orange);
+      padding: 12px 22px;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .service-buttons a:nth-child(2) { background-color: var(--blue); }
+    .service-buttons a:nth-child(3) { background-color: var(--green); }
+    .service-buttons a:nth-child(4) { background-color: #aa66cc; }
+    .service-buttons a:nth-child(5) { background-color: #33cccc; }
+    .service-buttons a:hover {
+      background-color: #ffffff11;
+    }
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -90,10 +112,9 @@
       line-height: 1.6;
       margin-bottom: 25px;
     }
-    .cta {
+    .cta, .back-home {
       display: block;
       width: max-content;
-      background: var(--orange);
       color: white;
       padding: 14px 30px;
       border-radius: 30px;
@@ -103,30 +124,22 @@
       text-align: center;
       transition: background 0.3s ease;
     }
+    .cta {
+      background: var(--orange);
+    }
     .cta:hover {
       background: var(--green);
     }
     .back-home {
-      display: block;
-      width: max-content;
       background: var(--blue);
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 10px auto 40px;
-      text-align: center;
-      transition: background 0.3s ease;
     }
     .back-home:hover {
       background: var(--green);
     }
-
     .quote-section {
       background-color: #1e293b;
-      padding: 40px 20px;
-      border-radius: 12px;
+      padding: 30px;
+      border-radius: 15px;
       margin-top: 40px;
     }
     .quote-form {
@@ -134,41 +147,33 @@
       flex-direction: column;
       gap: 15px;
     }
-    .quote-form label {
-      font-weight: bold;
-      margin-top: 10px;
-    }
     .quote-form input,
     .quote-form select,
     .quote-form textarea {
-      padding: 10px;
+      padding: 12px;
+      border-radius: 8px;
       border: none;
-      border-radius: 6px;
       font-size: 1em;
-      background-color: #f4f4f4;
-      color: #111;
     }
-    .radio-group {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
+    .quote-form select[multiple] {
+      height: 100px;
     }
     .quote-form button {
-      background-color: var(--orange);
+      background: var(--green);
       color: white;
-      font-weight: bold;
       border: none;
-      border-radius: 25px;
-      padding: 12px 25px;
-      font-size: 1em;
+      padding: 14px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1em;
       cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.3s ease;
     }
     .quote-form button:hover {
-      background-color: var(--green);
+      background: var(--orange);
     }
-
+    .radio-group label {
+      margin-right: 15px;
+    }
     footer {
       text-align: center;
       background: #0f172a;
@@ -176,6 +181,14 @@
       padding: 20px;
       font-size: 0.9em;
       margin-top: 60px;
+    }
+    footer a {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 5px;
     }
     @media (max-width: 700px) {
       h2 {
@@ -211,8 +224,16 @@
       <a href="deep-cleaning.html">Deep Cleaning</a>
       <a href="power-washing.html">Power Washing</a>
     </nav>
-    <a href="tel:5092004873" class="call-button" aria-label="Call Brush and Broom LLP">Call Us</a>
+    <a href="tel:5092004873" class="call-button">Call Us</a>
   </header>
+
+  <div class="service-buttons">
+    <a href="interior-painting.html">Interior Painting</a>
+    <a href="exterior-painting.html">Exterior Painting</a>
+    <a href="move-cleaning.html">Move-In/Out Cleaning</a>
+    <a href="deep-cleaning.html">Initial Deep Cleaning</a>
+    <a href="power-washing.html">Power Washing</a>
+  </div>
 
   <main>
     <h2>Interior Painting</h2>
@@ -220,32 +241,32 @@
       Our Interior Painting service covers walls, ceilings, trim, doors, and more. We use top-quality paints that are low odor and durable to give your home a fresh, clean look.
     </p>
     <p>
-      From detailed prep work — including patching, sanding, and priming — to the final coat, our experienced painters ensure smooth, flawless finishes that last. Whether updating one room or the entire interior, Brush & Broom LLP guarantees professionalism and respect for your home.
+      From detailed prep work — including patching, sanding, and priming — to the final coat, our experienced painters ensure smooth, flawless finishes that last.
     </p>
     <p>
-      Let us bring your vision to life with colors and finishes that enhance your living space.
+      Whether updating one room or the entire interior, Brush & Broom LLP guarantees professionalism and respect for your home.
     </p>
 
     <a href="#quote" class="cta">Request a Free Quote</a>
-    <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
+    <a href="index.html" class="back-home">← Back to Home</a>
 
     <section class="quote-section" id="quote">
       <h2>Get a Free Interior Painting Estimate</h2>
       <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required aria-label="Full Name">
+        <input type="text" id="name" name="name" required>
 
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Optional if using email" aria-label="Phone Number">
+        <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
 
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="Optional if using phone" aria-label="Email Address">
+        <input type="email" id="email" name="email" placeholder="Optional if using phone">
 
         <label for="sqft">Approximate Square Footage:</label>
-        <input type="number" id="sqft" name="square_footage" placeholder="e.g. 1200" required aria-label="Square Footage">
+        <input type="number" id="sqft" name="square_footage" placeholder="e.g. 1200" required>
 
         <label for="services">Interior Services Needed:</label>
-        <select id="services" name="services[]" multiple required aria-label="Interior Services Needed">
+        <select id="services" name="services[]" multiple required>
           <option value="Walls">Walls</option>
           <option value="Ceilings">Ceilings</option>
           <option value="Trim and Doors">Trim & Doors</option>
@@ -262,15 +283,15 @@
         </div>
 
         <label for="timeline">Project Timeline:</label>
-        <select id="timeline" name="timeline" aria-label="Project Timeline">
+        <select id="timeline" name="timeline">
           <option value="ASAP">ASAP</option>
-          <option value="1-2 weeks">1–2 Weeks</option>
-          <option value="1-2 months">1–2 Months</option>
+          <option value="1–2 weeks">1–2 Weeks</option>
+          <option value="1–2 months">1–2 Months</option>
           <option value="Just getting quotes">Just Getting Quotes</option>
         </select>
 
         <label for="comments">Comments or Special Requests:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..." aria-label="Additional Comments"></textarea>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..."></textarea>
 
         <button type="submit">Get My Free Estimate</button>
       </form>
@@ -279,12 +300,8 @@
 
   <footer>
     <div style="margin-bottom: 15px;">
-      <a href="tel:5092004873" style="background-color: hotpink; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
-        📞 Call Us: (509) 200-4873
-      </a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color: #33ccff; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
-        📧 Email Us
-      </a>
+      <a href="tel:5092004873" style="background-color: hotpink; color: white;">📞 Call Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color: #33ccff; color: white;">📧 Email Us</a>
     </div>
     &copy; 2025 Brush & Broom LLP
   </footer>
