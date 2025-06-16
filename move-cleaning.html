@@ -2,224 +2,311 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Move-In and Move-Out cleaning by Brush & Broom LLP in Walla Walla, WA." />
-  <meta name="keywords" content="move-out cleaning, move-in cleaning, apartment cleaning, Brush and Broom LLP, Walla Walla" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Move-in and move-out cleaning services in Walla Walla by Brush & Broom LLP. Thorough, fast, and professional." />
+  <meta name="keywords" content="move-in cleaning, move-out cleaning, rental cleaning, Brush and Broom LLP, Walla Walla WA" />
   <meta name="author" content="Brush & Broom LLP" />
-  <title>Move-In / Move-Out Cleaning | Brush & Broom LLP – Walla Walla, WA</title>
+  <title>Move-In/Out Cleaning | Brush & Broom LLP – Walla Walla, WA</title>
   <style>
     :root {
-      --colors: #ff7a24, #28c76f, #2499ff, #aa66cc, #33cccc, #f44336, #ffc107, #3f51b5, #e91e63, #4caf50;
+      --text-light: #f9f9f9;
     }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111827;
-      color: #f9f9f9;
+      color: var(--text-light);
+      overflow-x: hidden;
+      background: #0f172a;
+    }
+    .bg-slideshow {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      animation: slideBg 24s infinite ease-in-out;
+    }
+    @keyframes slideBg {
+      0%, 100% { background-image: url('bg1.jpg'); }
+      25%      { background-image: url('bg2.jpg'); }
+      50%      { background-image: url('bg3.jpg'); }
+      75%      { background-image: url('bg4.jpg'); }
     }
     header {
+      background: rgba(15, 23, 42, 0.85);
+      padding: 20px;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       justify-content: space-between;
-      background-color: #0f172a;
-      padding: 20px;
-      border-bottom: 3px solid #28c76f;
-    }
-    header img {
-      height: 60px;
-      margin-right: 15px;
+      flex-wrap: wrap;
+      border-bottom: 4px solid #2499ff;
     }
     header h1 {
-      font-size: 1.7em;
+      font-size: 1.8em;
       margin: 0;
       flex-grow: 1;
     }
-    .nav-buttons {
+    nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
     }
-    .nav-buttons a {
-      background-color: hsl(calc(360 * var(--i) / 10), 70%, 50%);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
+    nav a {
+      padding: 10px 16px;
+      border-radius: 25px;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s ease;
+      color: white;
+      background-color: #2499ff;
+      box-shadow: 0 3px 10px #2499ff80;
+      transition: background-color 0.3s ease;
     }
-    .nav-buttons a:hover {
-      background-color: white;
-      color: #111827;
+    nav a:hover {
+      background-color: #1c6db8;
     }
-    h2 {
-      font-size: 2.6em;
+    nav a[aria-current="page"] {
+      background-color: #1c6db8;
+      pointer-events: none;
+    }
+    .logo-container {
       text-align: center;
-      background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 40px;
+      padding: 20px 0 10px;
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 4px solid #2499ff;
+    }
+    .logo-container img {
+      height: 130px;
+      max-width: 90%;
     }
     main {
       max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      animation: fadeIn 1.5s ease;
+      margin: 40px auto 80px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 30px 20px;
+      border-radius: 15px;
     }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    .cta, .back-home {
-      display: block;
-      width: max-content;
-      margin: 20px auto;
+    main h2 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #28c76f, #ff7a24, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       text-align: center;
-      font-weight: bold;
+    }
+    main p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: var(--text-light);
+      text-align: center;
+    }
+    .service-details {
+      margin-bottom: 35px;
+    }
+    .service-details h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border-left: 5px solid #2499ff;
+      padding-left: 10px;
+    }
+    .service-details ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      color: var(--text-light);
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .cta-buttons a {
       padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
       text-decoration: none;
       color: white;
-      border-radius: 30px;
-    }
-    .cta {
-      background-color: #ff7a24;
-    }
-    .cta:hover {
-      background-color: #28c76f;
-    }
-    .back-home {
       background-color: #2499ff;
+      box-shadow: 0 3px 10px #2499ff80;
+      transition: background-color 0.3s ease;
     }
-    .back-home:hover {
-      background-color: #28c76f;
-    }
-    .quote-section {
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 12px;
-      margin-top: 40px;
+    .cta-buttons a:hover {
+      background-color: #1c6db8;
     }
     .quote-form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    .quote-form h3 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
     }
     .quote-form input,
-    .quote-form select,
-    .quote-form textarea {
+    .quote-form textarea,
+    .quote-form select {
+      width: 100%;
       padding: 12px;
+      margin-bottom: 15px;
       border-radius: 8px;
       border: none;
       font-size: 1em;
     }
     .quote-form button {
-      background: #28c76f;
-      color: white;
-      border: none;
       padding: 14px;
-      font-size: 1.1em;
       font-weight: bold;
+      font-size: 1.1em;
       border-radius: 8px;
       cursor: pointer;
+      background-color: #2499ff;
+      color: white;
+      border: none;
+      box-shadow: 0 3px 10px #2499ff80;
+      transition: background-color 0.3s ease;
+      width: 100%;
     }
     .quote-form button:hover {
-      background: #ff7a24;
+      background-color: #1c6db8;
     }
     footer {
       text-align: center;
-      background: #0f172a;
-      padding: 20px;
-      color: #ccc;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 25px 10px;
       font-size: 0.9em;
+      color: #ccc;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
-    footer a {
+    .footer-contact {
       display: inline-block;
-      padding: 10px 18px;
-      border-radius: 25px;
+      padding: 12px 24px;
+      border-radius: 30px;
       font-weight: bold;
-      margin: 5px;
       text-decoration: none;
+      color: white;
+      margin: 5px;
+      background-color: #2499ff;
+      box-shadow: 0 3px 10px #2499ff80;
+      transition: background-color 0.3s ease;
+    }
+    .footer-contact:hover {
+      background-color: #1c6db8;
+    }
+    .social-icons img {
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    .social-icons a {
+      display: inline-block;
+    }
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
+      main {
+        margin: 40px 10px 100px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="bg-slideshow"></div>
+
   <header>
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
     <h1>Brush & Broom LLP</h1>
-    <div class="nav-buttons">
-      <a href="index.html" style="--i:0;">Home</a>
-      <a href="interior-painting.html" style="--i:1;">Interior Painting</a>
-      <a href="exterior-painting.html" style="--i:2;">Exterior Painting</a>
-      <a href="deep-cleaning.html" style="--i:3;">Deep Cleaning</a>
-      <a href="flooring.html" style="--i:4;">Flooring</a>
-      <a href="siding.html" style="--i:5;">Siding</a>
-      <a href="power-washing.html" style="--i:6;">Power Washing</a>
-    </div>
+    <nav>
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html" aria-current="page">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </nav>
   </header>
+
+  <div class="logo-container">
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  </div>
 
   <main>
     <h2>Move-In / Move-Out Cleaning</h2>
-    <p>
-      Our Move-In and Move-Out cleaning services are designed to help renters, landlords, and homeowners leave or enter a home with a fresh start.
-    </p>
-    <p>
-      Whether you're moving out and want your deposit back, or just bought a new place and want it spotless before settling in—we’ve got you covered.
-    </p>
-    <p>
-      We deep clean kitchens, bathrooms, floors, windows, and everything in between to ensure your space looks and feels brand new.
-    </p>
+    <p>We make sure your place is spotless before you move in or after you move out. Landlords, tenants, and property managers count on Brush & Broom LLP for reliable, professional cleaning that leaves a great impression.</p>
 
-    <a href="#quote" class="cta">Get a Free Cleaning Quote</a>
-    <a href="index.html" class="back-home">← Back to Home</a>
+    <div class="service-details">
+      <h3>Our Move Cleaning Includes:</h3>
+      <ul>
+        <li>Thorough cleaning of all rooms, surfaces, and floors</li>
+        <li>Inside cabinets, drawers, closets, and appliances</li>
+        <li>Dusting baseboards, blinds, vents, and light fixtures</li>
+        <li>Sanitizing bathrooms and kitchens from top to bottom</li>
+        <li>Removal of trash, cobwebs, and grime</li>
+      </ul>
+    </div>
 
-    <section class="quote-section" id="quote">
-      <h2>Request a Move-In / Move-Out Estimate</h2>
-      <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="service-details">
+      <h3>Who Needs It?</h3>
+      <ul>
+        <li>Tenants wanting to secure a deposit return</li>
+        <li>Landlords preparing units for new renters</li>
+        <li>Homeowners before or after a big move</li>
+        <li>Realtors staging a clean home for sale</li>
+      </ul>
+    </div>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
+    <div class="cta-buttons">
+      <a href="#quote">Get a Free Estimate</a>
+      <a href="tel:5092004873">Call Us</a>
+    </div>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" placeholder="Optional if using phone">
-
-        <label for="cleaning-type">Cleaning Type:</label>
-        <select id="cleaning-type" name="cleaning-type" required>
-          <option value="Move-In">Move-In Cleaning</option>
-          <option value="Move-Out">Move-Out Cleaning</option>
-          <option value="Both">Both</option>
+    <section id="quote" class="quote-form">
+      <h3>Get Your Free Quote</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" />
+        <input type="email" name="email" placeholder="Email Address" />
+        <select name="services[]" multiple required aria-label="Select services">
+          <option value="Interior Painting">Interior Painting</option>
+          <option value="Exterior Painting">Exterior Painting</option>
+          <option value="Move In/Out Cleaning" selected>Move In/Out Cleaning</option>
+          <option value="Initial Deep Cleaning">Deep Cleaning</option>
+          <option value="Power Washing">Power Washing</option>
+          <option value="Vinyl Siding">Siding</option>
+          <option value="Flooring">Flooring</option>
         </select>
-
-        <label for="timeline">Timeline:</label>
-        <select id="timeline" name="timeline">
-          <option value="ASAP">ASAP</option>
-          <option value="1–2 weeks">1–2 Weeks</option>
-          <option value="1–2 months">1–2 Months</option>
-          <option value="Just looking">Just Getting Quotes</option>
-        </select>
-
-        <label for="comments">Comments or Special Instructions:</label>
-        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else..."></textarea>
-
-        <button type="submit">Submit Estimate Request</button>
+        <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
+        <button type="submit">Get Estimate</button>
       </form>
     </section>
   </main>
 
   <footer>
     <div>
-      <a href="tel:5092004873" style="background-color:#ff69b4; color:white;">📞 Call Us</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color:#33ccff; color:white;">📧 Email Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
     </div>
-    &copy; 2025 Brush & Broom LLP
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
 </body>
 </html>
