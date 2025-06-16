@@ -182,16 +182,53 @@
 
     <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
 
-    <section id="quote" style="margin-top: 40px;">
-      <h2>Request a Quote</h2>
-      <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain" style="max-width: 500px; margin: 20px auto; text-align: left;">
-        <input type="text" name="Name" placeholder="Your Name" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
-        <input type="email" name="Email" placeholder="Your Email" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
-        <input type="tel" name="Phone" placeholder="Phone Number" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;" />
-        <textarea name="Message" rows="5" placeholder="Tell us what you need…" required style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #444; background: #111; color: white;"></textarea>
-        <button type="submit" style="background: var(--blue); color: white; padding: 12px 20px; border: none; border-radius: 6px; font-size: 1em; cursor: pointer;">Send</button>
-      </form>
-    </section>
+   <section class="quote-section">
+  <h2>Get a Free Interior Painting Estimate</h2>
+  <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
+    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Optional if using phone">
+
+    <label for="sqft">Approximate Square Footage:</label>
+    <input type="number" id="sqft" name="square_footage" placeholder="e.g. 1200" required>
+
+    <label for="services">Interior Services Needed:</label>
+    <select id="services" name="services[]" multiple required>
+      <option value="Walls">Walls</option>
+      <option value="Ceilings">Ceilings</option>
+      <option value="Trim and Doors">Trim & Doors</option>
+      <option value="Accent Walls">Accent Walls</option>
+      <option value="Cabinet Painting">Cabinets</option>
+      <option value="Drywall Repair">Drywall Repair</option>
+    </select>
+
+    <label for="contact-method">Preferred Contact Method:</label>
+    <div class="radio-group">
+      <label><input type="radio" name="contact_method" value="Phone Call"> Call</label>
+      <label><input type="radio" name="contact_method" value="Text"> Text</label>
+      <label><input type="radio" name="contact_method" value="Email"> Email</label>
+    </div>
+
+    <label for="timeline">Project Timeline:</label>
+    <select id="timeline" name="timeline">
+      <option value="ASAP">ASAP</option>
+      <option value="1–2 weeks">1–2 Weeks</option>
+      <option value="1–2 months">1–2 Months</option>
+      <option value="Just getting quotes">Just Getting Quotes</option>
+    </select>
+
+    <label for="comments">Comments or Special Requests:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..."></textarea>
+
+    <button type="submit">Get My Free Estimate</button>
+  </form>
+</section>
   </main>
 
 <footer>
