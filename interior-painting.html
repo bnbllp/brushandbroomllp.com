@@ -7,6 +7,7 @@
   <meta name="keywords" content="Interior Painting Walla Walla, wall painting, trim painting, ceiling painting, Brush and Broom LLP" />
   <meta name="author" content="Brush & Broom LLP" />
   <title>Interior Painting | Brush & Broom LLP – Walla Walla, WA</title>
+  <link rel="icon" href="favicon.ico" />
   <style>
     :root {
       --orange: #ff7a24;
@@ -121,6 +122,53 @@
     .back-home:hover {
       background: var(--green);
     }
+
+    .quote-section {
+      background-color: #1e293b;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin-top: 40px;
+    }
+    .quote-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .quote-form label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      background-color: #f4f4f4;
+      color: #111;
+    }
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .quote-form button {
+      background-color: var(--orange);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease;
+    }
+    .quote-form button:hover {
+      background-color: var(--green);
+    }
+
     footer {
       text-align: center;
       background: #0f172a;
@@ -179,68 +227,66 @@
     </p>
 
     <a href="#quote" class="cta">Request a Free Quote</a>
-
     <a href="index.html" class="back-home" aria-label="Back to Home Page">← Back to Home</a>
 
-   <section class="quote-section">
-  <h2>Get a Free Interior Painting Estimate</h2>
-  <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
-    
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required>
+    <section class="quote-section" id="quote">
+      <h2>Get a Free Interior Painting Estimate</h2>
+      <form action="https://formspree.io/f/yourformid" method="POST" class="quote-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required aria-label="Full Name">
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" placeholder="Optional if using email">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional if using email" aria-label="Phone Number">
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" placeholder="Optional if using phone">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Optional if using phone" aria-label="Email Address">
 
-    <label for="sqft">Approximate Square Footage:</label>
-    <input type="number" id="sqft" name="square_footage" placeholder="e.g. 1200" required>
+        <label for="sqft">Approximate Square Footage:</label>
+        <input type="number" id="sqft" name="square_footage" placeholder="e.g. 1200" required aria-label="Square Footage">
 
-    <label for="services">Interior Services Needed:</label>
-    <select id="services" name="services[]" multiple required>
-      <option value="Walls">Walls</option>
-      <option value="Ceilings">Ceilings</option>
-      <option value="Trim and Doors">Trim & Doors</option>
-      <option value="Accent Walls">Accent Walls</option>
-      <option value="Cabinet Painting">Cabinets</option>
-      <option value="Drywall Repair">Drywall Repair</option>
-    </select>
+        <label for="services">Interior Services Needed:</label>
+        <select id="services" name="services[]" multiple required aria-label="Interior Services Needed">
+          <option value="Walls">Walls</option>
+          <option value="Ceilings">Ceilings</option>
+          <option value="Trim and Doors">Trim & Doors</option>
+          <option value="Accent Walls">Accent Walls</option>
+          <option value="Cabinet Painting">Cabinets</option>
+          <option value="Drywall Repair">Drywall Repair</option>
+        </select>
 
-    <label for="contact-method">Preferred Contact Method:</label>
-    <div class="radio-group">
-      <label><input type="radio" name="contact_method" value="Phone Call"> Call</label>
-      <label><input type="radio" name="contact_method" value="Text"> Text</label>
-      <label><input type="radio" name="contact_method" value="Email"> Email</label>
-    </div>
+        <label>Preferred Contact Method:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="contact_method" value="Phone Call"> Call</label>
+          <label><input type="radio" name="contact_method" value="Text"> Text</label>
+          <label><input type="radio" name="contact_method" value="Email"> Email</label>
+        </div>
 
-    <label for="timeline">Project Timeline:</label>
-    <select id="timeline" name="timeline">
-      <option value="ASAP">ASAP</option>
-      <option value="1–2 weeks">1–2 Weeks</option>
-      <option value="1–2 months">1–2 Months</option>
-      <option value="Just getting quotes">Just Getting Quotes</option>
-    </select>
+        <label for="timeline">Project Timeline:</label>
+        <select id="timeline" name="timeline" aria-label="Project Timeline">
+          <option value="ASAP">ASAP</option>
+          <option value="1-2 weeks">1–2 Weeks</option>
+          <option value="1-2 months">1–2 Months</option>
+          <option value="Just getting quotes">Just Getting Quotes</option>
+        </select>
 
-    <label for="comments">Comments or Special Requests:</label>
-    <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..."></textarea>
+        <label for="comments">Comments or Special Requests:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Tell us anything else about your project..." aria-label="Additional Comments"></textarea>
 
-    <button type="submit">Get My Free Estimate</button>
-  </form>
-</section>
+        <button type="submit">Get My Free Estimate</button>
+      </form>
+    </section>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" style="background-color: hotpink; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
-      📞 Call Us: (509) 200-4873
-    </a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color: #33ccff; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
-      📧 Email Us
-    </a>
-  </div>
-  &copy; 2025 Brush & Broom LLP
-</footer>
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" style="background-color: hotpink; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
+        📞 Call Us: (509) 200-4873
+      </a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" style="background-color: #33ccff; color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">
+        📧 Email Us
+      </a>
+    </div>
+    &copy; 2025 Brush & Broom LLP
+  </footer>
 </body>
 </html>
