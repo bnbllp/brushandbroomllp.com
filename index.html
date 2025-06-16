@@ -19,18 +19,13 @@
       --light: #ffffff;
       --gray: #f2f2f2;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: var(--bg-dark);
       color: var(--light);
+      line-height: 1.6;
     }
-
     header {
       display: flex;
       flex-wrap: wrap;
@@ -40,140 +35,84 @@
       background-color: var(--bg-dark);
       border-bottom: 3px solid var(--green);
     }
-
-    header img {
-      height: 60px;
-    }
-
-    .top-left {
-      display: flex;
-      align-items: center;
-    }
-
-    .top-center {
-      flex: 1;
-      text-align: center;
-    }
-
+    header img { height: 60px; }
+    .top-left { display: flex; align-items: center; }
+    .top-center { flex: 1; text-align: center; }
     .top-center h1 {
       font-size: 1.5em;
-      margin: 0;
       color: var(--light);
-      user-select: none;
     }
-
     nav.top-right {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
-
     .service-top-btn {
       text-decoration: none;
       font-weight: 700;
       padding: 8px 14px;
       border-radius: 20px;
-      color: white;
       font-size: 0.9em;
+      color: white;
       transition: background-color 0.3s ease;
-      user-select: none;
     }
-
     .orange-btn { background: var(--orange); }
     .blue-btn { background: var(--blue); }
     .green-btn { background: var(--green); }
     .pink-btn { background: var(--pink); }
     .sky-btn { background: var(--skyblue); }
-
-    .service-top-btn:hover {
-      opacity: 0.85;
+    .estimate-button {
+      background: white;
+      color: black;
+      font-weight: 700;
+      border-radius: 20px;
+      padding: 8px 14px;
+      text-decoration: none;
     }
-
-    main {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
     .hero {
       text-align: center;
       padding: 60px 20px 30px;
-      user-select: none;
     }
-
     .hero h2 {
       font-size: 2.8em;
       background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
-      margin-bottom: 20px;
     }
-
     .hero p {
       font-size: 1.2em;
-      margin-bottom: 20px;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.4;
+      margin: 0 auto 20px;
     }
-
-    .cta {
+    .cta, .text-btn {
       display: inline-block;
       margin-top: 15px;
       padding: 12px 30px;
       border-radius: 30px;
       font-weight: 700;
       text-decoration: none;
-      border: 2px solid white;
-      background-color: var(--orange);
       color: white;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-      user-select: none;
-    }
-
-    .cta:hover {
-      background-color: var(--green);
-    }
-
-    .text-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-weight: 700;
-      text-decoration: none;
       border: 2px solid white;
-      background-color: var(--blue);
-      color: white;
       box-shadow: 0 0 12px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-      user-select: none;
     }
-
-    .text-btn:hover {
-      background-color: var(--skyblue);
-    }
+    .cta { background-color: var(--orange); }
+    .cta:hover { background-color: var(--green); }
+    .text-btn { background-color: var(--blue); }
+    .text-btn:hover { background-color: var(--skyblue); }
 
     .section-light {
       background-color: var(--gray);
       color: #111;
       padding: 60px 20px;
       text-align: center;
-      user-select: none;
     }
-
     .services {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 25px;
-      max-width: 1200px;
-      margin: 20px auto 0 auto;
     }
-
     .service-box {
       background: white;
       color: black;
@@ -181,30 +120,24 @@
       padding: 25px;
       max-width: 280px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
-      user-select: none;
     }
-
     .service-box:hover {
       transform: scale(1.03);
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-
     .service-box img {
       height: 60px;
       margin-bottom: 10px;
     }
-
     .service-box a {
       display: inline-block;
-      margin: 10px 0 15px 0;
+      margin: 10px 0;
       padding: 10px 20px;
-      text-decoration: none;
-      color: white;
       border-radius: 25px;
       font-weight: 700;
-      user-select: none;
+      text-decoration: none;
+      color: white;
     }
 
     .section-dark {
@@ -212,9 +145,7 @@
       color: var(--light);
       padding: 60px 20px;
       text-align: center;
-      user-select: none;
     }
-
     form {
       max-width: 650px;
       margin: 30px auto;
@@ -222,12 +153,8 @@
       background: #1e1e1e;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      color: white;
     }
-
-    form input,
-    form textarea,
-    form select {
+    form input, form textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 15px;
@@ -235,65 +162,28 @@
       border-radius: 8px;
       background: #2a2a2a;
       color: white;
-      font-size: 1em;
     }
-
-    form textarea {
-      resize: vertical;
-    }
-
-    form fieldset {
-      margin: 20px 0;
-      padding: 15px;
-      border: 1px solid #555;
-      border-radius: 10px;
-      background: #2a2a2a;
-      color: white;
-    }
-
-    form legend {
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 0.95em;
-      cursor: pointer;
-      user-select: none;
-    }
-
     form button {
       width: 100%;
-      font-size: 1.1em;
-      font-weight: 700;
       padding: 14px;
-      border: none;
       border-radius: 30px;
       background-color: var(--orange);
       color: white;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      user-select: none;
+      font-weight: 700;
+      border: none;
     }
-
-    form button:hover {
-      background-color: var(--green);
-    }
+    form button:hover { background-color: var(--green); }
 
     .quote-imgs {
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin: 30px auto 0 auto;
+      margin-top: 30px;
       flex-wrap: wrap;
     }
-
     .quote-imgs img {
       width: 180px;
       border-radius: 10px;
-      user-select: none;
     }
 
     blockquote {
@@ -301,12 +191,6 @@
       margin: 20px auto;
       max-width: 600px;
       color: var(--gray);
-      user-select: none;
-    }
-
-    section > h2 {
-      margin-bottom: 25px;
-      font-weight: 800;
     }
 
     .footer {
@@ -314,63 +198,27 @@
       background-color: var(--bg-dark);
       text-align: center;
       color: #ccc;
-      user-select: none;
     }
-
     .footer-icons {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin: 20px 0 40px 0;
+      margin: 20px 0 40px;
     }
-
     .footer-icons a img {
       height: 35px;
       filter: brightness(0) invert(1);
-      transition: filter 0.3s ease;
     }
-
     .footer-icons a:hover img {
       filter: brightness(0.7) invert(0.8);
     }
-
-    .footer img {
-      height: 100px;
-      margin-bottom: 20px;
-      user-select: none;
-    }
-
     @media (max-width: 768px) {
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .hero h2 {
-        font-size: 2em;
-      }
-
-      .top-center h1 {
-        font-size: 1.2em;
-      }
-
-      form {
-        padding: 20px;
-      }
-
-      .quote-imgs img {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      nav.top-right {
-        justify-content: center;
-      }
+      .services { flex-direction: column; align-items: center; }
+      .hero h2 { font-size: 2em; }
     }
   </style>
 </head>
 <body>
-
   <header>
     <div class="top-left">
       <img src="logo.PNG" alt="Brush and Broom LLP Logo" />
@@ -378,74 +226,72 @@
     <div class="top-center">
       <h1>Brush & Broom LLP</h1>
     </div>
-    <nav class="top-right" aria-label="Primary navigation">
+    <nav class="top-right">
       <a href="interior-painting.html" class="service-top-btn orange-btn">Interior</a>
       <a href="exterior-painting.html" class="service-top-btn blue-btn">Exterior</a>
       <a href="move-cleaning.html" class="service-top-btn green-btn">Move-Out</a>
       <a href="power-washing.html" class="service-top-btn sky-btn">Power Wash</a>
       <a href="deep-cleaning.html" class="service-top-btn pink-btn">Deep Cleaning</a>
-      <a href="estimate.html" class="estimate-button">Get Your Free Estimate</a>
+      <a href="#quote" class="estimate-button">Get Your Free Estimate</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" role="banner">
+    <section class="hero">
       <h2>Painting. Cleaning. Curb Appeal.</h2>
       <p>We help Walla Walla homes and businesses shine inside and out with quality painting, cleaning, siding, flooring, and pressure washing.</p>
       <a href="#quote" class="cta">Get a Free Estimate</a><br />
       <a href="tel:5092004873" class="text-btn">Call or Text Us</a>
     </section>
 
-    <section class="section-light" id="services" role="region" aria-labelledby="services-heading">
-      <h2 id="services-heading">What We Do</h2>
+    <section class="section-light" id="services">
+      <h2>What We Do</h2>
       <div class="services">
-        <div class="service-box" role="article" aria-label="Interior Painting Service">
+        <div class="service-box">
           <img src="interior-paint-icon.PNG" alt="Interior Painting Icon" />
-          <a href="interior-painting.html" class="orange-btn" aria-describedby="desc1">Interior Painting</a>
-          <p id="desc1">Walls, ceilings, trim — precision work that transforms your space.</p>
+          <a href="interior-painting.html" class="orange-btn">Interior Painting</a>
+          <p>Walls, ceilings, trim — precision work that transforms your space.</p>
         </div>
-        <div class="service-box" role="article" aria-label="Exterior Painting Service">
+        <div class="service-box">
           <img src="exterior-paint-icon.png" alt="Exterior Painting Icon" />
-          <a href="exterior-painting.html" class="blue-btn" aria-describedby="desc2">Exterior Painting</a>
-          <p id="desc2">Bold colors and weatherproof finishes for serious curb appeal.</p>
+          <a href="exterior-painting.html" class="blue-btn">Exterior Painting</a>
+          <p>Bold colors and weatherproof finishes for serious curb appeal.</p>
         </div>
-        <div class="service-box" role="article" aria-label="Move-Out Cleaning Service">
+        <div class="service-box">
           <img src="move-clean-icon.PNG" alt="Move-Out Cleaning Icon" />
-          <a href="move-cleaning.html" class="green-btn" aria-describedby="desc3">Move-Out Cleaning</a>
-          <p id="desc3">We deep clean so you can move on stress-free.</p>
+          <a href="move-cleaning.html" class="green-btn">Move-Out Cleaning</a>
+          <p>We deep clean so you can move on stress-free.</p>
         </div>
-        <div class="service-box" role="article" aria-label="Power Washing Service">
+        <div class="service-box">
           <img src="power-wash-icon.PNG" alt="Power Washing Icon" />
-          <a href="power-washing.html" class="sky-btn" aria-describedby="desc4">Power Washing</a>
-          <p id="desc4">Driveways, siding, decks — sparkling clean in no time.</p>
+          <a href="power-washing.html" class="sky-btn">Power Washing</a>
+          <p>Driveways, siding, decks — sparkling clean in no time.</p>
         </div>
-        <div class="service-box" role="article" aria-label="Deep Cleaning Service">
+        <div class="service-box">
           <img src="deep-clean-icon.PNG" alt="Deep Cleaning Icon" />
-          <a href="deep-cleaning.html" class="pink-btn" aria-describedby="desc5">Deep Cleaning</a>
-          <p id="desc5">Thorough cleaning from top to bottom — ideal for any season.</p>
+          <a href="deep-cleaning.html" class="pink-btn">Deep Cleaning</a>
+          <p>Thorough cleaning from top to bottom — ideal for any season.</p>
         </div>
       </div>
     </section>
 
-    <section id="quote" class="section-dark" role="region" aria-labelledby="quote-heading">
-      <h2 id="quote-heading">Get a Free Quote</h2>
-
-      <form aria-label="Contact form to request a free quote" method="post" action="#">
-        <input type="text" name="name" placeholder="Your Full Name" required aria-required="true" />
-        <input type="email" name="email" placeholder="Your Email Address" required aria-required="true" />
+    <section id="quote" class="section-dark">
+      <h2>Get a Free Quote</h2>
+      <form method="post" action="#">
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Your Email Address" required />
         <input type="tel" name="phone" placeholder="Phone Number" />
-        <textarea name="message" rows="5" placeholder="Tell us about your project..." required aria-required="true"></textarea>
-        <button type="submit" class="cta">Send Message</button>
+        <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit">Send Message</button>
       </form>
-
-      <div class="quote-imgs" aria-label="Project photos">
+      <div class="quote-imgs">
         <img src="Interior painting.PNG" alt="Interior Accent Painting" />
         <img src="cleaning side by side.png" alt="Turnover Cleaning Before and After" />
         <img src="Side by side before and after.png" alt="Exterior Cleaning Results" />
       </div>
     </section>
 
-    <section aria-label="Customer testimonials" style="padding: 60px 20px; text-align: center; color: var(--light);">
+    <section style="text-align: center; color: white; padding: 60px 20px;">
       <h2>What Customers Are Saying</h2>
       <blockquote>“They tackled every inch of our home like pros. It looked brand new when they were done. Highly recommend!” — Shernie W.</blockquote>
       <blockquote>“Attention to detail and clear communication. They made our home feel fresh again.” — Jerry C.</blockquote>
@@ -453,9 +299,8 @@
     </section>
   </main>
 
-    <footer class="footer">
+  <footer class="footer">
     <img src="logo.PNG" alt="Company Logo" style="height: 50px;" /><br><br>
-    <p>Follow Us:</p>
     <h2>Follow & Review Us</h2>
     <div class="footer-icons">
       <a href="https://m.facebook.com/profile.php?id=61571531374537" target="_blank"><img src="facebook_icon.PNG" alt="Facebook"></a>
@@ -465,9 +310,5 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP – All rights reserved.</p>
   </footer>
-
-</body>
-</html>
-
 </body>
 </html>
