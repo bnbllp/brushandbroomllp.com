@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional Flooring Services by Brush & Broom LLP in Walla Walla, WA" />
-  <meta name="keywords" content="flooring, vinyl, laminate, tile, Walla Walla, Brush and Broom LLP" />
+  <meta name="description" content="Professional flooring installation, repair, and refinishing in Walla Walla, WA by Brush & Broom LLP." />
+  <meta name="keywords" content="flooring, vinyl plank, laminate, hardwood floor, refinishing, Brush and Broom LLP, Walla Walla" />
   <meta name="author" content="Brush & Broom LLP" />
-  <title>Flooring Services | Brush & Broom LLP</title>
+  <title>Flooring Services | Brush & Broom LLP – Walla Walla, WA</title>
   <style>
     :root {
       --text-light: #f9f9f9;
@@ -17,6 +17,7 @@
       font-family: 'Segoe UI', sans-serif;
       color: var(--text-light);
       overflow-x: hidden;
+      background: #0f172a;
     }
     .bg-slideshow {
       position: fixed;
@@ -40,7 +41,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      border-bottom: 4px solid #28c76f;
+      border-bottom: 4px solid #ff7a24;
     }
     header h1 {
       font-size: 1.8em;
@@ -59,46 +60,116 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
+      background-color: #ff7a24;
+      box-shadow: 0 3px 10px #ff7a2480;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #c15a15;
     }
     .logo-container {
       text-align: center;
       padding: 20px 0 10px;
       background: rgba(15, 23, 42, 0.85);
-      border-bottom: 4px solid #28c76f;
+      border-bottom: 4px solid #ff7a24;
     }
     .logo-container img {
       height: 130px;
       max-width: 90%;
     }
-    .hero {
-      text-align: center;
-      padding: 100px 20px 60px;
-      backdrop-filter: brightness(0.8);
+    main {
+      max-width: 900px;
+      margin: 40px auto 80px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 30px 20px;
+      border-radius: 15px;
     }
-    .hero h2 {
-      font-size: 2.5em;
+    main h2 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
       background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-align: center;
     }
-    .hero p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: 20px auto;
+    main p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      color: var(--text-light);
+      text-align: center;
+    }
+    .service-details {
+      margin-bottom: 35px;
+    }
+    .service-details h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      border-left: 5px solid #ff7a24;
+      padding-left: 10px;
+    }
+    .service-details ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      color: var(--text-light);
     }
     .cta-buttons {
-      margin-top: 30px;
       display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
     .cta-buttons a {
-      padding: 14px 24px;
+      padding: 14px 28px;
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
       color: white;
+      background-color: #ff7a24;
+      box-shadow: 0 3px 10px #ff7a2480;
+      transition: background-color 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background-color: #c15a15;
+    }
+    .quote-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(30, 41, 59, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+    }
+    .quote-form h3 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .quote-form input,
+    .quote-form textarea,
+    .quote-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    .quote-form button {
+      padding: 14px;
+      font-weight: bold;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #ff7a24;
+      color: white;
+      border: none;
+      box-shadow: 0 3px 10px #ff7a2480;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    .quote-form button:hover {
+      background-color: #c15a15;
     }
     footer {
       text-align: center;
@@ -106,6 +177,9 @@
       padding: 25px 10px;
       font-size: 0.9em;
       color: #ccc;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
     .footer-contact {
       display: inline-block;
@@ -115,11 +189,20 @@
       text-decoration: none;
       color: white;
       margin: 5px;
+      background-color: #ff7a24;
+      box-shadow: 0 3px 10px #ff7a2480;
+      transition: background-color 0.3s ease;
+    }
+    .footer-contact:hover {
+      background-color: #c15a15;
     }
     .social-icons img {
       height: 30px;
       margin: 0 10px;
       vertical-align: middle;
+    }
+    .social-icons a {
+      display: inline-block;
     }
     @media (max-width: 700px) {
       header {
@@ -130,48 +213,25 @@
         justify-content: center;
         width: 100%;
       }
+      main {
+        margin: 40px 10px 100px;
+        padding: 20px;
+      }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const buttons = document.querySelectorAll(
-        "nav a, .cta-buttons a, .footer-contact"
-      );
-      const colors = [
-        "#FF7A24", "#2499FF", "#28C76F", "#AA66CC", "#33CCCC", "#FF4081",
-        "#00E5FF", "#FFD740", "#7C4DFF", "#FF5252", "#00C853", "#2962FF",
-        "#FF6D00", "#D500F9", "#64DD17", "#0091EA", "#FF1744", "#00BFA5",
-        "#E91E63", "#FF9800", "#4CAF50", "#3F51B5", "#795548", "#CDDC39"
-      ];
-      function getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
-      }
-      function updateColors() {
-        buttons.forEach((btn) => {
-          const color = getRandomColor();
-          btn.style.backgroundColor = color;
-          btn.style.boxShadow = `0 3px 10px ${color}80`;
-        });
-      }
-      updateColors();
-      setInterval(updateColors, 3000);
-    });
-  </script>
 </head>
-
 <body>
   <div class="bg-slideshow"></div>
 
   <header>
     <h1>Brush & Broom LLP</h1>
     <nav>
-      <a href="index.html">Home</a>
       <a href="interior-painting.html">Interior Painting</a>
       <a href="exterior-painting.html">Exterior Painting</a>
       <a href="move-cleaning.html">Move In/Out Cleaning</a>
       <a href="deep-cleaning.html">Deep Cleaning</a>
       <a href="power-washing.html">Power Washing</a>
-      <a href="flooring.html">Flooring</a>
+      <a href="flooring.html" aria-current="page">Flooring</a>
       <a href="siding.html">Siding</a>
     </nav>
   </header>
@@ -180,14 +240,46 @@
     <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
   </div>
 
-  <section class="hero">
-    <h2>Professional Flooring Installation</h2>
-    <p>From luxury vinyl planks to laminate and tile, we handle flooring with precision and care. Let’s transform your space from the ground up.</p>
+  <main>
+    <h2>Flooring Installation & Repair</h2>
+    <p>Enhance your space with stunning, durable flooring options installed by pros. We specialize in vinyl plank, laminate, and hardwood restoration.</p>
+
+    <div class="service-details">
+      <h3>Our Flooring Services Include:</h3>
+      <ul>
+        <li>Vinyl plank and laminate flooring installation</li>
+        <li>Subfloor preparation and leveling</li>
+        <li>Hardwood refinishing and repairs</li>
+        <li>Baseboard and trim replacement</li>
+        <li>Removal of old flooring materials</li>
+      </ul>
+    </div>
+
     <div class="cta-buttons">
-      <a href="index.html#quote">Get a Free Estimate</a>
+      <a href="#quote">Get a Free Estimate</a>
       <a href="tel:5092004873">Call Us</a>
     </div>
-  </section>
+
+    <section id="quote" class="quote-form">
+      <h3>Get Your Free Quote</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" />
+        <input type="email" name="email" placeholder="Email Address" />
+        <select name="services[]" multiple required>
+          <option value="Interior Painting">Interior Painting</option>
+          <option value="Exterior Painting">Exterior Painting</option>
+          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
+          <option value="Initial Deep Cleaning">Deep Cleaning</option>
+          <option value="Power Washing">Power Washing</option>
+          <option value="Vinyl Siding">Siding</option>
+          <option value="Flooring" selected>Flooring</option>
+        </select>
+        <textarea name="comments" rows="4" placeholder="Tell us about your flooring needs..."></textarea>
+        <button type="submit">Get Estimate</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <div>
