@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Flooring Services by Brush & Broom LLP in Walla Walla, WA" />
+  <meta name="keywords" content="flooring, vinyl, laminate, tile, Walla Walla, Brush and Broom LLP" />
+  <meta name="author" content="Brush & Broom LLP" />
   <title>Flooring Services | Brush & Broom LLP</title>
-  <meta name="description" content="Professional flooring installation and repair in Walla Walla by Brush & Broom LLP. Reliable, stylish, and affordable flooring solutions." />
   <style>
+    :root {
+      --text-light: #f9f9f9;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #f9f9f9;
-      background: black;
+      color: var(--text-light);
       overflow-x: hidden;
     }
     .bg-slideshow {
@@ -31,74 +36,171 @@
     header {
       background: rgba(15, 23, 42, 0.85);
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
       border-bottom: 4px solid #28c76f;
     }
     header h1 {
+      font-size: 1.8em;
       margin: 0;
-      font-size: 2em;
+      flex-grow: 1;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    nav a {
+      padding: 10px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+    .logo-container {
+      text-align: center;
+      padding: 20px 0 10px;
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 4px solid #28c76f;
+    }
+    .logo-container img {
+      height: 130px;
+      max-width: 90%;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+      backdrop-filter: brightness(0.8);
+    }
+    .hero h2 {
+      font-size: 2.5em;
       background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-      background: rgba(15, 23, 42, 0.85);
-      border-radius: 15px;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
     }
     .cta-buttons {
-      text-align: center;
       margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .cta-buttons a {
-      display: inline-block;
       padding: 14px 24px;
-      margin: 10px;
       border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
+    }
+    footer {
+      text-align: center;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 25px 10px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+    .footer-contact {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      margin: 5px;
+    }
+    .social-icons img {
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+      }
     }
   </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(
+        "nav a, .cta-buttons a, .footer-contact"
+      );
+      const colors = [
+        "#FF7A24", "#2499FF", "#28C76F", "#AA66CC", "#33CCCC", "#FF4081",
+        "#00E5FF", "#FFD740", "#7C4DFF", "#FF5252", "#00C853", "#2962FF",
+        "#FF6D00", "#D500F9", "#64DD17", "#0091EA", "#FF1744", "#00BFA5",
+        "#E91E63", "#FF9800", "#4CAF50", "#3F51B5", "#795548", "#CDDC39"
+      ];
+      function getRandomColor() {
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+      function updateColors() {
+        buttons.forEach((btn) => {
+          const color = getRandomColor();
+          btn.style.backgroundColor = color;
+          btn.style.boxShadow = `0 3px 10px ${color}80`;
+        });
+      }
+      updateColors();
+      setInterval(updateColors, 3000);
+    });
+  </script>
 </head>
 
 <body>
   <div class="bg-slideshow"></div>
 
   <header>
-    <h1>Brush & Broom LLP – Flooring Services</h1>
+    <h1>Brush & Broom LLP</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </nav>
   </header>
 
-  <div class="content">
-    <h2>Professional Flooring Installation & Repair</h2>
-    <p>Looking to refresh your space with new floors? At Brush & Broom LLP, we specialize in flooring installation, repairs, and refinishing. Whether it’s hardwood, laminate, vinyl, or tile – our skilled team delivers clean, professional results that last.</p>
+  <div class="logo-container">
+    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  </div>
 
-    <p>We handle all prep work, subfloor leveling, and cleanup so you don’t have to lift a finger. Homeowners and businesses across Walla Walla trust us for reliable service with fair pricing and no mess left behind.</p>
-
-    <p>✔ Luxury vinyl plank (LVP)<br/>
-       ✔ Laminate & engineered wood<br/>
-       ✔ Tile flooring<br/>
-       ✔ Subfloor repair and prep<br/>
-       ✔ Demo and haul-away included</p>
-
+  <section class="hero">
+    <h2>Professional Flooring Installation</h2>
+    <p>From luxury vinyl planks to laminate and tile, we handle flooring with precision and care. Let’s transform your space from the ground up.</p>
     <div class="cta-buttons">
       <a href="index.html#quote">Get a Free Estimate</a>
       <a href="tel:5092004873">Call Us</a>
     </div>
-  </div>
+  </section>
+
+  <footer>
+    <div>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
 </body>
 </html>
