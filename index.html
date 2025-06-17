@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brush & Broom LLP – Painting, Cleaning, Power Washing, Flooring & Siding in Walla Walla and Seattle, WA" />
+  <title>Brush & Broom LLP</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      animation: slideShow 15s infinite;
+    }
+
+    @keyframes slideShow {
+      0%, 100% { background: url('bg1.jpg') center/cover no-repeat; }
+      33% { background: url('bg2.jpg') center/cover no-repeat; }
+      66% { background: url('bg3.jpg') center/cover no-repeat; }
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 2;
+      padding: 3rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .buttons a {
+      padding: 0.75rem 1.5rem;
+      background-color: teal;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      opacity: 0.8;
+    }
+
+    .quote-form {
+      padding: 2rem;
+      background-color: rgba(255,255,255,0.1);
+      margin: 2rem auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .quote-form h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .quote-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: orange;
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: #000;
+    }
+
+    .socials img {
+      height: 30px;
+      margin: 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  <nav>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#quote">Get a Quote</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="background"></div>
+  <div class="content">
+    <h1>Brush & Broom LLP</h1>
+    <p>Professional Painting, Cleaning, Siding, Flooring, & More</p>
+    <div class="buttons">
+      <a href="tel:5092004873">Call Us</a>
+      <a href="sms:5092004873">Text Us</a>
+      <a href="#quote">Get a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="buttons">
+  <a href="interior-painting.html">Interior Painting</a>
+  <a href="exterior-painting.html">Exterior Painting</a>
+  <a href="cabinet-finishing.html">Cabinet Finishing</a>
+  <a href="trim-painting.html">Door & Trim Painting</a>
+  <a href="deep-cleaning.html">Initial Deep Cleaning</a>
+  <a href="moveout-cleaning.html">Move-in/Out Cleaning</a>
+  <a href="power-washing.html">Power Washing</a>
+  <a href="siding.html">Vinyl Siding</a>
+  <a href="flooring.html">Flooring</a>
+</section>
+
+<section id="quote" class="quote-form">
+  <h2>Request a Free Quote</h2>
+  <form onsubmit="event.preventDefault(); alert('Thanks! We will get back to you shortly.')">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <input type="tel" placeholder="Your Phone" required />
+    <select multiple>
+      <option>Interior Painting</option>
+      <option>Exterior Painting</option>
+      <option>Cabinet Finishing</option>
+      <option>Door & Trim Painting</option>
+      <option>Initial Deep Cleaning</option>
+      <option>Move-in/Out Cleaning</option>
+      <option>Power Washing</option>
+      <option>Vinyl Siding</option>
+      <option>Flooring</option>
+    </select>
+    <textarea placeholder="Additional Details..."></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<section id="photos" class="buttons">
+  <h2 style="text-align:center;">Our Work</h2>
+  <div class="buttons">
+    <img src="photo1.jpg" alt="Work 1" width="200" />
+    <img src="photo2.jpg" alt="Work 2" width="200" />
+    <img src="photo3.jpg" alt="Work 3" width="200" />
+  </div>
+</section>
+
+<section id="testimonials" class="quote-form">
+  <h2>What Our Customers Say</h2>
+  <p>“Fantastic job on our home exterior!” – Sarah M.</p>
+  <p>“Incredibly thorough and professional cleaning.” – John T.</p>
+  <p>“Best paint and flooring team in town!” – Linda W.</p>
+</section>
+
+<footer>
+  <p>Contact us: <a href="tel:5092004873" style="color:orange;">509-200-4873</a></p>
+  <div class="socials">
+    <a href="#"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+    <a href="#"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+    <a href="#"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+    <a href="#"><img src="google_icon.PNG" alt="Google" /></a>
+  </div>
+</footer>
+
+</body>
+</html>
