@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore all services offered by Brush & Broom LLP including painting, cleaning, power washing, siding, and flooring." />
-  <title>Our Services | Brush & Broom LLP</title>
+  <title>Services | Brush & Broom LLP</title>
+  <meta name="description" content="Explore all services offered by Brush & Broom LLP in Walla Walla including painting, cleaning, siding, flooring and power washing." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --text-light: #f9f9f9;
+      --light: #f9f9f9;
+      --green: #28c76f;
     }
     * {
       box-sizing: border-box;
@@ -16,7 +17,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: var(--text-light);
+      color: var(--light);
       overflow-x: hidden;
       background: #0f172a;
     }
@@ -38,91 +39,104 @@
       75% { background-image: url('bg4.jpg'); }
     }
     header {
-      background: rgba(15, 23, 42, 0.85);
-      padding: 15px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      border-bottom: 4px solid #28c76f;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 4px solid var(--green);
       position: relative;
     }
-    .logo-container {
+    .logo-title {
       display: flex;
       align-items: center;
-      gap: 12px;
     }
-    .logo-container img {
+    .logo-title img {
       height: 60px;
+      margin-right: 15px;
     }
-    .logo-container h1 {
+    .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 2em;
+      font-size: 1.9em;
+      color: white;
       margin: 0;
-      color: white;
-    }
-    nav {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    nav a {
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
-    }
-    nav a:hover {
-      filter: brightness(1.1);
+      border-left: 4px solid var(--green);
+      border-right: 4px solid var(--green);
+      padding: 0 12px;
+      text-shadow: 2px 2px 5px black;
     }
     .menu-btn {
-      font-size: 28px;
-      background: none;
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      margin-top: 5px;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       border: none;
-      color: white;
       cursor: pointer;
-      margin-left: 10px;
+      z-index: 1100;
+      animation: pulse 2s infinite;
     }
-    .slide-menu {
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .side-menu {
       position: fixed;
-      top: 0;
-      right: -280px;
+      top: 104px;
+      right: -300px;
       width: 260px;
-      height: 100%;
-      background: #1e293b;
-      padding: 60px 20px;
-      transition: right 0.4s ease;
-      z-index: 999;
+      height: calc(100% - 104px);
+      background: rgba(15, 23, 42, 0.97);
+      box-shadow: -3px 0 10px #000;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+      padding: 30px 20px;
     }
-    .slide-menu a {
-      display: block;
-      padding: 12px 0;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: white;
-      border-bottom: 1px solid #28c76f;
-    }
-    .slide-menu.active {
+    .side-menu.open {
       right: 0;
+    }
+    .side-menu h2 {
+      margin-top: 0;
+      color: var(--green);
+    }
+    .side-menu a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .side-menu a:hover {
+      color: var(--green);
+    }
+    #menuOverlay {
+      display: none;
+      position: fixed;
+      top: 104px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 104px);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
     }
     main {
       max-width: 1000px;
-      margin: 60px auto 80px;
+      margin: 40px auto 100px;
       background: rgba(15, 23, 42, 0.9);
       padding: 30px 20px;
       border-radius: 15px;
     }
     main h2 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 30px;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      font-size: 2.4em;
+      margin-bottom: 25px;
+      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      text-align: center;
     }
     .service-grid {
       display: flex;
@@ -138,12 +152,9 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
-    }
-    .service-grid a:hover {
-      background-color: #1e7a4d;
     }
     footer {
       text-align: center;
@@ -163,21 +174,23 @@
       text-decoration: none;
       color: white;
       margin: 5px;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
-    }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
     }
     .social-icons img {
       height: 30px;
       margin: 0 10px;
       vertical-align: middle;
     }
-    @media (max-width: 700px) {
-      nav { justify-content: center; width: 100%; }
-      main { margin: 40px 10px 100px; padding: 20px; }
+    .social-icons a {
+      display: inline-block;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -194,46 +207,60 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <div id="sideMenu" class="side-menu">
+  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
     <h2>Menu</h2>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
     <a href="safety.html">Safety & Preparation</a>
     <a href="contact.html">Contact Us</a>
-  </div>
+  </nav>
+
   <main>
     <h2>Our Services</h2>
     <div class="service-grid">
-      <a href="interior-painting.html">Interior Painting</a>
-      <a href="exterior-painting.html">Exterior Painting</a>
-      <a href="move-cleaning.html">Move In/Out Cleaning</a>
-      <a href="deep-cleaning.html">Deep Cleaning</a>
-      <a href="power-washing.html">Power Washing</a>
-      <a href="flooring.html">Flooring</a>
-      <a href="siding.html">Siding</a>
+      <a href="interior.html">Interior Painting</a>
+      <a href="exterior.html">Exterior Painting</a>
+      <a href="cabinet.html">Cabinet Painting</a>
+      <a href="deck.html">Deck Painting</a>
+      <a href="door.html">Door Painting</a>
+      <a href="metal.html">Metal Painting</a>
+      <a href="sidingpainting.html">Siding Painting</a>
+      <a href="wood.html">Wood Painting</a>
+      <a href="staining.html">Wood Staining</a>
+      <a href="deepclean.html">Deep Cleaning</a>
+      <a href="generalclean.html">General Housekeeping</a>
+      <a href="window.html">Window Cleaning</a>
+      <a href="moving.html">Moving Cleanup</a>
+      <a href="office.html">Office Cleaning</a>
+      <a href="standard.html">Standard Cleaning</a>
+      <a href="gutter.html">Gutter Cleaning</a>
+      <a href="power.html">Power Washing</a>
+      <a href="roof.html">Roof Cleaning</a>
+      <a href="softwash.html">Soft Wash</a>
+      <a href="siding.html">Siding Installation</a>
+      <a href="flooring.html">Flooring Installation</a>
     </div>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
-  
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
+
   <script>
     const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
     const buttons = document.querySelectorAll('.service-grid a');
-
     function randomizeColors() {
       buttons.forEach(btn => {
         const rand = colors[Math.floor(Math.random() * colors.length)];
@@ -251,7 +278,6 @@
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
 
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
