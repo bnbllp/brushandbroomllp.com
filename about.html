@@ -4,23 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | Brush & Broom LLP</title>
+  <meta name="description" content="Learn about Brush & Broom LLP—your trusted partner for painting, cleaning, and more in Walla Walla, WA. Family-owned, quality-driven, and community-focused." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
       --light: #f9f9f9;
+      --green: #28c76f;
     }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: var(--light);
-      background: #0f172a;
       overflow-x: hidden;
+      background: #0f172a;
     }
-
     .bg-slideshow {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: -1;
       background-size: cover;
       background-position: center;
@@ -32,146 +36,141 @@
       50% { background-image: url('bg3.jpg'); }
       75% { background-image: url('bg4.jpg'); }
     }
-
     header {
-      background: rgba(15, 23, 42, 0.9);
-      padding: 15px;
-      border-bottom: 4px solid #28c76f;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 4px solid var(--green);
+      position: relative;
     }
-    .logo-left {
+    .logo-title {
       display: flex;
       align-items: center;
-      gap: 15px;
     }
-    .logo-left img {
+    .logo-title img {
       height: 60px;
-      width: auto;
+      margin-right: 15px;
     }
-    .site-title {
+    .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 1.8em;
-      color: #fff;
-      border-top: 2px solid #28c76f;
-      border-bottom: 2px solid #28c76f;
-      padding: 4px 0;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    nav a {
-      padding: 10px 16px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
+      font-size: 1.9em;
       color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: 0.3s ease;
+      margin: 0;
+      border-left: 4px solid var(--green);
+      border-right: 4px solid var(--green);
+      padding: 0 12px;
+      text-shadow: 2px 2px 5px black;
     }
-    nav a:hover {
-      filter: brightness(1.15);
-    }
-
-    .menu-button {
-      background: none;
+    .menu-btn {
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      margin-top: 5px;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       border: none;
-      color: white;
-      font-size: 1.5em;
       cursor: pointer;
-      padding: 10px;
+      z-index: 1100;
+      animation: pulse 2s infinite;
     }
-
-    .slideout-menu {
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .side-menu {
       position: fixed;
-      top: 0;
+      top: 104px;
       right: -300px;
-      width: 280px;
-      height: 100%;
-      background: rgba(15, 23, 42, 0.98);
+      width: 260px;
+      height: calc(100% - 104px);
+      background: rgba(15, 23, 42, 0.97);
+      box-shadow: -3px 0 10px #000;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
       padding: 30px 20px;
-      transition: right 0.4s ease;
-      z-index: 999;
-      box-shadow: -3px 0 10px rgba(0,0,0,0.6);
     }
-    .slideout-menu.open {
+    .side-menu.open {
       right: 0;
     }
-    .slideout-menu a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 0;
-      font-weight: bold;
-      border-bottom: 1px solid #28c76f;
+    .side-menu h2 {
+      margin-top: 0;
+      color: var(--green);
     }
-
+    .side-menu a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .side-menu a:hover {
+      color: var(--green);
+    }
+    #menuOverlay {
+      display: none;
+      position: fixed;
+      top: 104px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 104px);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+    }
     main {
-      max-width: 900px;
-      margin: 80px auto 120px;
-      padding: 30px 20px;
+      max-width: 1000px;
+      margin: 40px auto 100px;
       background: rgba(15, 23, 42, 0.9);
+      padding: 30px 20px;
       border-radius: 15px;
-      animation: fadeIn 1s ease forwards;
     }
     main h2 {
       font-size: 2.4em;
-      text-align: center;
-      background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-    main p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      color: var(--light);
       text-align: center;
     }
-
+    main p {
+      text-align: center;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
     footer {
+      text-align: center;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 25px 10px;
+      font-size: 0.9em;
+      color: #ccc;
       position: fixed;
       bottom: 0;
       width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      padding: 25px 10px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #ccc;
     }
     .footer-contact {
       display: inline-block;
-      margin: 6px;
-      padding: 12px 20px;
+      padding: 12px 24px;
       border-radius: 30px;
       font-weight: bold;
-      background-color: #28c76f;
-      color: white;
       text-decoration: none;
+      color: white;
+      margin: 5px;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
     }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
-    }
     .social-icons img {
-      height: 28px;
-      margin: 0 8px;
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
     }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-      nav { justify-content: center; width: 100%; }
+    .social-icons a {
+      display: inline-block;
     }
   </style>
 </head>
@@ -188,65 +187,44 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <div id="sideMenu" class="side-menu">
+  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
     <h2>Menu</h2>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
     <a href="safety.html">Safety & Preparation</a>
     <a href="contact.html">Contact Us</a>
-  </div>
+  </nav>
 
   <main>
     <h2>About Us</h2>
-    <p>
-      We're Brush & Broom LLP — a family-run painting and cleaning company based in Walla Walla, WA. With a deep love for transforming spaces, we bring energy, humor, and professionalism to every job.
-    </p>
-    <p>
-      We started with a passion for craftsmanship and a mission to bring integrity, beauty, and attention to detail into homes and businesses throughout the region. Whether it's fresh paint, sparkling clean move-outs, power washing, siding, or flooring — we do it all with pride.
-    </p>
-    <p>
-      Our team is hardworking, family-oriented, and recovery-strong. We believe in second chances, great work, and leaving every space better than we found it.
-    </p>
+    <p>Brush & Broom LLP was built with two things in mind—quality and community. We're a small, locally owned business based right here in Walla Walla, WA. Whether it's painting your home's exterior or deep-cleaning after a move, we show up with hustle, heart, and high standards.</p>
+    <p>What makes us different? We care about the details—and the people. We treat every home like it’s our own, and every client like a neighbor. Our team is passionate, punctual, and professional from start to finish.</p>
+    <p>We don’t just leave a job clean and complete—we leave it better than we found it.</p>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
-  
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
+
   <script>
-    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
-    const buttons = document.querySelectorAll('.service-grid a');
-
-    function randomizeColors() {
-      buttons.forEach(btn => {
-        const rand = colors[Math.floor(Math.random() * colors.length)];
-        btn.style.backgroundColor = rand;
-        btn.style.boxShadow = `0 3px 10px ${rand}80`;
-      });
-    }
-    randomizeColors();
-    setInterval(randomizeColors, 3000);
-
     function toggleMenu() {
       const menu = document.getElementById("sideMenu");
       const overlay = document.getElementById("menuOverlay");
       menu.classList.toggle("open");
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
-
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
