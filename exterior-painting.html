@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional exterior painting services by Brush & Broom LLP in Walla Walla, WA. Enhance your home's curb appeal with our expert painting." />
-  <meta name="keywords" content="exterior painting, house painting, trim, siding, Brush and Broom LLP, Walla Walla" />
-  <meta name="author" content="Brush & Broom LLP" />
-<title>Exterior Painting in Walla Walla | Brush & Broom LLP</title>
-<meta name="description" content="Full-service exterior house painting in Walla Walla. Boost curb appeal with our licensed, professional painters." />
+  <title>Exterior Painting | Brush & Broom LLP</title>
+  <meta name="description" content="Exterior painting by Brush & Broom LLP in Walla Walla. Residential and commercial painting done right. Free quotes!" />
   <style>
     :root {
+      --main-green: #28c76f;
       --text-light: #f9f9f9;
     }
     * { box-sizing: border-box; }
@@ -17,8 +15,8 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: var(--text-light);
-      overflow-x: hidden;
       background: #0f172a;
+      overflow-x: hidden;
     }
     .bg-slideshow {
       position: fixed;
@@ -40,86 +38,91 @@
       padding: 20px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 4px solid #28c76f;
+      border-bottom: 4px solid var(--main-green);
     }
-    header h1 {
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo img {
+      height: 70px;
+    }
+    .logo h1 {
       font-size: 1.8em;
       margin: 0;
-      flex-grow: 1;
     }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    nav a {
-      padding: 10px 16px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
+    .menu-tab {
+      position: fixed;
+      right: 0;
+      top: 90px;
+      background: var(--main-green);
       color: white;
-      background-color: #28c76f;
+      padding: 10px 15px;
+      border-radius: 10px 0 0 10px;
+      cursor: pointer;
       box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      z-index: 1000;
     }
-    nav a:hover {
-      background-color: #1e7a4d;
+    .menu-content {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #1e293b;
+      padding-top: 80px;
+      padding-left: 20px;
+      transition: right 0.3s ease;
+      z-index: 999;
     }
-    .logo-container {
-      text-align: center;
-      padding: 20px 0 10px;
-      background: rgba(15, 23, 42, 0.85);
-      border-bottom: 4px solid #28c76f;
+    .menu-content a {
+      display: block;
+      margin: 20px 0;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
     }
-    .logo-container img {
-      height: 130px;
-      max-width: 90%;
+    .menu-content.open {
+      right: 0;
     }
     main {
       max-width: 900px;
-      margin: 40px auto 80px;
-      background: rgba(15, 23, 42, 0.9);
+      margin: 40px auto 120px;
+      background: rgba(15, 23, 42, 0.92);
       padding: 30px 20px;
       border-radius: 15px;
     }
     main h2 {
       font-size: 2.4em;
-      margin-bottom: 10px;
+      text-align: center;
       background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-align: center;
     }
-    main p {
+    main p, ul {
       font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 25px;
       color: var(--text-light);
       text-align: center;
     }
-    .service-details {
-      margin-bottom: 35px;
-    }
-    .service-details h3 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      border-left: 5px solid #28c76f;
-      padding-left: 10px;
-    }
-    .service-details ul {
-      list-style-type: disc;
+    ul {
+      text-align: left;
       padding-left: 40px;
-      color: var(--text-light);
+    }
+    h3 {
+      font-size: 1.5em;
+      margin-top: 30px;
+      border-left: 5px solid var(--main-green);
+      padding-left: 10px;
     }
     .cta-buttons {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      margin: 30px 0;
     }
     .cta-buttons a {
       padding: 14px 28px;
@@ -127,9 +130,8 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #28c76f;
+      background-color: var(--main-green);
       box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
     }
     .cta-buttons a:hover {
       background-color: #1e7a4d;
@@ -144,141 +146,105 @@
     .quote-form h3 {
       text-align: center;
       font-size: 2em;
-      margin-bottom: 20px;
     }
-    .quote-form input,
-    .quote-form textarea,
-    .quote-form select {
+    .quote-form input, .quote-form textarea, .quote-form select {
       width: 100%;
       padding: 12px;
-      margin-bottom: 15px;
+      margin: 10px 0;
       border-radius: 8px;
       border: none;
-      font-size: 1em;
     }
     .quote-form button {
       padding: 14px;
       font-weight: bold;
       font-size: 1.1em;
       border-radius: 8px;
-      cursor: pointer;
-      background-color: #28c76f;
+      background-color: var(--main-green);
       color: white;
       border: none;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
       width: 100%;
+      box-shadow: 0 3px 10px #28c76f80;
     }
     .quote-form button:hover {
       background-color: #1e7a4d;
     }
     footer {
-      text-align: center;
-      background: rgba(15, 23, 42, 0.85);
-      padding: 25px 10px;
-      font-size: 0.9em;
-      color: #ccc;
       position: fixed;
       bottom: 0;
       width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9em;
+      z-index: 999;
     }
     .footer-contact {
-      display: inline-block;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
+      background-color: var(--main-green);
       color: white;
-      margin: 5px;
-      background-color: #28c76f;
+      border-radius: 20px;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 2px;
       box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
+      font-size: 0.9em;
     }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
+    .social-icons {
+      margin-top: 5px;
     }
     .social-icons img {
-      height: 30px;
-      margin: 0 10px;
+      height: 28px;
+      margin: 0 8px;
       vertical-align: middle;
     }
-    .social-icons a {
-      display: inline-block;
-    }
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        justify-content: center;
-        width: 100%;
-      }
-      main {
-        margin: 40px 10px 100px;
-        padding: 20px;
-      }
-    }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const navLinks = document.querySelectorAll("nav a");
-      navLinks.forEach(link => {
-        link.style.backgroundColor = "#28c76f";
-        link.style.boxShadow = "0 3px 10px #28c76f80";
-        link.addEventListener("mouseenter", () => {
-          link.style.backgroundColor = "#1e7a4d";
-        });
-        link.addEventListener("mouseleave", () => {
-          link.style.backgroundColor = "#28c76f";
-        });
-      });
-    });
-  </script>
 </head>
 <body>
   <div class="bg-slideshow"></div>
 
   <header>
-    <h1>Brush & Broom LLP</h1>
- <nav>
-  <a href="index.html">🏠 Home</a>
-</nav>
+    <div class="logo">
+      <img src="logo.PNG" alt="Brush & Broom LLP Logo">
+      <h1>Brush & Broom LLP</h1>
+    </div>
   </header>
 
-  <div class="logo-container">
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  <div class="menu-tab" onclick="toggleMenu()">☰ Menu</div>
+  <div class="menu-content" id="sideMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="portfolio.html">📸 Our Portfolio</a>
+    <a href="about.html">👋 About Us</a>
+    <a href="safety.html">🧯 Safety & Prep</a>
+    <a href="contact.html">📞 Contact Us</a>
   </div>
 
   <main>
     <h2>Exterior Painting Services</h2>
-    <p>Protect and beautify your home’s exterior with expert painting services from Brush & Broom LLP. We handle siding, trim, doors, decks, and more — providing long-lasting finishes to increase curb appeal and value.</p>
+    <p>We help homes and buildings in Walla Walla stand out. Whether it's siding, doors, trim, or full repaints—our exterior work is built to last.</p>
 
-    <div class="service-details">
-      <h3>Our Exterior Painting Includes:</h3>
-      <ul>
-        <li>Thorough surface preparation: cleaning, sanding, scraping</li>
-        <li>Priming and painting of siding, trim, doors, and decks</li>
-        <li>Use of weather-resistant, premium exterior paints</li>
-        <li>Attention to detail for clean lines and flawless coverage</li>
-        <li>Power washing available as a prep service</li>
-        <li>Fully insured and EPA certified for safe, professional work</li>
-      </ul>
-    </div>
+    <h3>We Paint It All:</h3>
+    <ul>
+      <li>Full house exteriors: siding, fascia, soffit</li>
+      <li>Garages, sheds, fences, & decks</li>
+      <li>Trim, doors, shutters, and porches</li>
+      <li>Proper prep: pressure washing, scraping, priming</li>
+      <li>Stain, seal, and repaint options</li>
+    </ul>
 
-    <div class="service-details">
-      <h3>Why Choose Brush & Broom LLP?</h3>
-      <ul>
-        <li>Experienced professionals dedicated to quality</li>
-        <li>Flexible scheduling and free estimates</li>
-        <li>Competitive pricing without surprises</li>
-        <li>Locally owned, serving Walla Walla and surrounding areas</li>
-        <li>Customer satisfaction is our top priority</li>
-      </ul>
-    </div>
+    <h3>Why Brush & Broom LLP?</h3>
+    <ul>
+      <li>Durable finishes made for Northwest weather</li>
+      <li>Licensed, insured, EPA-Certified painters</li>
+      <li>Respectful crew & clear communication</li>
+      <li>Free estimates with no pressure</li>
+    </ul>
 
     <div class="cta-buttons">
-      <a href="#quote">Get a Free Estimate</a>
+      <a href="#quote">Request a Quote</a>
       <a href="tel:5092004873">Call Us</a>
     </div>
 
@@ -288,53 +254,36 @@
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="tel" name="phone" placeholder="Phone Number" />
         <input type="email" name="email" placeholder="Email Address" />
-        <select name="services[]" multiple required aria-label="Select services">
-          <option value="Interior Painting">Interior Painting</option>
+        <select name="services[]" multiple required>
           <option value="Exterior Painting" selected>Exterior Painting</option>
-          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
-          <option value="Initial Deep Cleaning">Deep Cleaning</option>
+          <option value="Interior Painting">Interior Painting</option>
+          <option value="Cabinet Finishing">Cabinet Finishing</option>
           <option value="Power Washing">Power Washing</option>
-          <option value="Vinyl Siding">Siding</option>
-          <option value="Flooring">Flooring</option>
+          <option value="Gutter Cleaning">Gutter Cleaning</option>
+          <option value="Deck Staining">Deck Staining</option>
         </select>
-        <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
+        <textarea name="comments" rows="4" placeholder="Tell us about your exterior project..."></textarea>
         <button type="submit">Get Estimate</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <div>
-      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
-    </div>
+    <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+    <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
     <div class="social-icons">
-      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+      <a href="#"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="#"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="#"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="#"><img src="google_icon.PNG" alt="Google" /></a>
     </div>
-    <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
+
   <script>
-    const buttons = document.querySelectorAll('nav a');
-    const colors = [
-      '#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5',
-      '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'
-    ];
-    function randomizeButtonColor(button) {
-      const randColor = colors[Math.floor(Math.random() * colors.length)];
-      button.style.backgroundColor = randColor;
-      button.style.boxShadow = `0 3px 10px ${randColor}80`;
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
     }
-    function startColorAnimation() {
-      buttons.forEach((btn, i) => {
-        setTimeout(() => {
-          randomizeButtonColor(btn);
-          setInterval(() => randomizeButtonColor(btn), 4000 + (i * 300));
-        }, i * 200);
-      });
-    }
-    startColorAnimation();
-  </script></body>
+  </script>
+</body>
 </html>
