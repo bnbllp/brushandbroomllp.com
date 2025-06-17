@@ -225,14 +225,22 @@
   <div class="bg-slideshow"></div>
 
   <header>
-    <h1>Brush & Broom LLP</h1>
-  <nav>
-  <a href="index.html">🏠 Home</a>
-</nav>
+    <div class="logo-title">
+      <a href="index.html"><img src="logo.PNG" alt="Logo" style="height: 75px;" /></a>
+      <h1>Brush & Broom LLP</h1>
+    </div>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </header>
 
-  <div class="logo-container">
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  <div id="menuOverlay" onclick="toggleMenu()"></div>
+
+  <div id="sideMenu" class="side-menu">
+    <h2>Menu</h2>
+    <a href="services.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="portfolio.html">Our Portfolio</a>
+    <a href="safety.html">Safety & Preparation</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 
   <main>
