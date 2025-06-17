@@ -255,26 +255,48 @@
     </div>
   </section>
 
-  <section id="quote" class="quote-form">
-    <h3>Get Your Free Quote</h3>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="tel" name="phone" placeholder="Phone Number" />
-      <input type="email" name="email" placeholder="Email Address" />
-      <select name="services[]" multiple required aria-label="Select services">
-        <option value="Interior Painting">Interior Painting</option>
-        <option value="Exterior Painting">Exterior Painting</option>
-        <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
-        <option value="Initial Deep Cleaning">Deep Cleaning</option>
-        <option value="Power Washing">Power Washing</option>
-        <option value="Vinyl Siding">Siding</option>
-        <option value="Flooring">Flooring</option>
-      </select>
-      <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
-      <button type="submit">Get Estimate</button>
-    </form>
-  </section>
+<form id="quote-form" onsubmit="showThankYou(event)" style="max-width:600px;margin:auto;">
+  <h3>Get a Free Estimate</h3>
+  
+  <label for="name">Full Name:</label>
+  <input type="text" id="name" name="name" placeholder="Your name" required>
+  
+  <label for="email">Email Address:</label>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  
+  <label for="phone">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+  
+  <label for="services">Services Needed:</label>
+  <select id="services" name="services[]" multiple required>
+    <option>Interior Painting</option>
+    <option>Exterior Painting</option>
+    <option>Cabinet Finishing</option>
+    <option>Door & Trim Painting</option>
+    <option>Move-in/Out Cleaning</option>
+    <option>Initial Deep Cleaning</option>
+    <option>Power Washing</option>
+    <option>Vinyl Siding</option>
+    <option>Flooring</option>
+  </select>
 
+  <label for="details">Project Details:</label>
+  <textarea id="details" name="details" placeholder="e.g., 2 bedrooms + ceiling repaint..."></textarea>
+  
+  <button type="submit">Send Request</button>
+</form>
+
+<div id="thank-you-popup" style="display:none;text-align:center;margin-top:20px;color:lime;">
+  🎉 Thank you! We’ll be in touch shortly.
+</div>
+
+<script>
+  function showThankYou(event) {
+    event.preventDefault();
+    document.getElementById("quote-form").reset();
+    document.getElementById("thank-you-popup").style.display = "block";
+  }
+</script>
   <section class="photo-showcase">
     <h3>Project Highlights</h3>
     <img src="Side by side before and after.png" alt="Before and after exterior painting" />
