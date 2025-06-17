@@ -52,11 +52,7 @@
       margin: 0;
       text-shadow: 2px 2px 4px #000;
     }
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 99;
+    .menu-btn {
       background: #28c76f;
       border: none;
       color: #fff;
@@ -64,6 +60,15 @@
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
+      font-size: 1.2em;
+    }
+    #menuOverlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 97;
+      display: none;
     }
     .side-menu {
       position: fixed;
@@ -77,6 +82,14 @@
       box-shadow: -2px 0 10px #000;
       transition: right 0.3s ease;
       z-index: 98;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu h2 {
+      margin-top: 0;
+      border-bottom: 2px solid #28c76f;
+      padding-bottom: 10px;
     }
     .side-menu a {
       display: block;
@@ -152,17 +165,9 @@
 <body>
   <div class="bg-slideshow"></div>
 
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-  <div class="side-menu" id="sideMenu">
-    <a href="about.html">About Us</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Preparation</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
-
   <header>
     <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Logo" style="height: 75px;" /></a>
+      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
       <h1>Brush & Broom LLP</h1>
     </div>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -186,35 +191,22 @@
     <p>Get in touch for a free estimate and let’s add a splash of color to your home today.</p>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
-  
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
+
   <script>
-    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
-    const buttons = document.querySelectorAll('.service-grid a');
-
-    function randomizeColors() {
-      buttons.forEach(btn => {
-        const rand = colors[Math.floor(Math.random() * colors.length)];
-        btn.style.backgroundColor = rand;
-        btn.style.boxShadow = `0 3px 10px ${rand}80`;
-      });
-    }
-    randomizeColors();
-    setInterval(randomizeColors, 3000);
-
     function toggleMenu() {
       const menu = document.getElementById("sideMenu");
       const overlay = document.getElementById("menuOverlay");
@@ -222,7 +214,6 @@
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
 
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
