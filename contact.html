@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us | Brush & Broom LLP</title>
+  <meta name="description" content="Get in touch with Brush & Broom LLP for expert painting, cleaning, and power washing services in Walla Walla, WA." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --light: #f9f9f9;
+      --green: #28c76f;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0f172a;
-      color: #f9f9f9;
+      color: var(--light);
       overflow-x: hidden;
+      background: #0f172a;
     }
     .bg-slideshow {
       position: fixed;
@@ -31,132 +39,137 @@
       75% { background-image: url('bg4.jpg'); }
     }
     header {
-      background: rgba(15, 23, 42, 0.9);
-      padding: 10px 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      border-bottom: 4px solid #28c76f;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 4px solid var(--green);
+      position: relative;
     }
     .logo-title {
       display: flex;
       align-items: center;
-      gap: 15px;
     }
     .logo-title img {
       height: 60px;
+      margin-right: 15px;
     }
     .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 2em;
-      color: #fff;
-      margin: 0;
-      text-shadow: 2px 2px 4px #000;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-    nav a {
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
+      font-size: 1.9em;
       color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
+      margin: 0;
+      border-left: 4px solid var(--green);
+      border-right: 4px solid var(--green);
+      padding: 0 12px;
+      text-shadow: 2px 2px 5px black;
     }
-    nav a:hover {
-      filter: brightness(1.1);
-    }
-    .menu-toggle {
-      position: fixed;
-      top: 20px;
+    .menu-btn {
+      position: absolute;
+      top: 100%;
       right: 20px;
-      z-index: 99;
-      background: #28c76f;
+      margin-top: 5px;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       border: none;
-      color: #fff;
-      padding: 10px 14px;
-      border-radius: 5px;
-      font-weight: bold;
       cursor: pointer;
+      z-index: 1100;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
     }
     .side-menu {
       position: fixed;
-      top: 0;
+      top: 104px;
       right: -300px;
-      width: 300px;
-      height: 100%;
-      background: #1e293b;
-      color: #fff;
-      padding: 60px 20px;
-      box-shadow: -2px 0 10px #000;
-      transition: right 0.3s ease;
-      z-index: 98;
+      width: 260px;
+      height: calc(100% - 104px);
+      background: rgba(15, 23, 42, 0.97);
+      box-shadow: -3px 0 10px #000;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+      padding: 30px 20px;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu h2 {
+      margin-top: 0;
+      color: var(--green);
     }
     .side-menu a {
       display: block;
       margin: 15px 0;
-      font-size: 1.2em;
+      color: white;
+      font-weight: bold;
       text-decoration: none;
-      color: #fff;
-      border-bottom: 1px solid #28c76f;
-      padding-bottom: 5px;
+    }
+    .side-menu a:hover {
+      color: var(--green);
+    }
+    #menuOverlay {
+      display: none;
+      position: fixed;
+      top: 104px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 104px);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
     }
     main {
-      max-width: 960px;
-      margin: 80px auto 120px;
-      background: rgba(15, 23, 42, 0.95);
-      padding: 40px 20px;
+      max-width: 600px;
+      margin: 40px auto 120px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 30px 25px;
       border-radius: 15px;
     }
     main h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-      text-align: center;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      font-size: 2.4em;
+      margin-bottom: 25px;
+      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-    .contact-info {
       text-align: center;
-      margin-bottom: 30px;
     }
-    .contact-info a {
-      color: #28c76f;
-      text-decoration: none;
+    form label {
+      display: block;
+      margin: 15px 0 6px;
       font-weight: bold;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    input, textarea {
-      padding: 12px;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: none;
       font-size: 1em;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      background: #e2e8f0;
-      color: #111;
+      font-family: inherit;
     }
-    button[type="submit"] {
-      padding: 12px;
-      background: #28c76f;
-      color: white;
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    form button {
+      margin-top: 20px;
+      background: var(--green);
       border: none;
-      border-radius: 8px;
+      padding: 12px 25px;
+      font-size: 1.2em;
       font-weight: bold;
+      color: white;
+      border-radius: 30px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      box-shadow: 0 3px 10px #28c76f80;
+      transition: background-color 0.3s ease;
     }
-    button[type="submit"]:hover {
-      background: #1e7a4d;
+    form button:hover {
+      background-color: #22a15f;
     }
     footer {
       text-align: center;
@@ -176,12 +189,9 @@
       text-decoration: none;
       color: white;
       margin: 5px;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
-    }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
     }
     .social-icons img {
       height: 30px;
@@ -191,24 +201,16 @@
     .social-icons a {
       display: inline-block;
     }
-    @media (max-width: 700px) {
-      header, .logo-title {
-        flex-direction: column;
-        text-align: center;
+    @media (max-width: 600px) {
+      main {
+        margin: 20px 10px 120px;
+        padding: 20px 15px;
       }
     }
   </style>
 </head>
 <body>
   <div class="bg-slideshow"></div>
-
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-  <div class="side-menu" id="sideMenu">
-    <a href="about.html">About Us</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Preparation</a>
-    <a href="contact.html">Contact Us</a>
-  </div>
 
   <header>
     <div class="logo-title">
@@ -220,66 +222,56 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <div id="sideMenu" class="side-menu">
+  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
     <h2>Menu</h2>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
     <a href="safety.html">Safety & Preparation</a>
     <a href="contact.html">Contact Us</a>
-  </div>
+  </nav>
+
   <main>
     <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p>Have a question or need an estimate?</p>
-      <p>📱 <a href="sms:5092004873">(509) 200-4873</a></p>
-      <p>📧 <a href="mailto:bnbllp@brushandbroomllp.com">bnbllp@brushandbroomllp.com</a></p>
-    </div>
-    <form action="mailto:bnbllp@brushandbroomllp.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    <form action="mailto:bnbllp@brushandbroomllp.com" method="post" enctype="text/plain">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="Name" required />
+      
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="Email" required />
+      
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="Phone" />
+      
+      <label for="message">Message*</label>
+      <textarea id="message" name="Message" required></textarea>
+      
       <button type="submit">Send Message</button>
     </form>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
-  
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
+
   <script>
-    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
-    const buttons = document.querySelectorAll('.service-grid a');
-
-    function randomizeColors() {
-      buttons.forEach(btn => {
-        const rand = colors[Math.floor(Math.random() * colors.length)];
-        btn.style.backgroundColor = rand;
-        btn.style.boxShadow = `0 3px 10px ${rand}80`;
-      });
-    }
-    randomizeColors();
-    setInterval(randomizeColors, 3000);
-
     function toggleMenu() {
       const menu = document.getElementById("sideMenu");
       const overlay = document.getElementById("menuOverlay");
       menu.classList.toggle("open");
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
-
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
