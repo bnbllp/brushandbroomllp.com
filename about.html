@@ -16,6 +16,7 @@
       background: #0f172a;
       overflow-x: hidden;
     }
+
     .bg-slideshow {
       position: fixed;
       top: 0; left: 0;
@@ -85,9 +86,9 @@
       color: white;
       font-size: 1.5em;
       cursor: pointer;
-      margin-left: auto;
       padding: 10px;
     }
+
     .slideout-menu {
       position: fixed;
       top: 0;
@@ -114,7 +115,7 @@
 
     main {
       max-width: 900px;
-      margin: 80px auto 100px;
+      margin: 80px auto 120px;
       padding: 30px 20px;
       background: rgba(15, 23, 42, 0.9);
       border-radius: 15px;
@@ -185,14 +186,19 @@
     <button class="menu-button" onclick="toggleMenu()">☰</button>
     <nav>
       <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="safety.html">Prep & Safety</a>
+      <a href="contact.html">Quote</a>
     </nav>
   </header>
 
   <div class="slideout-menu" id="slideMenu">
+    <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Preparation</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="safety.html">Safety & Prep</a>
+    <a href="contact.html">Get a Quote</a>
   </div>
 
   <main>
@@ -228,7 +234,6 @@
       slideMenu.classList.toggle("open");
     }
 
-    // Animated random button colors every 3s
     const buttons = document.querySelectorAll('nav a');
     const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
     function randomizeColors() {
