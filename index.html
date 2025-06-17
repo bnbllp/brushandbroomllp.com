@@ -8,7 +8,73 @@
   <meta name="author" content="Brush & Broom LLP" />
 <title>Brush & Broom LLP | Painting, Cleaning, Power Washing in Walla Walla</title>
 <meta name="description" content="Professional painting, cleaning, power washing, siding, and flooring in Walla Walla. Brush & Broom LLP is family-owned, licensed, and ready to freshen up your space." />
-  <style>
+  /* Menu Button Style */
+#menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #1e293b;
+  color: white;
+  padding: 12px 18px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 10px #00000070;
+}
+
+/* Slide-Out Sidebar Panel */
+#side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: #0f172a;
+  padding-top: 80px;
+  box-shadow: 4px 0 12px #00000070;
+  z-index: 9998;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* When the panel is open, slide it into view */
+#side-menu.open {
+  left: 0;
+}
+
+/* General Link Styles */
+#side-menu a {
+  display: block;
+  padding: 18px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-decoration: none;
+  margin: 4px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect for Links */
+#side-menu a:hover {
+  filter: brightness(1.2);
+}
+
+/* Services submenu container */
+#services-submenu {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+/* Slightly smaller font for submenu items (optional) */
+#services-submenu a {
+  font-size: 0.95em;
+  margin: 4px 12px;
+}<style>
     :root {
       --text-light: #f9f9f9;
     }
@@ -331,5 +397,57 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
-</body>
+<!-- Slide-Out Menu Button -->
+<div id="menu-button" onclick="toggleMenu()">☰ Menu</div>
+
+<!-- Slide-Out Sidebar Panel -->
+<div id="side-menu">
+  <a href="index.html">Home</a>
+  <a href="#about">About Us</a>
+  <!-- Services Menu with Submenu -->
+  <div class="menu-item" id="services-menu">
+    <a href="javascript:void(0)" onclick="toggleServicesSubmenu()">Services</a>
+    <div id="services-submenu">
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </div>
+  </div>
+  <a href="#safety">Safety</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- Menu Script -->
+<script>
+  // Toggle the main side menu open/close
+  function toggleMenu() {
+    document.getElementById("side-menu").classList.toggle("open");
+  }
+
+  // Toggle the services submenu open/close
+  function toggleServicesSubmenu() {
+    const submenu = document.getElementById("services-submenu");
+    submenu.style.display = submenu.style.display === "flex" ? "none" : "flex";
+  }
+
+  // Random rich colors for each main link and submenu item
+  const colors = [
+    "#FF7A24", "#2499FF", "#28C76F", "#AA66CC", "#33CCCC",
+    "#FF4081", "#00E5FF", "#FFD740", "#7C4DFF", "#FF5252",
+    "#00C853", "#2962FF", "#FF6D00", "#D500F9", "#64DD17",
+    "#0091EA", "#FF1744", "#00BFA5", "#E91E63", "#FF9800",
+    "#4CAF50", "#3F51B5", "#795548", "#CDDC39"
+  ];
+  // Apply random color to all links (excluding non-text elements)
+  const allLinks = document.querySelectorAll("#side-menu a");
+  allLinks.forEach(link => {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    link.style.backgroundColor = color;
+  });
+</script></body>
 </html>
