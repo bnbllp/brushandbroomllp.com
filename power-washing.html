@@ -3,27 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional power washing services by Brush & Broom LLP in Walla Walla, WA. Clean driveways, siding, decks and more." />
-  <meta name="keywords" content="power washing, pressure washing, siding cleaning, deck cleaning, Brush and Broom LLP, Walla Walla" />
-  <meta name="author" content="Brush & Broom LLP" />
-<title>Power Washing in Walla Walla | Brush & Broom LLP</title>
-<meta name="description" content="We power wash homes, decks, driveways, siding, and more in Walla Walla. Make it shine again!" />
+  <title>Power Washing | Brush & Broom LLP</title>
+  <meta name="description" content="Power washing services by Brush & Broom LLP in Walla Walla, WA. Blast away dirt, grime, and buildup with professional pressure cleaning." />
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --text-light: #f9f9f9;
+      --light: #f9f9f9;
+      --green: #28c76f;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: var(--text-light);
+      color: var(--light);
       overflow-x: hidden;
       background: #0f172a;
     }
     .bg-slideshow {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       z-index: -1;
       background-size: cover;
       background-position: center;
@@ -31,56 +32,98 @@
     }
     @keyframes slideBg {
       0%, 100% { background-image: url('bg1.jpg'); }
-      25%      { background-image: url('bg2.jpg'); }
-      50%      { background-image: url('bg3.jpg'); }
-      75%      { background-image: url('bg4.jpg'); }
+      25% { background-image: url('bg2.jpg'); }
+      50% { background-image: url('bg3.jpg'); }
+      75% { background-image: url('bg4.jpg'); }
     }
     header {
-      background: rgba(15, 23, 42, 0.85);
-      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 4px solid var(--green);
+      position: relative;
+    }
+    .logo-title {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 4px solid #28c76f;
     }
-    header h1 {
-      font-size: 1.8em;
+    .logo-title img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .logo-title h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 1.9em;
+      color: white;
       margin: 0;
-      flex-grow: 1;
+      border-left: 4px solid var(--green);
+      border-right: 4px solid var(--green);
+      padding: 0 12px;
+      text-shadow: 2px 2px 5px black;
     }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
+    .menu-btn {
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      margin-top: 5px;
+      font-size: 2.5em;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+      animation: pulse 2s infinite;
     }
-    nav a {
-      padding: 10px 16px;
-      border-radius: 25px;
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .side-menu {
+      position: fixed;
+      top: 104px;
+      right: -300px;
+      width: 260px;
+      height: calc(100% - 104px);
+      background: rgba(15, 23, 42, 0.97);
+      box-shadow: -3px 0 10px #000;
+      transition: right 0.3s ease-in-out;
+      z-index: 1050;
+      padding: 30px 20px;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu h2 {
+      margin-top: 0;
+      color: var(--green);
+    }
+    .side-menu a {
+      display: block;
+      margin: 15px 0;
+      color: white;
       font-weight: bold;
       text-decoration: none;
-      color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
     }
-    nav a:hover {
-      background-color: #1e7a4d;
+    .side-menu a:hover {
+      color: var(--green);
     }
-    .logo-container {
-      text-align: center;
-      padding: 20px 0 10px;
-      background: rgba(15, 23, 42, 0.85);
-      border-bottom: 4px solid #28c76f;
-    }
-    .logo-container img {
-      height: 130px;
-      max-width: 90%;
+    #menuOverlay {
+      display: none;
+      position: fixed;
+      top: 104px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 104px);
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
     }
     main {
-      max-width: 900px;
-      margin: 40px auto 80px;
+      max-width: 1000px;
+      margin: 40px auto 100px;
       background: rgba(15, 23, 42, 0.9);
       padding: 30px 20px;
       border-radius: 15px;
@@ -88,89 +131,16 @@
     main h2 {
       font-size: 2.4em;
       margin-bottom: 10px;
-      background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
+      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
     }
     main p {
+      text-align: center;
       font-size: 1.1em;
       line-height: 1.6;
       margin-bottom: 25px;
-      color: var(--text-light);
-      text-align: center;
-    }
-    .service-details {
-      margin-bottom: 35px;
-    }
-    .service-details h3 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      border-left: 5px solid #28c76f;
-      padding-left: 10px;
-    }
-    .service-details ul {
-      list-style-type: disc;
-      padding-left: 40px;
-      color: var(--text-light);
-    }
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-bottom: 30px;
-    }
-    .cta-buttons a {
-      padding: 14px 28px;
-      border-radius: 30px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      background-color: #28c76f;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
-    }
-    .cta-buttons a:hover {
-      background-color: #1e7a4d;
-    }
-    .quote-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: rgba(30, 41, 59, 0.95);
-      padding: 30px;
-      border-radius: 15px;
-    }
-    .quote-form h3 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .quote-form input,
-    .quote-form textarea,
-    .quote-form select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1em;
-    }
-    .quote-form button {
-      padding: 14px;
-      font-weight: bold;
-      font-size: 1.1em;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: #28c76f;
-      color: white;
-      border: none;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    .quote-form button:hover {
-      background-color: #1e7a4d;
     }
     footer {
       text-align: center;
@@ -190,12 +160,9 @@
       text-decoration: none;
       color: white;
       margin: 5px;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
-    }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
     }
     .social-icons img {
       height: 30px;
@@ -205,18 +172,10 @@
     .social-icons a {
       display: inline-block;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
-      }
-      nav {
-        justify-content: center;
-        width: 100%;
-      }
-      main {
-        margin: 40px 10px 100px;
-        padding: 20px;
       }
     }
   </style>
@@ -234,59 +193,26 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <div id="sideMenu" class="side-menu">
+  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
     <h2>Menu</h2>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
     <a href="safety.html">Safety & Preparation</a>
     <a href="contact.html">Contact Us</a>
-  </div>
+  </nav>
 
   <main>
-    <h2>Power Washing Services</h2>
-    <p>Bring surfaces back to life with Brush & Broom LLP's professional power washing. We safely remove dirt, algae, and buildup from driveways, decks, siding, and more.</p>
-
-    <div class="service-details">
-      <h3>Power Washing Areas We Clean:</h3>
-      <ul>
-        <li>Driveways, sidewalks, and patios</li>
-        <li>Siding and home exteriors</li>
-        <li>Decks, fences, and porches</li>
-        <li>Garages and shop floors</li>
-        <li>Pre-paint cleaning prep</li>
-      </ul>
-    </div>
-
-    <div class="cta-buttons">
-      <a href="#quote">Get a Free Estimate</a>
-      <a href="tel:5092004873">Call Us</a>
-    </div>
-
-    <section id="quote" class="quote-form">
-      <h3>Get Your Free Quote</h3>
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="tel" name="phone" placeholder="Phone Number" />
-        <input type="email" name="email" placeholder="Email Address" />
-        <select name="services[]" multiple required>
-          <option value="Interior Painting">Interior Painting</option>
-          <option value="Exterior Painting">Exterior Painting</option>
-          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
-          <option value="Initial Deep Cleaning">Deep Cleaning</option>
-          <option value="Power Washing" selected>Power Washing</option>
-          <option value="Vinyl Siding">Siding</option>
-          <option value="Flooring">Flooring</option>
-        </select>
-        <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
-        <button type="submit">Get Estimate</button>
-      </form>
-    </section>
+    <h2>Power Washing</h2>
+    <p>Blast away years of dirt, grime, moss, and buildup with our powerful pressure washing service. Driveways, siding, walkways, patios — we clean it all.</p>
+    <p>We use commercial-grade equipment that’s strong on grime but safe for your surfaces. Get your home or business looking fresh, bright, and renewed in no time.</p>
+    <p>This is the kind of clean you don’t realize you needed until you see it. Prepare to be impressed — and maybe a little addicted to how satisfying it is.</p>
   </main>
 
   <footer>
-    <div>
-      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
       <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
     </div>
     <div class="social-icons">
@@ -295,43 +221,16 @@
       <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
       <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
     </div>
-    <p>&copy; 2025 Brush & Broom LLP</p><footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
-  </div>
-  <div class="social-icons">
-    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
-  
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
+
   <script>
-    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
-    const buttons = document.querySelectorAll('.service-grid a');
-
-    function randomizeColors() {
-      buttons.forEach(btn => {
-        const rand = colors[Math.floor(Math.random() * colors.length)];
-        btn.style.backgroundColor = rand;
-        btn.style.boxShadow = `0 3px 10px ${rand}80`;
-      });
-    }
-    randomizeColors();
-    setInterval(randomizeColors, 3000);
-
     function toggleMenu() {
       const menu = document.getElementById("sideMenu");
       const overlay = document.getElementById("menuOverlay");
       menu.classList.toggle("open");
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
-
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
