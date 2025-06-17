@@ -7,6 +7,25 @@
   <title>Brush & Broom LLP</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
+    .menu-btn {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
     :root {
       --light: #f9f9f9;
       --green: #28c76f;
@@ -229,15 +248,13 @@
 <body>
   <div class="bg-slideshow"></div>
 
-  <header>
-    <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
-      <h1>Brush & Broom LLP</h1>
-    </div>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  </header><div id="menuOverlay" onclick="toggleMenu()" style="display:none;"></div>
-
-  <div class="side-menu" id="sideMenu">
+ <header style="position: relative;">
+  <div class="logo-title">
+    <a href="index.html"><img src="logo.PNG" alt="Logo" style="height: 75px;" /></a>
+    <h1>Brush & Broom LLP</h1>
+  </div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</header>
     <h2>Menu</h2>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
