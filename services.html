@@ -2,49 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Brush & Broom LLP</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore all services offered by Brush & Broom LLP including painting, cleaning, power washing, siding, and flooring." />
+  <title>Our Services | Brush & Broom LLP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --text-light: #f9f9f9;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-light);
+      overflow-x: hidden;
+      background: #0f172a;
+    }
+    .bg-slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      animation: slideBg 24s infinite ease-in-out;
+    }
+    @keyframes slideBg {
+      0%, 100% { background-image: url('bg1.jpg'); }
+      25% { background-image: url('bg2.jpg'); }
+      50% { background-image: url('bg3.jpg'); }
+      75% { background-image: url('bg4.jpg'); }
+    }
+    header {
+      background: rgba(15, 23, 42, 0.85);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 4px solid #28c76f;
+      position: relative;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-container img {
+      height: 60px;
+    }
+    .logo-container h1 {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 2em;
+      margin: 0;
+      color: white;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #28c76f;
+      box-shadow: 0 3px 10px #28c76f80;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      filter: brightness(1.1);
+    }
+    .menu-btn {
+      font-size: 28px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .slide-menu {
+      position: fixed;
+      top: 0;
+      right: -280px;
+      width: 260px;
+      height: 100%;
+      background: #1e293b;
+      padding: 60px 20px;
+      transition: right 0.4s ease;
+      z-index: 999;
+    }
+    .slide-menu a {
+      display: block;
+      padding: 12px 0;
+      font-size: 1.1em;
+      text-decoration: none;
+      color: white;
+      border-bottom: 1px solid #28c76f;
+    }
+    .slide-menu.active {
+      right: 0;
+    }
+    main {
+      max-width: 1000px;
+      margin: 60px auto 80px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 30px 20px;
+      border-radius: 15px;
+    }
+    main h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .service-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-grid a {
+      flex: 1 1 280px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background-color: #28c76f;
+      box-shadow: 0 3px 10px #28c76f80;
+      transition: background-color 0.3s ease;
+    }
+    .service-grid a:hover {
+      background-color: #1e7a4d;
+    }
+    footer {
+      text-align: center;
+      background: rgba(15, 23, 42, 0.85);
+      padding: 25px 10px;
+      font-size: 0.9em;
+      color: #ccc;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .footer-contact {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      margin: 5px;
+      background-color: #28c76f;
+      box-shadow: 0 3px 10px #28c76f80;
+      transition: background-color 0.3s ease;
+    }
+    .footer-contact:hover {
+      background-color: #1e7a4d;
+    }
+    .social-icons img {
+      height: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    @media (max-width: 700px) {
+      nav { justify-content: center; width: 100%; }
+      main { margin: 40px 10px 100px; padding: 20px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <h1>Brush & Broom LLP</h1>
+  <div class="bg-slideshow"></div>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo.PNG" alt="Logo" />
+      <h1>Brush & Broom LLP</h1>
+    </div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="javascript:void(0);" class="menu-btn" onclick="toggleMenu()">☰</a>
     </nav>
   </header>
 
-  <main class="site-main">
-    <section class="content-section">
-      <h2>Our Services</h2>
-      <ul class="service-list">
-        <li><strong>Interior & Exterior Painting</strong> – Residential and Commercial</li>
-        <li><strong>Power Washing</strong> – Driveways, decks, siding, and more</li>
-        <li><strong>Deep Cleaning</strong> – Move-in/out, weekly, bi-weekly, and monthly</li>
-        <li><strong>Organizing & Decluttering</strong> – Room-by-room support</li>
-        <li><strong>Window & Floor Cleaning</strong> – Sparkling clean finishes</li>
-        <li><strong>Minor Repairs</strong> – Patch, caulk, prep, and more</li>
-      </ul>
-    </section>
+  <div class="slide-menu" id="sideMenu">
+    <a href="about.html">About Us</a>
+    <a href="portfolio.html">Our Portfolio</a>
+    <a href="safety.html">Safety & Preparation</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <main>
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <a href="interior-painting.html">Interior Painting</a>
+      <a href="exterior-painting.html">Exterior Painting</a>
+      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="deep-cleaning.html">Deep Cleaning</a>
+      <a href="power-washing.html">Power Washing</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="siding.html">Siding</a>
+    </div>
   </main>
 
-  <footer class="site-footer">
-     <footer>
-        <p>Contact us: <a href="mailto:[email protected]">[bnbllp@brushandbroomllp.com]</a> | 509-200-4873</p>
-        <address>
-            Walla Walla, WA 99362<br>
-            Hours: Mon-Fri 8 AM - 5 PM<br>
-            Licensed & Insured (Yes, We’re Legit!)
-        </address>
-    </footer>
-</body>
-</html>
-    <p>&copy; 2025 Brush & Broom LLP. All rights reserved.</p>
+  <footer>
+    <div>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us: (509) 200-4873</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
+    <div class="social-icons">
+      <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+      <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+      <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+      <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("active");
+    }
+  </script>
 </body>
 </html>
