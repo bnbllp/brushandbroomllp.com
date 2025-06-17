@@ -60,6 +60,7 @@
       color: #fff;
       text-shadow: 2px 2px 4px #000;
     }
+
     nav {
       display: flex;
       gap: 10px;
@@ -76,14 +77,15 @@
       box-shadow: 0 3px 10px #28c76f80;
     }
 
-    /* Slide-in menu */
     .menu-toggle {
       font-size: 1.5em;
       cursor: pointer;
       background: none;
       border: none;
       color: #fff;
+      display: none;
     }
+
     .side-menu {
       position: fixed;
       top: 0;
@@ -133,6 +135,10 @@
       border-radius: 12px;
       border: 3px solid var(--primary);
       box-shadow: 0 0 15px #00000055;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-gallery img:hover {
+      transform: scale(1.03);
     }
 
     footer {
@@ -173,6 +179,12 @@
         display: block;
       }
     }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -207,10 +219,10 @@
     <p style="text-align:center;">A collection of our favorite transformations, from full home repaints to deep cleaning miracles and everything in between.</p>
 
     <div class="portfolio-gallery">
-      <img src="Side by side before and after.png" alt="Project 1" />
-      <img src="cleaning side by side.png" alt="Project 2" />
-      <img src="exterior-paint-icon.png" alt="Project 3" />
-      <img src="interior-paint-icon.PNG" alt="Project 4" />
+      <img src="Side by side before and after.png" alt="Before and after paint project" loading="lazy" />
+      <img src="cleaning side by side.png" alt="Before and after deep clean" loading="lazy" />
+      <img src="exterior-paint-icon.png" alt="Exterior painting icon" loading="lazy" />
+      <img src="interior-paint-icon.PNG" alt="Interior painting icon" loading="lazy" />
     </div>
   </main>
 
@@ -227,5 +239,14 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
+
+  <script>
+    const sideMenu = document.querySelector('.side-menu');
+    document.querySelectorAll('.side-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        sideMenu.classList.remove('open');
+      });
+    });
+  </script>
 </body>
 </html>
