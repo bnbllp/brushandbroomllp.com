@@ -14,6 +14,7 @@
       color: #f9f9f9;
       overflow-x: hidden;
     }
+
     .bg-slideshow {
       position: fixed;
       top: 0; left: 0;
@@ -23,12 +24,14 @@
       background-position: center;
       animation: slideBg 24s infinite ease-in-out;
     }
+
     @keyframes slideBg {
       0%, 100% { background-image: url('bg1.jpg'); }
       25% { background-image: url('bg2.jpg'); }
       50% { background-image: url('bg3.jpg'); }
       75% { background-image: url('bg4.jpg'); }
     }
+
     header {
       background: rgba(15, 23, 42, 0.9);
       padding: 10px 20px;
@@ -36,15 +39,20 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 4px solid #28c76f;
+      position: relative;
+      z-index: 100;
     }
+
     .logo-title {
       display: flex;
       align-items: center;
       gap: 15px;
     }
+
     .logo-title img {
       height: 60px;
     }
+
     .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 2em;
@@ -52,6 +60,7 @@
       margin: 0;
       text-shadow: 2px 2px 4px #000;
     }
+
     .menu-btn {
       background: #28c76f;
       border: none;
@@ -61,6 +70,7 @@
       font-weight: bold;
       cursor: pointer;
       font-size: 1.2em;
+      z-index: 101;
     }
 
     #menuOverlay {
@@ -68,9 +78,10 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.6);
-      z-index: 97;
+      z-index: 98;
       display: none;
     }
+
     #menuOverlay.active {
       display: block;
     }
@@ -87,16 +98,19 @@
       box-shadow: -2px 0 10px #000;
       transform: translateX(100%);
       transition: transform 0.3s ease;
-      z-index: 98;
+      z-index: 99;
     }
+
     .side-menu.open {
-      transform: translateX(0%);
+      transform: translateX(0);
     }
+
     .side-menu h2 {
       margin-top: 0;
       border-bottom: 2px solid #28c76f;
       padding-bottom: 10px;
     }
+
     .side-menu a {
       display: block;
       margin: 15px 0;
@@ -114,6 +128,7 @@
       padding: 40px 20px;
       border-radius: 15px;
     }
+
     main h2 {
       font-size: 2.2em;
       margin-bottom: 15px;
@@ -122,6 +137,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
     main p {
       font-size: 1.1em;
       line-height: 1.6;
@@ -139,6 +155,7 @@
       bottom: 0;
       width: 100%;
     }
+
     .footer-contact {
       display: inline-block;
       padding: 10px 18px;
@@ -151,14 +168,17 @@
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
     }
+
     .footer-contact:hover {
       background-color: #1e7a4d;
     }
+
     .social-icons img {
       height: 30px;
       margin: 0 10px;
       vertical-align: middle;
     }
+
     .social-icons a {
       display: inline-block;
     }
@@ -219,7 +239,6 @@
     function toggleMenu(forceClose = false) {
       const menu = document.getElementById("sideMenu");
       const overlay = document.getElementById("menuOverlay");
-
       const isOpen = menu.classList.contains("open");
 
       if (forceClose || isOpen) {
@@ -231,6 +250,7 @@
       }
     }
 
+    // Optional: auto-close menu if link inside it is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', () => toggleMenu(true));
