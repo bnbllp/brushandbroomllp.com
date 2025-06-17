@@ -4,11 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Brush & Broom LLP – Interior & Exterior Painting, Cleaning, Flooring & More in Walla Walla, WA" />
-  <title>Brush & Broom LLP | Painting & Cleaning Experts</title>
+  <title>Brush & Broom LLP</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --text-light: #f9f9f9;
+      --light: #f9f9f9;
+      --green: #28c76f;
     }
     * {
       box-sizing: border-box;
@@ -16,7 +17,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: var(--text-light);
+      color: var(--light);
       overflow-x: hidden;
       background: #0f172a;
     }
@@ -38,51 +39,97 @@
       75% { background-image: url('bg4.jpg'); }
     }
     header {
-      background: rgba(15, 23, 42, 0.85);
-      padding: 30px 15px 20px;
-      text-align: center;
-      border-bottom: 4px solid #28c76f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 4px solid var(--green);
     }
-    header h1 {
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+    .logo-title img {
+      height: 60px;
+      margin-right: 15px;
+    }
+    .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 3em;
-      color: #fff;
-      margin: 0 0 10px;
-      text-shadow: 2px 2px 4px #000;
+      font-size: 1.9em;
+      color: white;
+      margin: 0;
+      border-left: 4px solid var(--green);
+      border-right: 4px solid var(--green);
+      padding: 0 12px;
+      text-shadow: 2px 2px 5px black;
     }
     nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 10px;
-      margin-top: 10px;
+      justify-content: center;
     }
     nav a {
-      padding: 12px 20px;
+      padding: 10px 18px;
       border-radius: 25px;
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
-      transition: all 0.6s ease;
+      transition: background-color 0.3s ease;
     }
     nav a:hover {
       filter: brightness(1.1);
     }
-    .logo-container {
-      text-align: center;
-      padding: 20px 0 10px;
-      background: rgba(15, 23, 42, 0.85);
-      border-bottom: 4px solid #28c76f;
+
+    /* Slide-Out Menu Button */
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
     }
-    .logo-container img {
-      height: 130px;
-      max-width: 90%;
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 280px;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.97);
+      box-shadow: -3px 0 10px #000;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+      padding: 30px 20px;
     }
+
+    .side-menu.open {
+      right: 0;
+    }
+
+    .side-menu h2 {
+      margin-top: 0;
+      color: var(--green);
+    }
+
+    .side-menu a {
+      display: block;
+      margin: 15px 0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .side-menu a:hover {
+      color: var(--green);
+    }
+
     main {
       max-width: 1000px;
-      margin: 40px auto 80px;
+      margin: 40px auto 100px;
       background: rgba(15, 23, 42, 0.9);
       padding: 30px 20px;
       border-radius: 15px;
@@ -90,17 +137,16 @@
     main h2 {
       font-size: 2.4em;
       margin-bottom: 10px;
-      background: linear-gradient(to right, #ff7a24, #2499ff, #28c76f);
+      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
     }
     main p {
+      text-align: center;
       font-size: 1.1em;
       line-height: 1.6;
       margin-bottom: 25px;
-      color: var(--text-light);
-      text-align: center;
     }
     .service-grid {
       display: flex;
@@ -116,16 +162,14 @@
       font-weight: bold;
       text-decoration: none;
       color: white;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
-      transition: all 0.6s ease;
+      transition: background-color 0.3s ease;
     }
-    .service-grid a:hover {
-      filter: brightness(1.1);
-    }
+
     .quote-form {
       max-width: 600px;
-      margin: 40px auto;
+      margin: 50px auto;
       background: rgba(30, 41, 59, 0.95);
       padding: 30px;
       border-radius: 15px;
@@ -151,7 +195,7 @@
       font-size: 1.1em;
       border-radius: 8px;
       cursor: pointer;
-      background-color: #28c76f;
+      background-color: var(--green);
       color: white;
       border: none;
       box-shadow: 0 3px 10px #28c76f80;
@@ -161,6 +205,7 @@
     .quote-form button:hover {
       background-color: #1e7a4d;
     }
+
     footer {
       text-align: center;
       background: rgba(15, 23, 42, 0.85);
@@ -171,6 +216,7 @@
       bottom: 0;
       width: 100%;
     }
+
     .footer-contact {
       display: inline-block;
       padding: 12px 24px;
@@ -179,24 +225,31 @@
       text-decoration: none;
       color: white;
       margin: 5px;
-      background-color: #28c76f;
+      background-color: var(--green);
       box-shadow: 0 3px 10px #28c76f80;
       transition: background-color 0.3s ease;
     }
-    .footer-contact:hover {
-      background-color: #1e7a4d;
-    }
+
     .social-icons img {
       height: 30px;
       margin: 0 10px;
       vertical-align: middle;
     }
+
     .social-icons a {
       display: inline-block;
     }
-    @media (max-width: 700px) {
-      nav { justify-content: center; width: 100%; }
-      main { margin: 40px 10px 100px; padding: 20px; }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -204,25 +257,33 @@
   <div class="bg-slideshow"></div>
 
   <header>
-    <h1>Brush & Broom LLP</h1>
+    <div class="logo-title">
+      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
+      <h1>Brush & Broom LLP</h1>
+    </div>
     <nav>
-      <a href="interior-painting.html">Interior Painting</a>
-      <a href="exterior-painting.html">Exterior Painting</a>
-      <a href="move-cleaning.html">Move In/Out Cleaning</a>
+      <a href="interior-painting.html">Interior</a>
+      <a href="exterior-painting.html">Exterior</a>
+      <a href="move-cleaning.html">Move Cleaning</a>
       <a href="deep-cleaning.html">Deep Cleaning</a>
-      <a href="power-washing.html">Power Washing</a>
+      <a href="power-washing.html">Power Wash</a>
       <a href="flooring.html">Flooring</a>
       <a href="siding.html">Siding</a>
     </nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </header>
 
-  <div class="logo-container">
-    <img src="logo.PNG" alt="Brush & Broom LLP Logo" />
+  <div class="side-menu" id="sideMenu">
+    <h2>Menu</h2>
+    <a href="about.html">About Us</a>
+    <a href="portfolio.html">Our Portfolio</a>
+    <a href="safety.html">Safety & Preparation</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 
   <main>
     <h2>Welcome to Brush & Broom LLP</h2>
-    <p>Your one-stop solution for professional painting, deep cleaning, power washing, flooring, and siding in Walla Walla, WA. Trusted, affordable, and family-run!</p>
+    <p>Walla Walla’s go-to experts for painting, cleaning, flooring, siding, and power washing. Affordable. Family-run. Fully certified.</p>
 
     <div class="service-grid">
       <a href="interior-painting.html">Interior Painting</a>
@@ -234,20 +295,20 @@
       <a href="siding.html">Siding</a>
     </div>
 
-    <section id="quote" class="quote-form">
-      <h3>Get Your Free Quote</h3>
+    <section class="quote-form">
+      <h3>Get a Free Estimate</h3>
       <form action="https://formspree.io/f/yourformid" method="POST">
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="tel" name="phone" placeholder="Phone Number" />
         <input type="email" name="email" placeholder="Email Address" />
-        <select name="services[]" multiple required aria-label="Select services">
+        <select name="services[]" multiple required>
           <option value="Interior Painting">Interior Painting</option>
           <option value="Exterior Painting">Exterior Painting</option>
           <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
-          <option value="Initial Deep Cleaning">Deep Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
           <option value="Power Washing">Power Washing</option>
-          <option value="Vinyl Siding">Siding</option>
           <option value="Flooring">Flooring</option>
+          <option value="Siding">Siding</option>
         </select>
         <textarea name="comments" rows="4" placeholder="Tell us about your project..."></textarea>
         <button type="submit">Get Estimate</button>
@@ -270,25 +331,22 @@
   </footer>
 
   <script>
-    const buttons = document.querySelectorAll('nav a');
-    const colors = [
-      '#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5',
-      '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'
-    ];
-    function randomizeButtonColor(button) {
-      const randColor = colors[Math.floor(Math.random() * colors.length)];
-      button.style.backgroundColor = randColor;
-      button.style.boxShadow = `0 3px 10px ${randColor}80`;
-    }
-    function startColorAnimation() {
-      buttons.forEach((btn, i) => {
-        setTimeout(() => {
-          randomizeButtonColor(btn);
-          setInterval(() => randomizeButtonColor(btn), 4000 + (i * 300));
-        }, i * 200);
+    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
+    const buttons = document.querySelectorAll('nav a, .service-grid a');
+
+    function randomizeColors() {
+      buttons.forEach(btn => {
+        const rand = colors[Math.floor(Math.random() * colors.length)];
+        btn.style.backgroundColor = rand;
+        btn.style.boxShadow = `0 3px 10px ${rand}80`;
       });
     }
-    startColorAnimation();
+    randomizeColors();
+    setInterval(randomizeColors, 3000);
+
+    function toggleMenu() {
+      document.getElementById("sideMenu").classList.toggle("open");
+    }
   </script>
 </body>
 </html>
