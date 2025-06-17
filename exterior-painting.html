@@ -268,22 +268,48 @@
     </section>
   </main>
 
-  <footer>
-    <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
-    <div class="social-icons">
-      <a href="#"><img src="facebook_icon.PNG" alt="Facebook" /></a>
-      <a href="#"><img src="yelp_icon.PNG" alt="Yelp" /></a>
-      <a href="#"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
-      <a href="#"><img src="google_icon.PNG" alt="Google" /></a>
-    </div>
-  </footer>
-
+<footer>
+  <div style="margin-bottom: 15px;">
+    <a href="tel:5092004873" class="footer-contact small-btn">📞 Call Us</a>
+    <a href="sms:5092004873" class="footer-contact small-btn">💬 Text Us</a>
+    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact small-btn">📧 Email Us</a>
+  </div>
+  <div class="social-icons">
+    <a href="https://facebook.com"><img src="facebook_icon.PNG" alt="Facebook" /></a>
+    <a href="https://yelp.com"><img src="yelp_icon.PNG" alt="Yelp" /></a>
+    <a href="https://nextdoor.com"><img src="nextdoor_icon.PNG" alt="Nextdoor" /></a>
+    <a href="https://google.com"><img src="google_icon.PNG" alt="Google" /></a>
+  </div>
+  <p>&copy; 2025 Brush & Broom LLP</p>
+</footer>
+  
   <script>
-    function toggleMenu() {
-      document.getElementById("sideMenu").classList.toggle("open");
+    const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
+    const buttons = document.querySelectorAll('.service-grid a');
+
+    function randomizeColors() {
+      buttons.forEach(btn => {
+        const rand = colors[Math.floor(Math.random() * colors.length)];
+        btn.style.backgroundColor = rand;
+        btn.style.boxShadow = `0 3px 10px ${rand}80`;
+      });
     }
+    randomizeColors();
+    setInterval(randomizeColors, 3000);
+
+    function toggleMenu() {
+      const menu = document.getElementById("sideMenu");
+      const overlay = document.getElementById("menuOverlay");
+      menu.classList.toggle("open");
+      overlay.style.display = menu.classList.contains("open") ? "block" : "none";
+    }
+
+    // Close menu when a link is clicked
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('#sideMenu a').forEach(link => {
+        link.addEventListener('click', toggleMenu);
+      });
+    });
   </script>
 </body>
 </html>
