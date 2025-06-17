@@ -191,23 +191,18 @@
   <div class="bg-slideshow"></div>
 
   <header>
-    <div class="logo-left">
-      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
+    <div class="logo-title">
+      <a href="index.html"><img src="logo.PNG" alt="Logo" style="height: 75px;" /></a>
       <h1>Brush & Broom LLP</h1>
     </div>
-    <nav>
-      <a href="interior-painting.html">Interior</a>
-      <a href="exterior-painting.html">Exterior</a>
-      <a href="move-cleaning.html">Move/Out</a>
-      <a href="deep-cleaning.html">Deep Cleaning</a>
-      <a href="power-washing.html">Power Wash</a>
-      <a href="flooring.html">Flooring</a>
-      <a href="siding.html">Siding</a>
-    </nav>
-    <button class="menu-toggle" onclick="document.querySelector('.side-menu').classList.toggle('open')">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </header>
 
-  <div class="side-menu">
+  <div id="menuOverlay" onclick="toggleMenu()"></div>
+
+  <div id="sideMenu" class="side-menu">
+    <h2>Menu</h2>
+    <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Our Portfolio</a>
     <a href="safety.html">Safety & Preparation</a>
