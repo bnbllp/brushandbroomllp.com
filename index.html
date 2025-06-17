@@ -320,5 +320,20 @@
     </div>
     <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
-</body>
+<script>
+  const buttons = document.querySelectorAll('nav a');
+  const colors = [
+    '#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5',
+    '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'
+  ];
+  function randomizeColors() {
+    buttons.forEach(btn => {
+      const randColor = colors[Math.floor(Math.random() * colors.length)];
+      btn.style.backgroundColor = randColor;
+      btn.style.boxShadow = `0 3px 10px ${randColor}80`;
+    });
+  }
+  randomizeColors();
+  setInterval(randomizeColors, 3000);
+</script></body>
 </html>
