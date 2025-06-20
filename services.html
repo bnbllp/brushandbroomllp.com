@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services | Brush & Broom LLP</title>
-  <link rel="canonical" href="https://brushandbroomllp.com/the-real-page.html">
- <style>
+  <link rel="canonical" href="https://brushandbroomllp.com/services.html">
+  <style>
     :root {
       --light: #f9f9f9;
       --green: #28c76f;
@@ -70,7 +70,7 @@
       text-shadow: 2px 2px 5px black;
     }
 
-    .menu-btn {
+    .menu-button {
       position: absolute;
       top: 100%;
       right: 20px;
@@ -106,11 +106,6 @@
 
     .side-menu.open {
       right: 0;
-    }
-
-    .side-menu h2 {
-      margin-top: 0;
-      color: var(--green);
     }
 
     .side-menu a {
@@ -151,13 +146,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       text-align: center;
-    }
-
-    main p {
-      text-align: center;
-      font-size: 1.1em;
-      line-height: 1.6;
-      margin-bottom: 25px;
     }
 
     .service-grid {
@@ -247,34 +235,24 @@
       transition: background-color 0.3s ease;
     }
 
-    .social-icons img {
-      height: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
+    .small-btn {
+      font-size: 0.85em;
+      padding: 8px 16px;
+      margin: 3px 6px;
     }
-
-    .social-icons a {
-      display: inline-block;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  .small-btn {
-  font-size: 0.85em;
-  padding: 8px 16px;
-  margin: 3px 6px;
-}</style>
+  </style>
 </head>
 <body>
+  <div class="bg-slideshow"></div>
 
-  <!-- Menu Button -->
-  <button class="menu-button" onclick="toggleMenu()">Menu</button>
+  <header>
+    <div class="logo-title">
+      <img src="logo.png" alt="Brush & Broom LLP Logo" />
+      <h1>Brush & Broom LLP</h1>
+    </div>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+  </header>
 
-  <!-- Side Menu -->
   <div class="side-menu" id="sideMenu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -283,45 +261,46 @@
     <a href="portfolio.html">Portfolio</a>
     <a href="safety.html">Safety</a>
   </div>
+  <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <!-- Services Grid -->
   <main>
-    <div class="services-grid">
-      <div class="service-item">Interior Painting</div>
-      <div class="service-item">Exterior Painting</div>
-      <div class="service-item">Cabinet Painting</div>
-      <div class="service-item">Deck Painting</div>
-      <div class="service-item">Door Painting</div>
-      <div class="service-item">Metal Painting</div>
-      <div class="service-item">Siding Painting</div>
-      <div class="service-item">Wood Painting</div>
-      <div class="service-item">Staining Wood</div>
-      <div class="service-item">Deep Clean</div>
-      <div class="service-item">General Housekeeping</div>
-      <div class="service-item">Interior & Exterior Window Cleaning</div>
-      <div class="service-item">Moving-Related Cleaning</div>
-      <div class="service-item">Office & Workspace Cleaning</div>
-      <div class="service-item">Standard Cleaning</div>
-      <div class="service-item">Gutter Cleaning</div>
-      <div class="service-item">Power/Pressure Washing</div>
-      <div class="service-item">Roof Cleaning</div>
-      <div class="service-item">Soft Wash</div>
-      <div class="service-item">Siding Installation</div>
-      <div class="service-item">Flooring Installation</div>
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <a href="#">Interior Painting</a>
+      <a href="#">Exterior Painting</a>
+      <a href="#">Cabinet Painting</a>
+      <a href="#">Deck Painting</a>
+      <a href="#">Door Painting</a>
+      <a href="#">Metal Painting</a>
+      <a href="#">Siding Painting</a>
+      <a href="#">Wood Painting</a>
+      <a href="#">Staining Wood</a>
+      <a href="#">Deep Clean</a>
+      <a href="#">General Housekeeping</a>
+      <a href="#">Interior & Exterior Window Cleaning</a>
+      <a href="#">Moving-Related Cleaning</a>
+      <a href="#">Office & Workspace Cleaning</a>
+      <a href="#">Standard Cleaning</a>
+      <a href="#">Gutter Cleaning</a>
+      <a href="#">Power/Pressure Washing</a>
+      <a href="#">Roof Cleaning</a>
+      <a href="#">Soft Wash</a>
+      <a href="#">Siding Installation</a>
+      <a href="#">Flooring Installation</a>
     </div>
   </main>
 
-<footer>
-  <div style="margin-bottom: 15px;">
-    <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
-    <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
-    <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
-    <a href="/contact.html" class="footer-contact small-btn">📝 Get a Quote</a>
-  </div>
-  <p>&copy; 2025 Brush & Broom LLP</p>
-</footer>
+  <footer>
+    <div style="margin-bottom: 15px;">
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+      <a href="contact.html" class="footer-contact small-btn">📝 Get a Quote</a>
+    </div>
+    <p>&copy; 2025 Brush & Broom LLP</p>
+  </footer>
 
-<script>
+  <script>
     const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
     const buttons = document.querySelectorAll('.service-grid a');
 
@@ -342,7 +321,6 @@
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
 
-    // Close menu when a link is clicked
     document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('#sideMenu a').forEach(link => {
         link.addEventListener('click', toggleMenu);
