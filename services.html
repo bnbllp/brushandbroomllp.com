@@ -17,14 +17,14 @@
   <meta property="og:url" content="https://brushandbroomllp.com/services.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bg-slideshow"></div>
 
   <header>
     <div class="logo-title">
-      <img src="assets/images/logo.png" alt="Brush & Broom LLP Logo" />
+      <img src="logo.png" alt="Brush & Broom LLP Logo" />
       <h1>Brush & Broom LLP</h1>
     </div>
     <button class="menu-button" onclick="toggleMenu()">☰</button>
@@ -70,9 +70,9 @@
   <!-- Inject footer -->
   <div id="footer-placeholder"></div>
 
-  <script src="scripts/script.js"></script>
+  <script src="script.js"></script>
   <script>
-    fetch("includes/footer.html")
+    fetch("footer.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
