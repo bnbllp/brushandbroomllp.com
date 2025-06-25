@@ -4,113 +4,117 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deep Cleaning | Brush & Broom LLP</title>
-  <meta name="description" content="Deep cleaning services by Brush & Broom LLP in Walla Walla, WA. We clean the spots others miss—thorough, detailed, and refreshing." />
+  <meta name="description" content="Thorough deep cleaning services in Walla Walla by Brush & Broom LLP. Kitchens, bathrooms, baseboards, behind furniture & more." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --light: #f9f9f9;
       --green: #28c76f;
+      --light: #f9f9f9;
+      --dark: #0f172a;
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: var(--light);
+      background: var(--dark);
       overflow-x: hidden;
-      background: #0f172a;
     }
+
     .bg-slideshow {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background-size: cover;
       background-position: center;
       animation: slideBg 24s infinite ease-in-out;
+      z-index: -1;
     }
+
     @keyframes slideBg {
       0%, 100% { background-image: url('bg1.jpg'); }
       25% { background-image: url('bg2.jpg'); }
       50% { background-image: url('bg3.jpg'); }
       75% { background-image: url('bg4.jpg'); }
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 20px;
+      padding: 1rem 1.5rem;
       background: rgba(15, 23, 42, 0.9);
       border-bottom: 4px solid var(--green);
-      position: relative;
     }
+
     .logo-title {
       display: flex;
       align-items: center;
+      gap: 1rem;
     }
+
     .logo-title img {
       height: 60px;
-      margin-right: 15px;
     }
+
     .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
-      font-size: 1.9em;
-      color: white;
-      margin: 0;
+      font-size: 1.8em;
+      padding: 0 0.5rem;
       border-left: 4px solid var(--green);
       border-right: 4px solid var(--green);
-      padding: 0 12px;
-      text-shadow: 2px 2px 5px black;
     }
+
     .menu-btn {
-      position: absolute;
-      top: 100%;
-      right: 20px;
-      margin-top: 5px;
-      font-size: 2.5em;
+      font-size: 2.2em;
       background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       border: none;
       cursor: pointer;
-      z-index: 1100;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
+      0%, 100% { transform: scale(1); opacity: 0.8; }
       50% { transform: scale(1.1); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.8; }
     }
-    .side-menu {
+
+    #sideMenu {
       position: fixed;
       top: 104px;
-      right: -300px;
-      width: 260px;
+      right: -280px;
+      width: 250px;
       height: calc(100% - 104px);
       background: rgba(15, 23, 42, 0.97);
-      box-shadow: -3px 0 10px #000;
-      transition: right 0.3s ease-in-out;
+      padding: 2rem 1.25rem;
+      box-shadow: -4px 0 12px #000;
+      transition: right 0.3s ease;
       z-index: 1050;
-      padding: 30px 20px;
     }
-    .side-menu.open {
+
+    #sideMenu.open {
       right: 0;
     }
-    .side-menu h2 {
-      margin-top: 0;
+
+    #sideMenu h2 {
       color: var(--green);
+      margin-bottom: 1rem;
     }
-    .side-menu a {
+
+    #sideMenu a {
       display: block;
-      margin: 15px 0;
+      margin: 0.75rem 0;
       color: white;
       font-weight: bold;
       text-decoration: none;
     }
-    .side-menu a:hover {
+
+    #sideMenu a:hover {
       color: var(--green);
     }
+
     #menuOverlay {
       display: none;
       position: fixed;
@@ -121,105 +125,52 @@
       background-color: rgba(0, 0, 0, 0.6);
       z-index: 1000;
     }
+
     main {
-      max-width: 1000px;
-      margin: 40px auto 100px;
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 2rem;
       background: rgba(15, 23, 42, 0.9);
-      padding: 30px 20px;
       border-radius: 15px;
     }
+
     main h2 {
-      font-size: 2.4em;
-      margin-bottom: 10px;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 1rem;
       background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      text-align: center;
     }
+
     main p {
       text-align: center;
       font-size: 1.1em;
       line-height: 1.6;
-      margin-bottom: 25px;
+      margin-bottom: 1.5rem;
     }
-    .quote-form {
-      max-width: 600px;
-      margin: 50px auto;
-      background: rgba(30, 41, 59, 0.95);
-      padding: 30px;
-      border-radius: 15px;
-    }
-    .quote-form h3 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-    .quote-form input,
-    .quote-form textarea,
-    .quote-form select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1em;
-    }
-    .quote-form button {
-      padding: 14px;
-      font-weight: bold;
-      font-size: 1.1em;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: var(--green);
-      color: white;
-      border: none;
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    .quote-form button:hover {
-      background-color: #1e7a4d;
-    }
+
     footer {
       text-align: center;
       background: rgba(15, 23, 42, 0.85);
-      padding: 10px 5px;
+      padding: 1rem;
       font-size: 0.9em;
       color: #ccc;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
     }
+
     .footer-contact {
       display: inline-block;
-      padding: 8px 14px;
+      margin: 0.25rem;
+      padding: 0.5rem 1rem;
       border-radius: 30px;
+      background: var(--green);
+      color: white;
       font-weight: bold;
       text-decoration: none;
-      color: white;
-      margin: 5px;
-      background-color: var(--green);
-      box-shadow: 0 3px 10px #28c76f80;
-      transition: background-color 0.3s ease;
     }
-    .social-icons img {
-      height: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-    .social-icons a {
-      display: inline-block;
-    }
+
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-    .small-btn {
-      font-size: 0.85em;
-      padding: 8px 16px;
-      margin: 3px 6px;
+      header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -228,7 +179,7 @@
 
   <header>
     <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Logo" style="height: 75px;" /></a>
+      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
       <h1>Brush & Broom LLP</h1>
     </div>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -236,25 +187,25 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
+  <nav id="sideMenu" aria-label="Main menu">
     <h2>Menu</h2>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About Us</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Preparation</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="safety.html">Safety</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
     <h2>Deep Cleaning</h2>
-    <p>We go beyond the basics. Our deep cleaning service tackles buildup, grime, and forgotten corners with serious attention to detail. It's the reset button your space deserves.</p>
-    <p>We scrub behind appliances, detail your baseboards, sanitize bathrooms and kitchens, and make every surface sparkle. Ideal for move-ins, move-outs, spring cleaning, or just when life gets messy.</p>
-    <p>When we say "deep clean," we mean clean enough to impress your mother-in-law *and* your landlord.</p>
+    <p>Sometimes regular cleaning isn’t enough — that’s where we come in.</p>
+    <p>We scrub, sanitize, and polish everything from baseboards to behind your fridge. Kitchens, bathrooms, vents, and blinds? We clean them all. Even that ceiling fan you forgot existed.</p>
+    <p>Let’s get your home, rental, or business sparkling from the inside out.</p>
   </main>
 
   <footer>
-    <div style="margin-bottom: 15px;">
+    <div>
       <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
       <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
       <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
@@ -269,10 +220,11 @@
       menu.classList.toggle("open");
       overlay.style.display = menu.classList.contains("open") ? "block" : "none";
     }
+
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#sideMenu a').forEach(link => {
-        link.addEventListener('click', toggleMenu);
-      });
+      document.querySelectorAll('#sideMenu a').forEach(link =>
+        link.addEventListener('click', toggleMenu)
+      );
     });
   </script>
 </body>
