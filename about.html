@@ -40,7 +40,6 @@
     }
 
     .logo-title h1 {
-      font-family: 'Segoe UI', sans-serif;
       font-size: 1.8em;
       padding: 0 10px;
       border-left: 4px solid var(--green);
@@ -68,7 +67,7 @@
     #sideMenu {
       position: fixed;
       top: 80px;
-      right: -250px;
+      right: -280px;
       width: 250px;
       height: 100%;
       background: #0e1526;
@@ -143,7 +142,7 @@
       <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP logo" /></a>
       <h1>Brush & Broom LLP</h1>
     </div>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <button class="menu-btn">☰</button>
   </header>
 
   <nav id="sideMenu">
@@ -171,10 +170,18 @@
   </footer>
 
   <script>
-    const toggleMenu = () => {
-      const menu = document.getElementById('sideMenu');
+    const menu = document.getElementById('sideMenu');
+    const menuBtn = document.querySelector('.menu-btn');
+
+    menuBtn.addEventListener('click', () => {
       menu.classList.toggle('open');
-    };
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
 
     const footerButtons = document.querySelectorAll('.footer-contact');
     const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
