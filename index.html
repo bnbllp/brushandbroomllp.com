@@ -103,6 +103,72 @@
       text-align: center;
     }
 
+    .service-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .service-item {
+      flex: 1 1 260px;
+      background: var(--green);
+      color: white;
+      padding: 1.2rem;
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-item a {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .service-item small {
+      display: block;
+      font-size: 0.9em;
+      margin-top: 0.5rem;
+      color: #f0f0f0;
+    }
+
+    .quote-form {
+      max-width: 600px;
+      margin: 3rem auto;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .quote-form h3 {
+      margin-bottom: 1rem;
+    }
+
+    .quote-form input,
+    .quote-form textarea,
+    .quote-form select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .quote-form button {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1em;
+      font-weight: bold;
+      background: var(--green);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
     footer {
       text-align: center;
       background: #0e1526;
@@ -111,7 +177,7 @@
 
     .footer-contact {
       display: inline-block;
-      margin: 5px;
+      margin: 0.4rem;
       padding: 10px 20px;
       border-radius: 30px;
       background: var(--green);
@@ -146,7 +212,47 @@
   <main>
     <h2>Welcome to Brush & Broom LLP</h2>
     <p>We specialize in residential and commercial interior & exterior painting, power washing, and detailed cleaning services in Walla Walla, WA. Let’s bring your property back to life — the professional way.</p>
-    <p>Browse our services above or contact us for a fast, free estimate.</p>
+
+    <div class="service-grid">
+      <div class="service-item">
+        <a href="interior-painting.html">Interior Painting</a>
+        <small>Professional wall, ceiling, and trim painting</small>
+      </div>
+      <div class="service-item">
+        <a href="exterior-painting.html">Exterior Painting</a>
+        <small>Durable outdoor coatings for homes and buildings</small>
+      </div>
+      <div class="service-item">
+        <a href="move-cleaning.html">Move In/Out Cleaning</a>
+        <small>Deep cleaning for renters, landlords & buyers</small>
+      </div>
+      <div class="service-item">
+        <a href="deep-cleaning.html">Deep Cleaning</a>
+        <small>Baseboards, appliances, and behind-the-scenes clean</small>
+      </div>
+      <div class="service-item">
+        <a href="power-washing.html">Power Washing</a>
+        <small>Driveways, siding, sidewalks & more</small>
+      </div>
+    </div>
+
+    <section class="quote-form">
+      <h3>Get a Free Estimate</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" />
+        <input type="email" name="email" placeholder="Email Address" />
+        <select name="services[]" multiple required>
+          <option value="Interior Painting">Interior Painting</option>
+          <option value="Exterior Painting">Exterior Painting</option>
+          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
+          <option value="Deep Cleaning">Deep Cleaning</option>
+          <option value="Power Washing">Power Washing</option>
+        </select>
+        <textarea name="comments" placeholder="Tell us about your project..."></textarea>
+        <button type="submit">Get Estimate</button>
+      </form>
+    </section>
   </main>
 
   <footer>
@@ -183,6 +289,18 @@
     }
     cycleFooterColors();
     setInterval(cycleFooterColors, 3000);
+
+    const serviceItems = document.querySelectorAll('.service-item');
+    const serviceColors = ['#28c76f', '#2499ff', '#ff7a24', '#e91e63', '#3f51b5'];
+    function animateServiceColors() {
+      serviceItems.forEach(btn => {
+        const color = serviceColors[Math.floor(Math.random() * serviceColors.length)];
+        btn.style.backgroundColor = color;
+        btn.style.boxShadow = `0 3px 10px ${color}80`;
+      });
+    }
+    animateServiceColors();
+    setInterval(animateServiceColors, 3000);
   </script>
 </body>
 </html>
