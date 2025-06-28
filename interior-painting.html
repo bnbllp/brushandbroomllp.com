@@ -21,23 +21,75 @@
 
     header {
       display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 20px;
       background: #0e1526;
       border-bottom: 3px solid var(--green);
     }
 
-    header img {
-      height: 60px;
-      margin-right: 10px;
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    header h1 {
+    .logo-title img {
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .logo-title h1 {
       font-size: 1.8em;
+      padding: 0 10px;
       border-left: 4px solid var(--green);
       border-right: 4px solid var(--green);
-      padding: 0 10px;
       color: white;
+    }
+
+    .menu-btn {
+      font-size: 1.8em;
+      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: 2px solid #28c76f;
+      border-radius: 8px;
+      padding: 5px 10px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    #sideMenu {
+      position: fixed;
+      top: 80px;
+      right: -280px;
+      width: 250px;
+      height: 100%;
+      background: #0e1526;
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    #sideMenu.open {
+      right: 0;
+    }
+
+    #sideMenu a {
+      display: block;
+      margin: 1rem 0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #sideMenu a:hover {
+      color: var(--green);
     }
 
     main {
@@ -86,9 +138,20 @@
 </head>
 <body>
   <header>
-    <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP Logo" /></a>
-    <h1>Brush & Broom LLP</h1>
+    <div class="logo-title">
+      <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP logo" /></a>
+      <h1>Brush & Broom LLP</h1>
+    </div>
+    <button class="menu-btn">☰</button>
   </header>
+
+  <nav id="sideMenu">
+    <h2 style="color:white;">Menu</h2>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="portfolio.html">Our Portfolio</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main>
     <h2>Interior Painting Services in Walla Walla</h2>
@@ -107,6 +170,19 @@
   </footer>
 
   <script>
+    const menu = document.getElementById('sideMenu');
+    const menuBtn = document.querySelector('.menu-btn');
+
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove('open');
+      }
+    });
+
     const footerButtons = document.querySelectorAll('.footer-contact');
     const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
     function cycleFooterColors() {
