@@ -3,205 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interior Painting | Brush & Broom LLP</title>
-  <meta name="description" content="Professional interior painting services in Walla Walla by Brush & Broom LLP. Clean, careful, and color-perfect." />
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <title>Interior Painting | Brush & Broom LLP – Walla Walla, WA</title>
+  <meta name="description" content="Transform your home with Brush & Broom LLP’s professional interior painting in Walla Walla. Clean lines, fast work, fair pricing." />
   <style>
     :root {
-      --light: #f9f9f9;
       --green: #28c76f;
-      --dark: #0f172a;
+      --text-light: #f9f9f9;
+      --bg-dark: #111;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--dark);
-      color: var(--light);
-      overflow-x: hidden;
-    }
-
-    .bg-slideshow {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background-size: cover;
-      background-position: center;
-      animation: slideBg 24s infinite ease-in-out;
-    }
-
-    @keyframes slideBg {
-      0%, 100% { background-image: url('bg1.jpg'); }
-      25% { background-image: url('bg2.jpg'); }
-      50% { background-image: url('bg3.jpg'); }
-      75% { background-image: url('bg4.jpg'); }
+      background: var(--bg-dark);
+      color: var(--text-light);
     }
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 1rem 1.5rem;
-      background: rgba(15, 23, 42, 0.9);
-      border-bottom: 4px solid var(--green);
+      padding: 20px;
+      background: #0e1526;
+      border-bottom: 3px solid var(--green);
     }
 
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    header img {
+      height: 60px;
+      margin-right: 10px;
     }
 
-    .logo-title img {
-      height: 65px;
-    }
-
-    .logo-title h1 {
-      font-family: 'Permanent Marker', cursive;
+    header h1 {
       font-size: 1.8em;
-      padding: 0 0.5rem;
       border-left: 4px solid var(--green);
       border-right: 4px solid var(--green);
+      padding: 0 10px;
       color: white;
-    }
-
-    .menu-btn {
-      font-size: 2.2em;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border: none;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    nav.side-menu {
-      position: fixed;
-      top: 104px;
-      right: -280px;
-      width: 250px;
-      height: calc(100% - 104px);
-      background: rgba(15, 23, 42, 0.97);
-      padding: 2rem 1.25rem;
-      box-shadow: -4px 0 12px #000;
-      transition: right 0.3s ease;
-      z-index: 1050;
-    }
-
-    nav.side-menu.open {
-      right: 0;
-    }
-
-    nav.side-menu h2 {
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-
-    nav.side-menu a {
-      display: block;
-      margin: 0.75rem 0;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    nav.side-menu a:hover {
-      color: var(--green);
-    }
-
-    #menuOverlay {
-      display: none;
-      position: fixed;
-      top: 104px;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 104px);
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1000;
     }
 
     main {
-      max-width: 960px;
-      margin: 3rem auto;
-      background: rgba(15, 23, 42, 0.9);
       padding: 2rem;
-      border-radius: 15px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
     }
 
     main h2 {
-      font-size: 2.2em;
-      text-align: center;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
       background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
     }
 
     main p {
-      text-align: center;
-      font-size: 1.1em;
+      font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
 
     footer {
       text-align: center;
-      background: rgba(15, 23, 42, 0.85);
+      background: #0e1526;
       padding: 1rem;
-      font-size: 0.9em;
-      color: #ccc;
     }
 
     .footer-contact {
       display: inline-block;
-      margin: 0.25rem;
-      padding: 0.5rem 1rem;
+      margin: 5px;
+      padding: 10px 20px;
       border-radius: 30px;
       background: var(--green);
       color: white;
       font-weight: bold;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
+    .footer-contact:hover {
+      opacity: 0.9;
     }
   </style>
 </head>
 <body>
-  <div class="bg-slideshow"></div>
-
   <header>
-    <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Brush & Broom Logo" /></a>
-      <h1>Brush & Broom LLP</h1>
-    </div>
-    <button class="menu-btn" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP Logo" /></a>
+    <h1>Brush & Broom LLP</h1>
   </header>
 
-  <div id="menuOverlay" onclick="toggleMenu()"></div>
-
-  <nav id="sideMenu" class="side-menu" aria-label="Site menu">
-    <h2>Brush and Broom</h2>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Preparation</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
-
   <main>
-    <h2>Interior Painting</h2>
-    <p>We take the mess and guesswork out of interior painting. From prep and masking to clean-cut lines and flawless finishes, we treat every wall like it’s part of our own home.</p>
-    <p>Whether you’re refreshing a single room or repainting the whole interior, our team is clean, quiet, and quick. We protect your belongings, respect your space, and deliver smooth, even coats that last.</p>
-    <p>Get in touch for a free estimate and let’s add a splash of color to your home today.</p>
+    <h2>Interior Painting Services in Walla Walla</h2>
+    <p>We know how much a clean, professional interior paint job can transform your space. At Brush & Broom LLP, we specialize in walls, ceilings, trim, and accent walls using top-rated paints like Behr.</p>
+    <p>We take care of everything — moving or covering furniture, taping off edges, protecting your floors, and using high-quality paints that leave lasting results.</p>
+    <p>Whether you’re looking to freshen up a single room or repaint the entire house, we bring careful prep, clean lines, and consistent coverage to every project.</p>
   </main>
 
   <footer>
@@ -214,18 +107,17 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      const menu = document.getElementById("sideMenu");
-      const overlay = document.getElementById("menuOverlay");
-      menu.classList.toggle("open");
-      overlay.style.display = menu.classList.contains("open") ? "block" : "none";
+    const footerButtons = document.querySelectorAll('.footer-contact');
+    const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
+    function cycleFooterColors() {
+      footerButtons.forEach(btn => {
+        const color = footerColors[Math.floor(Math.random() * footerColors.length)];
+        btn.style.backgroundColor = color;
+        btn.style.boxShadow = `0 0 8px ${color}88`;
+      });
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#sideMenu a').forEach(link =>
-        link.addEventListener('click', toggleMenu)
-      );
-    });
+    cycleFooterColors();
+    setInterval(cycleFooterColors, 3000);
   </script>
 </body>
 </html>
