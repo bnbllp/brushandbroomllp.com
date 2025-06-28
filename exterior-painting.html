@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exterior Painting | Brush & Broom LLP</title>
-  <meta name="description" content="Exterior house painting in Walla Walla by Brush & Broom LLP. Reliable prep, durable coatings, bold curb appeal." />
+  <title>Exterior Painting | Brush & Broom LLP – Walla Walla</title>
+  <meta name="description" content="Professional exterior painting services in Walla Walla by Brush & Broom LLP. Boost curb appeal with high-quality coatings and expert prep work." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <style>
     :root {
       --green: #28c76f;
       --light: #f9f9f9;
       --dark: #0f172a;
+      --orange: #ff7a24;
+      --blue: #2499ff;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      color: var(--light);
       background: var(--dark);
+      color: var(--light);
       overflow-x: hidden;
     }
 
@@ -43,7 +43,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 1.5rem;
+      padding: 15px 20px;
       background: rgba(15, 23, 42, 0.9);
       border-bottom: 4px solid var(--green);
     }
@@ -51,7 +51,7 @@
     .logo-title {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 10px;
     }
 
     .logo-title img {
@@ -61,14 +61,15 @@
     .logo-title h1 {
       font-family: 'Permanent Marker', cursive;
       font-size: 1.8em;
-      padding: 0 0.5rem;
+      padding: 0 10px;
       border-left: 4px solid var(--green);
       border-right: 4px solid var(--green);
+      color: white;
     }
 
     .menu-btn {
       font-size: 2.2em;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
+      background: linear-gradient(to right, var(--orange), var(--green), var(--blue));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       border: none;
@@ -94,9 +95,7 @@
       z-index: 1050;
     }
 
-    #sideMenu.open {
-      right: 0;
-    }
+    #sideMenu.open { right: 0; }
 
     #sideMenu h2 {
       color: var(--green);
@@ -126,6 +125,27 @@
       z-index: 1000;
     }
 
+    .mini-service-nav {
+      text-align: center;
+      background: #1f2937;
+      padding: 10px;
+    }
+
+    .mini-service-nav a {
+      display: inline-block;
+      margin: 5px;
+      padding: 6px 12px;
+      background: var(--green);
+      border-radius: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .mini-service-nav a:hover {
+      background: var(--blue);
+    }
+
     main {
       max-width: 960px;
       margin: 3rem auto;
@@ -138,7 +158,7 @@
       font-size: 2.2em;
       text-align: center;
       margin-bottom: 1rem;
-      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
+      background: linear-gradient(to right, var(--orange), var(--blue), var(--green));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -156,6 +176,9 @@
       padding: 1rem;
       font-size: 0.9em;
       color: #ccc;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
     .footer-contact {
@@ -167,10 +190,6 @@
       color: white;
       font-weight: bold;
       text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -192,15 +211,22 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="safety.html">Safety</a>
     <a href="contact.html">Contact</a>
   </nav>
 
+  <div class="mini-service-nav">
+    <a href="interior-painting.html">Interior Painting</a>
+    <a href="deep-cleaning.html">Deep Cleaning</a>
+    <a href="move-cleaning.html">Move-Out Cleaning</a>
+    <a href="power-washing.html">Power Washing</a>
+    <a href="safety.html">Safety Info</a>
+  </div>
+
   <main>
     <h2>Exterior Painting</h2>
-    <p>Protect your home and boost its curb appeal with professional exterior painting services.</p>
-    <p>From full prep (scraping, masking, priming) to final touch-ups, we bring attention to detail and years of experience to every project.</p>
-    <p>We use high-quality coatings that withstand weather and time—so your home stays beautiful longer.</p>
+    <p>Protect your home and boost its curb appeal with professional exterior painting services in Walla Walla.</p>
+    <p>We handle prep work like scraping, masking, and priming to ensure proper adhesion and smooth coverage. We only use top-grade paint with long-lasting, weather-resistant finishes.</p>
+    <p>Whether it’s siding, trim, doors, or fences — we’ve got the tools and experience to deliver clean, durable results that stand out on your block.</p>
   </main>
 
   <footer>
@@ -208,6 +234,7 @@
       <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
       <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
       <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+      <a href="contact.html" class="footer-contact">📝 Get a Quote</a>
     </div>
     <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
@@ -224,6 +251,18 @@
       document.querySelectorAll('#sideMenu a').forEach(link =>
         link.addEventListener('click', toggleMenu)
       );
+
+      const footerButtons = document.querySelectorAll('.footer-contact');
+      const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
+      function updateColors() {
+        footerButtons.forEach(btn => {
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          btn.style.backgroundColor = color;
+          btn.style.boxShadow = `0 0 8px ${color}88`;
+        });
+      }
+      updateColors();
+      setInterval(updateColors, 3000);
     });
   </script>
 </body>
