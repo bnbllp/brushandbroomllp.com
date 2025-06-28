@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Top-rated cleaning, power washing, and painting company in Walla Walla, WA. Brush & Broom LLP delivers professional move-out cleaning, deep cleans, and pressure washing." />
-  <title>Walla Walla Cleaning, Painting & Power Washing | Brush & Broom LLP</title>
+  <title>Painting, Cleaning & Power Washing in Walla Walla | Brush & Broom LLP</title>
+  <meta name="description" content="Brush & Broom LLP offers professional interior/exterior painting, house cleaning, deep cleaning, and power washing in Walla Walla, WA. Trusted, local, and affordable." />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Brush & Broom LLP",
+    "url": "https://www.brushandbroomllp.com",
+    "logo": "https://www.brushandbroomllp.com/logo.PNG",
+    "image": "https://www.brushandbroomllp.com/logo.PNG",
+    "description": "Painting, cleaning, and power washing in Walla Walla, WA. Reliable, licensed, and family-owned.",
+    "telephone": "+1-509-200-4873",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Walla Walla, WA"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+
   <style>
     :root {
       --green: #28c76f;
@@ -154,16 +173,29 @@
       justify-content: center;
     }
 
-    .service-grid a {
+    .service-item {
       flex: 1 1 280px;
       background: var(--green);
       color: white;
       padding: 1rem;
       border-radius: 12px;
-      font-weight: bold;
       text-align: center;
-      text-decoration: none;
       transition: background-color 0.3s ease;
+    }
+
+    .service-item a {
+      display: block;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .service-item small {
+      display: block;
+      font-size: 0.9em;
+      color: #f0f0f0;
+      margin-top: 0.5rem;
     }
 
     .quote-form {
@@ -249,15 +281,30 @@
   </nav>
 
   <main>
-    <h2>Welcome to Brush & Broom LLP</h2>
-    <p>We’re Walla Walla’s go-to experts for painting, cleaning, and power washing! Affordable. Family-run. Fully certified and half caffeinated 😅</p>
+    <h2>Walla Walla's Local Experts in Painting, Cleaning & Power Washing</h2>
+    <p>Brush & Broom LLP is your go-to team in Walla Walla for high-quality painting, thorough house cleaning, and powerful pressure washing. From move-in/move-out cleans to complete repaints and restoring your exterior surfaces, we deliver clean finishes and even cleaner spaces.</p>
 
     <div class="service-grid">
-      <a href="interior-painting.html">Interior Painting</a>
-      <a href="exterior-painting.html">Exterior Painting</a>
-      <a href="move-cleaning.html">Move In/Out Cleaning</a>
-      <a href="deep-cleaning.html">Deep Cleaning</a>
-      <a href="power-washing.html">Power Washing</a>
+      <div class="service-item">
+        <a href="interior-painting.html">Interior Painting</a>
+        <small>Professional wall, ceiling, and trim painting</small>
+      </div>
+      <div class="service-item">
+        <a href="exterior-painting.html">Exterior Painting</a>
+        <small>Durable outdoor coatings for homes and buildings</small>
+      </div>
+      <div class="service-item">
+        <a href="move-cleaning.html">Move In/Out Cleaning</a>
+        <small>Deep cleaning for renters, landlords & buyers</small>
+      </div>
+      <div class="service-item">
+        <a href="deep-cleaning.html">Deep Cleaning</a>
+        <small>Baseboards, appliances, and behind-the-scenes clean</small>
+      </div>
+      <div class="service-item">
+        <a href="power-washing.html">Power Washing</a>
+        <small>Driveways, siding, sidewalks & more</small>
+      </div>
     </div>
 
     <section class="quote-form">
@@ -289,7 +336,7 @@
   </footer>
 
   <script>
-    const buttons = document.querySelectorAll('.service-grid a');
+    const buttons = document.querySelectorAll('.service-item');
     const colors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#3f51b5', '#ff5722', '#ffc107', '#00bcd4', '#4caf50', '#607d8b', '#f44336'];
 
     const randomizeColors = () => {
