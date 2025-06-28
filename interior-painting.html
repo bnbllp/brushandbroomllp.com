@@ -107,6 +107,31 @@
       margin-bottom: 1rem;
     }
 
+    .service-nav {
+      margin: 1.5rem auto 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .service-nav a {
+      padding: 8px 16px;
+      border-radius: 30px;
+      background: #1f2937;
+      color: white;
+      text-decoration: none;
+      border: 2px solid var(--green);
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .service-nav a:hover {
+      background: var(--green);
+      color: black;
+      transform: scale(1.05);
+    }
+
     main p {
       font-size: 1.1rem;
       line-height: 1.6;
@@ -155,6 +180,15 @@
 
   <main>
     <h2>Interior Painting Services in Walla Walla</h2>
+
+    <div class="service-nav">
+      <a href="deep-cleaning.html">🧼 Deep Cleaning</a>
+      <a href="power-washing.html">💦 Power Washing</a>
+      <a href="move-cleaning.html">🚚 Move-Out Cleaning</a>
+      <a href="exterior-painting.html">🎨 Exterior Painting</a>
+      <a href="contact.html">📝 Get a Quote</a>
+    </div>
+
     <p>We know how much a clean, professional interior paint job can transform your space. At Brush & Broom LLP, we specialize in walls, ceilings, trim, and accent walls using top-rated paints like Behr.</p>
     <p>We take care of everything — moving or covering furniture, taping off edges, protecting your floors, and using high-quality paints that leave lasting results.</p>
     <p>Whether you’re looking to freshen up a single room or repaint the entire house, we bring careful prep, clean lines, and consistent coverage to every project.</p>
