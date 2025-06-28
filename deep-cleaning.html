@@ -26,6 +26,7 @@
       padding: 20px;
       background: #0e1526;
       border-bottom: 3px solid var(--green);
+      flex-wrap: wrap;
     }
 
     .logo-title {
@@ -62,6 +63,38 @@
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 0.9; }
       50% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .service-links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      background: #1a1a1a;
+      padding: 10px 0;
+      border-bottom: 2px solid var(--green);
+    }
+
+    .service-links a {
+      color: white;
+      background: #333;
+      padding: 6px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-links a:hover {
+      background: var(--green);
+      color: #000;
+      font-weight: bold;
+    }
+
+    .service-links .active {
+      background: var(--green);
+      color: #000;
+      font-weight: bold;
     }
 
     #sideMenu {
@@ -143,6 +176,11 @@
       <h1>Brush & Broom LLP</h1>
     </div>
     <button class="menu-btn">☰</button>
+    <div class="service-links">
+      <a href="interior-painting.html">🎨 Interior Painting</a>
+      <a href="power-washing.html">💦 Power Washing</a>
+      <a href="deep-cleaning.html" class="active">🧽 Deep Cleaning</a>
+    </div>
   </header>
 
   <nav id="sideMenu">
