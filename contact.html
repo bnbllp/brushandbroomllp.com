@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Brush & Broom LLP – Walla Walla Painting, Cleaning & Power Washing</title>
-  <meta name="description" content="Contact Brush & Broom LLP for professional painting, cleaning, or power washing in Walla Walla, WA. Call, text, or email us to get started today." />
+  <meta name="description" content="Contact Brush & Broom LLP for painting, cleaning, or power washing in Walla Walla, WA. Call, text, email, or send us a message through the form." />
   <meta property="og:title" content="Contact Brush & Broom LLP" />
-  <meta property="og:description" content="Get in touch for top-rated painting, cleaning & power washing in Walla Walla, WA." />
+  <meta property="og:description" content="Reach out for expert painting, cleaning & pressure washing in Walla Walla." />
   <meta property="og:image" content="https://www.brushandbroomllp.com/logo.PNG" />
   <meta property="og:url" content="https://www.brushandbroomllp.com/contact.html" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -77,7 +77,6 @@
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
     }
 
     .menu-btn {
@@ -108,9 +107,7 @@
       z-index: 1050;
     }
 
-    #sideMenu.open {
-      right: 0;
-    }
+    #sideMenu.open { right: 0; }
 
     #sideMenu h2 {
       color: var(--green);
@@ -125,9 +122,7 @@
       text-decoration: none;
     }
 
-    #sideMenu a:hover {
-      color: var(--green);
-    }
+    #sideMenu a:hover { color: var(--green); }
 
     #menuOverlay {
       display: none;
@@ -136,7 +131,7 @@
       left: 0;
       width: 100%;
       height: calc(100% - 104px);
-      background-color: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.6);
       z-index: 1000;
     }
 
@@ -157,23 +152,51 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .contact-options {
+    form {
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
-      margin-top: 2rem;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background: var(--green);
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .contact-options {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
     .contact-options a {
       display: inline-block;
-      padding: 0.75rem 1.5rem;
-      font-size: 1.1em;
       background: var(--green);
       color: white;
-      border-radius: 30px;
       font-weight: bold;
       text-decoration: none;
-      transition: background 0.3s;
+      padding: 0.75rem 1.25rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
     }
 
     .contact-options a:hover {
@@ -199,10 +222,6 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-    }
   </style>
 </head>
 <body>
@@ -211,7 +230,7 @@
   <header>
     <div class="logo-title">
       <a href="index.html">
-        <img src="logo.PNG" alt="Brush and Broom Logo" />
+        <img src="logo.PNG" alt="Logo" />
         <h1>Brush & Broom LLP</h1>
       </a>
     </div>
@@ -220,7 +239,7 @@
 
   <div id="menuOverlay" onclick="toggleMenu()"></div>
 
-  <nav id="sideMenu" aria-label="Main menu">
+  <nav id="sideMenu">
     <h2>Brush and Broom</h2>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -231,12 +250,20 @@
 
   <main>
     <h2>Contact Us</h2>
-    <p>Let’s get your project started. Reach out via phone, text, or email — we respond quickly.</p>
+    <p>Let us know how we can help. Fill out the form or reach out directly.</p>
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
     <div class="contact-options">
-      <a href="tel:5092004873">📞 Call: (509) 200-4873</a>
+      <a href="tel:5092004873">📞 (509) 200-4873</a>
       <a href="sms:5092004873">💬 Text Us</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com">📧 bnbllp@brushandbroomllp.com</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com">📧 Email Us</a>
     </div>
   </main>
 
