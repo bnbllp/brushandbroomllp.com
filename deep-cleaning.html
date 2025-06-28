@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deep Cleaning Services | Brush & Broom LLP – Walla Walla, WA</title>
-  <meta name="description" content="Detailed deep cleaning services in Walla Walla by Brush & Broom LLP. We scrub, sanitize, and refresh every surface with professional care." />
+  <title>Deep Cleaning | Brush & Broom LLP – Walla Walla, WA</title>
+  <meta name="description" content="Professional deep cleaning services by Brush & Broom LLP in Walla Walla. Thorough, reliable, and detailed house and business cleaning." />
   <style>
     :root {
       --green: #28c76f;
@@ -26,7 +26,6 @@
       padding: 20px;
       background: #0e1526;
       border-bottom: 3px solid var(--green);
-      flex-wrap: wrap;
     }
 
     .logo-title {
@@ -63,39 +62,6 @@
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 0.9; }
       50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    .service-links {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      background: #1a1a1a;
-      padding: 10px 0;
-      border-bottom: 2px solid var(--green);
-    }
-
-    .service-links a {
-      color: white;
-      background: #333;
-      padding: 6px 14px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-
-    .service-links a:hover {
-      background: var(--green);
-      color: #000;
-      font-weight: bold;
-    }
-
-    .service-links .active {
-      background: var(--green);
-      color: #000;
-      font-weight: bold;
     }
 
     #sideMenu {
@@ -141,6 +107,31 @@
       margin-bottom: 1rem;
     }
 
+    .service-nav {
+      margin: 1.5rem auto 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .service-nav a {
+      padding: 8px 16px;
+      border-radius: 30px;
+      background: #1f2937;
+      color: white;
+      text-decoration: none;
+      border: 2px solid var(--green);
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s;
+    }
+
+    .service-nav a:hover {
+      background: var(--green);
+      color: black;
+      transform: scale(1.05);
+    }
+
     main p {
       font-size: 1.1rem;
       line-height: 1.6;
@@ -177,13 +168,6 @@
       <h1>Brush & Broom LLP</h1>
     </div>
     <button class="menu-btn">☰</button>
-    <div class="service-links">
-      <a href="interior-painting.html">🎨 Interior Painting</a>
-      <a href="exterior-painting.html">🏠 Exterior Painting</a>
-      <a href="power-washing.html">💦 Power Washing</a>
-      <a href="deep-cleaning.html" class="active">🧽 Deep Cleaning</a>
-      <a href="move-cleaning.html">🚚 Move-Out Cleaning</a>
-    </div>
   </header>
 
   <nav id="sideMenu">
@@ -196,9 +180,18 @@
 
   <main>
     <h2>Deep Cleaning Services in Walla Walla</h2>
-    <p>Our deep cleaning services are ideal for move-outs, seasonal resets, or just giving your space a fresh start. We tackle every corner, baseboard, and hidden surface with serious attention to detail.</p>
-    <p>From kitchens and bathrooms to behind appliances and inside cabinets, we scrub, sanitize, and refresh every surface so you don’t have to.</p>
-    <p>We come equipped with supplies and experience to tackle grime, dust, and buildup you may not even realize is there.</p>
+
+    <div class="service-nav">
+      <a href="interior-painting.html">🎨 Interior Painting</a>
+      <a href="exterior-painting.html">🏡 Exterior Painting</a>
+      <a href="power-washing.html">💦 Power Washing</a>
+      <a href="move-cleaning.html">🚚 Move-Out Cleaning</a>
+      <a href="contact.html">📝 Get a Quote</a>
+    </div>
+
+    <p>We go far beyond surface-level. Our deep cleaning service gets into the corners, under the appliances, behind the fixtures — giving your space the full reset it deserves.</p>
+    <p>Perfect for spring cleaning, post-renovation cleanups, or prepping for guests and inspections. We scrub, sanitize, and polish to a high standard — no shortcuts.</p>
+    <p>We bring the supplies, the elbow grease, and the detail-oriented mindset your home or business needs.</p>
   </main>
 
   <footer>
