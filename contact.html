@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Brush & Broom LLP</title>
-  <meta name="description" content="Reach out to Brush & Broom LLP. Call, text, or email us to get a quote or ask a question. We’re based in Walla Walla, WA." />
+  <title>Contact Us | Brush & Broom LLP – Walla Walla Painting, Cleaning & Power Washing</title>
+  <meta name="description" content="Contact Brush & Broom LLP for professional painting, cleaning, or power washing in Walla Walla, WA. Call, text, or email us to get started today." />
+  <meta property="og:title" content="Contact Brush & Broom LLP" />
+  <meta property="og:description" content="Get in touch for top-rated painting, cleaning & power washing in Walla Walla, WA." />
+  <meta property="og:image" content="https://www.brushandbroomllp.com/logo.PNG" />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/contact.html" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
     :root {
       --green: #28c76f;
@@ -64,6 +70,14 @@
       padding: 0 0.5rem;
       border-left: 4px solid var(--green);
       border-right: 4px solid var(--green);
+      color: white;
+    }
+
+    .logo-title a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .menu-btn {
@@ -169,10 +183,21 @@
     footer {
       text-align: center;
       background: rgba(15, 23, 42, 0.85);
-      padding: 1rem;
+      padding: 1.2rem;
       font-size: 0.9em;
       color: #ccc;
-      margin-top: 3rem;
+    }
+
+    .footer-contact {
+      display: inline-block;
+      margin: 0.25rem;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      background: var(--green);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
     @media (max-width: 768px) {
@@ -185,8 +210,10 @@
 
   <header>
     <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Logo" /></a>
-      <h1>Brush & Broom LLP</h1>
+      <a href="index.html">
+        <img src="logo.PNG" alt="Brush and Broom Logo" />
+        <h1>Brush & Broom LLP</h1>
+      </a>
     </div>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </header>
@@ -196,9 +223,10 @@
   <nav id="sideMenu" aria-label="Main menu">
     <h2>Brush and Broom</h2>
     <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
     <a href="about.html">About Us</a>
+    <a href="portfolio.html">Portfolio</a>
     <a href="safety.html">Safety</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <main>
@@ -213,6 +241,11 @@
   </main>
 
   <footer>
+    <div>
+      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
+      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
+      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
+    </div>
     <p>&copy; 2025 Brush & Broom LLP</p>
   </footer>
 
@@ -229,6 +262,18 @@
         link.addEventListener('click', toggleMenu)
       );
     });
+
+    const footerButtons = document.querySelectorAll('.footer-contact');
+    const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#4caf50'];
+    function updateFooterColors() {
+      footerButtons.forEach(btn => {
+        const color = footerColors[Math.floor(Math.random() * footerColors.length)];
+        btn.style.backgroundColor = color;
+        btn.style.boxShadow = `0 0 10px ${color}88`;
+      });
+    }
+    updateFooterColors();
+    setInterval(updateFooterColors, 3000);
   </script>
 </body>
 </html>
