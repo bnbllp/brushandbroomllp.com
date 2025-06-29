@@ -252,12 +252,13 @@
     <h2>Contact Us</h2>
     <p>Let us know how we can help. Fill out the form or reach out directly.</p>
 
-    <form action="https://formspree.io/f/yourformid" method="POST">
+    <form id="contact-form" action="https://formspree.io/f/mqabwval" method="POST">
       <input type="text" name="name" placeholder="Full Name" required />
       <input type="email" name="email" placeholder="Email Address" required />
       <input type="tel" name="phone" placeholder="Phone Number" />
       <textarea name="message" placeholder="Tell us about your project..." required></textarea>
       <button type="submit">Send Message</button>
+      <p id="form-status" style="margin-top: 10px;"></p>
     </form>
 
     <div class="contact-options">
@@ -288,19 +289,48 @@
       document.querySelectorAll('#sideMenu a').forEach(link =>
         link.addEventListener('click', toggleMenu)
       );
-    });
 
-    const footerButtons = document.querySelectorAll('.footer-contact');
-    const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#4caf50'];
-    function updateFooterColors() {
-      footerButtons.forEach(btn => {
-        const color = footerColors[Math.floor(Math.random() * footerColors.length)];
-        btn.style.backgroundColor = color;
-        btn.style.boxShadow = `0 0 10px ${color}88`;
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            status.textContent = "✅ Thank you! Your message has been sent.";
+            status.style.color = "lime";
+            form.reset();
+          } else {
+            const err = await response.json();
+            status.textContent = "❌ " + (err.message || "Something went wrong.");
+            status.style.color = "red";
+          }
+        } catch (error) {
+          status.textContent = "❌ Could not submit form. Please try again later.";
+          status.style.color = "red";
+        }
       });
-    }
-    updateFooterColors();
-    setInterval(updateFooterColors, 3000);
+
+      const footerButtons = document.querySelectorAll('.footer-contact');
+      const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#9c27b0', '#4caf50'];
+      function updateFooterColors() {
+        footerButtons.forEach(btn => {
+          const color = footerColors[Math.floor(Math.random() * footerColors.length)];
+          btn.style.backgroundColor = color;
+          btn.style.boxShadow = `0 0 10px ${color}88`;
+        });
+      }
+      updateFooterColors();
+      setInterval(updateFooterColors, 3000);
+    });
   </script>
 </body>
 </html>
