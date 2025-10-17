@@ -3,42 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | Painting, Cleaning & Power Washing in Kirkland and Bellevue, Washington area</title>
-  <meta name="description" content="Brush & Broom LLP offers expert interior painting, exterior painting, power washing, and deep cleaning in Kirkland and Bellevue, Washington area, WA. Request a free quote today!" />
+  <title>Brush & Broom LLP | Cleaning, Painting & Remodeling in Kirkland & Bellevue</title>
+  <meta name="description" content="Brush & Broom LLP provides professional cleaning, painting, flooring, remodeling, and maintenance services in the Kirkland and Bellevue, Washington area. Get a free quote today!" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <meta property="og:title" content="Brush & Broom LLP | Painting, Cleaning & Power Washing" />
-  <meta property="og:description" content="Interior & exterior painting, deep cleaning, and power washing in Kirkland and Bellevue, Washington area, WA." />
-  <meta property="og:image" content="https://www.brushandbroomllp.com/logo.PNG" />
+
+  <!-- SEO + Social -->
+  <meta property="og:title" content="Brush & Broom LLP | Painting, Cleaning & Remodeling Experts" />
+  <meta property="og:description" content="Professional cleaning, painting, flooring, and remodeling in Kirkland & Bellevue, WA." />
+  <meta property="og:image" content="https://www.brushandbroomllp.com/logo.png" />
   <meta property="og:url" content="https://www.brushandbroomllp.com" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <style>
     :root {
       --green: #28c76f;
-      --text-light: #f9f9f9;
-      --bg-dark: #111;
+      --navy: #0e1526;
+      --grey: #cfd2d6;
+      --light: #f8f9fa;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
+      background: var(--light);
+      color: #1c1c1c;
     }
 
     header {
+      background: var(--navy);
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      background: #0e1526;
-      border-bottom: 3px solid var(--green);
+      padding: 1rem 2rem;
+      border-bottom: 4px solid var(--green);
       flex-wrap: wrap;
     }
 
     .logo-title {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .logo-title img {
@@ -47,60 +52,38 @@
 
     .logo-title h1 {
       font-size: 1.8em;
-      padding: 0 10px;
-      border-left: 4px solid var(--green);
-      border-right: 4px solid var(--green);
       color: white;
+      font-weight: 700;
     }
 
-    .menu-btn {
-      font-size: 1.8em;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border: 2px solid #28c76f;
-      border-radius: 8px;
-      padding: 5px 10px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    #sideMenu {
-      position: fixed;
-      top: 80px;
-      right: -280px;
-      width: 250px;
-      height: 100%;
-      background: #0e1526;
-      padding: 20px;
-      transition: right 0.3s ease;
-      z-index: 1000;
-    }
-
-    #sideMenu.open {
-      right: 0;
-    }
-
-    #sideMenu a {
-      display: block;
-      margin: 1rem 0;
-      color: white;
-      font-weight: bold;
+    nav a {
+      color: var(--grey);
       text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
-    #sideMenu a:hover {
+    nav a:hover {
       color: var(--green);
     }
 
     main {
-      padding: 2rem;
       text-align: center;
+      padding: 3rem 1.5rem;
+      background: linear-gradient(to bottom right, #ffffff, #f0f4f7);
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 2em;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-area {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 2rem;
     }
 
     .service-grid {
@@ -108,41 +91,45 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      margin-top: 2rem;
     }
 
     .service-item {
-      flex: 1 1 260px;
-      background: var(--green);
-      color: white;
-      padding: 1.2rem;
-      border-radius: 12px;
-      transition: background-color 0.3s ease;
+      flex: 1 1 250px;
+      background: white;
+      border: 2px solid var(--grey);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .service-item a {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
+    .service-item:hover {
+      border-color: var(--green);
+      box-shadow: 0 4px 12px rgba(40,199,111,0.3);
+      transform: translateY(-4px);
     }
 
-    .service-item small {
-      display: block;
-      font-size: 0.9em;
-      margin-top: 0.5rem;
-      color: #f0f0f0;
+    .service-item h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-item p {
+      color: #555;
     }
 
     .quote-form {
       max-width: 600px;
       margin: 3rem auto;
-      background: #1a1a1a;
+      background: var(--navy);
+      color: white;
       padding: 2rem;
       border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
     }
 
     .quote-form h3 {
+      color: var(--green);
       margin-bottom: 1rem;
     }
 
@@ -152,191 +139,127 @@
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
+      border-radius: 6px;
       border: none;
-      border-radius: 8px;
       font-size: 1em;
     }
 
     .quote-form button {
-      width: 100%;
-      padding: 1rem;
-      font-size: 1.1em;
-      font-weight: bold;
       background: var(--green);
       color: white;
       border: none;
-      border-radius: 8px;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1em;
+      border-radius: 6px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .quote-form p#quote-status {
-      margin-top: 10px;
-      font-weight: bold;
+    .quote-form button:hover {
+      background: #22af63;
     }
 
     footer {
+      background: var(--navy);
+      color: var(--grey);
       text-align: center;
-      background: #0e1526;
-      padding: 1rem;
+      padding: 1.5rem;
+      margin-top: 3rem;
     }
 
     .footer-contact {
       display: inline-block;
-      margin: 0.4rem;
-      padding: 10px 20px;
-      border-radius: 30px;
+      margin: 0.5rem;
       background: var(--green);
       color: white;
-      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 30px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      font-weight: bold;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .footer-contact:hover {
-      opacity: 0.9;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px var(--green);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP logo" /></a>
+      <img src="logo.png" alt="Brush & Broom LLP logo" />
       <h1>Brush & Broom LLP</h1>
     </div>
-    <button class="menu-btn">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-<p class="service-area">Proudly serving the Kirkland and Bellevue, Washington area.</p>
-
-  <nav id="sideMenu">
-    <h2 style="color:white;">Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <main>
-    <h2>Welcome to Brush & Broom LLP</h2>
-    <p>We specialize in residential and commercial interior & exterior painting, power washing, and detailed cleaning services in Kirkland and Bellevue, Washington area, WA. Let’s bring your property back to life — the professional way.</p>
+    <h2>Professional Painting, Cleaning & Remodeling</h2>
+    <p class="service-area">Proudly serving Kirkland, Bellevue, and surrounding King County areas.</p>
 
     <div class="service-grid">
       <div class="service-item">
-        <a href="interior-painting.html">Interior Painting</a>
-        <small>Professional wall, ceiling, and trim painting</small>
+        <h3>Cleaning Services</h3>
+        <p>Move-in/out, deep cleaning, and maintenance cleanings for homes and businesses.</p>
       </div>
       <div class="service-item">
-        <a href="exterior-painting.html">Exterior Painting</a>
-        <small>Durable outdoor coatings for homes and buildings</small>
+        <h3>Painting</h3>
+        <p>Interior and exterior painting with durable finishes and professional prep work.</p>
       </div>
       <div class="service-item">
-        <a href="move-cleaning.html">Move In/Out Cleaning</a>
-        <small>Deep cleaning for renters, landlords & buyers</small>
+        <h3>Flooring</h3>
+        <p>LVP installation, hardwood restoration, and commercial flooring solutions.</p>
       </div>
       <div class="service-item">
-        <a href="deep-cleaning.html">Deep Cleaning</a>
-        <small>Baseboards, appliances, and behind-the-scenes clean</small>
+        <h3>Remodeling</h3>
+        <p>Bathroom and kitchen renovations that elevate comfort and value.</p>
       </div>
       <div class="service-item">
-        <a href="power-washing.html">Power Washing</a>
-        <small>Driveways, siding, sidewalks & more</small>
+        <h3>Handyman & Maintenance</h3>
+        <p>General repairs, power washing, and property upkeep done right.</p>
       </div>
     </div>
 
     <section class="quote-form">
-      <h3>Get a Free Estimate</h3>
-      <form id="quote-form" action="https://formspree.io/f/mqabwval" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="tel" name="phone" placeholder="Phone Number" />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <select name="services[]" multiple required>
-          <option value="Interior Painting">Interior Painting</option>
-          <option value="Exterior Painting">Exterior Painting</option>
-          <option value="Move In/Out Cleaning">Move In/Out Cleaning</option>
-          <option value="Deep Cleaning">Deep Cleaning</option>
-          <option value="Power Washing">Power Washing</option>
+      <h3>Get a Free Quote</h3>
+      <form action="https://formsubmit.co/seabnbllp@icloud.com" method="POST">
+        <input type="hidden" name="_subject" value="New Quote Request - Brush & Broom LLP">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option>Cleaning</option>
+          <option>Painting</option>
+          <option>Flooring</option>
+          <option>Remodeling</option>
+          <option>Handyman / Maintenance</option>
         </select>
-        <textarea name="comments" placeholder="Tell us about your project..."></textarea>
-        <button type="submit">Get Estimate</button>
-        <p id="quote-status"></p>
+        <textarea name="message" placeholder="Tell us about your project..." rows="5"></textarea>
+        <button type="submit">Request Free Quote</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <div>
-      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
-      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
-    </div>
-    <p>&copy; 2025 Brush & Broom LLP</p>
+    <a href="tel:2065711092" class="footer-contact">📞 Call (206) 571-1092</a>
+    <a href="mailto:seabnbllp@icloud.com" class="footer-contact">📧 Email Us</a>
+    <p>&copy; 2025 Brush & Broom LLP — Serving Kirkland & Bellevue, WA</p>
   </footer>
-
-  <script>
-    const menu = document.getElementById('sideMenu');
-    const menuBtn = document.querySelector('.menu-btn');
-
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-        menu.classList.remove('open');
-      }
-    });
-
-    const footerButtons = document.querySelectorAll('.footer-contact');
-    const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
-    function cycleFooterColors() {
-      footerButtons.forEach(btn => {
-        const color = footerColors[Math.floor(Math.random() * footerColors.length)];
-        btn.style.backgroundColor = color;
-        btn.style.boxShadow = `0 0 8px ${color}88`;
-      });
-    }
-    cycleFooterColors();
-    setInterval(cycleFooterColors, 3000);
-
-    const serviceItems = document.querySelectorAll('.service-item');
-    const serviceColors = ['#28c76f', '#2499ff', '#ff7a24', '#e91e63', '#3f51b5'];
-    function animateServiceColors() {
-      serviceItems.forEach(btn => {
-        const color = serviceColors[Math.floor(Math.random() * serviceColors.length)];
-        btn.style.backgroundColor = color;
-        btn.style.boxShadow = `0 3px 10px ${color}80`;
-      });
-    }
-    animateServiceColors();
-    setInterval(animateServiceColors, 3000);
-
-    const quoteForm = document.getElementById("quote-form");
-    const quoteStatus = document.getElementById("quote-status");
-
-    quoteForm.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const data = new FormData(quoteForm);
-
-      try {
-        const response = await fetch(quoteForm.action, {
-          method: quoteForm.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-          quoteStatus.textContent = "✅ Your quote request has been sent!";
-          quoteStatus.style.color = "lime";
-          quoteForm.reset();
-        } else {
-          const err = await response.json();
-          quoteStatus.textContent = "❌ " + (err.message || "Something went wrong.");
-          quoteStatus.style.color = "red";
-        }
-      } catch (error) {
-        quoteStatus.textContent = "❌ Could not submit form. Try again later.";
-        quoteStatus.style.color = "red";
-      }
-    });
-  </script>
 </body>
 </html>
