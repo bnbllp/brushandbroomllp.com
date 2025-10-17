@@ -3,198 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Brush & Broom LLP – Kirkland and Bellevue, Washington area, WA</title>
-  <meta name="description" content="Meet the dedicated team behind Brush & Broom LLP, Kirkland and Bellevue, Washington area’s experts in house cleaning, professional painting, and power washing. Family-owned and trusted for quality and care." />
+  <title>About Us | Brush & Broom LLP | Painting, Cleaning & Remodeling Experts</title>
+  <meta name="description" content="Learn about Brush & Broom LLP — your trusted team for cleaning, painting, flooring, and remodeling services in Kirkland and Bellevue, WA." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <meta property="og:title" content="About Brush & Broom LLP | Professional Painting, Cleaning & Remodeling" />
+  <meta property="og:description" content="Serving Kirkland, Bellevue & surrounding areas with trusted home improvement and cleaning services." />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/about.html" />
+
   <style>
     :root {
       --green: #28c76f;
-      --text-light: #f9f9f9;
-      --bg-dark: #111;
+      --navy: #0e1526;
+      --grey: #cfd2d6;
+      --light: #f8f9fa;
     }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: #0e1526;
-      border-bottom: 3px solid var(--green);
-    }
-
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-title img {
-      height: 60px;
-      cursor: pointer;
-    }
-
-    .logo-title h1 {
-      font-size: 1.8em;
-      padding: 0 10px;
-      border-left: 4px solid var(--green);
-      border-right: 4px solid var(--green);
-      color: white;
-    }
-
-    .menu-btn {
-      font-size: 1.8em;
-      background: linear-gradient(to right, #ff7a24, #28c76f, #2499ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      border: 2px solid #28c76f;
-      border-radius: 8px;
-      padding: 5px 10px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 0.9; }
-      50% { transform: scale(1.1); opacity: 1; }
-    }
-
-    #sideMenu {
-      position: fixed;
-      top: 80px;
-      right: -280px;
-      width: 250px;
-      height: 100%;
-      background: #0e1526;
-      padding: 20px;
-      transition: right 0.3s ease;
-      z-index: 1000;
-    }
-
-    #sideMenu.open {
-      right: 0;
-    }
-
-    #sideMenu a {
-      display: block;
-      margin: 1rem 0;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    #sideMenu a:hover {
-      color: var(--green);
-    }
-
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    main h2 {
-      font-size: 2.2rem;
-      background: linear-gradient(to right, #ff7a24, #2499ff, var(--green));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-    }
-
-    main p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-    }
-
-    footer {
-      text-align: center;
-      background: #0e1526;
-      padding: 1rem;
-    }
-
-    .footer-contact {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      border-radius: 30px;
-      background: var(--green);
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-contact:hover {
-      opacity: 0.9;
-    }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--light); color: #1c1c1c; }
+    header { background: var(--navy); color: white; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 4px solid var(--green); flex-wrap: wrap; }
+    .logo-title { display: flex; align-items: center; gap: 10px; }
+    .logo-title img { height: 60px; }
+    .logo-title h1 { font-size: 1.8em; color: white; }
+    nav a { color: var(--grey); text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: var(--green); }
+    main { padding: 3rem 2rem; max-width: 900px; margin: auto; text-align: center; }
+    h2 { color: var(--navy); font-size: 2em; margin-bottom: 1rem; }
+    p { line-height: 1.7; margin-bottom: 1.2rem; color: #333; }
+    .values { background: white; border: 2px solid var(--grey); border-radius: 10px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 2rem; }
+    footer { background: var(--navy); color: var(--grey); text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    .footer-contact { display: inline-block; margin: 0.5rem; background: var(--green); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.2s; }
+    .footer-contact:hover { transform: scale(1.05); box-shadow: 0 0 10px var(--green); }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-title">
-      <a href="index.html"><img src="logo.PNG" alt="Brush & Broom LLP logo" /></a>
+      <a href="index.html"><img src="logo.png" alt="Brush & Broom LLP logo" /></a>
       <h1>Brush & Broom LLP</h1>
     </div>
-    <button class="menu-btn">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
-<p class="service-area">Proudly serving the Kirkland and Bellevue, Washington area.</p>
-
-  <nav id="sideMenu">
-    <h2 style="color:white;">Menu</h2>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Our Portfolio</a>
-    <a href="safety.html">Safety & Prep</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <main>
-    <h2>Kirkland and Bellevue, Washington area’s Trusted Painting, Cleaning & Power Washing Crew</h2>
-    <p>At Brush & Broom LLP, we believe your space deserves more than average—it deserves attention to detail, high-quality work, and people who genuinely care.</p>
-    <p>We’re a locally rooted, family-led crew offering deep residential cleaning, crisp and professional interior/exterior painting, and high-pressure power washing. Whether it’s restoring siding, brightening walls, or preparing a rental property, we do it all with integrity and precision.</p>
-    <p>Every job matters to us, because your home or business is a reflection of ours.</p>
+    <h2>About Brush & Broom LLP</h2>
+    <p>At Brush & Broom LLP, we take pride in providing dependable, high-quality home improvement and cleaning services throughout Kirkland, Bellevue, and surrounding areas. What began as a small local business in Eastern Washington has grown into a trusted partner for homeowners and property managers across King County.</p>
+
+    <p>We specialize in detailed cleaning, expert interior and exterior painting, flooring installation and restoration, bathroom and kitchen remodeling, and professional handyman and maintenance work. Every project is handled with care, precision, and a commitment to exceptional results.</p>
+
+    <div class="values">
+      <h3 style="color:var(--green);">Our Core Values</h3>
+      <p>✅ <strong>Integrity:</strong> We believe in transparent pricing and honest communication.</p>
+      <p>✅ <strong>Quality:</strong> From paint prep to clean finishes, every detail matters.</p>
+      <p>✅ <strong>Reliability:</strong> We show up on time and get the job done right.</p>
+      <p>✅ <strong>Community:</strong> We’re proud to serve local families, seniors, and small businesses in our area.</p>
+    </div>
+
+    <p style="margin-top:2rem;">Whether you need a deep clean, a fresh coat of paint, or a complete remodel, we’re here to make your space shine. Get in touch today for your free quote!</p>
+
+    <a href="contact.html" class="footer-contact">📞 Get in Touch</a>
   </main>
 
   <footer>
-    <div>
-      <a href="tel:5092004873" class="footer-contact">📞 Call Us</a>
-      <a href="sms:5092004873" class="footer-contact">💬 Text Us</a>
-      <a href="mailto:bnbllp@brushandbroomllp.com" class="footer-contact">📧 Email Us</a>
-    </div>
-    <p>&copy; 2025 Brush & Broom LLP</p>
+    <a href="tel:2065711092" class="footer-contact">Call (206) 571-1092</a>
+    <a href="mailto:seabnbllp@icloud.com" class="footer-contact">Email Us</a>
+    <p>&copy; 2025 Brush & Broom LLP — Kirkland & Bellevue, WA</p>
   </footer>
-
-  <script>
-    const menu = document.getElementById('sideMenu');
-    const menuBtn = document.querySelector('.menu-btn');
-
-    menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('open');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-        menu.classList.remove('open');
-      }
-    });
-
-    const footerButtons = document.querySelectorAll('.footer-contact');
-    const footerColors = ['#ff7a24', '#28c76f', '#2499ff', '#e91e63', '#ff5722', '#4caf50'];
-    function cycleFooterColors() {
-      footerButtons.forEach(btn => {
-        const color = footerColors[Math.floor(Math.random() * footerColors.length)];
-        btn.style.backgroundColor = color;
-        btn.style.boxShadow = `0 0 8px ${color}88`;
-      });
-    }
-    cycleFooterColors();
-    setInterval(cycleFooterColors, 3000);
-  </script>
 </body>
 </html>
