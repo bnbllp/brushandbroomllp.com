@@ -260,3 +260,11 @@
   padding: 8px 16px;
   margin: 3px 6px;
     
+
+
+/* Updates for Brush and Broom LLP - contact & form styling */
+.service-area{font-size:0.95rem;color:#333;text-align:center;margin:12px 0}
+.quote-form{max-width:720px;margin:24px auto;padding:16px;border-radius:8px;background:#fafafa}
+.quote-form label{display:block;margin:8px 0 4px;font-weight:600}
+.quote-form input, .quote-form textarea{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px}
+button.cta{background:#2a7ae2;color:#fff;padding:10px 14px;border-radius:6px;border:none;font-weight:700;cursor:pointer}
