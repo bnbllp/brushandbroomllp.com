@@ -1,265 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | Cleaning, Painting & Remodeling in Kirkland, Bellevue, Redmond and surrounding areas within King County. .</title>
-  <meta name="description" content="Brush & Broom LLP provides professional cleaning, painting, flooring, remodeling, and maintenance services in the Kirkland and Bellevue, Washington area. Get a free quote today!" />
-  <link rel="icon" href="favicon.icon" type="image/logo.PNG" />
-
-  <!-- SEO + Social -->
-  <meta property="og:title" content="Brush & Broom LLP | Painting, Cleaning & yRemodelingy Experts" />
-  <meta property="og:description" content="Professional cleaning, painting, flooring, and remodeling in Kirkland & Bellevue, WA." />
-  <meta property="og:image" content="https://www.brushandbroomllp.com/logo.png" />
-  <meta property="og:url" content="https://www.brushandbroomllp.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <style>
-    :root {
-      --green: #28c76f;
-      --navy: #0e1526;
-      --grey: #cfd2d6;
-      --light: #f8f9fa;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--light);
-      color: #1c1c1c;
-    }
-
-    header {
-      background: var(--navy);
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 4px solid var(--green);
-      flex-wrap: wrap;
-    }
-
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-title img {
-      height: 60px;
-    }
-
-    .logo-title h1 {
-      font-size: 1.8em;
-      color: white;
-      font-weight: 700;
-    }
-
-    nav a {
-      color: var(--grey);
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--green);
-    }
-
-    main {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      background: linear-gradient(to bottom right, #ffffff, #f0f4f7);
-    }
-
-    h2 {
-      color: var(--navy);
-      font-size: 2em;
-      margin-bottom: 0.5rem;
-    }
-
-    .service-area {
-      font-weight: 500;
-      color: #333;
-      margin-bottom: 2rem;
-    }
-
-    .service-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .service-item {
-      flex: 1 1 250px;
-      background: white;
-      border: 2px solid var(--grey);
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .service-item:hover {
-      border-color: var(--green);
-      box-shadow: 0 4px 12px rgba(40,199,111,0.3);
-      transform: translateY(-4px);
-    }
-
-    .service-item h3 {
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-    }
-
-    .service-item p {
-      color: #555;
-    }
-
-    .quote-form {
-      max-width: 600px;
-      margin: 3rem auto;
-      background: var(--navy);
-      color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    .quote-form h3 {
-      color: var(--green);
-      margin-bottom: 1rem;
-    }
-
-    .quote-form input,
-    .quote-form textarea,
-    .quote-form select {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      border: none;
-      font-size: 1em;
-    }
-
-    .quote-form button {
-      background: var(--green);
-      color: white;
-      border: none;
-      width: 100%;
-      padding: 1rem;
-      font-size: 1.1em;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .quote-form button:hover {
-      background: #22af63;
-    }
-
-    footer {
-      background: var(--navy);
-      color: var(--grey);
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-    }
-
-    .footer-contact {
-      display: inline-block;
-      margin: 0.5rem;
-      background: var(--green);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .footer-contact:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px var(--green);
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        width: 100%;
-        text-align: center;
-        margin-top: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brush & Broom LLP: Expert cleaning, painting, flooring, remodeling, and handyman services in Kirkland, Bellevue, and King County. Get a free quote today!">
+    <title>Brush & Broom LLP | Painting, Cleaning & Remodeling Experts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+        header { background: #4A90E2; color: white; padding: 20px; text-align: center; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .hero { background: #f4f4f4; padding: 40px; text-align: center; }
+        .services { padding: 20px; max-width: 800px; margin: auto; }
+        .service { margin: 20px 0; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .cta { background: #4A90E2; color: white; padding: 10px; text-align: center; margin: 10px 0; }
+        footer { background: #333; color: white; text-align: center; padding: 10px; }
+        img { max-width: 100%; height: auto; }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo-title">
-      <img src="logo.PNG" alt="Brush & Broom LLP logo" />
-      <h1>Brush & Broom LLP</h1>
-    </div>
+    <header>
+        <h1>Brush & Broom LLP</h1>
+        <p>Cleaning, Painting & Remodeling in Kirkland, Bellevue, Redmond and surrounding areas within King County.</p>
+        <img src="logo.png" alt="Brush & Broom LLP Logo" width="200">
+    </header>
+    
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
     </nav>
-  </header>
-
-  <main>
-    <h2>Professional Painting, Cleaning & Remodeling</h2>
-    <p class="service-area">Proudly serving Kirkland, Bellevue, and surrounding King County areas.</p>
-
-    <div class="service-grid">
-      <div class="service-item">
-        <h3>Cleaning Services</h3>
-        <p>Move-in/out, deep cleaning, and maintenance cleanings for homes and businesses.</p>
-      </div>
-      <div class="service-item">
-        <h3>Painting</h3>
-        <p>Interior and exterior painting with durable finishes and professional prep work.</p>
-      </div>
-      <div class="service-item">
-        <h3>Flooring</h3>
-        <p>LVP installation, hardwood restoration, and commercial flooring solutions.</p>
-      </div>
-      <div class="service-item">
-        <h3>Remodeling</h3>
-        <p>Bathroom and kitchen renovations that elevate comfort and value.</p>
-      </div>
-      <div class="service-item">
-        <h3>Handyman & Maintenance</h3>
-        <p>General repairs, power washing, and property upkeep done right.</p>
-      </div>
-    </div>
-
-    <section class="quote-form">
-      <h3>Get a Free Quote</h3>
-      <form action="https://formsubmit.co/seabnbllp@icloud.com" method="POST">
-        <input type="hidden" name="_subject" value="New Quote Request - Brush & Broom LLP">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <input type="email" name="email" placeholder="Email Address" required>
-        <select name="service" required>
-          <option value="">Select a Service</option>
-          <option>Cleaning</option>
-          <option>Painting</option>
-          <option>Flooring</option>
-          <option>Remodeling</option>
-          <option>Handyman / Maintenance</option>
-        </select>
-        <textarea name="message" placeholder="Tell us about your project..." rows="5"></textarea>
-        <button type="submit">Request Free Quote</button>
-      </form>
+    
+    <section class="hero">
+        <h2>Professional Painting, Cleaning & Remodeling</h2>
+        <p>Proudly serving Kirkland, Bellevue, and surrounding King County areas.</p>
+        <div class="cta"><a href="contact.html" style="color: white; text-decoration: none;">Get a Free Quote Today!</a></div>
     </section>
-  </main>
-
-  <footer>
-    <a href="tel:2065711092" class="footer-contact">📞 Call (206) 571-1092</a>
-    <a href="mailto:seabnbllp@icloud.com" class="footer-contact">📧 Email Us</a>
-    <p>&copy; 2025 Brush & Broom LLP — Serving Kirkland & Bellevue, WA</p>
-  </footer>
+    
+    <section class="services">
+        <h3>Our Services</h3>
+        <div class="service">
+            <h4><a href="cleaning.html">Cleaning Services</a></h4>
+            <p>Move-in/out, deep cleaning, and maintenance cleanings for homes and businesses.</p>
+            <div class="cta"><a href="cleaning.html" style="color: white; text-decoration: none;">Learn More</a></div>
+            <img src="cleaning-placeholder.jpg" alt="Professional cleaning in action">
+        </div>
+        <div class="service">
+            <h4><a href="painting.html">Painting</a></h4>
+            <p>Interior and exterior painting with durable finishes and professional prep work.</p>
+            <div class="cta"><a href="painting.html" style="color: white; text-decoration: none;">Learn More</a></div>
+            <img src="painting-placeholder.jpg" alt="Freshly painted home interior">
+        </div>
+        <div class="service">
+            <h4><a href="flooring.html">Flooring</a></h4>
+            <p>LVP installation, hardwood restoration, and commercial flooring solutions.</p>
+            <div class="cta"><a href="flooring.html" style="color: white; text-decoration: none;">Learn More</a></div>
+            <img src="flooring-placeholder.jpg" alt="Installed luxury vinyl plank flooring">
+        </div>
+        <div class="service">
+            <h4><a href="remodeling.html">Remodeling</a></h4>
+            <p>Bathroom and kitchen renovations that elevate comfort and value.</p>
+            <div class="cta"><a href="remodeling.html" style="color: white; text-decoration: none;">Learn More</a></div>
+            <img src="remodeling-placeholder.jpg" alt="Modern kitchen remodel">
+        </div>
+        <div class="service">
+            <h4><a href="handyman.html">Handyman & Maintenance</a></h4>
+            <p>General repairs, power washing, and property upkeep done right.</p>
+            <div class="cta"><a href="handyman.html" style="color: white; text-decoration: none;">Learn More</a></div>
+            <img src="handyman-placeholder.jpg" alt="Handyman repairing a door">
+        </div>
+    </section>
+    
+    <footer>
+        <p>Contact: (425) 123-4567 | info@brushandbroomllp.com | Kirkland, WA</p>
+        <p>&copy; 2025 Brush & Broom LLP. All rights reserved.</p>
+    </footer>
 </body>
 </html>
