@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>House Cleaning & Move-Out Cleaning in Bellevue, Kirkland, Redmond & Seattle. | Brush & Broom LLP</title>
-
+  <title>House Cleaning & Move-Out Cleaning | Brush & Broom LLP</title>
   <meta name="description" content="Brush & Broom LLP offers professional house cleaning, deep cleaning, and move-in/move-out cleaning in Bellevue, Kirkland, Redmond, and Eastside King County. Family-owned, eco-friendly, and trusted by locals." />
 
   <!-- Open Graph / Social -->
@@ -14,9 +13,9 @@
   <meta property="og:description" content="Family-owned cleaning service specializing in deep cleans and move-outs across Bellevue, Kirkland, and Redmond." />
   <meta property="og:url" content="https://www.brushandbroomllp.com" />
   <meta property="og:image" content="https://www.brushandbroomllp.com/og-image.jpg" />
-
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -32,301 +31,73 @@
       --shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Roboto', sans-serif; background-color: var(--light-bg); color: var(--navy); line-height:1.65; }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--navy);
-      line-height: 1.65;
+    /* NAVIGATION */
+    .site-nav {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 20px; background-color: var(--white); box-shadow: var(--shadow); flex-wrap:wrap;
     }
+    .nav-container { display:flex; justify-content:space-between; align-items:center; width:100%; flex-wrap:wrap; }
+    .nav-links { list-style:none; display:flex; gap:25px; margin-left:20px; }
+    .nav-links li a { text-decoration:none; font-weight:bold; color: var(--navy); transition: color 0.2s; }
+    .nav-links li a:hover { color: var(--green); }
+
+    .social-links { display:flex; gap:10px; margin-top:10px; }
+    .social-links a { display:inline-block; width:32px; height:32px; background-color: var(--navy); color: var(--white); text-align:center; line-height:32px; border-radius:50%; font-weight:bold; text-decoration:none; transition: all 0.2s; }
+    .social-links a:hover { background-color: var(--green); }
+    @media(max-width:768px){ .nav-links { flex-direction:column; gap:10px; margin-left:0; width:100%; } .social-links { justify-content:center; margin-top:15px; } }
 
     /* HERO */
-    header.hero {
-      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
-      color: var(--white);
-      padding: 70px 20px;
-      text-align: center;
-    }
+    header.hero { background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75)); color: var(--white); padding: 70px 20px; text-align: center; }
+    .hero-inner { max-width:1100px; margin:0 auto; }
+    .hero-inner img.logo { max-width:220px; margin-bottom:25px; }
+    h1 { font-family: 'Playfair Display', serif; font-size:2.6rem; margin-bottom:15px; }
+    .hero-subtext { font-size:1rem; margin-top:15px; color:var(--gray); }
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .btn { display:inline-block; padding:14px 26px; border-radius:6px; font-weight:700; text-decoration:none; transition: all 0.25s ease; margin-top:10px; }
+    .btn-primary { background-color: var(--green); color: var(--white); }
+    .btn-primary:hover { background-color: var(--green-dark); transform:translateY(-2px); }
+    .btn-secondary { border: 2px solid var(--green); color: var(--green); margin-left:10px; }
+    .btn-secondary:hover { background-color: var(--green); color: var(--white); }
 
-    .hero-inner img.logo {
-      max-width: 220px;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.6rem;
-      margin-bottom: 15px;
-    }
-
-    .hero-tagline {
-      font-size: 1.25rem;
-      color: var(--gray);
-      margin-bottom: 25px;
-    }
-
-    .trust-line {
-      margin-top: 15px;
-      font-size: 0.95rem;
-      color: var(--gray);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 26px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.25s ease;
-    }
-
-    .btn-primary {
-      background-color: var(--green);
-      color: var(--white);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--green-dark);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      border: 2px solid var(--green);
-      color: var(--green);
-      margin-left: 10px;
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--green);
-      color: var(--white);
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.1rem;
-      margin-bottom: 30px;
-      text-align: center;
-    }
+    section { padding:70px 20px; max-width:1200px; margin:0 auto; }
+    section h2 { font-family: 'Playfair Display', serif; font-size:2.1rem; margin-bottom:30px; text-align:center; }
 
     /* PILLARS */
-    .pillars {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-    }
-
-    .pillar {
-      background-color: var(--white);
-      padding: 35px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
-    }
-
-    .pillar h3 {
-      color: var(--navy);
-      margin-bottom: 15px;
-      font-size: 1.4rem;
-    }
-
-    .pillar ul {
-      padding-left: 20px;
-      margin-bottom: 25px;
-    }
+    .pillars { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; }
+    .pillar { background-color: var(--white); padding:35px; border-radius:10px; box-shadow: var(--shadow); }
+    .pillar h3 { color: var(--navy); margin-bottom:15px; font-size:1.4rem; }
+    .pillar ul { padding-left:20px; margin-bottom:25px; }
 
     /* WHY US */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .why-item {
-      background-color: var(--white);
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    .why-item h3 {
-      color: var(--green);
-      margin-bottom: 10px;
-    }
+    .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .why-item { background-color: var(--white); padding:25px; border-radius:8px; box-shadow: var(--shadow); }
+    .why-item h3 { color: var(--green); margin-bottom:10px; }
 
     /* SERVICE AREAS */
-    .areas-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      list-style: none;
-    }
-
-    .areas-list li {
-      background-color: var(--gray);
-      color: var(--navy);
-      padding: 10px 18px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
+    .areas-list { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; list-style:none; margin-top:20px; }
+    .areas-list li { background-color: var(--gray); color: var(--navy); padding:10px 18px; border-radius:20px; font-size:0.9rem; }
 
     /* REVIEWS */
-    .reviews {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .review {
-      background-color: var(--white);
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      font-style: italic;
-    }
-
-    .review-meta {
-      margin-top: 12px;
-      font-style: normal;
-      font-weight: 700;
-      color: var(--green);
-    }
+    .reviews { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; margin-top:20px; }
+    .review { background-color: var(--white); padding:25px; border-radius:8px; box-shadow: var(--shadow); font-style:italic; }
+    .review-meta { margin-top:12px; font-style:normal; font-weight:700; color:var(--green); }
 
     /* FINAL CTA */
-    .final-cta {
-      background-color: var(--navy);
-      color: var(--white);
-      text-align: center;
-      padding: 70px 20px;
-    }
+    .final-cta { background-color: var(--navy); color: var(--white); text-align:center; padding:70px 20px; }
+    .final-cta p { color: var(--gray); margin-bottom:25px; }
 
-    .final-cta p {
-      color: var(--gray);
-      margin-bottom: 25px;
-    }
+    footer { background-color: var(--navy); color: var(--gray); text-align:center; padding:20px; font-size:0.85rem; }
 
-    footer {
-      background-color: var(--navy);
-      color: var(--gray);
-      text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.1rem;
-      }
-    }
-    .site-nav {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
-  background-color: var(--white);
-  box-shadow: var(--shadow);
-  flex-wrap:wrap;
-}
-
-.nav-container {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  width:100%;
-  flex-wrap:wrap;
-}
-
-.nav-links {
-  list-style:none;
-  display:flex;
-  gap:25px;
-  margin-left:20px;
-}
-
-.nav-links li a {
-  text-decoration:none;
-  font-weight:bold;
-  color: var(--navy);
-  transition: color 0.2s;
-}
-
-.nav-links li a:hover { color: var(--green); }
-
-.social-links {
-  display:flex;
-  gap:10px;
-  margin-top:10px;
-}
-
-.social-links a {
-  display:inline-block;
-  width:32px;
-  height:32px;
-  background-color: var(--navy);
-  color: var(--white);
-  text-align:center;
-  line-height:32px;
-  border-radius:50%;
-  font-weight:bold;
-  text-decoration:none;
-  transition: all 0.2s;
-}
-
-.social-links a:hover { background-color: var(--green); }
-
-/* Mobile adjustment */
-@media(max-width:768px){
-  .nav-links { flex-direction:column; gap:10px; margin-left:0; width:100%; }
-  .social-links { justify-content:center; margin-top:15px; }
-}
+    @media(max-width:768px){ h1 { font-size:2.1rem; } }
   </style>
-
-  <!-- SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CleaningService",
-    "name": "Brush & Broom LLP",
-    "description": "Family-owned house cleaning and move-out cleaning service serving Bellevue, Kirkland, and Redmond.",
-    "telephone": "206-571-1092",
-    "url": "https://www.brushandbroomllp.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bellevue",
-      "addressRegion": "WA",
-      "addressCountry": "US"
-    },
-    "areaServed": [
-      "Bellevue WA",
-      "Kirkland WA",
-      "Redmond WA",
-      "Eastside King County"
-    ],
-    "priceRange": "$$"
-  }
-  </script>
-
 </head>
 
 <body>
 
 <header class="hero">
-  <!-- NAVIGATION -->
   <nav class="site-nav">
     <div class="nav-container">
       <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="logo" />
@@ -347,7 +118,6 @@
     </div>
   </nav>
 
-  <!-- HERO CONTENT -->
   <div class="hero-inner">
     <h1>We Clean It. You Relax.</h1>
     <p>Brush & Broom LLP is a wife-and-husband team taming chaos across Bellevue, Kirkland, and the Eastside of King County. We'll sweep you off your feet with spotless results!</p>
@@ -358,7 +128,7 @@
     <p class="hero-subtext">Friendly faces, professional results, and zero judgment about how things look right now.</p>
   </div>
 </header>
-  
+
 <section>
   <h2>Cleaning Services That Reset Your Space</h2>
   <div class="pillars">
@@ -371,7 +141,6 @@
       </ul>
       <a href="/cleaning" class="btn btn-primary">Get a Cleaning Quote</a>
     </div>
-
     <div class="pillar">
       <h3>Move-In / Move-Out Cleaning</h3>
       <ul>
@@ -421,15 +190,15 @@
   <h2>What Clients Say</h2>
   <div class="reviews">
     <div class="review">
-      “Same-day booking, above and beyond service. Absolutely recommend.”
+      <p>“Same-day booking, above and beyond service. Absolutely recommend.”</p>
       <div class="review-meta">– Nextdoor Neighbor</div>
     </div>
     <div class="review">
-      “Responsive, professional, and excellent quality work.”
+      <p>“Responsive, professional, and excellent quality work.”</p>
       <div class="review-meta">– Google Review</div>
     </div>
     <div class="review">
-      “Prompt, efficient, and genuinely kind people.”
+      <p>“Prompt, efficient, and genuinely kind people.”</p>
       <div class="review-meta">– Local Client</div>
     </div>
   </div>
