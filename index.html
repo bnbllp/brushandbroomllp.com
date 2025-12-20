@@ -3,20 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | House Cleaning in Bellevue, Kirkland & Eastside WA</title>
-  <meta name="description" content="Brush & Broom LLP is a family-owned wife-and-husband house cleaning and painting company serving Bellevue, Kirkland, Redmond, and Eastside King County, WA with move-out cleaning, deep cleaning, and eco-friendly maid services." />
-  <meta name="keywords" content="Bellevue house cleaning, Kirkland house cleaning, Eastside cleaning services, move out cleaning Bellevue, deep cleaning Bellevue, maid service Bellevue, eco friendly cleaning Bellevue, Redmond house cleaners, Eastside WA cleaning company, painting and cleaning services Bellevue" />
-  <link rel="canonical" href="https://www.brushandbroomllp.com/" />
+
+  <title>House Cleaning & Move-Out Cleaning in Bellevue, Kirkland & Redmond | Brush & Broom LLP</title>
+
+  <meta name="description" content="Brush & Broom LLP offers professional house cleaning, deep cleaning, and move-in/move-out cleaning in Bellevue, Kirkland, Redmond, and Eastside King County. Family-owned, eco-friendly, and trusted by locals." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Trusted House Cleaning in Bellevue & the Eastside | Brush & Broom LLP" />
+  <meta property="og:description" content="Family-owned cleaning service specializing in deep cleans and move-outs across Bellevue, Kirkland, and Redmond." />
+  <meta property="og:url" content="https://www.brushandbroomllp.com" />
+  <meta property="og:image" content="https://www.brushandbroomllp.com/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --navy: #002244;
       --green: #69be28;
+      --green-dark: #5aa81f;
       --gray: #a5acaf;
       --white: #ffffff;
       --light-bg: #f9f9f9;
-      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
     * {
@@ -29,109 +42,52 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--light-bg);
       color: var(--navy);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    a {
-      color: inherit;
-    }
-
-    /* Simple top navigation for UX + internal links */
-    .top-nav {
-      background-color: var(--white);
-      box-shadow: var(--shadow);
-      padding: 10px 20px;
-    }
-
-    .top-nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .top-nav-brand {
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--navy);
-    }
-
-    .top-nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      font-size: 0.9rem;
-    }
-
-    .top-nav-links a {
-      text-decoration: none;
-    }
-
+    /* HERO */
     header.hero {
-      background-color: var(--navy);
-      color: var(--gray);
-      padding: 60px 20px;
+      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
+      color: var(--white);
+      padding: 70px 20px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    header.hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to bottom, rgba(0,34,68,0.8), rgba(0,34,68,0.6));
-      z-index: 1;
     }
 
     .hero-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
     .hero-inner img.logo {
-      max-width: 250px;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+      max-width: 220px;
+      margin-bottom: 25px;
     }
 
-    .hero h1 {
+    h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-ctas {
+      font-size: 2.6rem;
       margin-bottom: 15px;
     }
 
-    .hero-subtext {
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    .trust-line {
+      margin-top: 15px;
       font-size: 0.95rem;
       color: var(--gray);
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      border-radius: 5px;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s, transform 0.2s;
-      cursor: pointer;
+      transition: all 0.25s ease;
     }
 
     .btn-primary {
@@ -139,106 +95,70 @@
       color: var(--white);
     }
 
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      background-color: #559520;
+    .btn-primary:hover {
+      background-color: var(--green-dark);
       transform: translateY(-2px);
     }
 
     .btn-secondary {
-      background-color: transparent;
       border: 2px solid var(--green);
       color: var(--green);
       margin-left: 10px;
     }
 
-    .btn-secondary:hover,
-    .btn-secondary:focus-visible {
+    .btn-secondary:hover {
       background-color: var(--green);
       color: var(--white);
-      transform: translateY(-2px);
     }
 
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .pillars {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .pillar {
-      flex: 1 1 300px;
-      background-color: var(--white);
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      transition: transform 0.3s;
-    }
-
-    .pillar:hover {
-      transform: translateY(-5px);
-    }
-
-    .pillar h2 {
+    section h2 {
       font-family: 'Playfair Display', serif;
-      color: var(--navy);
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-
-    .pillar ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      border: 2px solid var(--navy);
-      color: var(--navy);
-    }
-
-    .btn-outline:hover,
-    .btn-outline:focus-visible {
-      background-color: var(--navy);
-      color: var(--white);
-    }
-
-    .about,
-    .why-us,
-    .service-areas,
-    .social-proof,
-    .additional-services,
-    .final-cta {
+      font-size: 2.1rem;
+      margin-bottom: 30px;
       text-align: center;
     }
 
-    .about h2,
-    .why-us h2,
-    .service-areas h2,
-    .social-proof h2,
-    .additional-services h2,
-    .final-cta h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--navy);
-      margin-bottom: 30px;
-      font-size: 2rem;
+    /* PILLARS */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
+    .pillar {
+      background-color: var(--white);
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .pillar h3 {
+      color: var(--navy);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .pillar ul {
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* WHY US */
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
 
     .why-item {
       background-color: var(--white);
-      padding: 20px;
+      padding: 25px;
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
@@ -246,150 +166,83 @@
     .why-item h3 {
       color: var(--green);
       margin-bottom: 10px;
-      font-size: 1.1rem;
     }
 
+    /* SERVICE AREAS */
     .areas-list {
-      list-style: none;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 20px;
-      margin-bottom: 10px;
+      gap: 12px;
+      list-style: none;
     }
 
     .areas-list li {
       background-color: var(--gray);
       color: var(--navy);
-      padding: 10px 20px;
+      padding: 10px 18px;
       border-radius: 20px;
       font-size: 0.9rem;
     }
 
-    .areas-note {
-      margin-top: 10px;
-      font-size: 0.95rem;
-    }
-
+    /* REVIEWS */
     .reviews {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      justify-content: center;
     }
 
     .review {
-      flex: 1 1 300px;
       background-color: var(--white);
-      padding: 20px;
+      padding: 25px;
       border-radius: 8px;
       box-shadow: var(--shadow);
       font-style: italic;
     }
 
     .review-meta {
+      margin-top: 12px;
       font-style: normal;
-      font-weight: bold;
-      margin-top: 10px;
+      font-weight: 700;
       color: var(--green);
     }
 
-    .trust-logos {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .trust-logos span {
-      background-color: var(--navy);
-      color: var(--white);
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-
-    .additional-services ul {
-      list-style-type: disc;
-      max-width: 600px;
-      margin: 20px auto;
-      padding-left: 20px;
-      text-align: left;
-    }
-
+    /* FINAL CTA */
     .final-cta {
       background-color: var(--navy);
       color: var(--white);
-      padding: 60px 20px;
-    }
-
-    .final-cta h2 {
-      color: var(--white);
+      text-align: center;
+      padding: 70px 20px;
     }
 
     .final-cta p {
       color: var(--gray);
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    .final-cta-buttons .btn-primary {
-      background-color: var(--green);
-      color: var(--white);
-    }
-
-    .final-cta-buttons .btn-secondary {
-      background-color: transparent;
-      border: 2px solid var(--green);
-      color: var(--green);
-    }
-
-    footer.site-footer {
+    footer {
       background-color: var(--navy);
       color: var(--gray);
       text-align: center;
       padding: 20px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
 
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      section {
-        padding: 40px 15px;
-      }
-
-      .pillars {
-        flex-direction: column;
-      }
-
-      .reviews {
-        flex-direction: column;
-      }
-
-      .top-nav-inner {
-        justify-content: center;
-      }
-
-      .btn-secondary {
-        margin-left: 0;
-        margin-top: 10px;
+      h1 {
+        font-size: 2.1rem;
       }
     }
   </style>
 
-  <!-- LocalBusiness + ServiceArea + Services schema -->
+  <!-- SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "CleaningService",
     "name": "Brush & Broom LLP",
-    "description": "Family-owned house cleaning and painting company providing move-in cleaning, move-out cleaning, deep cleaning, eco-friendly maid services, and residential painting in Bellevue, Kirkland, Redmond, and Eastside King County, WA.",
-    "image": "https://www.brushandbroomllp.com/F2635366-F577-497F-87F2-DAF4138C1243.png",
-    "telephone": "+1-206-571-1092",
+    "description": "Family-owned house cleaning and move-out cleaning service serving Bellevue, Kirkland, and Redmond.",
+    "telephone": "206-571-1092",
     "url": "https://www.brushandbroomllp.com",
     "address": {
       "@type": "PostalAddress",
@@ -398,194 +251,117 @@
       "addressCountry": "US"
     },
     "areaServed": [
-      {
-        "@type": "Place",
-        "name": "Bellevue, WA"
-      },
-      {
-        "@type": "Place",
-        "name": "Kirkland, WA"
-      },
-      {
-        "@type": "Place",
-        "name": "Redmond, WA"
-      },
-      {
-        "@type": "Place",
-        "name": "Eastside King County, WA"
-      }
+      "Bellevue WA",
+      "Kirkland WA",
+      "Redmond WA",
+      "Eastside King County"
     ],
-    "servesCuisine": "",
-    "priceRange": "$$",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    ],
-    "sameAs": [
-      "https://www.google.com/maps",
-      "https://www.facebook.com",
-      "https://www.instagram.com"
-    ],
-    "serviceType": "House cleaning, move-out cleaning, deep cleaning, eco-friendly cleaning, maid services, residential painting",
-    "@id": "https://www.brushandbroomllp.com/#localbusiness"
+    "priceRange": "$$"
   }
   </script>
+
 </head>
+
 <body>
 
-  <nav class="top-nav" aria-label="Main navigation">
-    <div class="top-nav-inner">
-      <div class="top-nav-brand">Brush &amp; Broom LLP – Bellevue, WA</div>
-      <div class="top-nav-links">
-        <a href="#cleaning-services">Cleaning Services</a>
-        <a href="#painting-services">Painting</a>
-        <a href="#why-us">Why Us</a>
-        <a href="#service-areas">Service Areas</a>
-        <a href="#reviews">Reviews</a>
-        <a href="/contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+<header class="hero">
+  <div class="hero-inner">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP house cleaning service logo" class="logo">
+    <h1>Professional House Cleaning in Bellevue & the Eastside</h1>
+    <p class="hero-tagline">We clean it. You relax. Deep cleans, move-outs, and maintenance cleaning done right.</p>
 
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP logo" class="logo" loading="lazy" />
-      <h1>House Cleaning in Bellevue & the Eastside</h1>
-      <p>Brush &amp; Broom LLP is a wife-and-husband house cleaning team taming chaos across Bellevue, Kirkland, Redmond, and Eastside King County with friendly, reliable, and eco-conscious service.</p>
-      <div class="hero-ctas">
-        <a href="/contact" class="btn btn-primary">Request a Free Cleaning Quote</a>
-        <a href="tel:+12065711092" class="btn btn-secondary">Call Now: (206) 571-1092</a>
-      </div>
-      <p class="hero-subtext">No judgment, just professional house cleaning and move-out cleaning that makes your home feel calm again.</p>
-    </div>
-  </header>
+    <a href="/contact" class="btn btn-primary" aria-label="Request a free house cleaning quote">Request a Free Quote</a>
+    <a href="tel:2065711092" class="btn btn-secondary">Call (206) 571-1092</a>
 
-  <!-- CORE SERVICE PILLARS -->
-  <section class="pillars" id="cleaning-services">
+    <p class="trust-line">Licensed • Insured • Family-Owned • Eco-Friendly Options</p>
+  </div>
+</header>
+
+<section>
+  <h2>Cleaning Services That Reset Your Space</h2>
+  <div class="pillars">
     <div class="pillar">
-      <h2>House Cleaning That Resets Your Space</h2>
-      <p>Whether you are moving, hosting, or just tired of the grime, our professional house cleaning in Bellevue and the Eastside helps you breathe easy again.</p>
+      <h3>House & Deep Cleaning</h3>
       <ul>
-        <li>Move-in and move-out cleaning for renters, landlords, and property managers in Bellevue, Kirkland, and Redmond</li>
-        <li>One-time deep cleaning for kitchens, bathrooms, and whole homes</li>
-        <li>Recurring maintenance maid service to keep chaos at bay</li>
-        <li>Eco-friendly cleaning options that fit the Eastside's green vibe</li>
+        <li>One-time and recurring home cleaning</li>
+        <li>Kitchens, bathrooms, and whole-home resets</li>
+        <li>Eco-friendly products available</li>
       </ul>
-      <a href="/cleaning" class="btn btn-outline">Get a House Cleaning Quote</a>
+      <a href="/cleaning" class="btn btn-primary">Get a Cleaning Quote</a>
     </div>
 
-    <div class="pillar" id="painting-services">
-      <h2>Interior & Exterior Painting Options</h2>
-      <p>In addition to cleaning, our small team is ready for interior and exterior residential painting projects across Bellevue and nearby Eastside neighborhoods.</p>
+    <div class="pillar">
+      <h3>Move-In / Move-Out Cleaning</h3>
       <ul>
-        <li>Interior paint refreshes for homes, condos, and small offices</li>
-        <li>Exterior finishes built for Pacific Northwest weather</li>
-        <li>Color consultations and small touch-up projects between tenants</li>
+        <li>Apartment and home move-outs</li>
+        <li>Landlord & property manager friendly</li>
+        <li>Fast turnaround when timing matters</li>
       </ul>
-      <a href="/contact" class="btn btn-outline">Inquire About Painting</a>
+      <a href="/contact" class="btn btn-primary">Schedule a Move-Out Clean</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">Meet the Duo Behind the Brooms</h2>
-    <p>Brush &amp; Broom LLP is run by a wife-and-husband team who understand that life is messy—kids, pets, guests, tenants—and your home deserves to feel great anyway.</p>
-    <p>No random rotating crews; just the same friendly faces who respect your home, schedule, and sanity. We arrive on time, communicate clearly, and leave every room sparkling.</p>
-  </section>
-
-  <section class="why-us" id="why-us" aria-labelledby="why-us-heading">
-    <h2 id="why-us-heading">Why Eastside Neighbors Choose Us</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <h3>Local Eastside Experts</h3>
-        <p>Based in Bellevue and serving Kirkland, Redmond, and surrounding Eastside neighborhoods, we know local homes, building styles, and expectations.</p>
-      </div>
-      <div class="why-item">
-        <h3>Friendly & Professional</h3>
-        <p>We keep it light and approachable, but we are serious about detailed prep, surface protection, and thorough cleaning with no shortcuts.</p>
-      </div>
-      <div class="why-item">
-        <h3>PNW-Proof Services</h3>
-        <p>From rain to humidity, our eco-friendly cleaning products and methods are tailored for Pacific Northwest living.</p>
-      </div>
-      <div class="why-item">
-        <h3>Transparent Quotes</h3>
-        <p>You know exactly what is included, the timeline, and the cost upfront, so there are no surprise fees on cleaning day.</p>
-      </div>
+<section>
+  <h2>Why Eastside Neighbors Choose Brush & Broom</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <h3>Local & Family-Owned</h3>
+      <p>No rotating crews. Just consistent, respectful service from owners who care.</p>
     </div>
-  </section>
-
-  <section class="service-areas" id="service-areas" aria-labelledby="service-areas-heading">
-    <h2 id="service-areas-heading">Cleaning Across Bellevue & the Eastside</h2>
-    <p>Brush &amp; Broom LLP focuses on areas where fast communication and reliable scheduling are possible.</p>
-    <ul class="areas-list">
-      <li>Bellevue, WA</li>
-      <li>Kirkland, WA</li>
-      <li>Redmond, WA</li>
-      <li>Eastside communities</li>
-      <li>Select Seattle neighborhoods</li>
-    </ul>
-    <p class="areas-note">Not sure if your address is in range? Share your location on the quote form and we will confirm quickly.</p>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section class="social-proof" id="reviews" aria-labelledby="reviews-heading">
-    <h2 id="reviews-heading">People Like You, Breathing Easier</h2>
-    <div class="reviews">
-      <article class="review">
-        <p>“I hired this company to help me clean up for my move. They went above and beyond. Thank you so much for helping me when I was in a bind. Same day booking. HIGHLY RECOMMEND.”</p>
-        <p class="review-meta">– South Beacon Hill, Seattle – Nextdoor</p>
-      </article>
-      <article class="review">
-        <p>“Responsive, polite, timely, excellent work, helpful. I highly recommend for outstanding quality.”</p>
-        <p class="review-meta">– Jerry C. – Google Reviews</p>
-      </article>
-      <article class="review">
-        <p>“They helped with a total clean and refresh. Prompt, efficient, expert—and a likable couple!”</p>
-        <p class="review-meta">– Pamela M. – Google Reviews</p>
-      </article>
+    <div class="why-item">
+      <h3>Transparent Pricing</h3>
+      <p>Clear quotes. No surprises. No pressure.</p>
     </div>
-    <div class="trust-logos">
-      <span>Rated highly by local homeowners</span>
-      <span>Family-owned in King County</span>
-      <span>Trusted for move-out cleaning & deep cleans</span>
+    <div class="why-item">
+      <h3>PNW-Proof Cleaning</h3>
+      <p>Built for rainy weather, pets, kids, and real life.</p>
     </div>
-  </section>
-
-  <section class="additional-services" aria-labelledby="additional-services-heading">
-    <h2 id="additional-services-heading">Need Extra Help?</h2>
-    <p>While cleaning is our primary focus, a few add-on services make your move, turnover, or refresh even smoother.</p>
-    <ul>
-      <li>Light handyman fixes completed during your cleaning visit</li>
-      <li>Power washing for driveways, patios, and small exteriors</li>
-      <li>Small paint touch-ups between tenants or before listing</li>
-    </ul>
-    <p class="additional-note">Bundle services to save time and reduce stress—ask about options on your quote request.</p>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final-cta" aria-labelledby="final-cta-heading">
-    <h2 id="final-cta-heading">Ready for Your Sparkling “After”?</h2>
-    <p>Tell us about the dusty corners, move-out mess, or upcoming guests and we will send a clear, no-pressure estimate for your house cleaning.</p>
-    <div class="final-cta-buttons">
-      <a href="/contact" class="btn btn-primary">Request a Free Cleaning Quote</a>
-      <a href="tel:+12065711092" class="btn btn-secondary">Call to Chat About Cleaning</a>
+    <div class="why-item">
+      <h3>Trusted by Locals</h3>
+      <p>Highly rated by homeowners, renters, and neighbors.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
-    <p>House cleaning, move-out cleaning, and residential painting in Bellevue, Kirkland, Redmond, and Eastside King County, Washington.</p>
-  </footer>
+<section>
+  <h2>Serving Bellevue, Kirkland & the Eastside</h2>
+  <ul class="areas-list">
+    <li>Bellevue</li>
+    <li>Kirkland</li>
+    <li>Redmond</li>
+    <li>Eastside King County</li>
+    <li>Select Seattle Areas</li>
+  </ul>
+</section>
+
+<section>
+  <h2>What Clients Say</h2>
+  <div class="reviews">
+    <div class="review">
+      “Same-day booking, above and beyond service. Absolutely recommend.”
+      <div class="review-meta">– Nextdoor Neighbor</div>
+    </div>
+    <div class="review">
+      “Responsive, professional, and excellent quality work.”
+      <div class="review-meta">– Google Review</div>
+    </div>
+    <div class="review">
+      “Prompt, efficient, and genuinely kind people.”
+      <div class="review-meta">– Local Client</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Ready for a Cleaner Home?</h2>
+  <p>Tell us what you need—we’ll send a clear, no-pressure quote.</p>
+  <a href="/contact" class="btn btn-primary">Request Your Free Quote</a>
+</section>
+
+<footer>
+  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+</footer>
+
 </body>
 </html>
