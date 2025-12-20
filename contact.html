@@ -7,15 +7,6 @@
   <title>Request a Free Cleaning Quote | Brush & Broom LLP</title>
   <meta name="description" content="Get a free, no-pressure cleaning quote from Brush & Broom LLP. Family-owned house cleaning, deep cleaning, and move-out cleaning in Bellevue, Kirkland, Redmond & Eastside King County." />
 
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Free House Cleaning Quote | Brush & Broom LLP" />
-  <meta property="og:description" content="Family-owned cleaning service providing deep cleans, move-outs, and eco-friendly house cleaning in Bellevue, Kirkland, and Redmond." />
-  <meta property="og:url" content="https://www.brushandbroomllp.com/quote" />
-  <meta property="og:image" content="https://www.brushandbroomllp.com/og-image.jpg" />
-
-  <meta name="twitter:card" content="summary_large_image">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -31,18 +22,8 @@
       --shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--navy);
-      line-height: 1.65;
-    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
 
     header.quote-hero {
       background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
@@ -51,22 +32,9 @@
       text-align: center;
     }
 
-    .quote-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
-
-    .quote-hero p {
-      font-size: 1.2rem;
-      margin-bottom: 25px;
-    }
-
-    .trust-line {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: var(--gray);
-    }
+    .quote-hero h1 { font-family: 'Playfair Display', serif; font-size:2.5rem; margin-bottom:15px; }
+    .quote-hero p { font-size:1.2rem; margin-bottom:25px; }
+    .trust-line { margin-top: 10px; font-size: 0.95rem; color: var(--gray); }
 
     main {
       max-width: 800px;
@@ -77,48 +45,16 @@
       box-shadow: var(--shadow);
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    input, textarea, select {
-      padding: 12px 15px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      width: 100%;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
+    form { display:flex; flex-direction:column; gap:20px; }
+    input, textarea, select { padding:12px 15px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%; }
+    textarea { resize: vertical; }
     button {
-      padding: 14px 20px;
-      border-radius: 6px;
-      border: none;
-      background-color: var(--green);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.25s ease;
+      padding:14px 20px; border-radius:6px; border:none; background-color:var(--green); color:var(--white);
+      font-weight:700; font-size:1rem; cursor:pointer; transition: all 0.25s ease;
     }
+    button:hover { background-color: var(--green-dark); transform:translateY(-2px); }
 
-    button:hover {
-      background-color: var(--green-dark);
-      transform: translateY(-2px);
-    }
-
-    footer {
-      background-color: var(--navy);
-      color: var(--gray);
-      text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-    }
+    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
 
     @media(max-width:768px){
       .quote-hero h1 { font-size: 2rem; }
@@ -136,7 +72,17 @@
 </header>
 
 <main>
-  <form action="/thank-you" method="post">
+  <!-- FORMSPREE FORM -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <!-- Redirect to thank-you page -->
+    <input type="hidden" name="_next" value="https://www.brushandbroomllp.com/thank-you">
+    <!-- Email the submissions -->
+    <input type="hidden" name="_to" value="seabnbllp@icloud.com">
+    <!-- Set custom subject line -->
+    <input type="hidden" name="_subject" value="New Quote Request – Brush & Broom LLP">
+    <!-- Optional: disable captcha -->
+    <input type="hidden" name="_captcha" value="false">
+
     <label for="name">Full Name *</label>
     <input type="text" id="name" name="name" required>
 
