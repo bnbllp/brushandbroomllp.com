@@ -14,6 +14,7 @@
 <meta property="og:image" content="https://www.brushandbroomllp.com/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image">
 
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -33,12 +34,7 @@
     "addressRegion": "WA",
     "addressCountry": "US"
   },
-  "areaServed": [
-    "Bellevue WA",
-    "Kirkland WA",
-    "Redmond WA",
-    "Eastside King County"
-  ],
+  "areaServed": ["Bellevue WA", "Kirkland WA", "Redmond WA", "Eastside King County"],
   "priceRange": "$$"
 }
 </script>
@@ -61,6 +57,7 @@ body {
   background: var(--light-bg);
   color: var(--navy);
   line-height:1.6;
+  scroll-behavior: smooth;
 }
 
 /* NAVIGATION */
@@ -71,48 +68,25 @@ body {
   padding:15px 20px;
   background-color: var(--white);
   box-shadow: var(--shadow);
+  position: sticky;
+  top:0;
+  z-index:999;
   flex-wrap:wrap;
 }
 
-.nav-container {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  width:100%;
-  flex-wrap:wrap;
-}
+.nav-container { display:flex; align-items:center; justify-content:space-between; width:100%; flex-wrap:wrap; }
 
-.logo {
-  max-width:200px;
-  height:auto;
-}
+.logo-container { max-width: 200px; }
+.logo { width:100%; height:auto; display:block; object-fit:contain; }
 
-.nav-links {
-  list-style:none;
-  display:flex;
-  gap:25px;
-  margin-left:20px;
-}
-
-.nav-links li a {
-  text-decoration:none;
-  font-weight:bold;
-  color: var(--navy);
-  transition: color 0.2s;
-}
-
+.nav-links { list-style:none; display:flex; gap:25px; }
+.nav-links li a { text-decoration:none; font-weight:bold; color: var(--navy); transition: color 0.2s; }
 .nav-links li a:hover { color: var(--green); }
 
-.social-links {
-  display:flex;
-  gap:10px;
-  margin-top:10px;
-}
-
+.social-links { display:flex; gap:10px; }
 .social-links a {
   display:inline-block;
-  width:32px;
-  height:32px;
+  width:32px; height:32px;
   background-color: var(--navy);
   color: var(--white);
   text-align:center;
@@ -122,32 +96,29 @@ body {
   text-decoration:none;
   transition: all 0.2s;
 }
-
 .social-links a:hover { background-color: var(--green); }
 
 /* HERO */
 header.hero {
-  background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
-  color: var(--white);
+  min-height:80vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   text-align:center;
   padding:70px 20px;
-}
-
-.hero-inner {
-  max-width:1100px;
-  margin:0 auto;
+  background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75)),
+              url('hero-bg.jpg') center/cover no-repeat;
+  color: var(--white);
 }
 
 .hero-inner h1 {
   font-family:'Playfair Display', serif;
-  font-size:2.6rem;
+  font-size:2.8rem;
   margin-bottom:15px;
 }
 
-.hero-inner p {
-  font-size:1.2rem;
-  margin-bottom:20px;
-}
+.hero-inner p { font-size:1.25rem; margin-bottom:20px; }
 
 .hero-ctas a {
   display:inline-block;
@@ -155,59 +126,54 @@ header.hero {
   border-radius:6px;
   font-weight:700;
   text-decoration:none;
-  transition: all 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin:0 5px;
 }
+.hero-ctas a:hover { transform:scale(1.05); box-shadow:0 6px 15px rgba(0,0,0,0.2); }
 
 .btn-primary { background:var(--green); color: var(--white); }
-.btn-primary:hover { background:var(--green-dark); transform: translateY(-2px); }
-
+.btn-primary:hover { background: var(--green-dark); }
 .btn-secondary { border:2px solid var(--green); color:var(--green); }
-.btn-secondary:hover { background:var(--green); color: var(--white); }
+.btn-secondary:hover { background: var(--green); color: var(--white); }
 
 .hero-subtext { margin-top:15px; color:var(--gray); font-size:0.95rem; }
 
 /* SECTIONS */
 section { padding:70px 20px; max-width:1200px; margin:0 auto; }
 
-section h2 { 
-  font-family:'Playfair Display', serif; 
-  font-size:2.1rem; 
-  margin-bottom:30px; 
-  text-align:center; 
+section h2 {
+  font-family:'Playfair Display', serif;
+  font-size:2.1rem;
+  margin-bottom:30px;
+  text-align:center;
 }
 
 /* PILLARS */
-.pillars {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
-}
-
+.pillars { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:25px; }
 .pillar {
   background: var(--white);
   padding:35px;
   border-radius:10px;
   box-shadow: var(--shadow);
+  opacity:0; transform:translateY(30px);
+  transition: all 0.8s ease;
 }
+.pillar.visible { opacity:1; transform:translateY(0); }
 
 .pillar h3 { color:var(--navy); margin-bottom:15px; font-size:1.4rem; }
 .pillar ul { padding-left:20px; margin-bottom:25px; }
 
 /* WHY US */
-.why-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
 .why-item {
   background: var(--white);
   padding:25px;
   border-radius:8px;
   box-shadow: var(--shadow);
+  opacity:0; transform:translateY(30px);
+  transition: all 0.8s ease;
 }
-
+.why-item.visible { opacity:1; transform:translateY(0); }
 .why-item h3 { color: var(--green); margin-bottom:10px; }
 
 /* SERVICE AREAS */
@@ -215,20 +181,9 @@ section h2 {
 .areas-list li { background: var(--gray); color: var(--navy); padding:10px 18px; border-radius:20px; font-size:0.9rem; }
 
 /* REVIEWS */
-.reviews {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-
-.review {
-  background: var(--white);
-  padding:25px;
-  border-radius:8px;
-  box-shadow: var(--shadow);
-  font-style:italic;
-}
-
+.reviews { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.review { background: var(--white); padding:25px; border-radius:8px; box-shadow: var(--shadow); font-style:italic; opacity:0; transform:translateY(30px); transition: all 0.8s ease; }
+.review.visible { opacity:1; transform:translateY(0); }
 .review-meta { margin-top:12px; font-style:normal; font-weight:700; color:var(--green); }
 
 /* FINAL CTA */
@@ -236,22 +191,25 @@ section h2 {
 .final-cta p { color: var(--gray); margin-bottom:25px; }
 
 /* FOOTER */
-footer { background: var(--navy); color: var(--gray); text-align:center; padding:20px; font-size:0.85rem; }
+footer { background: var(--navy); color: var(--gray); text-align:center; padding:20px; font-size:0.85rem; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
 
 /* MOBILE */
 @media(max-width:768px){
   h1 { font-size:2.1rem; }
-  .nav-links { flex-direction:column; gap:10px; margin-left:0; width:100%; }
+  .nav-links { flex-direction:column; gap:10px; width:100%; }
   .social-links { justify-content:center; margin-top:15px; }
 }
 </style>
+
 </head>
 <body>
 
 <header class="hero">
   <nav class="site-nav">
     <div class="nav-container">
-      <a href="/" class="logo-link"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="logo" /></a>
+      <div class="logo-container">
+        <a href="/"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="logo" /></a>
+      </div>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/cleaning">Cleaning</a></li>
@@ -280,10 +238,11 @@ footer { background: var(--navy); color: var(--gray); text-align:center; padding
   </div>
 </header>
 
+<main>
 <section>
   <h2>Cleaning Services That Reset Your Space</h2>
   <div class="pillars">
-    <div class="pillar">
+    <article class="pillar fade-in">
       <h3>House & Deep Cleaning</h3>
       <ul>
         <li>One-time and recurring home cleaning</li>
@@ -291,8 +250,8 @@ footer { background: var(--navy); color: var(--gray); text-align:center; padding
         <li>Eco-friendly products available</li>
       </ul>
       <a href="/cleaning" class="btn btn-primary">Get a Cleaning Quote</a>
-    </div>
-    <div class="pillar">
+    </article>
+    <article class="pillar fade-in">
       <h3>Move-In / Move-Out Cleaning</h3>
       <ul>
         <li>Apartment and home move-outs</li>
@@ -300,29 +259,29 @@ footer { background: var(--navy); color: var(--gray); text-align:center; padding
         <li>Fast turnaround when timing matters</li>
       </ul>
       <a href="/contact" class="btn btn-primary">Schedule a Move-Out Clean</a>
-    </div>
+    </article>
   </div>
 </section>
 
 <section>
   <h2>Why Eastside Neighbors Choose Brush & Broom</h2>
   <div class="why-grid">
-    <div class="why-item">
+    <article class="why-item fade-in">
       <h3>Local & Family-Owned</h3>
       <p>No rotating crews. Just consistent, respectful service from owners who care.</p>
-    </div>
-    <div class="why-item">
+    </article>
+    <article class="why-item fade-in">
       <h3>Transparent Pricing</h3>
       <p>Clear quotes. No surprises. No pressure.</p>
-    </div>
-    <div class="why-item">
+    </article>
+    <article class="why-item fade-in">
       <h3>PNW-Proof Cleaning</h3>
       <p>Built for rainy weather, pets, kids, and real life.</p>
-    </div>
-    <div class="why-item">
+    </article>
+    <article class="why-item fade-in">
       <h3>Trusted by Locals</h3>
       <p>Highly rated by homeowners, renters, and neighbors.</p>
-    </div>
+    </article>
   </div>
 </section>
 
@@ -340,18 +299,18 @@ footer { background: var(--navy); color: var(--gray); text-align:center; padding
 <section>
   <h2>What Clients Say</h2>
   <div class="reviews">
-    <div class="review">
-      “Same-day booking, above and beyond service. Absolutely recommend.”
-      <div class="review-meta">– Nextdoor Neighbor</div>
-    </div>
-    <div class="review">
-      “Responsive, professional, and excellent quality work.”
-      <div class="review-meta">– Google Review</div>
-    </div>
-    <div class="review">
-      “Prompt, efficient, and genuinely kind people.”
-      <div class="review-meta">– Local Client</div>
-    </div>
+    <figure class="review fade-in">
+      <blockquote>“Same-day booking, above and beyond service. Absolutely recommend.”</blockquote>
+      <figcaption>– Nextdoor Neighbor</figcaption>
+    </figure>
+    <figure class="review fade-in">
+      <blockquote>“Responsive, professional, and excellent quality work.”</blockquote>
+      <figcaption>– Google Review</figcaption>
+    </figure>
+    <figure class="review fade-in">
+      <blockquote>“Prompt, efficient, and genuinely kind people.”</blockquote>
+      <figcaption>– Local Client</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -360,10 +319,33 @@ footer { background: var(--navy); color: var(--gray); text-align:center; padding
   <p>Tell us what you need—we’ll send a clear, no-pressure quote.</p>
   <a href="/contact" class="btn btn-primary">Request Your Free Quote</a>
 </section>
+</main>
 
 <footer>
   <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/brushandbroomllp" target="_blank" aria-label="Facebook">F</a>
+    <a href="https://www.nextdoor.com/pages/brush-and-broom-llp" target="_blank" aria-label="Nextdoor">N</a>
+    <a href="https://g.page/brushandbroomllp" target="_blank" aria-label="Google">G</a>
+    <a href="https://www.tiktok.com/@brushandbroomllp" target="_blank" aria-label="TikTok">T</a>
+    <a href="https://www.instagram.com/brushandbroomllp" target="_blank" aria-label="Instagram">I</a>
+  </div>
 </footer>
+
+<script>
+// Fade-in animations
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
