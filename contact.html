@@ -2,138 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Brush & Broom LLP | Seattle, Kirkland & Bellevue Cleaning and Painting</title>
-  <meta name="description" content="Contact Brush & Broom LLP for cleaning and painting services in Seattle, Kirkland, Bellevue, and King County. Request a free quote or call us today." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Request a Free Cleaning Quote | Brush & Broom LLP</title>
+  <meta name="description" content="Get a free, no-pressure cleaning quote from Brush & Broom LLP. Family-owned house cleaning, deep cleaning, and move-out cleaning in Bellevue, Kirkland, Redmond & Eastside King County." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free House Cleaning Quote | Brush & Broom LLP" />
+  <meta property="og:description" content="Family-owned cleaning service providing deep cleans, move-outs, and eco-friendly house cleaning in Bellevue, Kirkland, and Redmond." />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/quote" />
+  <meta property="og:image" content="https://www.brushandbroomllp.com/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+    :root {
+      --navy: #002244;
+      --green: #69be28;
+      --green-dark: #5aa81f;
+      --gray: #a5acaf;
+      --white: #ffffff;
+      --light-bg: #f9f9f9;
+      --shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    .hero {
-      background-color: #002244; /* Navy Blue */
-      color: #a5acaf; /* Wolf Gray */
-      padding: 40px 20px;
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    header.quote-hero {
+      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
+      color: var(--white);
+      padding: 60px 20px;
       text-align: center;
     }
-    .hero-inner img.logo {
-      max-width: 200px;
-      margin-bottom: 20px;
-    }
-    .btn-primary {
-      background-color: #002244; /* Navy Blue */
-      color: #a5acaf; /* Wolf Gray */
-      border: none;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-secondary {
-      background-color: #69be28; /* Seahawks Green */
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .form-container {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    .form-group {
+
+    .quote-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
       margin-bottom: 15px;
     }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
+
+    .quote-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
     }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 10px;
+
+    .trust-line {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    main {
+      max-width: 800px;
+      margin: -40px auto 50px auto;
+      background-color: var(--white);
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, textarea, select {
+      padding: 12px 15px;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
     }
-    .site-footer {
-      background-color: #002244; /* Navy Blue */
-      color: #a5acaf; /* Wolf Gray */
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 14px 20px;
+      border-radius: 6px;
+      border: none;
+      background-color: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    button:hover {
+      background-color: var(--green-dark);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: var(--navy);
+      color: var(--gray);
       text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.85rem;
+    }
+
+    @media(max-width:768px){
+      .quote-hero h1 { font-size: 2rem; }
+      main { margin: -30px 15px 40px 15px; padding: 30px 20px; }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="hero-inner">
-      <img src="logo.PNG" alt="Brush & Broom LLP Logo" class="logo" />
-      <h1>Get in touch with Brush & Broom LLP</h1>
-      <p>Have questions or ready to book your cleaning or painting project? Fill out the form below or call us directly.</p>
-      <div class="hero-ctas">
-        <a href="tel:2065711092" class="btn btn-secondary">Call now: (206) 571-1092</a>
-      </div>
-    </div>
-  </header>
+<header class="quote-hero">
+  <h1>Get Your Free Cleaning Quote</h1>
+  <p>Fast, no-pressure estimates for house cleaning, deep cleans, and move-outs in Bellevue, Kirkland, Redmond & Eastside King County.</p>
+  <p class="trust-line">Licensed • Insured • Family-Owned • Eco-Friendly Options</p>
+</header>
 
-  <!-- CONTACT FORM -->
-  <section class="form-container">
-    <h2>Request a Free Quote</h2>
-    <form action="/contact" method="post">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div class="form-group">
-        <label for="service">Service Needed</label>
-        <select id="service" name="service" required>
-          <option value="">Select a service</option>
-          <option value="cleaning">Cleaning</option>
-          <option value="painting">Painting</option>
-          <option value="both">Cleaning & Painting</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Tell us about your project</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Send Request</button>
-    </form>
-  </section>
+<main>
+  <form action="/thank-you" method="post">
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required>
 
-  <!-- CONTACT INFO -->
-  <section class="form-container">
-    <h2>Or reach us directly</h2>
-    <p><strong>Phone:</strong> <a href="tel:2065711092">(206) 571-1092</a></p>
-    <p><strong>Email:</strong> <a href="mailto:info@brushandbroomllp.com">info@brushandbroomllp.com</a></p>
-    <p><strong>Service Areas:</strong> Seattle, Kirkland, Bellevue, and King County</p>
-  </section>
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
 
-  <footer class="site-footer">
-    <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
-    <p>Serving Seattle, Kirkland, Bellevue, and surrounding King County communities.</p>
-  </footer>
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="service">Type of Service *</label>
+    <select id="service" name="service" required>
+      <option value="" disabled selected>Select a service</option>
+      <option value="House Cleaning">House Cleaning</option>
+      <option value="Deep Cleaning">Deep Cleaning</option>
+      <option value="Move-In / Move-Out">Move-In / Move-Out</option>
+      <option value="Painting Inquiry">Painting Inquiry</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+
+    <label for="details">Details / Special Requests</label>
+    <textarea id="details" name="details" rows="5"></textarea>
+
+    <button type="submit">Request Your Free Quote</button>
+  </form>
+</main>
+
+<footer>
+  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+</footer>
 
 </body>
 </html>
