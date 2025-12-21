@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior & Exterior Painting | Brush & Broom LLP</title>
 
-  <title>Cleaning & Painting Services | Brush & Broom LLP – Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP offers bundled cleaning and painting services in Bellevue, Kirkland, Redmond & Eastside. Eco-friendly, reliable, family-owned. Transform your home today!">
+  <meta name="description" content="Brush & Broom LLP provides high-quality interior and exterior painting in Bellevue, Kirkland, and the Eastside. Clean lines, honest prep, and results that last." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
@@ -22,154 +20,226 @@
       --shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
-
-    header.combo-hero {
-      background: linear-gradient(to bottom, rgba(0,34,68,0.85), rgba(0,34,68,0.7));
-      color: var(--white);
-      text-align: center;
-      padding: 60px 20px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    header.combo-hero h1 { font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:15px; }
-    header.combo-hero p { font-size:1.2rem; margin-bottom:20px; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--light-bg);
+      color: var(--navy);
+      line-height: 1.6;
+    }
 
-    main { max-width:900px; margin:-40px auto 50px auto; background-color: var(--white); padding:50px 35px; border-radius:10px; box-shadow:var(--shadow); }
+    /* HERO */
+    header.hero {
+      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
+      color: var(--white);
+      padding: 70px 20px;
+      text-align: center;
+    }
 
-    section { margin-bottom:50px; }
-    h2 { font-family:'Playfair Display', serif; color:var(--navy); margin-bottom:20px; font-size:2rem; }
-    h3 { color: var(--green); margin-bottom:10px; }
-    p { margin-bottom:15px; font-size:1.1rem; }
-    ul { margin-left:20px; margin-bottom:15px; }
-    li { margin-bottom:10px; }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
 
     .btn {
-      display:inline-block;
-      padding:12px 25px;
-      border-radius:5px;
-      text-decoration:none;
-      font-weight:bold;
-      background-color:var(--green);
-      color:var(--white);
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
       transition: all 0.25s ease;
-      margin-top:10px;
     }
 
-    .btn:hover { background-color:var(--green-dark); transform:translateY(-2px); }
-
-    .social-links {
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      margin-top:20px;
-    }
-
-    .social-links a {
-      display:inline-block;
-      width:40px;
-      height:40px;
-      background-color: var(--navy);
+    .btn-primary {
+      background: var(--green);
       color: var(--white);
-      text-align:center;
-      line-height:40px;
-      border-radius:50%;
-      font-weight:bold;
-      font-size:1.1rem;
-      text-decoration:none;
-      transition: all 0.2s;
     }
 
-    .social-links a:hover { background-color: var(--green); }
-
-    .trust-logos {
-      display:flex;
-      flex-wrap:wrap;
-      gap:15px;
-      justify-content:center;
-      margin-top:20px;
+    .btn-primary:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
     }
 
-    .trust-logos span {
-      background-color: var(--navy);
+    .btn-secondary {
+      border: 2px solid var(--green);
+      color: var(--green);
+      margin-left: 10px;
+    }
+
+    .btn-secondary:hover {
+      background: var(--green);
       color: var(--white);
-      padding:8px 15px;
-      border-radius:20px;
-      font-size:0.9rem;
     }
 
-    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
+    /* SECTIONS */
+    section {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-    @media(max-width:768px){
-      header.combo-hero h1 { font-size:2rem; }
-      main { margin:-30px 15px 40px 15px; padding:35px 20px; }
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.1rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    /* SERVICE BLOCKS */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: var(--navy);
+      font-size: 1.4rem;
+    }
+
+    .service-card ul {
+      padding-left: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* WHY US */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .why-item {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .why-item h3 {
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .final-cta p {
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: var(--navy);
+      color: var(--gray);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.1rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header class="combo-hero">
-  <h1>Cleaning & Painting Combo Services</h1>
-  <p>Transform your home inside and out with our bundled services in Bellevue, Kirkland, Redmond & Eastside.</p>
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Paint That Actually Holds Up</h1>
+    <p>Interior and exterior painting done right—clean prep, sharp lines, and finishes built for real Pacific Northwest weather.</p>
+    <a href="/contact" class="btn btn-primary">Request a Painting Quote</a>
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+  </div>
 </header>
 
-<main>
-  <section class="combo-services">
-    <h2>What’s Included in Our Combo Service</h2>
-    <p>Get the ultimate refresh by pairing our professional cleaning with interior or exterior painting:</p>
-    <ul>
-      <li>Deep cleaning before painting for a flawless finish</li>
-      <li>Interior wall and trim painting to brighten your space</li>
-      <li>Exterior painting options suited for Pacific Northwest weather</li>
-      <li>Eco-friendly cleaning and paint options safe for your family and pets</li>
-      <li>Flexible scheduling to minimize disruption</li>
-    </ul>
-    <a href="/quote" class="btn">Request a Free Combo Quote</a>
-  </section>
-
-  <section class="why-combo">
-    <h2>Why Bundle Cleaning & Painting?</h2>
-    <p>Bundling saves you time, hassle, and ensures the best results:</p>
-    <ul>
-      <li>Everything done in the right order—clean first, paint second</li>
-      <li>One point of contact and scheduling simplicity</li>
-      <li>Cost savings when combining services</li>
-      <li>Consistent high-quality results from a trusted local team</li>
-    </ul>
-  </section>
-
-  <section class="trust">
-    <h2>Trusted by Your Neighbors</h2>
-    <p>Family-owned, locally rated, and focused on integrity, quality, and community:</p>
-    <div class="trust-logos">
-      <span>Family-Owned</span>
-      <span>Locally Rated Highly</span>
-      <span>Eco-Friendly Options</span>
-      <span>Trusted by Homeowners & Renters</span>
+<section>
+  <h2>Our Painting Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Interior Painting</h3>
+      <ul>
+        <li>Walls, ceilings, trim, and doors</li>
+        <li>Room refreshes or full-home repaints</li>
+        <li>Low-odor, family-safe paint options</li>
+        <li>Careful prep and protection of floors & furniture</li>
+      </ul>
     </div>
-  </section>
 
-  <section class="cta">
-    <h2>Ready to Transform Your Home?</h2>
-    <p>Our cleaning + painting combo ensures your home looks and feels amazing. Get your free quote today!</p>
-    <a href="/quote" class="btn">Request a Free Combo Quote</a>
-  </section>
-
-  <!-- SOCIAL LINKS -->
-  <section class="social">
-    <h2>Connect With Us</h2>
-    <div class="social-links">
-      <a href="https://www.facebook.com/brushandbroomllp" target="_blank" aria-label="Facebook">F</a>
-      <a href="https://www.nextdoor.com/pages/brush-and-broom-llp" target="_blank" aria-label="Nextdoor">N</a>
-      <a href="https://g.page/brushandbroomllp" target="_blank" aria-label="Google">G</a>
-      <a href="https://www.tiktok.com/@brushandbroomllp" target="_blank" aria-label="TikTok">T</a>
-      <a href="https://www.instagram.com/brushandbroomllp" target="_blank" aria-label="Instagram">I</a>
+    <div class="service-card">
+      <h3>Exterior Painting</h3>
+      <ul>
+        <li>Homes, garages, and small buildings</li>
+        <li>PNW-rated coatings for rain and moisture</li>
+        <li>Proper scraping, sanding, and priming</li>
+        <li>Clean, respectful job sites</li>
+      </ul>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<section>
+  <h2>Why Clients Trust Us With Their Paint</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <h3>Prep Is Non-Negotiable</h3>
+      <p>Most paint jobs fail because of bad prep. We don’t skip it—ever.</p>
+    </div>
+    <div class="why-item">
+      <h3>Clean Lines, No Mess</h3>
+      <p>If it shouldn’t have paint on it, it won’t. Simple as that.</p>
+    </div>
+    <div class="why-item">
+      <h3>Owner-Run Crews</h3>
+      <p>You’re dealing directly with the people doing the work—not a random subcontractor.</p>
+    </div>
+    <div class="why-item">
+      <h3>Honest Quotes</h3>
+      <p>No bait-and-switch pricing. We quote it right the first time.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Ready to Upgrade Your Space?</h2>
+  <p>Bad paint is louder than bad furniture. Let’s fix it properly.</p>
+  <a href="/contact" class="btn btn-primary">Get a Painting Quote</a>
+</section>
 
 <footer>
-  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & the Eastside</p>
 </footer>
 
 </body>
