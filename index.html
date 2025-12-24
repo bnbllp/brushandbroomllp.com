@@ -3,151 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | Trusted Cleaning & Painting in Seattle, Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP is a family-owned cleaning and painting company serving Seattle, Bellevue, Kirkland, and the Eastside. Honest, eco-friendly cleaning, deep cleaning, and painting services." />
+  <title>Brush &amp; Broom LLP | Trusted Cleaning &amp; Painting in Seattle, Bellevue &amp; the Eastside</title>
+  <meta name="description" content="Brush &amp; Broom LLP is a family-owned cleaning and painting company serving Seattle, Bellevue, Kirkland, and the Eastside. Honest, eco-friendly cleaning, deep cleaning, and painting services with zero judgment." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
   <div class="hero-inner">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="hero-logo">
+    <a href="/" class="hero-logo-link" aria-label="Brush &amp; Broom LLP Home">
+      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush &amp; Broom LLP logo" class="hero-logo">
+    </a>
     <h1>We Clean It. You Relax.</h1>
     <p>
-      Brush & Broom LLP is a wife-and-husband team delivering honest, high-quality
+      Brush &amp; Broom LLP is a wife-and-husband team delivering honest, high-quality
       cleaning, deep cleaning, and painting services across Seattle, Bellevue, Kirkland, and the Eastside.
     </p>
     <div class="cta-buttons">
       <a href="/contact.html" class="btn btn-primary">Request a Free Quote</a>
-      <a href="tel:2065711092" class="btn btn-secondary">(206) 571-1092</a>
+      <a href="tel:2065711092" class="btn btn-secondary" aria-label="Call Brush and Broom at 206-571-1092">(206) 571-1092</a>
       <a href="mailto:Seabnbllp@icloud.com" class="btn btn-secondary">Email Us</a>
     </div>
   </div>
 </header>
 
-<section>
-  <h2>Services Built for Real Life</h2>
-  <p class="section-lead">
-    Whether you’re moving, overwhelmed, or just ready for a reset,
-    we deliver reliable results without the awkward sales pressure.
+<main>
+
+  <section aria-labelledby="services-heading">
+    <h2 id="services-heading">Services Built for Real Life</h2>
+    <p class="section-lead">
+      Whether you’re moving, overwhelmed, or just ready for a reset,
+      we deliver reliable results without the awkward sales pressure.
+    </p>
+
+    <div class="services">
+      <article class="service-card">
+        <h3>Professional Cleaning</h3>
+        <ul>
+          <li>Move-in / move-out cleaning</li>
+          <li>Deep cleaning &amp; resets</li>
+          <li>Recurring maintenance</li>
+          <li>Eco-friendly options available</li>
+        </ul>
+        <a href="/house-cleaning-bellevue/" class="btn btn-primary">Get a Cleaning Quote</a>
+      </article>
+
+      <article class="service-card">
+        <h3>Painting &amp; Refresh Work</h3>
+        <ul>
+          <li>Interior painting</li>
+          <li>Exterior painting (PNW-ready)</li>
+          <li>Behr paint as standard, custom options available</li>
+          <li>Light touch-ups &amp; transitions</li>
+        </ul>
+        <a href="/interior-painting-bellevue/" class="btn btn-primary">Ask About Painting</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="centered-section" aria-labelledby="cleaning-details-heading">
+    <h2 id="cleaning-details-heading">Want more details on our cleaning services?</h2>
+    <a href="/house-cleaning-bellevue/" class="btn btn-primary">Go to Cleaning Page</a>
+  </section>
+
+  <section class="centered-section" aria-labelledby="painting-details-heading">
+    <h2 class="visually-hidden" id="painting-details-heading">Painting services details</h2>
+    <a href="/interior-painting-bellevue/" class="btn btn-secondary">Explore Our Painting Services</a>
+  </section>
+
+  <section aria-labelledby="about-heading">
+    <h2 id="about-heading">Meet the People Behind the Work</h2>
+    <div class="about">
+      <p>
+        Brush &amp; Broom LLP is proudly run by a husband-and-wife team who understand that
+        life gets messy — kids, pets, moves, work, and everything in between.
+        <a href="/about.html" class="link-accent">Learn more about us</a>.
+      </p>
+      <p>
+        No rotating crews. No strangers in your home. Just the same reliable faces who
+        show up on time, communicate clearly, and take pride in doing things right.
+      </p>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-heading">
+    <h2 id="why-heading">Why Neighbors Choose Us</h2>
+    <div class="why-grid">
+      <article class="why-item">
+        <h3>Local &amp; Accountable</h3>
+        <p>You’re working directly with the owners — not a franchise.</p>
+      </article>
+      <article class="why-item">
+        <h3>Honest Pricing</h3>
+        <p>Clear quotes. No pressure. No surprise add-ons.</p>
+      </article>
+      <article class="why-item">
+        <h3>PNW-Smart</h3>
+        <p>Services designed for local homes and weather.</p>
+      </article>
+      <article class="why-item">
+        <h3>Zero Judgment</h3>
+        <p>We’ve seen it all. Our job is to help, not judge.</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="areas-heading">
+    <h2 id="areas-heading">Service Areas</h2>
+    <div class="areas" aria-label="Primary service locations">
+      <span>Seattle</span>
+      <span>Bellevue</span>
+      <span>Kirkland</span>
+      <span>Redmond</span>
+      <span>Eastside Communities</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="reviews-heading">
+    <h2 id="reviews-heading">What Clients Say</h2>
+    <div class="reviews">
+      <figure class="review">
+        <blockquote>
+          “Same-day booking, above and beyond service. I couldn’t believe how easy it was.”
+        </blockquote>
+        <figcaption>– Nextdoor Neighbor</figcaption>
+      </figure>
+
+      <figure class="review">
+        <blockquote>
+          “Professional, polite, and excellent work. Highly recommend.”
+        </blockquote>
+        <figcaption>– Google Review</figcaption>
+      </figure>
+
+      <figure class="review">
+        <blockquote>
+          “Prompt, efficient, and genuinely kind people.”
+        </blockquote>
+        <figcaption>– Local Client</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="final-cta" aria-labelledby="final-cta-heading">
+    <h2 id="final-cta-heading">We’ve seen worse. Yours won’t scare us.</h2>
+    <p>Tell us what you need. We’ll handle the rest — no pressure, no nonsense.</p>
+    <a href="/contact.html" class="btn btn-primary">Request a Free Quote</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    © 2025 Brush &amp; Broom LLP · Seattle, Bellevue, Kirkland &amp; Eastside
   </p>
-
-  <div class="services">
-    <div class="service-card">
-      <h3>Professional Cleaning</h3>
-      <ul>
-        <li>Move-in / move-out cleaning</li>
-        <li>Deep cleaning & resets</li>
-        <li>Recurring maintenance</li>
-        <li>Eco-friendly options available</li>
-      </ul>
-      <a href="/house-cleaning-bellevue/" class="btn btn-primary">Get a Cleaning Quote</a>
-    </div>
-
-    <div class="service-card">
-      <h3>Painting & Refresh Work</h3>
-      <ul>
-        <li>Interior painting</li>
-        <li>Exterior painting (PNW-ready)</li>
-        <li>Behr paint as standard, custom options available</li>
-        <li>Light touch-ups & transitions</li>
-      </ul>
-      <a href="/interior-painting-bellevue/" class="btn btn-primary">Ask About Painting</a>
-    </div>
-  </div>
-</section>
-
-<section style="text-align:center;">
-  <h2>Want more details on our cleaning services?</h2>
-  <a href="/house-cleaning-bellevue/" class="btn btn-primary">Go to Cleaning Page</a>
-</section>
-
-<section style="text-align:center;">
-  <a href="/interior-painting-bellevue/" class="btn btn-secondary">Explore Our Painting Services</a>
-</section>
-
-<section>
-  <h2>Meet the People Behind the Work</h2>
-  <div class="about">
-    <p>
-      Brush & Broom LLP is proudly run by a husband-and-wife team who understand that
-      life gets messy — kids, pets, moves, work, and everything in between. 
-      <a href="/about.html" style="color: var(--green); text-decoration: underline;">Learn more about us</a>.
-    </p>
-    <p>
-      No rotating crews. No strangers in your home. Just the same reliable faces who
-      show up on time, communicate clearly, and take pride in doing things right.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Why Neighbors Choose Us</h2>
-  <div class="why-grid">
-    <div class="why-item">
-      <h4>Local & Accountable</h4>
-      <p>You’re working directly with the owners — not a franchise.</p>
-    </div>
-    <div class="why-item">
-      <h4>Honest Pricing</h4>
-      <p>Clear quotes. No pressure. No surprise add-ons.</p>
-    </div>
-    <div class="why-item">
-      <h4>PNW-Smart</h4>
-      <p>Services designed for local homes and weather.</p>
-    </div>
-    <div class="why-item">
-      <h4>Zero Judgment</h4>
-      <p>We’ve seen it all. Our job is to help, not judge.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Service Areas</h2>
-  <div class="areas">
-    <span>Seattle</span>
-    <span>Bellevue</span>
-    <span>Kirkland</span>
-    <span>Redmond</span>
-    <span>Eastside Communities</span>
-  </div>
-</section>
-
-<section>
-  <h2>What Clients Say</h2>
-  <div class="reviews">
-    <div class="review">
-      “Same-day booking, above and beyond service. I couldn’t believe how easy it was.”
-      <strong>– Nextdoor Neighbor</strong>
-    </div>
-    <div class="review">
-      “Professional, polite, and excellent work. Highly recommend.”
-      <strong>– Google Review</strong>
-    </div>
-    <div class="review">
-      “Prompt, efficient, and genuinely kind people.”
-      <strong>– Local Client</strong>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta">
-  <h2>We’ve seen worse. Yours won’t scare us.</h2>
-  <p>Tell us what you need. We’ll handle the rest — no pressure, no nonsense.</p>
-  <a href="/contact.html" class="btn btn-primary">Request a Free Quote</a>
-</section>
-
-<footer>
-  © 2025 Brush & Broom LLP · Seattle, Bellevue, Kirkland & Eastside<br>
-  <a href="tel:2065711092" style="color: var(--green); text-decoration: underline;">206-571-1092</a> |
-  <a href="mailto:Seabnbllp@icloud.com" style="color: var(--green); text-decoration: underline;">Seabnbllp@icloud.com</a>
+  <p>
+    <a href="tel:2065711092" class="link-accent">206-571-1092</a> |
+    <a href="mailto:Seabnbllp@icloud.com" class="link-accent">Seabnbllp@icloud.com</a>
+  </p>
 </footer>
 
 </body>
