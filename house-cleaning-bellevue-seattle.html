@@ -5,182 +5,253 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>House Cleaning Services | Brush & Broom LLP – Bellevue & Eastside</title>
-  <meta name="description" content="Professional house cleaning in Bellevue, WA. Brush & Broom LLP offers move-in/out cleaning, deep cleaning, and recurring services with eco-friendly options.">
+  <meta name="description" content="Professional house cleaning in Bellevue and the Eastside. Move-in/out, deep cleaning, recurring service, and eco-friendly options from a trusted family-owned team.">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #002244;
-      --green: #69be28;
-      --green-dark: #5aa81f;
-      --gray: #a5acaf;
-      --white: #ffffff;
-      --light-bg: #f9f9f9;
-      --shadow: 0 6px 14px rgba(0,0,0,0.08);
+      --navy:#002244;
+      --green:#69be28;
+      --green-dark:#5aa81f;
+      --gray:#a5acaf;
+      --white:#ffffff;
+      --light-bg:#f9f9f9;
+      --shadow:0 6px 14px rgba(0,0,0,0.08);
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
+    * { box-sizing:border-box; margin:0; padding:0; }
 
-    header.cleaning-hero {
-      background: linear-gradient(to bottom, rgba(0,34,68,0.85), rgba(0,34,68,0.7));
-      color: var(--white);
-      text-align: center;
-      padding: 60px 20px;
+    body {
+      font-family:'Roboto',sans-serif;
+      background:var(--light-bg);
+      color:var(--navy);
+      line-height:1.65;
     }
 
-    header.cleaning-hero h1 { font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:15px; }
-    header.cleaning-hero p { font-size:1.2rem; margin-bottom:20px; }
+    /* HERO */
+    header.hero {
+      background:
+        linear-gradient(rgba(0,34,68,0.75), rgba(0,34,68,0.75)),
+        url("/images/hero-cleaning.jpg") center/cover no-repeat;
+      color:var(--white);
+      text-align:center;
+      padding:90px 20px;
+    }
 
-    main { max-width:900px; margin:-40px auto 50px auto; background-color: var(--white); padding:50px 35px; border-radius:10px; box-shadow:var(--shadow); }
+    header.hero h1 {
+      font-family:'Playfair Display',serif;
+      font-size:2.6rem;
+      margin-bottom:15px;
+    }
 
-    section { margin-bottom:50px; }
-    h2 { font-family:'Playfair Display', serif; color:var(--navy); margin-bottom:20px; font-size:2rem; }
-    h3 { color: var(--green); margin-bottom:10px; }
-    p { margin-bottom:15px; font-size:1.1rem; }
-    ul { margin-left:20px; margin-bottom:15px; }
-    li { margin-bottom:10px; }
+    header.hero p {
+      font-size:1.2rem;
+      max-width:720px;
+      margin:0 auto 25px auto;
+    }
 
     .btn {
       display:inline-block;
-      padding:12px 25px;
-      border-radius:5px;
+      padding:14px 28px;
+      border-radius:6px;
+      font-weight:700;
       text-decoration:none;
-      font-weight:bold;
-      background-color:var(--green);
+      background:var(--green);
       color:var(--white);
-      transition: all 0.25s ease;
-      margin-top:10px;
+      transition:all .25s ease;
     }
 
-    .btn:hover { background-color:var(--green-dark); transform:translateY(-2px); }
+    .btn:hover {
+      background:var(--green-dark);
+      transform:translateY(-2px);
+    }
 
-    .trust-logos {
+    /* MAIN CARD */
+    main {
+      max-width:980px;
+      margin:-45px auto 60px auto;
+      background:var(--white);
+      padding:55px 40px;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
+
+    section { margin-bottom:55px; }
+
+    h2 {
+      font-family:'Playfair Display',serif;
+      font-size:2rem;
+      margin-bottom:20px;
+    }
+
+    h3 { color:var(--green); margin-bottom:8px; }
+
+    p { font-size:1.1rem; margin-bottom:15px; }
+
+    ul { margin-left:22px; }
+    li { margin-bottom:10px; }
+
+    /* PHOTO FEATURE */
+    .photo-feature img {
+      width:100%;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+      margin-top:25px;
+    }
+
+    .gallery-grid img {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:10px;
+      box-shadow:var(--shadow);
+      transition:transform .25s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform:scale(1.03);
+    }
+
+    /* TRUST */
+    .trust-badges {
       display:flex;
       flex-wrap:wrap;
-      gap:15px;
+      gap:14px;
       justify-content:center;
       margin-top:20px;
     }
 
-    .trust-logos span {
-      background-color: var(--navy);
-      color: var(--white);
-      padding:8px 15px;
+    .trust-badges span {
+      background:var(--navy);
+      color:var(--white);
+      padding:8px 16px;
       border-radius:20px;
-      font-size:0.9rem;
+      font-size:.9rem;
     }
 
-    .faq-item { margin-bottom:20px; }
-    .faq-item h4 { margin-bottom:8px; font-weight:700; color:var(--green); }
+    /* FAQ */
+    .faq h4 {
+      color:var(--green);
+      margin-bottom:6px;
+    }
 
-    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
+    /* FOOTER */
+    footer {
+      background:var(--navy);
+      color:var(--gray);
+      text-align:center;
+      padding:22px;
+      font-size:.85rem;
+    }
 
     @media(max-width:768px){
-      header.cleaning-hero h1 { font-size:2rem; }
-      main { margin:-30px 15px 40px 15px; padding:35px 20px; }
+      header.hero h1 { font-size:2.1rem; }
+      main { padding:40px 22px; margin:-30px 15px 50px; }
     }
   </style>
 </head>
+
 <body>
 
-<header class="cleaning-hero">
-  <h1>Expert House Cleaning in Bellevue & Eastside</h1>
-  <p>Professional, reliable, and eco-friendly cleaning services that make your home sparkle without the stress.</p>
+<header class="hero">
+  <h1>Expert House Cleaning in Bellevue & the Eastside</h1>
+  <p>Professional, reliable, eco-friendly cleaning that saves you time and keeps your home feeling fresh.</p>
+  <a href="/contact" class="btn">Request a Free Quote</a>
 </header>
 
 <main>
+
+  <!-- FEATURE IMAGE -->
+  <section class="photo-feature">
+    <img src="/images/cleaning-team.jpg" alt="Brush & Broom professional house cleaning team in Bellevue">
+  </section>
+
   <!-- SERVICES -->
-  <section class="services">
+  <section>
     <h2>Our Cleaning Services</h2>
-    <p>We offer flexible cleaning solutions to fit your lifestyle and home needs:</p>
     <ul>
-      <li><strong>Move-In / Move-Out Cleaning:</strong> Perfect for renters, landlords, and property managers—leaving every corner spotless.</li>
-      <li><strong>Deep Cleaning:</strong> Kitchens, bathrooms, bedrooms, and whole-home deep cleans that remove dirt, grime, and allergens.</li>
-      <li><strong>Recurring Cleaning:</strong> Weekly, biweekly, or monthly maintenance to keep your home consistently fresh and clean.</li>
-      <li><strong>Eco-Friendly Cleaning:</strong> Safe for kids, pets, and the environment—without compromising on results.</li>
+      <li><strong>Move-In / Move-Out Cleaning</strong> — ideal for renters, landlords, and real estate turnovers.</li>
+      <li><strong>Deep Cleaning</strong> — kitchens, bathrooms, bedrooms, and full-home resets.</li>
+      <li><strong>Recurring Cleaning</strong> — weekly, biweekly, or monthly upkeep.</li>
+      <li><strong>Eco-Friendly Options</strong> — safe for kids, pets, and the environment.</li>
     </ul>
-  <a href="/contact" class="btn btn-primary">Request a Free Quote</a>
+    <a href="/contact" class="btn">Get Pricing</a>
   </section>
 
-  <!-- WHY CHOOSE US -->
-  <section class="why-us">
+  <!-- WHY US -->
+  <section>
     <h2>Why Choose Brush & Broom?</h2>
-    <div>
-      <h3>Local Eastside Experts</h3>
-      <p>We live and work here—Bellevue, Kirkland, Redmond, and surrounding communities. We understand local homes, weather, and what neighbors expect from a cleaning service.</p>
+    <h3>Local & Family-Owned</h3>
+    <p>We proudly serve Bellevue, Kirkland, Redmond, and surrounding Eastside communities.</p>
 
-      <h3>Friendly & Professional</h3>
-      <p>We show up on time, communicate openly, and respect your home. No random crews—just the same friendly faces every time.</p>
+    <h3>Reliable & Respectful</h3>
+    <p>Consistent crews, clear communication, and respect for your home—every visit.</p>
 
-      <h3>PNW-Proof Services</h3>
-      <p>From rain to humidity, our eco-friendly cleaning methods are tailored for the Pacific Northwest environment.</p>
+    <h3>PNW-Ready Cleaning</h3>
+    <p>Our methods are designed for Pacific Northwest homes, weather, and lifestyles.</p>
 
-      <h3>Transparent Quotes</h3>
-      <p>We provide clear, upfront pricing so you know exactly what’s included. No hidden fees or surprises.</p>
+    <h3>Honest Pricing</h3>
+    <p>No gimmicks. No surprise fees. Just straightforward quotes.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section>
+    <h2>Our Work</h2>
+    <div class="gallery-grid">
+      <img src="/images/cleaning-1.jpg" alt="Kitchen deep cleaning Bellevue">
+      <img src="/images/cleaning-2.jpg" alt="Bathroom cleaning Eastside">
+      <img src="/images/cleaning-3.jpg" alt="Move out cleaning Bellevue">
+      <img src="/images/cleaning-4.jpg" alt="Eco-friendly house cleaning">
     </div>
   </section>
 
-  <!-- FAQ & TIPS -->
-  <section class="faq-tips">
-    <h2>FAQs & Cleaning Tips</h2>
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>FAQs</h2>
 
-    <div class="faq-item">
-      <h4>How often should I schedule a cleaning?</h4>
-      <p>It depends on your lifestyle! Many Eastside families prefer biweekly cleaning for regular maintenance, while deep cleaning or move-out services are scheduled as needed.</p>
-    </div>
+    <h4>Do I need to be home?</h4>
+    <p>No. Many clients provide secure access and return to a spotless home.</p>
 
-    <div class="faq-item">
-      <h4>Do I need to be home during the cleaning?</h4>
-      <p>Nope! We can coordinate key pickup or secure access. Most clients choose to go about their day while we handle the work.</p>
-    </div>
+    <h4>How often should I clean?</h4>
+    <p>Biweekly is the most popular option for Eastside families.</p>
 
-    <div class="faq-item">
-      <h4>Are your cleaning products safe?</h4>
-      <p>Yes! We use eco-friendly, non-toxic products safe for kids, pets, and the environment, while still delivering sparkling results.</p>
-    </div>
-
-    <div class="faq-item">
-      <h4>Can you handle special requests?</h4>
-      <p>Absolutely. Just let us know if you have delicate surfaces, pet areas, or particular focus areas—we tailor every cleaning to your needs.</p>
-    </div>
-
-    <div class="faq-item">
-      <h4>Tips for keeping your home cleaner longer:</h4>
-      <ul>
-        <li>Wipe kitchen counters daily to prevent buildup.</li>
-        <li>Use entryway mats to reduce tracked-in dirt.</li>
-        <li>Do small spot-cleaning tasks regularly to avoid heavy deep cleans.</li>
-        <li>Declutter surfaces for easier, faster cleaning sessions.</li>
-      </ul>
-    </div>
+    <h4>Are your products safe?</h4>
+    <p>Yes—eco-friendly, non-toxic, and effective.</p>
   </section>
 
   <!-- TRUST -->
-  <section class="trust">
-    <h2>Trusted by Your Neighbors</h2>
-    <p>Family-owned, locally rated, and focused on integrity, quality, and community:</p>
-    <div class="trust-logos">
+  <section>
+    <h2>Trusted Locally</h2>
+    <div class="trust-badges">
       <span>Family-Owned</span>
-      <span>Locally Rated Highly</span>
-      <span>Eco-Friendly Options</span>
+      <span>Eco-Friendly</span>
+      <span>Locally Rated</span>
       <span>Trusted by Homeowners & Renters</span>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta">
-    <h2>Ready for a Spotless Home?</h2>
-    <p>Whether it’s a one-time deep clean or regular maintenance, we’re here to make your life easier. Request your free quote today!</p>
-  <a href="/contact" class="btn btn-primary">Request a Free Quote</a>
+  <section>
+    <h2>Ready for a Cleaner Home?</h2>
+    <p>One-time cleanings or ongoing service—we make it easy.</p>
+    <a href="/contact" class="btn">Request Your Free Quote</a>
   </section>
+
 </main>
 
 <footer>
-  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+  © Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County
 </footer>
 
 </body>
