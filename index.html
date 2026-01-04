@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Brush & Broom LLP | Trusted Cleaning & Painting in Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP is a family-owned cleaning and painting company serving Bellevue, Kirkland, and the Eastside. Honest work, eco-friendly options, and spotless results." />
+  <title>Brush & Broom LLP | Cleaning & Painting in Bellevue & Eastside</title>
+  <meta name="description" content="Brush & Broom LLP offers professional cleaning and painting in Bellevue, Kirkland, and the Eastside. Family-owned, honest work — now offering a FREE deep clean with any full interior or exterior repaint." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,50 +27,175 @@
     img { max-width: 100%; display: block; }
     a { text-decoration: none; }
 
-    header { background: linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)); color: var(--white); text-align: center; padding: 90px 20px 100px; }
+    header {
+      background: linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.88));
+      color: var(--white);
+      text-align: center;
+      padding: 90px 20px 105px;
+    }
+
     .hero-inner { max-width: 1000px; margin: 0 auto; }
     .hero-logo { max-width: 180px; margin: 0 auto 25px; }
-    header h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin-bottom: 15px; }
-    header p { font-size: 1.15rem; max-width: 720px; margin: 0 auto 35px; color: #e5e7eb; }
 
-    .cta-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-    .btn { padding: 14px 28px; border-radius: 6px; font-weight: 700; transition: all 0.2s ease; display: inline-block; }
-    .btn-primary { background: var(--green); color: var(--white); }
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
-    .btn-secondary { border: 2px solid var(--green); color: var(--green); }
-    .btn-secondary:hover { background: var(--green); color: var(--white); transform: translateY(-2px); }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+    }
 
-    section { max-width: 1200px; margin: 0 auto; padding: 90px 20px; }
-    section h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; text-align: center; margin-bottom: 35px; }
-    section p.section-lead { max-width: 800px; margin: 0 auto 55px; text-align: center; color: var(--gray); font-size: 1.05rem; }
+    header p {
+      font-size: 1.15rem;
+      max-width: 760px;
+      margin: 0 auto 25px;
+      color: #e5e7eb;
+    }
 
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .service-card { background: var(--white); border-radius: 14px; padding: 35px; box-shadow: var(--shadow); transition: transform 0.25s ease; }
-    .service-card:hover { transform: translateY(-6px); }
-    .service-card h3 { color: var(--green); margin-bottom: 15px; font-size: 1.35rem; }
-    .service-card ul { padding-left: 18px; margin-bottom: 25px; }
-    .service-card li { margin-bottom: 8px; }
+    .offer-badge {
+      background: var(--green);
+      color: var(--white);
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 35px;
+      box-shadow: var(--shadow);
+    }
 
-    .about { max-width: 850px; margin: 0 auto; text-align: center; }
-    .about p { margin-bottom: 18px; color: var(--gray); }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-top: 40px; }
-    .why-item { background: var(--white); padding: 30px; border-radius: 14px; box-shadow: var(--shadow); text-align: center; }
-    .why-item h4 { color: var(--green); margin-bottom: 10px; font-size: 1.1rem; }
+    .btn {
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
 
-    .areas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 25px; }
-    .areas span { background: #e5e7eb; padding: 10px 18px; border-radius: 999px; font-weight: 500; }
+    .btn-primary {
+      background: var(--green);
+      color: var(--white);
+    }
 
-    .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-    .review { background: var(--white); padding: 30px; border-radius: 14px; box-shadow: var(--shadow); font-style: italic; }
-    .review strong { display: block; margin-top: 12px; color: var(--green); font-style: normal; }
+    .btn-primary:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
 
-    .final-cta { background: var(--navy); color: var(--white); text-align: center; padding: 90px 20px; }
-    .final-cta p { color: #d1d5db; margin-bottom: 30px; font-size: 1.05rem; }
+    .btn-secondary {
+      border: 2px solid var(--green);
+      color: var(--green);
+    }
 
-    footer { background: #001a33; color: #9ca3af; text-align: center; padding: 25px 15px; font-size: 0.85rem; }
+    .btn-secondary:hover {
+      background: var(--green);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
 
-    @media (max-width: 768px) { header h1 { font-size: 2.1rem; } section { padding: 70px 18px; } }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 20px;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    section p.section-lead {
+      max-width: 820px;
+      margin: 0 auto 55px;
+      text-align: center;
+      color: var(--gray);
+      font-size: 1.05rem;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+      color: var(--green);
+      margin-bottom: 15px;
+      font-size: 1.35rem;
+    }
+
+    .service-card ul {
+      padding-left: 18px;
+      margin-bottom: 25px;
+    }
+
+    .service-card li {
+      margin-bottom: 8px;
+    }
+
+    .bonus {
+      background: #f0fdf4;
+      border-left: 4px solid var(--green);
+      padding: 15px 18px;
+      border-radius: 6px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about p {
+      margin-bottom: 18px;
+      color: var(--gray);
+    }
+
+    .final-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+      padding: 95px 20px;
+    }
+
+    .final-cta p {
+      color: #d1d5db;
+      margin-bottom: 30px;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background: #001a33;
+      color: #9ca3af;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.1rem; }
+      section { padding: 70px 18px; }
+    }
   </style>
 </head>
 
@@ -79,11 +204,19 @@
 <header>
   <div class="hero-inner">
     <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="hero-logo">
+
     <h1>We Clean It. We Paint It. You Relax.</h1>
+
     <p>
-      Brush & Broom LLP is a wife-and-husband team delivering honest, high-quality
-      cleaning and painting services across Bellevue, Kirkland, the Eastside & West Seattle! 
+      Brush & Broom LLP is a husband-and-wife team providing reliable cleaning
+      and professional painting services throughout Bellevue, Kirkland,
+      the Eastside, and West Seattle.
     </p>
+
+    <div class="offer-badge">
+      FREE Deep Cleaning with Any Full Interior or Exterior Repaint
+    </div>
+
     <div class="cta-buttons">
       <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
       <a href="tel:2065711092" class="btn btn-secondary">(206) 571-1092</a>
@@ -94,31 +227,42 @@
 <section>
   <h2>Services Built for Real Life</h2>
   <p class="section-lead">
-    Whether you’re moving, overwhelmed, or just ready for a reset,
-    we deliver reliable results without the awkward sales pressure.
+    Whether you’re moving, preparing to sell, or ready for a full refresh,
+    we handle the mess and the transformation — without pushy sales tactics.
   </p>
 
   <div class="services">
     <div class="service-card">
       <h3>Professional Cleaning</h3>
+
+      <div class="bonus">
+        Included FREE with any full interior or exterior repaint
+      </div>
+
       <ul>
+        <li>Deep cleaning & full-home resets</li>
         <li>Move-in / move-out cleaning</li>
-        <li>Deep cleaning & resets</li>
-        <li>Recurring maintenance</li>
-        <li>Eco-friendly options available</li>
+        <li>Recurring maintenance options</li>
+        <li>Eco-friendly products available</li>
       </ul>
-      <a href="house-cleaning-bellevue-seattle.html" class="btn btn-primary">Go to Cleaning Page</a>
+
+      <a href="house-cleaning-bellevue-seattle.html" class="btn btn-primary">
+        Go to Cleaning Page
+      </a>
     </div>
 
     <div class="service-card">
-      <h3>Painting & Refresh Work</h3>
+      <h3>Painting & Full Repaints</h3>
       <ul>
-        <li>Interior painting</li>
-        <li>Exterior painting (PNW-ready)</li>
-        <li>Behr paint as standard, custom options available</li>
-        <li>Light touch-ups & transitions</li>
+        <li>Complete interior repaints</li>
+        <li>Exterior painting built for PNW weather</li>
+        <li>Behr paint standard, custom upgrades available</li>
+        <li>Perfect for move-outs, listings, and refreshes</li>
       </ul>
-      <a href="interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-secondary">Explore Our Painting Services</a>
+
+      <a href="interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-secondary">
+        Explore Painting Services
+      </a>
     </div>
   </div>
 </section>
@@ -127,20 +271,26 @@
   <h2>Meet the People Behind the Work</h2>
   <div class="about">
     <p>
-      Brush & Broom LLP is proudly run by a husband-and-wife team who understand that
-      life gets messy — kids, pets, moves, work, and everything in between. 
-      <a href="about.html" style="color: var(--green); text-decoration: underline;">Learn more about us</a>.
+      Brush & Broom LLP is proudly run by a husband-and-wife team who understand
+      how stressful moves, renovations, and life transitions can be.
+      <a href="about.html" style="color: var(--green); text-decoration: underline;">
+        Learn more about us
+      </a>.
     </p>
+
     <p>
-      No rotating crews. No strangers in your home. Just the same reliable faces who
-      show up on time, communicate clearly, and take pride in doing things right.
+      No rotating crews. No handoffs. Just consistent communication,
+      quality work, and pride in doing things right.
     </p>
   </div>
 </section>
 
 <section class="final-cta">
-  <h2>We’ve seen worse. Yours won’t scare us.</h2>
-  <p>Tell us what you need. We’ll handle the rest — no pressure, no nonsense.</p>
+  <h2>One crew. One quote. A totally refreshed home.</h2>
+  <p>
+    Book a full repaint and we’ll handle the deep cleaning —
+    on us. Simple, honest, and done right.
+  </p>
   <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </section>
 
