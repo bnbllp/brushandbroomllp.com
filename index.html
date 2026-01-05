@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Brush & Broom LLP | Cleaning & Painting in Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP offers professional cleaning and painting in Bellevue, Kirkland, and the Eastside. Family-owned, honest work — now offering a FREE deep clean with any full interior or exterior repaint." />
+  <meta name="description" content="Brush & Broom LLP offers professional cleaning and painting in Bellevue, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -23,9 +24,17 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: var(--light-bg); color: var(--navy); line-height: 1.7; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--light-bg);
+      color: var(--navy);
+      line-height: 1.7;
+    }
+
     img { max-width: 100%; display: block; }
     a { text-decoration: none; }
+
+    /* ---------------- HERO ---------------- */
 
     header {
       background: linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.88));
@@ -97,6 +106,48 @@
       transform: translateY(-2px);
     }
 
+    /* ---------------- BEFORE / AFTER ---------------- */
+
+    .before-after {
+      width: 100%;
+    }
+
+    .before,
+    .after {
+      position: relative;
+      width: 100%;
+    }
+
+    .before {
+      background: var(--navy);
+    }
+
+    .after {
+      background: var(--white);
+    }
+
+    .before img,
+    .after img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+
+    .ba-label {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      padding: 8px 14px;
+      font-weight: 700;
+      border-radius: 4px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------------- SECTIONS ---------------- */
+
     section {
       max-width: 1200px;
       margin: 0 auto;
@@ -110,7 +161,7 @@
       margin-bottom: 35px;
     }
 
-    section p.section-lead {
+    .section-lead {
       max-width: 820px;
       margin: 0 auto 55px;
       text-align: center;
@@ -194,7 +245,8 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
-      section { padding: 70px 18px; }
+      .before img,
+      .after img { height: 260px; }
     }
   </style>
 </head>
@@ -208,9 +260,8 @@
     <h1>We Clean It. We Paint It. You Relax.</h1>
 
     <p>
-      Brush & Broom LLP is a husband-and-wife team providing reliable cleaning
-      and professional painting services throughout Bellevue, Kirkland,
-      the Eastside, and West Seattle.
+      Husband-and-wife team providing reliable cleaning and professional
+      painting services throughout Bellevue, Kirkland, and the Eastside.
     </p>
 
     <div class="offer-badge">
@@ -224,11 +275,24 @@
   </div>
 </header>
 
+<!-- BEFORE / AFTER SECTION -->
+<section class="before-after">
+  <div class="before">
+    <img src="images/before.jpg" alt="Before cleaning or painting">
+    <div class="ba-label">Before</div>
+  </div>
+
+  <div class="after">
+    <img src="images/after.jpg" alt="After cleaning or painting">
+    <div class="ba-label">After</div>
+  </div>
+</section>
+
 <section>
   <h2>Services Built for Real Life</h2>
   <p class="section-lead">
-    Whether you’re moving, preparing to sell, or ready for a full refresh,
-    we handle the mess and the transformation — without pushy sales tactics.
+    Whether you’re moving, selling, or refreshing your home,
+    we handle the mess and the transformation.
   </p>
 
   <div class="services">
@@ -236,14 +300,14 @@
       <h3>Professional Cleaning</h3>
 
       <div class="bonus">
-        Included FREE with any full interior or exterior repaint
+        FREE with any full interior or exterior repaint
       </div>
 
       <ul>
-        <li>Deep cleaning & full-home resets</li>
-        <li>Move-in / move-out cleaning</li>
-        <li>Recurring maintenance options</li>
-        <li>Eco-friendly products available</li>
+        <li>Deep cleaning & resets</li>
+        <li>Move-in / move-out</li>
+        <li>Recurring maintenance</li>
+        <li>Eco-friendly options</li>
       </ul>
 
       <a href="house-cleaning-bellevue-seattle.html" class="btn btn-primary">
@@ -252,12 +316,12 @@
     </div>
 
     <div class="service-card">
-      <h3>Painting & Full Repaints</h3>
+      <h3>Painting & Repaints</h3>
       <ul>
-        <li>Complete interior repaints</li>
-        <li>Exterior painting built for PNW weather</li>
-        <li>Behr paint standard, custom upgrades available</li>
-        <li>Perfect for move-outs, listings, and refreshes</li>
+        <li>Interior & exterior painting</li>
+        <li>PNW-weather durability</li>
+        <li>Behr paint standard</li>
+        <li>Perfect for listings & refreshes</li>
       </ul>
 
       <a href="interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-secondary">
@@ -267,29 +331,10 @@
   </div>
 </section>
 
-<section>
-  <h2>Meet the People Behind the Work</h2>
-  <div class="about">
-    <p>
-      Brush & Broom LLP is proudly run by a husband-and-wife team who understand
-      how stressful moves, renovations, and life transitions can be.
-      <a href="about.html" style="color: var(--green); text-decoration: underline;">
-        Learn more about us
-      </a>.
-    </p>
-
-    <p>
-      No rotating crews. No handoffs. Just consistent communication,
-      quality work, and pride in doing things right.
-    </p>
-  </div>
-</section>
-
 <section class="final-cta">
-  <h2>One crew. One quote. A totally refreshed home.</h2>
+  <h2>One crew. One quote. A refreshed home.</h2>
   <p>
-    Book a full repaint and we’ll handle the deep cleaning —
-    on us. Simple, honest, and done right.
+    Book a full repaint and we’ll handle the deep cleaning — on us.
   </p>
   <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </section>
