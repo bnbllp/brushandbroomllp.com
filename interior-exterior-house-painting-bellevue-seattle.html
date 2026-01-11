@@ -1,116 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interior & Exterior Painting Bellevue | Brush & Broom LLP</title>
-  <meta name="description" content="Brush & Broom LLP offers interior and exterior painting in Bellevue, Kirkland & the Eastside. Family-owned, detail-driven, durable results for your home." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interior & Exterior Painting Bellevue | Brush & Broom LLP</title>
+<meta name="description" content="Brush & Broom LLP offers interior and exterior painting in Bellevue, Kirkland & the Eastside. Family-owned, detail-driven, durable results for your home." />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles (inline for simplicity) -->
-  <style>
-    :root {
-      --navy: #002244;
-      --navy-dark: #001a33;
-      --green: #69be28;
-      --green-dark: #5aa81f;
-      --gray: #6b7280;
-      --gray-light: #9ca3af;
-      --bg-light: #f8fafc;
-      --radius-sm: 6px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --shadow-sm: 0 6px 15px rgba(0,0,0,0.06);
-      --shadow-md: 0 10px 25px rgba(0,0,0,0.10);
-    }
+<style>
+:root {
+  --navy:#002244; --navy-dark:#001a33; --green:#69be28; --green-dark:#5aa81f;
+  --gray:#6b7280; --gray-light:#9ca3af; --bg-light:#f8fafc;
+  --radius-sm:6px; --radius-md:14px; --radius-lg:20px;
+  --shadow-sm:0 6px 15px rgba(0,0,0,0.06); --shadow-md:0 10px 25px rgba(0,0,0,0.10);
+}
 
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Roboto',sans-serif; background: var(--bg-light); color: var(--navy); line-height:1.7; }
-    img { display:block; max-width:100%; }
-    a { color: inherit; text-decoration: none; }
-    h1,h2,h3 { font-family:'Playfair Display',serif; font-weight:700; }
-    h1 { font-size: clamp(2.1rem,4vw,2.8rem); margin-bottom: 20px; text-align:center; }
-    h2 { font-size: clamp(1.9rem,3vw,2.3rem); margin-bottom:32px; text-align:center; }
-    h3 { font-size:1.35rem; margin-bottom:16px; color: var(--green); }
-    p { margin-bottom:16px; color: var(--gray); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--navy);line-height:1.7;}
+img{display:block;max-width:100%;border-radius:var(--radius-md);}
+a{text-decoration:none;color:inherit;}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;}
+h1{font-size:clamp(2.1rem,4vw,2.8rem);margin-bottom:1rem;text-align:center;}
+h2{font-size:clamp(1.9rem,3vw,2.3rem);margin-bottom:1.5rem;text-align:center;}
+h3{font-size:1.35rem;margin-bottom:16px;color:var(--green);}
+p{margin-bottom:1rem;color:var(--gray);}
 
-    .btn { display:inline-block; padding:14px 30px; border-radius: var(--radius-sm); font-weight:700; transition:all 0.2s ease; margin-top:10px; }
-    .btn-primary { background: var(--green); color: var(--white); }
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+.btn{display:inline-block;padding:14px 30px;border-radius:var(--radius-sm);font-weight:700;transition:all 0.2s ease;margin-top:10px;text-align:center;}
+.btn-primary{background:var(--green);color:var(--white);}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);}
 
-    section { max-width:1100px; margin:0 auto; padding:80px 20px; }
-    .section-lead { max-width:820px; margin:0 auto 55px; text-align:center; font-size:1.05rem; }
+header{background:var(--navy);color:var(--white);text-align:center;padding:80px 20px 100px;}
+.logo-wrap{width:180px;margin:0 auto 30px;background:var(--white);padding:14px;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);display:block;}
+section{max-width:1200px;margin:0 auto;padding:80px 20px;}
+.section-lead{max-width:820px;margin:0 auto 40px;text-align:center;font-size:1.05rem;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:40px;}
+.service-card{background:var(--white);padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform 0.25s ease;}
+.service-card:hover{transform:translateY(-6px);}
+.service-card ul{padding-left:18px;margin-bottom:24px;}
+.service-card li{margin-bottom:8px;}
+.about,.reviews{max-width:850px;margin:0 auto;text-align:center;}
+.review{background:var(--white);padding:26px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);font-style:italic;margin-bottom:20px;}
+.review strong{display:block;margin-top:10px;font-style:normal;color:var(--navy);}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:30px;}
+.final-cta{background:var(--navy);color:var(--white);text-align:center;padding:80px 20px;}
+.final-cta p{color:#d1d5db;margin-bottom:30px;font-size:1.05rem;}
+footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px 15px;font-size:0.85rem;}
 
-    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:40px; }
-    .service-card { background: var(--white); padding:36px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); transition: transform 0.25s ease; }
-    .service-card:hover { transform: translateY(-6px); }
-    .service-card ul { padding-left:18px; margin-bottom:24px; }
-    .service-card li { margin-bottom:8px; }
-
-    .about, .reviews { max-width:850px; margin:0 auto; text-align:center; }
-    .review { background: var(--white); padding:26px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); font-style: italic; margin-bottom:20px; }
-    .review strong { display:block; margin-top:10px; font-style:normal; color: var(--navy); }
-
-    .final-cta { background: var(--navy); color: var(--white); text-align:center; padding:80px 20px; }
-    .final-cta p { color:#d1d5db; margin-bottom:30px; font-size:1.05rem; }
-
-    .logo-wrap { width:180px; margin:0 auto 30px; background: var(--white); padding:14px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); cursor:pointer; }
-
-    footer { background: var(--navy-dark); color: var(--gray-light); text-align:center; padding:26px 15px; font-size:0.85rem; }
-
-    @media (max-width:768px){ section{ padding:60px 15px; } }
-  </style>
+@media(max-width:768px){section{padding:60px 15px;}}
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="hero-inner">
-    <!-- Clickable logo to home -->
-    <a href="index.html" class="logo-wrap">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
-    </a>
-
-    <h1>Interior & Exterior Painting in Bellevue & Seattle</h1>
-    <p class="section-lead">We provide detailed, reliable painting services for Pacific Northwest homes — interior, exterior, and everything in between. Family-run, respectful, and PNW-tested materials for lasting results.</p>
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-  </div>
+  <a href="index.html" class="logo-wrap">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
+  </a>
+  <h1>Interior & Exterior Painting in Bellevue & the Eastside</h1>
+  <p class="section-lead">Detail-driven painting services for homes and properties in Bellevue, Kirkland, Redmond, Sammamish, and beyond. Family-owned, clean, and lasting results.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </header>
 
 <section>
   <h2>Our Painting Services</h2>
-  <p class="section-lead">From prep to finish, we handle it all so your home looks refreshed and protected.</p>
-
+  <p class="section-lead">Complete solutions from prep to finish, so your home looks refreshed and protected.</p>
   <div class="services">
     <div class="service-card">
       <h3>Interior Painting</h3>
       <ul>
-        <li>Walls, ceilings, trim, doors, and cabinets</li>
+        <li>Walls, ceilings, trim, doors, cabinets</li>
         <li>Color consultation available</li>
-        <li>Durable, clean finishes</li>
+        <li>Durable, smooth finishes</li>
       </ul>
     </div>
-
     <div class="service-card">
       <h3>Exterior Painting</h3>
       <ul>
-        <li>Siding, trim, fences, and decks</li>
+        <li>Siding, trim, fences, decks</li>
         <li>Weather-resistant coatings</li>
-        <li>Long-lasting protection for PNW conditions</li>
+        <li>PNW-tested durability</li>
       </ul>
     </div>
-
     <div class="service-card">
       <h3>Prep & Repairs</h3>
       <ul>
-        <li>Patching, sanding, caulking</li>
-        <li>Surface correction for smooth, even coverage</li>
+        <li>Sanding, patching, caulking</li>
+        <li>Ensures even, smooth coverage</li>
       </ul>
     </div>
-
     <div class="service-card">
       <h3>Repaints & Refreshes</h3>
       <ul>
@@ -122,37 +103,34 @@
 </section>
 
 <section>
-  <h2>Why Homeowners Choose Us</h2>
+  <h2>Why Homeowners Choose Brush & Broom</h2>
   <div class="about">
-    <p><strong>Prep Is Our Priority:</strong> Most paint problems start with poor prep. We do the work others skip because results matter.</p>
-    <p><strong>Clean, Respectful Job Sites:</strong> Drop cloths, masking, and daily cleanup — your home stays livable while we work.</p>
+    <p><strong>Prep is Everything:</strong> We handle the work others skip because flawless results start with proper prep.</p>
+    <p><strong>Respectful, Clean Work:</strong> Daily cleanups, drop cloths, and careful masking keep your home livable during the project.</p>
     <p><strong>PNW-Tested Materials:</strong> Coatings built for moisture, temperature swings, and durability.</p>
-    <p><strong>Honest Estimates:</strong> No upsells. No surprises. Clear scopes and realistic timelines.</p>
+    <p><strong>Transparent Quotes:</strong> Honest scopes, no upsells, realistic timelines.</p>
   </div>
 </section>
-  <!-- GALLERY -->
-  <section>
-    <h2>Recent Painting Projects</h2>
-    <div class="gallery-grid">
-      <img src="IMG_2552.jpeg" alt="Interior painting Bellevue">
-      <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Exterior house painting Eastside">
-      <img src="Grey and Beige Minimalist Collage Before & After Fashion Style YouTube Thumbnail.png" alt="Trim and detail painting">
-      <img src="Side by side before and after.png" alt="Home repaint project">
-    </div>
-  </section>
 
-  <section>
-  <h2>Special Bonus</h2>
-  <div class="bonus">
-    Book a full interior or exterior repaint and receive a <strong>FREE deep cleaning</strong>.
+<section>
+  <h2>Gallery of Recent Projects</h2>
+  <div class="gallery-grid">
+    <img src="IMG_2552.jpeg" alt="Interior painting Bellevue">
+    <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Exterior house painting Eastside">
+    <img src="Grey and Beige Minimalist Collage Before & After Fashion Style YouTube Thumbnail.png" alt="Trim and detail painting">
+    <img src="Side by side before and after.png" alt="Home repaint project">
   </div>
+</section>
+
+<section>
+  <h2>Special Bonus</h2>
+  <div class="bonus">Book a full interior or exterior repaint and receive a <strong>FREE deep cleaning</strong>.</div>
 </section>
 
 <section>
   <h2>Areas We Serve</h2>
   <div class="about">
-    <p>We proudly serve:</p>
-    <ul style="list-style-type:none; padding-left:0;">
+    <ul style="list-style:none;padding-left:0;">
       <li>Bellevue</li>
       <li>Kirkland</li>
       <li>Redmond</li>
@@ -164,19 +142,19 @@
     </ul>
   </div>
 </section>
-  
+
 <section>
   <h2>Frequently Asked Questions</h2>
   <div class="about">
-    <p><strong>How long does a typical job take?</strong><br>Most interior rooms take 1–2 days depending on prep and drying time. Full interiors or exteriors vary by size and condition.</p>
+    <p><strong>How long does a typical job take?</strong><br>Most interior rooms take 1–2 days depending on prep and drying. Full interiors or exteriors vary by size and condition.</p>
     <p><strong>Do you help with color selection?</strong><br>Yes, we guide clients toward durable, timeless choices.</p>
-    <p><strong>Are you insured?</strong><br>Absolutely. We operate fully insured for residential projects.</p>
+    <p><strong>Are you insured?</strong><br>Absolutely. We are fully insured for all residential projects.</p>
   </div>
 </section>
 
 <section class="final-cta">
   <h2>Ready to Refresh Your Home?</h2>
-  <p>From single rooms to full repaints, we’ll give you clear expectations and high-quality results — no gimmicks.</p>
+  <p>Single rooms or full repaints — clear expectations, high-quality results, no gimmicks.</p>
   <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </section>
 
