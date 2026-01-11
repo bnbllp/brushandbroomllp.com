@@ -1,94 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Brush & Broom LLP – Kirkland & Bellevue Cleaning & Painting</title>
-  <meta name="description" content="Reach out for interior/exterior painting, deep cleaning, or power washing in Kirkland, Bellevue & Eastside. Free estimates, honest work, small-town hospitality.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Request a Free Quote | Brush & Broom LLP</title>
+  <meta name="description" content="Get a free, no-pressure quote from Brush & Broom LLP. House cleaning, deep cleaning, move-outs, and painting in Bellevue, Kirkland, Redmond & Eastside King County." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; }
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
-    .hero { background: #f5f5f5 url('your-hero-image.jpg') center/cover no-repeat; padding: 60px 20px; text-align: center; color: #222; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
-    .cta-button { display: inline-block; background: #007ACC; color: #fff; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
-    .section { padding: 40px 20px; }
-    .testimonials { display: flex; gap: 20px; flex-wrap: wrap; }
-    .testimonial { background: #eef0f3; padding: 20px; border-radius: 5px; flex: 1 1 300px; }
-    form { display: flex; flex-direction: column; gap: 15px; }
-    input, select, textarea { padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
-    input[type="submit"] { background: #007ACC; color: #fff; border: none; font-weight: bold; cursor: pointer; padding: 15px; }
-    input[type="submit"]:hover { background: #005a99; }
-    .contact-methods { margin-top: 20px; }
-    .contact-methods p { margin: 5px 0; font-weight: bold; }
+    :root {
+      --navy: #002244;
+      --green: #69be28;
+      --green-dark: #5aa81f;
+      --gray: #a5acaf;
+      --white: #ffffff;
+      --light-bg: #f9f9f9;
+      --shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
+
+    /* Hero Section */
+    header.quote-hero {
+      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .quote-hero h1 { font-family: 'Playfair Display', serif; font-size:2.5rem; margin-bottom:15px; }
+    .quote-hero p { font-size:1.2rem; margin-bottom:15px; }
+    .trust-line { font-size:0.95rem; color: var(--gray); margin-top:10px; }
+
+    a.logo-home img, header img.logo-home { max-width:180px; height:auto; display:block; margin:auto 0 25px 0; }
+
+    /* Main Form Container */
+    main {
+      max-width: 900px;
+      margin: -40px auto 50px auto;
+      background-color: var(--white);
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    form { display:flex; flex-direction:column; gap:20px; }
+    input, textarea, select { padding:12px 15px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%; }
+    textarea { resize: vertical; }
+    button {
+      padding:14px 20px; border-radius:6px; border:none; background-color:var(--green); color:var(--white);
+      font-weight:700; font-size:1rem; cursor:pointer; transition: all 0.25s ease;
+    }
+    button:hover { background-color: var(--green-dark); transform:translateY(-2px); }
+
+    /* Testimonials */
+    .testimonials { display:flex; flex-wrap:wrap; gap:20px; margin-bottom:40px; }
+    .testimonial { flex:1 1 250px; background:#eef0f3; padding:20px; border-radius:6px; }
+
+    /* Alternative Contact */
+    .contact-methods { margin-top:20px; }
+    .contact-methods p { margin:5px 0; font-weight:bold; }
+
+    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
+
+    @media(max-width:768px){
+      .quote-hero h1 { font-size:2rem; }
+      main { margin: -30px 15px 40px 15px; padding: 30px 20px; }
+      .testimonials { flex-direction:column; }
+    }
   </style>
 </head>
+
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Schedule Your Free Estimate Today — Serving Kirkland, Bellevue & the Eastside</h1>
-    <p>Husband-and-wife team delivering painting, cleaning & power washing with honesty and small-town hospitality.</p>
-    <a href="#contact-form" class="cta-button">Get My Free Quote – 24hr Response</a>
-    <p style="margin-top:10px;"><a href="tel:YOUR_PHONE_NUMBER" style="color:#007ACC; font-weight:bold;">Call Now for Same-Day Scheduling</a></p>
-  </section>
+<header class="quote-hero">
+  <a href="index.html" class="logo-home">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Home">
+  </a>
+  <h1>Schedule Your Free Estimate Today</h1>
+  <p>House cleaning, deep cleaning, move-outs, painting & power washing in Bellevue, Kirkland, Redmond & Eastside King County.</p>
+  <p class="trust-line">Licensed • Insured • Family-Owned • Eco-Friendly Options</p>
+</header>
 
-  <!-- Testimonials Section -->
-  <section class="section">
-    <h2>Our Clients Say It Best</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐ “Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”</p>
-        <p><strong>— J.S., Bellevue</strong></p>
-      </div>
-      <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐ “Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”</p>
-        <p><strong>— M.T., Kirkland</strong></p>
-      </div>
-      <div class="testimonial">
-        <p>⭐⭐⭐⭐⭐ “Professional, reliable, and super friendly. Our exterior painting looks amazing!”</p>
-        <p><strong>— R.L., Redmond</strong></p>
-      </div>
+<main>
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>⭐⭐⭐⭐⭐ “Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”</p>
+      <p><strong>— J.S., Bellevue</strong></p>
     </div>
-  </section>
-
-  <!-- Contact Form Section -->
-  <section class="section" id="contact-form">
-    <h2>Quick Form – Get Your Free Estimate</h2>
-    <p>Fill out the essentials and we’ll reach out within 24 hours to schedule your project.</p>
-    <form action="YOUR_FORM_HANDLER_URL" method="post">
-      <input type="text" name="name" placeholder="Your Name *" required>
-      <input type="tel" name="phone" placeholder="Phone Number *" required>
-      <input type="email" name="email" placeholder="Email *" required>
-      <select name="service" required>
-        <option value="">Select Service Needed *</option>
-        <option value="house-cleaning">House Cleaning</option>
-        <option value="interior-painting">Interior Painting</option>
-        <option value="exterior-painting">Exterior Painting</option>
-        <option value="power-washing">Power Washing</option>
-        <option value="other">Other</option>
-      </select>
-      <textarea name="details" rows="4" placeholder="Project Details / Notes (optional)"></textarea>
-      <input type="submit" value="Submit for Free Quote">
-    </form>
-
-    <!-- Alternative Contact Methods -->
-    <div class="contact-methods">
-      <p>Prefer to talk directly?</p>
-      <p>Phone: <a href="tel:YOUR_PHONE_NUMBER">YOUR_PHONE_NUMBER</a></p>
-      <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+    <div class="testimonial">
+      <p>⭐⭐⭐⭐⭐ “Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”</p>
+      <p><strong>— M.T., Kirkland</strong></p>
     </div>
-  </section>
+    <div class="testimonial">
+      <p>⭐⭐⭐⭐⭐ “Professional, reliable, and super friendly. Our exterior painting looks amazing!”</p>
+      <p><strong>— R.L., Redmond</strong></p>
+    </div>
+  </div>
 
-  <!-- Local Hook / About Section -->
-  <section class="section" style="background:#f5f5f5;">
-    <p>Proudly serving Kirkland, Bellevue, Redmond & Eastside communities. We provide honest, reliable painting, cleaning, and power washing services — one home at a time.</p>
-  </section>
+  <!-- Contact Form -->
+  <form action="https://formspree.io/f/xkowrqyq" method="POST">
+    <input type="hidden" name="_next" value="https://www.brushandbroomllp.com/thank-you">
+    <input type="hidden" name="_subject" value="New Quote Request – Brush & Broom LLP">
+    <input type="hidden" name="_captcha" value="false">
 
-  <!-- Footer CTA -->
-  <section class="section" style="text-align:center;">
-    <a href="#contact-form" class="cta-button">Get Your Free Quote Today</a>
-  </section>
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="service">Type of Service *</label>
+    <select id="service" name="service" required>
+      <option value="" disabled selected>Select a service</option>
+      <option value="House Cleaning">House Cleaning</option>
+      <option value="Deep Cleaning">Deep Cleaning</option>
+      <option value="Move-In / Move-Out">Move-In / Move-Out</option>
+      <option value="Interior Painting">Interior Painting</option>
+      <option value="Exterior Painting">Exterior Painting</option>
+      <option value="Power Washing">Power Washing</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+
+    <label for="details">Details / Special Requests</label>
+    <textarea id="details" name="details" rows="5"></textarea>
+
+    <button type="submit">Request Your Free Quote</button>
+  </form>
+
+  <!-- Alternative Contact -->
+  <div class="contact-methods">
+    <p>Prefer to talk directly?</p>
+    <p>Phone: <a href="tel:YOUR_PHONE_NUMBER">YOUR_PHONE_NUMBER</a></p>
+    <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+  </div>
+</main>
+
+<footer>
+  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+</footer>
 
 </body>
 </html>
