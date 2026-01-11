@@ -147,6 +147,19 @@
       header.hero h1 { font-size:2.1rem; }
       main { padding:40px 22px; margin:-30px 15px 50px; }
     }
+      /* shrink the logo so it’s a normal header size */
+a.logo-home img,
+header img.logo-home {
+  max-width: 180px;   /* adjust this number to your taste */
+  height: auto;
+  display: block;
+}
+    header.about-hero {
+  display: flex;
+  flex-direction: column; /* THIS is missing */
+  justify-content: center;
+  align-items: center;
+}
   </style>
 </head>
 
