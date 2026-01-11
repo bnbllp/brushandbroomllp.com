@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Styles (inline for simplicity) -->
   <style>
     :root {
       --navy: #002244;
@@ -21,83 +20,79 @@
       --gray: #6b7280;
       --gray-light: #9ca3af;
       --bg-light: #f8fafc;
-
       --radius-sm: 6px;
       --radius-md: 14px;
       --radius-lg: 20px;
-
       --shadow-sm: 0 6px 15px rgba(0,0,0,0.06);
       --shadow-md: 0 10px 25px rgba(0,0,0,0.10);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: var(--bg-light); color: var(--navy); line-height: 1.7; }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    h1,h2,h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Roboto', sans-serif; background: var(--bg-light); color: var(--navy); line-height:1.7; }
+    img { display:block; max-width:100%; border-radius:var(--radius-md); }
+    a { color:inherit; text-decoration:none; }
+    h1,h2,h3 { font-family:'Playfair Display', serif; font-weight:700; }
 
-    h1 { font-size: clamp(2.1rem,4vw,2.8rem); margin-bottom: 20px; text-align: center; }
-    h2 { font-size: clamp(1.9rem,3vw,2.3rem); margin-bottom: 32px; text-align: center; }
-    p { margin-bottom: 16px; color: var(--gray); }
+    h1 { font-size:clamp(2.1rem,4vw,2.8rem); margin-bottom:1rem; text-align:center; }
+    h2 { font-size:clamp(1.9rem,3vw,2.3rem); margin-bottom:1.5rem; text-align:center; }
+    p { margin-bottom:1rem; color: var(--gray); }
 
-    .btn { display: inline-block; padding: 14px 30px; border-radius: var(--radius-sm); font-weight: 700; transition: all 0.2s ease; margin-top: 10px; }
-    .btn-primary { background: var(--green); color: var(--white); }
-    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .btn { display:inline-block; padding:14px 30px; border-radius:var(--radius-sm); font-weight:700; transition:all 0.2s ease; text-align:center; margin-top:10px; }
+    .btn-primary { background:var(--green); color:var(--white); }
+    .btn-primary:hover { background:var(--green-dark); transform:translateY(-2px); }
 
-    section { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
-    .section-lead { max-width: 820px; margin: 0 auto 55px; text-align: center; font-size: 1.05rem; }
+    header { background: var(--navy); color: var(--white); text-align:center; padding:80px 20px 100px; }
+    .hero-logo { width:180px; margin:0 auto 20px; display:block; background:var(--white); padding:14px; border-radius:var(--radius-lg); box-shadow:var(--shadow-md); }
 
-    .services { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 30px; margin-top: 40px; }
-    .service-card { background: var(--white); padding: 36px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); transition: transform 0.25s ease; }
-    .service-card:hover { transform: translateY(-6px); }
-    .service-card h3 { color: var(--green); font-size: 1.35rem; margin-bottom: 16px; }
-    .service-card ul { padding-left: 18px; margin-bottom: 24px; }
-    .service-card li { margin-bottom: 8px; }
-    .bonus { background: #f0fdf4; border-left: 4px solid var(--green); padding: 14px 18px; border-radius: var(--radius-sm); font-weight: 500; margin-bottom: 22px; }
+    section { max-width:1200px; margin:0 auto; padding:80px 20px; }
+    .section-lead { max-width:820px; margin:0 auto 40px; text-align:center; font-size:1.05rem; }
 
-    .about, .reviews { max-width: 850px; margin: 0 auto; text-align: center; }
-    .review { background: var(--white); padding: 26px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); font-style: italic; margin-bottom: 20px; }
-    .review strong { display: block; margin-top: 10px; font-style: normal; color: var(--navy); }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:40px; }
+    .service-card { background:var(--white); padding:36px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); transition: transform 0.25s ease; }
+    .service-card:hover { transform:translateY(-6px); }
+    .service-card h3 { color:var(--green); font-size:1.35rem; margin-bottom:16px; }
+    .service-card ul { padding-left:18px; margin-bottom:24px; }
+    .service-card li { margin-bottom:8px; }
+    .bonus { background:#f0fdf4; border-left:4px solid var(--green); padding:12px 16px; border-radius:var(--radius-sm); font-weight:500; margin-bottom:18px; text-align:center; }
 
-    .final-cta { background: var(--navy); color: var(--white); text-align: center; padding: 80px 20px; }
-    .final-cta p { color: #d1d5db; margin-bottom: 30px; font-size: 1.05rem; }
+    .about, .reviews { max-width:850px; margin:0 auto; text-align:center; }
+    .review { background:var(--white); padding:26px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); font-style:italic; margin-bottom:20px; }
+    .review strong { display:block; margin-top:10px; font-style:normal; color: var(--navy); }
 
-    footer { background: var(--navy-dark); color: var(--gray-light); text-align: center; padding: 26px 15px; font-size: 0.85rem; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:30px; }
 
-    @media (max-width:768px) {
-      section { padding: 60px 15px; }
+    .final-cta { background:var(--navy); color:var(--white); text-align:center; padding:80px 20px; }
+    .final-cta p { color:#d1d5db; margin-bottom:30px; font-size:1.05rem; }
+
+    footer { background:var(--navy-dark); color:var(--gray-light); text-align:center; padding:26px 15px; font-size:0.85rem; }
+
+    @media(max-width:768px){
+      section { padding:60px 15px; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="hero-inner">
-    <div class="logo-wrap">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
-    </div>
-    <h1>House Cleaning in Bellevue & the Eastside</h1>
-    <p class="section-lead">
-      Brush & Broom LLP provides reliable, detailed house cleaning services throughout Bellevue, Kirkland, Redmond, and the Eastside. We’re a family-run team who treats your home with respect and consistency.
-    </p>
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-  </div>
+  <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="hero-logo">
+  <h1>House Cleaning in Bellevue & the Eastside</h1>
+  <p class="section-lead">Reliable, detailed house cleaning for Bellevue, Kirkland, Redmond, Sammamish, and the surrounding Eastside. Family-owned and consistent — no rotating crews.</p>
+  <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </header>
 
 <section>
   <h2>Our Cleaning Services</h2>
-  <p class="section-lead">We handle real-life messes, whether it’s routine maintenance, a move, or a deep clean.</p>
-
+  <p class="section-lead">From routine maintenance to move-in/move-out, we tackle every mess with care and professionalism.</p>
   <div class="services">
     <div class="service-card">
       <h3>Deep Cleaning</h3>
       <ul>
-        <li>Kitchens, bathrooms, and living spaces</li>
-        <li>Baseboards, fixtures, and hard-to-reach areas</li>
+        <li>Kitchens, bathrooms, and living areas</li>
+        <li>Baseboards, fixtures, and corners</li>
         <li>Built-up grime, dust, and residue</li>
       </ul>
     </div>
-
     <div class="service-card">
       <h3>Move-In / Move-Out Cleaning</h3>
       <ul>
@@ -106,15 +101,13 @@
         <li>Preparing the space for the next resident</li>
       </ul>
     </div>
-
     <div class="service-card">
-      <h3>Recurring Maintenance Cleaning</h3>
+      <h3>Recurring Maintenance</h3>
       <ul>
-        <li>Weekly, bi-weekly, or monthly</li>
-        <li>Tailored to your home, pets, and schedule</li>
+        <li>Weekly, bi-weekly, or monthly visits</li>
+        <li>Tailored to pets, kids, and lifestyle</li>
       </ul>
     </div>
-
     <div class="service-card">
       <h3>Eco-Friendly Cleaning</h3>
       <ul>
@@ -126,35 +119,32 @@
 </section>
 
 <section>
-  <h2>Why Choose Brush & Broom</h2>
+  <h2>Why Choose Us</h2>
   <div class="about">
-    <p>No rotating crews. No strangers. Just the same reliable faces who show up on time and take pride in doing things right.</p>
-    <p>We communicate clearly, respect your home, and offer flexible scheduling. Our goal is to make your life easier without any upselling or pressure.</p>
+    <p>Consistent crews, respectful communication, and attention to detail. We treat your home as if it were our own.</p>
+    <p>No upselling, no pressure, just honest cleaning and flexible scheduling.</p>
   </div>
 </section>
-  <!-- GALLERY -->
-  <section>
-    <h2>Our Work</h2>
-    <div class="gallery-grid">
-      <img src="Colorful Photos Plain Collage Instagram Post.png" alt="Kitchen deep cleaning Bellevue">
-      <img src="IMG_1402.jpeg" alt="Kitchen cleaning in Kirkland">
-      <img src="IMG_1562.jpeg" alt="Move out cleaning Bellevue">
-      <img src="IMG_1569.jpeg" alt="Eco-friendly house cleaning">
-    </div>
-  </section>
+
+<section>
+  <h2>Gallery of Our Work</h2>
+  <div class="gallery-grid">
+    <img src="Colorful Photos Plain Collage Instagram Post.png" alt="Kitchen deep cleaning Bellevue">
+    <img src="IMG_1402.jpeg" alt="Kitchen cleaning Kirkland">
+    <img src="IMG_1562.jpeg" alt="Move-out cleaning Bellevue">
+    <img src="IMG_1569.jpeg" alt="Eco-friendly house cleaning">
+  </div>
+</section>
 
 <section>
   <h2>Special Bonus</h2>
-  <div class="bonus">
-    Book a full interior or exterior repaint and receive a <strong>FREE deep cleaning</strong>.
-  </div>
+  <div class="bonus">Book a full interior or exterior repaint and receive a <strong>FREE deep cleaning</strong>.</div>
 </section>
 
 <section>
   <h2>Areas We Serve</h2>
   <div class="about">
-    <p>We proudly serve:</p>
-    <ul style="list-style-type:none; padding-left:0;">
+    <ul style="list-style:none; padding-left:0;">
       <li>Bellevue</li>
       <li>Kirkland</li>
       <li>Redmond</li>
@@ -170,14 +160,14 @@
 <section>
   <h2>What Clients Say</h2>
   <div class="reviews">
-    <div class="review">“Professional, kind, and thorough. It was such a relief to come home to a place that actually felt clean.” <strong>– Local Client</strong></div>
-    <div class="review">“Great communication and attention to detail. You can tell they care about their work.” <strong>– Bellevue Homeowner</strong></div>
+    <div class="review">“Professional, kind, and thorough. It was such a relief to come home to a clean house.” <strong>– Local Client</strong></div>
+    <div class="review">“Great communication and attention to detail. You can tell they truly care.” <strong>– Bellevue Homeowner</strong></div>
   </div>
 </section>
 
 <section class="final-cta">
   <h2>Ready to Get Started?</h2>
-  <p>Whether it’s a one-time deep clean or ongoing maintenance, we’ll give you a clear quote and honest expectations — no gimmicks.</p>
+  <p>One crew. One clear quote. Honest expectations. No gimmicks.</p>
   <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
 </section>
 
