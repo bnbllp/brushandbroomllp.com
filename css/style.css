@@ -1,0 +1,92 @@
+    :root {
+      --navy: #002244;
+      --green: #69be28;
+      --green-dark: #5aa81f;
+      --gray: #a5acaf;
+      --white: #ffffff;
+      --light-bg: #f9f9f9;
+      --shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
+
+    header.about-hero {
+      background: linear-gradient(to bottom, rgba(0,34,68,0.85), rgba(0,34,68,0.7));
+      color: var(--white);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header.about-hero h1 { font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:15px; }
+    header.about-hero p { font-size:1.2rem; margin-bottom:20px; }
+
+    main {
+      max-width: 900px;
+      margin: -40px auto 50px auto;
+      background-color: var(--white);
+      padding: 50px 35px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+
+    section { margin-bottom: 40px; }
+    h2 { font-family:'Playfair Display', serif; color:var(--navy); margin-bottom:20px; font-size:2rem; }
+    p { margin-bottom:15px; font-size:1.1rem; }
+
+    .founders {
+      display:flex;
+      flex-wrap:wrap;
+      gap:30px;
+      align-items:center;
+      margin-top:30px;
+    }
+
+    .founder {
+      flex:1 1 300px;
+      text-align:center;
+    }
+
+    .founder img {
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:15px;
+      box-shadow:var(--shadow);
+    }
+
+    .btn {
+      display:inline-block;
+      padding:12px 25px;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
+      background-color:var(--green);
+      color:var(--white);
+      transition: all 0.25s ease;
+      margin-top:10px;
+    }
+
+    .btn:hover { background-color:var(--green-dark); transform:translateY(-2px); }
+
+    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
+
+    @media(max-width:768px){
+      header.about-hero h1 { font-size:2rem; }
+      main { margin:-30px 15px 40px 15px; padding:35px 20px; }
+      .founders { flex-direction:column; }
+    }
+    /* shrink the logo so it’s a normal header size */
+a.logo-home img,
+header img.logo-home {
+  max-width: 180px;   /* adjust this number to your taste */
+  height: auto;
+  display: block;
+}
+    header.about-hero {
+  display: flex;
+  flex-direction: column; /* THIS is missing */
+  justify-content: center;
+  align-items: center;
+}
