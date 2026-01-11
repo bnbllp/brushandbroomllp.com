@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -12,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-</style>
+
+  <style>
     :root {
       --navy: #002244;
       --green: #69be28;
@@ -24,6 +24,7 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Roboto', sans-serif;
       background: var(--light-bg);
@@ -33,8 +34,6 @@
 
     img { max-width: 100%; display: block; }
     a { text-decoration: none; }
-
-    /* ---------------- HERO ---------------- */
 
     header {
       background: linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.88));
@@ -106,48 +105,6 @@
       transform: translateY(-2px);
     }
 
-    /* ---------------- BEFORE / AFTER ---------------- */
-
-    .before-after {
-      width: 100%;
-    }
-
-    .before,
-    .after {
-      position: relative;
-      width: 100%;
-    }
-
-    .before {
-      background: var(--navy);
-    }
-
-    .after {
-      background: var(--white);
-    }
-
-    .before img,
-    .after img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-    }
-
-    .ba-label {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      padding: 8px 14px;
-      font-weight: 700;
-      border-radius: 4px;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-    }
-
-    /* ---------------- SECTIONS ---------------- */
-
     section {
       max-width: 1200px;
       margin: 0 auto;
@@ -161,80 +118,6 @@
       margin-bottom: 35px;
     }
 
-    .section-lead {
-      max-width: 820px;
-      margin: 0 auto 55px;
-      text-align: center;
-      color: var(--gray);
-      font-size: 1.05rem;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border-radius: 14px;
-      padding: 35px;
-      box-shadow: var(--shadow);
-      transition: transform 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .service-card h3 {
-      color: var(--green);
-      margin-bottom: 15px;
-      font-size: 1.35rem;
-    }
-
-    .service-card ul {
-      padding-left: 18px;
-      margin-bottom: 25px;
-    }
-
-    .service-card li {
-      margin-bottom: 8px;
-    }
-
-    .bonus {
-      background: #f0fdf4;
-      border-left: 4px solid var(--green);
-      padding: 15px 18px;
-      border-radius: 6px;
-      font-weight: 500;
-      margin-bottom: 20px;
-    }
-
-    .about {
-      max-width: 850px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about p {
-      margin-bottom: 18px;
-      color: var(--gray);
-    }
-
-    .final-cta {
-      background: var(--navy);
-      color: var(--white);
-      text-align: center;
-      padding: 95px 20px;
-    }
-
-    .final-cta p {
-      color: #d1d5db;
-      margin-bottom: 30px;
-      font-size: 1.05rem;
-    }
-
     footer {
       background: #001a33;
       color: #9ca3af;
@@ -245,10 +128,8 @@
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.1rem; }
-      .before img,
-      .after img { height: 260px; }
     }
-</style>
+  </style>
 </head>
 
 <body>
