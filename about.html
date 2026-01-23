@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Brush & Broom LLP – Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP is a family-owned cleaning and painting service in Bellevue, Kirkland, and Eastside King County. Friendly, professional, and eco-conscious." />
+
+  <title>About Us | Brush & Broom LLP – Seattle & Eastside</title>
+  <meta name="description" content="Learn about Brush & Broom LLP, a family-owned cleaning and painting company based in Seattle serving Kirkland and the Eastside. Honest work, real people, and quality you can trust." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,20 +30,56 @@
     }
 
     * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Roboto',sans-serif; background: var(--bg-light); color: var(--navy); line-height:1.7; }
+    body {
+      font-family:'Roboto',sans-serif;
+      background: var(--bg-light);
+      color: var(--navy);
+      line-height:1.7;
+    }
     img { display:block; max-width:100%; }
     a { color: inherit; text-decoration: none; }
-    h1,h2,h3 { font-family:'Playfair Display', serif; font-weight:700; }
-    h1 { font-size: clamp(2.1rem,4vw,2.8rem); margin-bottom: 20px; text-align:center; }
-    h2 { font-size: clamp(1.9rem,3vw,2.3rem); margin-bottom:32px; text-align:center; }
-    h3 { font-size:1.35rem; margin-bottom:12px; color: var(--green); }
-    p { margin-bottom:16px; color: var(--gray); }
 
-    .btn { display:inline-block; padding:14px 30px; border-radius: var(--radius-sm); font-weight:700; transition:all 0.2s ease; margin-top:10px; background: var(--green); color: var(--white); }
-    .btn:hover { background: var(--green-dark); transform: translateY(-2px); }
+    h1,h2,h3 {
+      font-family:'Playfair Display', serif;
+      font-weight:700;
+    }
+    h1 {
+      font-size: clamp(2.1rem,4vw,2.8rem);
+      margin-bottom: 20px;
+      text-align:center;
+    }
+    h2 {
+      font-size: clamp(1.9rem,3vw,2.3rem);
+      margin-bottom:32px;
+      text-align:center;
+    }
+    h3 {
+      font-size:1.35rem;
+      margin-bottom:12px;
+      color: var(--green);
+    }
+    p {
+      margin-bottom:16px;
+      color: var(--gray);
+    }
+
+    .btn {
+      display:inline-block;
+      padding:14px 30px;
+      border-radius: var(--radius-sm);
+      font-weight:700;
+      transition:all 0.2s ease;
+      margin-top:10px;
+      background: var(--green);
+      color: var(--white);
+    }
+    .btn:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
 
     header.about-hero {
-      background: linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.7));
+      background: linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.72));
       color: var(--white);
       text-align: center;
       padding: 90px 20px 120px;
@@ -51,30 +88,88 @@
       justify-content: center;
       align-items: center;
     }
-    header.about-hero .logo-wrap { width: 180px; margin-bottom: 30px; }
-    header.about-hero .logo-wrap img { width: 100%; }
 
-    main { max-width: 1100px; margin: -80px auto 60px auto; background: var(--white); padding: 50px 35px; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+    header.about-hero .logo-wrap {
+      width: 180px;
+      margin-bottom: 30px;
+    }
+    header.about-hero .logo-wrap img {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: -80px auto 60px auto;
+      background: var(--white);
+      padding: 50px 35px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
     section { margin-bottom: 60px; }
+
     ul { padding-left: 20px; }
-    ul li { margin-bottom: 8px; color: var(--gray); }
+    ul li {
+      margin-bottom: 10px;
+      color: var(--gray);
+    }
 
-    .founders { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap:30px; margin-top:30px; }
-    .founder { text-align:center; background: var(--white); padding:20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
-    .founder img { width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:15px; box-shadow: var(--shadow-sm); }
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+      margin-top:30px;
+    }
 
-    .final-cta { background: var(--navy); color: var(--white); text-align:center; padding:80px 20px; }
-    .final-cta p { color:#d1d5db; margin-bottom:30px; font-size:1.05rem; }
+    .founder {
+      text-align:center;
+      background: var(--white);
+      padding:25px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
 
-    footer { background: var(--navy-dark); color: var(--gray-light); text-align:center; padding:26px 15px; font-size: 0.85rem; }
+    .founder img {
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      object-fit:cover;
+      margin:0 auto 18px auto;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .final-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align:center;
+      padding:80px 20px;
+      border-radius: var(--radius-md);
+    }
+    .final-cta p {
+      color:#d1d5db;
+      margin-bottom:30px;
+      font-size:1.05rem;
+    }
+
+    footer {
+      background: var(--navy-dark);
+      color: var(--gray-light);
+      text-align:center;
+      padding:26px 15px;
+      font-size: 0.85rem;
+    }
 
     @media(max-width:768px){
-      main { margin:-60px 20px 40px 20px; padding:40px 20px; }
+      main {
+        margin:-60px 20px 40px 20px;
+        padding:40px 20px;
+      }
       .founders { grid-template-columns:1fr; }
       header.about-hero h1 { font-size:2rem; }
     }
   </style>
 </head>
+
 <body>
 
 <header class="about-hero">
@@ -82,52 +177,54 @@
     <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
   </a>
   <h1>About Brush & Broom LLP</h1>
-  <p>Family-owned, community-driven cleaning and painting services across Bellevue, Kirkland, Redmond, and Eastside King County.</p>
+  <p>Family-owned, community-first cleaning and painting services proudly based in Seattle and serving Kirkland and the Eastside.</p>
 </header>
 
 <main>
+
   <section class="story">
     <h2>Our Story</h2>
-    <p>Brush & Broom LLP started with a simple idea: life gets messy, and everyone deserves a clean, welcoming space without stress. Founded by a husband-and-wife team, we bring small-town hospitality, professionalism, and a personal touch to every home and office we serve.</p>
-    <p>We show up as the same friendly faces, respect your schedule, and leave your space sparkling. From eco-friendly cleaning to detailed painting services, our goal is to make your home feel cared for and comfortable.</p>
+    <p>Brush & Broom LLP was built on a simple belief: people deserve honest work, fair pricing, and a home that feels cared for — not rushed through.</p>
+    <p>Founded by a husband-and-wife team, we combine professionalism with small-town values. We show up on time, communicate clearly, and treat every space with respect. Whether it’s detailed cleaning or precision painting, our goal is always the same — leave your home better than we found it.</p>
   </section>
 
   <section class="mission">
-    <h2>Our Mission</h2>
+    <h2>What We Stand For</h2>
     <ul>
-      <li>Honesty, integrity, and quality workmanship</li>
-      <li>Creating opportunities for young or inexperienced workers</li>
-      <li>Supporting second-chance employees</li>
-      <li>Providing discounted or free services to seniors, disabled individuals, or those facing hardship</li>
+      <li>High standards, no shortcuts, and work we’re proud to put our name on</li>
+      <li>Honest communication and transparent pricing</li>
+      <li>Creating opportunities for young, inexperienced, or second-chance workers</li>
+      <li>Giving back through discounted or donated services for seniors and individuals facing hardship</li>
     </ul>
-    <p>We believe success isn’t just about growth—it’s about lifting others up along the way.</p>
+    <p>Growth matters — but doing right by people matters more.</p>
   </section>
 
   <section class="founders-section">
-    <h2>Meet the Team</h2>
+    <h2>Meet the Founders</h2>
     <div class="founders">
       <div class="founder">
-        <img src="IMG_3758_Original.jpeg" alt="Founder - Wife">
+        <img src="IMG_3758_Original.jpeg" alt="Brittany – Co-Founder of Brush & Broom LLP">
         <h3>Brittany</h3>
-        <p>Co-founder & Cleaning Operations Lead. Passionate about creating tidy, welcoming spaces and leading our cleaning team with heart and precision.</p>
+        <p>Co-Founder & Cleaning Operations Lead. Brittany oversees our cleaning services with an obsessive eye for detail and a genuine passion for creating calm, welcoming spaces.</p>
       </div>
       <div class="founder">
-        <img src="IMG_1582.jpeg" alt="Founder - Husband">
+        <img src="IMG_1582.jpeg" alt="Dustin – Co-Founder of Brush & Broom LLP">
         <h3>Dustin</h3>
-        <p>Co-founder & Painting and Client Services Lead. Handles operations, painting, and building long-term relationships with clients while growing our family-style culture.</p>
+        <p>Co-Founder & Painting and Client Services Lead. Dustin manages painting projects, client relationships, and company operations while building a culture rooted in trust and accountability.</p>
       </div>
     </div>
   </section>
 
   <section class="final-cta">
-    <h2>Experience the Brush & Broom Difference</h2>
-    <p>Ready to see your space transformed? Request a free quote today and let us sweep you off your feet!</p>
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+    <h2>Let’s Take Care of Your Space</h2>
+    <p>If you’re looking for reliable, down-to-earth professionals who actually care about the result, you’re in the right place.</p>
+    <a href="contact.html" class="btn">Request a Free Quote</a>
   </section>
+
 </main>
 
 <footer>
-  <p>© 2026 Brush & Broom LLP · Bellevue, Kirkland, Redmond & Eastside King County</p>
+  <p>© 2026 Brush & Broom LLP · Seattle, Kirkland & the Eastside</p>
 </footer>
 
 </body>
