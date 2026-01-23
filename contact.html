@@ -4,99 +4,222 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Request a Free Quote | Brush & Broom LLP</title>
-  <meta name="description" content="Get a free, no-pressure quote from Brush & Broom LLP. House cleaning, deep cleaning, move-outs, and painting in Bellevue, Kirkland, Redmond & Eastside King County." />
+  <title>Brush & Broom LLP | Cleaning & Painting in Bellevue & Eastside</title>
+  <meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Bellevue, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --navy: #002244;
-      --green: #69be28;
-      --green-dark: #5aa81f;
-      --gray: #a5acaf;
-      --white: #ffffff;
-      --light-bg: #f9f9f9;
-      --shadow: 0 6px 14px rgba(0,0,0,0.08);
+      --navy:#002244;
+      --navy-dark:#001a33;
+      --green:#69be28;
+      --green-dark:#5aa81f;
+      --gray:#6b7280;
+      --gray-light:#9ca3af;
+      --bg-light:#f8fafc;
+      --white:#ffffff;
+      --radius-sm:6px;
+      --radius-md:14px;
+      --radius-lg:20px;
+      --shadow-sm:0 6px 15px rgba(0,0,0,0.06);
+      --shadow-md:0 10px 25px rgba(0,0,0,0.10);
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
-    body { font-family:'Roboto', sans-serif; background-color:var(--light-bg); color:var(--navy); line-height:1.65; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--navy);line-height:1.7}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
 
-    /* Hero Section */
-    header.quote-hero {
-      background: linear-gradient(to bottom, rgba(0,34,68,0.9), rgba(0,34,68,0.75));
-      color: var(--white);
-      padding: 60px 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
+    h1{font-size:clamp(2.1rem,4vw,2.8rem);margin-bottom:1rem}
+    h2{text-align:center;font-size:clamp(1.9rem,3vw,2.3rem);margin-bottom:1.5rem}
+    p{color:var(--gray);margin-bottom:1rem}
+
+    .btn{display:inline-block;padding:14px 30px;border-radius:var(--radius-sm);font-weight:700;transition:0.2s}
+    .btn-primary{background:var(--green);color:var(--white)}
+    .btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .btn-secondary{border:2px solid var(--green);color:var(--green)}
+    .btn-secondary:hover{background:var(--green);color:var(--white)}
+
+    /* ===== GLOBAL HEADER ===== */
+
+    #site-header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:9999;
+      padding:18px 0;
+      background:rgba(255,255,255,0.96);
+      transition:all .35s ease;
+      box-shadow:0 4px 15px rgba(0,0,0,0.04);
     }
 
-    .quote-hero h1 { font-family: 'Playfair Display', serif; font-size:2.5rem; margin:20px 0 15px 0; }
-    .quote-hero p { font-size:1.2rem; margin-bottom:15px; }
-    .trust-line { font-size:0.95rem; color: var(--gray); margin-top:10px; }
-
-    a.logo-home {
-      display: block;
-      margin-bottom: 20px;
+    body.home #site-header{
+      background:transparent;
+      box-shadow:none;
     }
 
-    a.logo-home img {
-      max-width:180px;
-      height:auto;
-      display:block;
+    #site-header.scrolled{
+      background:rgba(255,255,255,0.96);
+      padding:10px 0;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .header-inner{
+      max-width:1200px;
       margin:0 auto;
-      cursor: pointer;
+      padding:0 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
 
-    /* Main Form Container */
-    main {
-      max-width: 900px;
-      margin: -40px auto 50px auto;
-      background-color: var(--white);
-      padding: 40px 30px;
-      border-radius: 10px;
-      box-shadow: var(--shadow);
+    .logo img{
+      height:48px;
+      transition:.35s;
     }
 
-    form { display:flex; flex-direction:column; gap:20px; }
-    input, textarea, select { padding:12px 15px; border-radius:6px; border:1px solid #ccc; font-size:1rem; width:100%; }
-    textarea { resize: vertical; }
-    button {
-      padding:14px 20px; border-radius:6px; border:none; background-color:var(--green); color:var(--white);
-      font-weight:700; font-size:1rem; cursor:pointer; transition: all 0.25s ease;
+    #site-header.scrolled .logo img{
+      height:40px;
     }
-    button:hover { background-color: var(--green-dark); transform:translateY(-2px); }
 
-    /* Work Samples Gallery */
-    .work-samples h2 { font-family:'Playfair Display', serif; font-size:2rem; text-align:center; margin-bottom:20px; color: var(--navy);}
-    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; margin-bottom:40px; }
-    .gallery-grid img { width:100%; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.08); }
+    /* ===== NAV ===== */
 
-    /* Testimonials */
-    .testimonials { display:flex; flex-wrap:wrap; gap:20px; margin-bottom:40px; }
-    .testimonial { flex:1 1 250px; background:#eef0f3; padding:20px; border-radius:6px; }
+    .desktop-nav{display:flex;gap:22px;font-weight:500}
 
-    /* Alternative Contact */
-    .contact-methods { margin-top:20px; }
-    .contact-methods p { margin:5px 0; font-weight:bold; }
-
-    footer { background-color: var(--navy); color: var(--gray); text-align: center; padding: 20px; font-size: 0.85rem; }
-
-    @media(max-width:768px){
-      .quote-hero h1 { font-size:2rem; }
-      main { margin: -30px 15px 40px 15px; padding: 30px 20px; }
-      .testimonials { flex-direction:column; }
-      .gallery-grid { grid-template-columns: 1fr; }
+    .nav-toggle{
+      display:none;
+      flex-direction:column;
+      gap:6px;
+      background:none;
+      border:none;
+      cursor:pointer;
     }
+
+    .nav-toggle span{
+      width:26px;
+      height:3px;
+      background:var(--navy);
+      border-radius:3px;
+      transition:.3s;
+    }
+
+    .mobile-nav{
+      display:none;
+      flex-direction:column;
+      background:var(--white);
+      padding:24px;
+      border-top:1px solid #e5e7eb;
+    }
+
+    .mobile-nav a{
+      padding:14px 0;
+      font-weight:600;
+      border-bottom:1px solid #f1f5f9;
+    }
+
+    #site-header.open .mobile-nav{display:flex}
+    #site-header.open .nav-toggle span:nth-child(1){transform:rotate(45deg) translateY(8px)}
+    #site-header.open .nav-toggle span:nth-child(2){opacity:0}
+    #site-header.open .nav-toggle span:nth-child(3){transform:rotate(-45deg) translateY(-8px)}
+
+    body.nav-open{overflow:hidden}
+
+    @media(max-width:900px){
+      .desktop-nav{display:none}
+      .nav-toggle{display:flex}
+    }
+
+    /* ===== HERO ===== */
+
+    .hero{
+      margin-top:90px;
+      background:
+        linear-gradient(rgba(0,34,68,.9),rgba(0,34,68,.9)),
+        url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
+      color:var(--white);
+      text-align:center;
+      padding:110px 20px;
+    }
+
+    .hero-logo{
+      width:180px;
+      margin:0 auto 24px;
+      background:var(--white);
+      padding:14px;
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-md);
+    }
+
+    .offer-badge{
+      display:inline-block;
+      background:var(--green);
+      color:var(--white);
+      padding:12px 24px;
+      border-radius:999px;
+      font-weight:700;
+      margin:28px 0;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .cta-buttons{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    section{max-width:1200px;margin:0 auto;padding:90px 20px}
+    footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px;font-size:.85rem}
   </style>
 </head>
 
+<body class="home">
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="/index.html" class="logo" aria-label="Go to homepage">
+      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP">
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a>
+      <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
+      <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
+    <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="hero-logo">
+  <h1>We Clean It. We Paint It. You Relax.</h1>
+  <p>Husband-and-wife team delivering trusted cleaning & painting services in Bellevue, Kirkland, and the Eastside.</p>
+  <div class="offer-badge">FREE Deep Cleaning with Any Full Repaint</div>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+    <a href="tel:2065711092" class="btn btn-secondary">(206) 571-1092</a>
+  </div>
+</section>
 <body>
 
 <header class="quote-hero">
