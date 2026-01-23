@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>About Us | Brush & Broom LLP – Seattle & Eastside</title>
-  <meta name="description" content="Learn about Brush & Broom LLP, a family-owned cleaning and painting company based in Seattle serving Kirkland and the Eastside. Honest work, real people, and quality you can trust." />
+  <meta name="description" content="Brush & Broom LLP is a family-owned cleaning and painting company based in Seattle, serving Kirkland and the Eastside. Honest work, real people, quality results." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,136 +14,146 @@
 
   <style>
     :root {
-      --navy: #002244;
-      --navy-dark: #001a33;
-      --green: #69be28;
-      --green-dark: #5aa81f;
-      --gray: #6b7280;
-      --gray-light: #9ca3af;
-      --white: #ffffff;
-      --bg-light: #f8fafc;
-      --radius-sm: 6px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --shadow-sm: 0 6px 15px rgba(0,0,0,0.06);
-      --shadow-md: 0 10px 25px rgba(0,0,0,0.10);
+      --navy:#002244;
+      --navy-dark:#001a33;
+      --green:#69be28;
+      --green-dark:#5aa81f;
+      --gray:#6b7280;
+      --gray-light:#9ca3af;
+      --white:#ffffff;
+      --bg-light:#f8fafc;
+      --radius-sm:6px;
+      --radius-md:14px;
+      --radius-lg:20px;
+      --shadow-sm:0 6px 15px rgba(0,0,0,0.06);
+      --shadow-md:0 10px 25px rgba(0,0,0,0.10);
     }
 
-    * { box-sizing: border-box; margin:0; padding:0; }
+    * { box-sizing:border-box; margin:0; padding:0; }
     body {
       font-family:'Roboto',sans-serif;
-      background: var(--bg-light);
-      color: var(--navy);
+      background:var(--bg-light);
+      color:var(--navy);
       line-height:1.7;
     }
-    img { display:block; max-width:100%; }
-    a { color: inherit; text-decoration: none; }
+    img { max-width:100%; display:block; }
+    a { text-decoration:none; color:inherit; }
 
     h1,h2,h3 {
-      font-family:'Playfair Display', serif;
+      font-family:'Playfair Display',serif;
       font-weight:700;
     }
     h1 {
-      font-size: clamp(2.1rem,4vw,2.8rem);
-      margin-bottom: 20px;
-      text-align:center;
+      font-size:clamp(2.2rem,4vw,2.9rem);
+      margin-bottom:20px;
     }
     h2 {
-      font-size: clamp(1.9rem,3vw,2.3rem);
-      margin-bottom:32px;
+      font-size:clamp(1.9rem,3vw,2.3rem);
+      margin-bottom:30px;
       text-align:center;
     }
     h3 {
-      font-size:1.35rem;
-      margin-bottom:12px;
-      color: var(--green);
+      font-size:1.3rem;
+      margin-bottom:10px;
+      color:var(--green);
     }
     p {
+      color:var(--gray);
       margin-bottom:16px;
-      color: var(--gray);
     }
 
-    .btn {
-      display:inline-block;
-      padding:14px 30px;
-      border-radius: var(--radius-sm);
-      font-weight:700;
-      transition:all 0.2s ease;
-      margin-top:10px;
-      background: var(--green);
-      color: var(--white);
-    }
-    .btn:hover {
-      background: var(--green-dark);
-      transform: translateY(-2px);
-    }
-
-    header.about-hero {
-      background: linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.72));
-      color: var(--white);
-      text-align: center;
-      padding: 90px 20px 120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    /* HEADER – matches other pages */
+    header.site-hero {
+      position:relative;
+      background:
+        linear-gradient(rgba(0,34,68,0.88), rgba(0,34,68,0.75)),
+        url("F2635366-F577-497F-87F2-DAF4138C1243.png");
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:420px;
+      padding:90px 20px 120px;
+      text-align:center;
+      color:var(--white);
     }
 
-    header.about-hero .logo-wrap {
-      width: 180px;
-      margin-bottom: 30px;
-    }
-    header.about-hero .logo-wrap img {
-      width: 100%;
+    header.site-hero .logo {
+      width:170px;
+      margin:0 auto 28px;
     }
 
+    header.site-hero p {
+      max-width:720px;
+      margin:0 auto;
+      color:#d1d5db;
+      font-size:1.05rem;
+    }
+
+    /* MAIN */
     main {
-      max-width: 1100px;
-      margin: -80px auto 60px auto;
-      background: var(--white);
-      padding: 50px 35px;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md);
+      max-width:1100px;
+      margin:-80px auto 60px;
+      background:var(--white);
+      padding:55px 35px;
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-md);
     }
 
-    section { margin-bottom: 60px; }
+    section { margin-bottom:70px; }
 
-    ul { padding-left: 20px; }
-    ul li {
-      margin-bottom: 10px;
-      color: var(--gray);
-    }
-
-    .founders {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /* WHY CHOOSE US */
+    .why-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:30px;
       margin-top:30px;
     }
-
-    .founder {
-      text-align:center;
-      background: var(--white);
+    .why-item {
+      background:var(--bg-light);
       padding:25px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
+      border-radius:var(--radius-md);
+      box-shadow:var(--shadow-sm);
+      text-align:center;
     }
 
+    /* FOUNDERS */
+    .founders {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+      margin-top:30px;
+    }
+    .founder {
+      text-align:center;
+      padding:25px;
+      border-radius:var(--radius-md);
+      box-shadow:var(--shadow-sm);
+    }
     .founder img {
       width:200px;
       height:200px;
-      border-radius:50%;
       object-fit:cover;
-      margin:0 auto 18px auto;
-      box-shadow: var(--shadow-sm);
+      border-radius:50%;
+      margin:0 auto 18px;
     }
 
+    /* GALLERY */
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+    .gallery img {
+      border-radius:var(--radius-md);
+      box-shadow:var(--shadow-sm);
+    }
+
+    /* CTA */
     .final-cta {
-      background: var(--navy);
-      color: var(--white);
-      text-align:center;
+      background:var(--navy);
+      color:var(--white);
       padding:80px 20px;
-      border-radius: var(--radius-md);
+      text-align:center;
+      border-radius:var(--radius-md);
     }
     .final-cta p {
       color:#d1d5db;
@@ -151,74 +161,103 @@
       font-size:1.05rem;
     }
 
+    .btn {
+      display:inline-block;
+      padding:14px 32px;
+      background:var(--green);
+      color:var(--white);
+      font-weight:700;
+      border-radius:var(--radius-sm);
+      transition:all 0.2s ease;
+    }
+    .btn:hover {
+      background:var(--green-dark);
+      transform:translateY(-2px);
+    }
+
     footer {
-      background: var(--navy-dark);
-      color: var(--gray-light);
+      background:var(--navy-dark);
+      color:var(--gray-light);
       text-align:center;
       padding:26px 15px;
-      font-size: 0.85rem;
+      font-size:0.85rem;
     }
 
     @media(max-width:768px){
       main {
-        margin:-60px 20px 40px 20px;
-        padding:40px 20px;
+        margin:-60px 18px 40px;
+        padding:40px 22px;
       }
-      .founders { grid-template-columns:1fr; }
-      header.about-hero h1 { font-size:2rem; }
     }
   </style>
 </head>
 
 <body>
 
-<header class="about-hero">
-  <a href="index.html" class="logo-wrap">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
+<header class="site-hero">
+  <a href="index.html">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="logo">
   </a>
   <h1>About Brush & Broom LLP</h1>
-  <p>Family-owned, community-first cleaning and painting services proudly based in Seattle and serving Kirkland and the Eastside.</p>
+  <p>Family-owned cleaning and painting services based in Seattle, proudly serving Kirkland and the Eastside with integrity, consistency, and care.</p>
 </header>
 
 <main>
 
-  <section class="story">
+  <section>
     <h2>Our Story</h2>
-    <p>Brush & Broom LLP was built on a simple belief: people deserve honest work, fair pricing, and a home that feels cared for — not rushed through.</p>
-    <p>Founded by a husband-and-wife team, we combine professionalism with small-town values. We show up on time, communicate clearly, and treat every space with respect. Whether it’s detailed cleaning or precision painting, our goal is always the same — leave your home better than we found it.</p>
+    <p>Brush & Broom LLP was built for people who value reliability and straight answers. We started as a husband-and-wife team with a simple goal — do the job right, treat people fairly, and leave every space better than we found it.</p>
+    <p>We don’t outsource relationships or rotate strangers through your home. You get the same accountable team, clear communication, and work that reflects pride — not shortcuts.</p>
   </section>
 
-  <section class="mission">
-    <h2>What We Stand For</h2>
-    <ul>
-      <li>High standards, no shortcuts, and work we’re proud to put our name on</li>
-      <li>Honest communication and transparent pricing</li>
-      <li>Creating opportunities for young, inexperienced, or second-chance workers</li>
-      <li>Giving back through discounted or donated services for seniors and individuals facing hardship</li>
-    </ul>
-    <p>Growth matters — but doing right by people matters more.</p>
-  </section>
-
-  <section class="founders-section">
-    <h2>Meet the Founders</h2>
-    <div class="founders">
-      <div class="founder">
-        <img src="IMG_3758_Original.jpeg" alt="Brittany – Co-Founder of Brush & Broom LLP">
-        <h3>Brittany</h3>
-        <p>Co-Founder & Cleaning Operations Lead. Brittany oversees our cleaning services with an obsessive eye for detail and a genuine passion for creating calm, welcoming spaces.</p>
+  <section>
+    <h2>Why Homeowners Choose Us</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <h3>We Show Up</h3>
+        <p>On time, prepared, and ready to work. No ghosting. No excuses.</p>
       </div>
-      <div class="founder">
-        <img src="IMG_1582.jpeg" alt="Dustin – Co-Founder of Brush & Broom LLP">
-        <h3>Dustin</h3>
-        <p>Co-Founder & Painting and Client Services Lead. Dustin manages painting projects, client relationships, and company operations while building a culture rooted in trust and accountability.</p>
+      <div class="why-item">
+        <h3>No Corners Cut</h3>
+        <p>Proper prep, thorough cleaning, and finishes that last.</p>
+      </div>
+      <div class="why-item">
+        <h3>People First</h3>
+        <p>Second-chance hiring, fair pricing, and respect for every client.</p>
       </div>
     </div>
   </section>
 
+  <section>
+    <h2>Meet the Founders</h2>
+    <div class="founders">
+      <div class="founder">
+        <img src="IMG_3758_Original.jpeg" alt="Brittany - Co-Founder">
+        <h3>Brittany</h3>
+        <p>Co-Founder & Cleaning Operations Lead. Brittany runs the cleaning side with unmatched attention to detail and genuine care for client spaces.</p>
+      </div>
+      <div class="founder">
+        <img src="IMG_1582.jpeg" alt="Dustin - Co-Founder">
+        <h3>Dustin</h3>
+        <p>Co-Founder & Painting and Client Services Lead. Oversees painting projects, operations, and long-term client relationships.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Real Work. Real Results.</h2>
+    <div class="gallery">
+      <!-- Replace with your real job photos -->
+      <img src="job1.jpg" alt="Interior painting project Seattle">
+      <img src="job2.jpg" alt="Deep cleaning project Kirkland">
+      <img src="job3.jpg" alt="Exterior painting Eastside">
+    </div>
+  </section>
+
   <section class="final-cta">
-    <h2>Let’s Take Care of Your Space</h2>
-    <p>If you’re looking for reliable, down-to-earth professionals who actually care about the result, you’re in the right place.</p>
-    <a href="contact.html" class="btn">Request a Free Quote</a>
+    <h2>Ready When You Are</h2>
+    <p>If you want dependable service from people who care about the outcome, let’s talk.</p>
+    <a href="contact.html" class="btn">Get a Free Quote</a>
   </section>
 
 </main>
