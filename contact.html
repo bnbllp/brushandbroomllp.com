@@ -1,191 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Brush & Broom LLP | Cleaning & Painting in Bellevue & Eastside</title>
-  <meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Bellevue, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint." />
+<title>Contact Brush & Broom LLP | Free Cleaning & Painting Quotes in Seattle</title>
+<meta name="description" content="Contact Brush & Broom LLP for a free cleaning or painting quote. Serving Seattle, Kirkland, and the Eastside. Call or text us — fast, honest estimates.">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --navy:#002244;
-      --navy-dark:#001a33;
-      --green:#69be28;
-      --green-dark:#5aa81f;
-      --gray:#6b7280;
-      --gray-light:#9ca3af;
-      --bg-light:#f8fafc;
-      --white:#ffffff;
-      --radius-sm:6px;
-      --radius-md:14px;
-      --radius-lg:20px;
-      --shadow-sm:0 6px 15px rgba(0,0,0,0.06);
-      --shadow-md:0 10px 25px rgba(0,0,0,0.10);
-    }
+<style>
+:root{
+  --navy:#002244;
+  --navy-dark:#001a33;
+  --green:#69be28;
+  --green-dark:#5aa81f;
+  --gray:#6b7280;
+  --gray-light:#9ca3af;
+  --bg-light:#f8fafc;
+  --white:#ffffff;
+  --radius-sm:6px;
+  --radius-md:14px;
+  --radius-lg:20px;
+  --shadow-sm:0 6px 15px rgba(0,0,0,.06);
+  --shadow-md:0 10px 25px rgba(0,0,0,.10);
+}
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--navy);line-height:1.7}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Roboto',sans-serif;
+  background:var(--bg-light);
+  color:var(--navy);
+  line-height:1.7;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
 
-    h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
-    h1{font-size:clamp(2.1rem,4vw,2.8rem);margin-bottom:1rem}
-    h2{text-align:center;font-size:clamp(1.9rem,3vw,2.3rem);margin-bottom:1.5rem}
-    p{color:var(--gray);margin-bottom:1rem}
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:var(--radius-sm);
+  font-weight:700;
+  transition:.2s;
+  text-align:center;
+}
+.btn-primary{
+  background:var(--green);
+  color:#fff;
+}
+.btn-primary:hover{
+  background:var(--green-dark);
+  transform:translateY(-2px);
+}
+.btn-secondary{
+  border:2px solid var(--green);
+  color:var(--green);
+}
+.btn-secondary:hover{
+  background:var(--green);
+  color:#fff;
+  transform:translateY(-2px);
+}
 
-    .btn{display:inline-block;padding:14px 30px;border-radius:var(--radius-sm);font-weight:700;transition:0.2s}
-    .btn-primary{background:var(--green);color:var(--white)}
-    .btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
-    .btn-secondary{border:2px solid var(--green);color:var(--green)}
-    .btn-secondary:hover{background:var(--green);color:var(--white)}
+/* HEADER */
+#site-header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:9999;
+  background:
+    linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
+    url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/220px no-repeat;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
 
-    /* ===== GLOBAL HEADER ===== */
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    #site-header{
-      position:fixed;
-      top:0;
-      width:100%;
-      z-index:9999;
-      padding:18px 0;
-      background:rgba(255,255,255,0.96);
-      transition:all .35s ease;
-      box-shadow:0 4px 15px rgba(0,0,0,0.04);
-    }
+.logo img{
+  height:42px;
+  opacity:.9;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.15));
+}
 
-    body.home #site-header{
-      background:transparent;
-      box-shadow:none;
-    }
+.desktop-nav{
+  display:flex;
+  gap:22px;
+  font-weight:500;
+}
 
-    #site-header.scrolled{
-      background:rgba(255,255,255,0.96);
-      padding:10px 0;
-      box-shadow:0 6px 18px rgba(0,0,0,0.08);
-    }
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  gap:6px;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
 
-    .header-inner{
-      max-width:1200px;
-      margin:0 auto;
-      padding:0 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+.nav-toggle span{
+  width:26px;
+  height:3px;
+  background:var(--navy);
+  border-radius:3px;
+}
 
-    .logo img{
-      height:48px;
-      transition:.35s;
-    }
+.mobile-nav{
+  display:none;
+  flex-direction:column;
+  background:#fff;
+  padding:20px;
+  border-top:1px solid #e5e7eb;
+}
 
-    #site-header.scrolled .logo img{
-      height:40px;
-    }
+#site-header.open .mobile-nav{display:flex}
 
-    /* ===== NAV ===== */
+@media(max-width:900px){
+  .desktop-nav{display:none}
+  .nav-toggle{display:flex}
+}
 
-    .desktop-nav{display:flex;gap:22px;font-weight:500}
+/* HERO */
+.page-hero{
+  margin-top:90px;
+  background:
+    linear-gradient(rgba(0,34,68,.85),rgba(0,34,68,.85)),
+    url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:90px 20px;
+}
 
-    .nav-toggle{
-      display:none;
-      flex-direction:column;
-      gap:6px;
-      background:none;
-      border:none;
-      cursor:pointer;
-    }
+.page-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,4vw,2.8rem);
+  margin-bottom:12px;
+}
 
-    .nav-toggle span{
-      width:26px;
-      height:3px;
-      background:var(--navy);
-      border-radius:3px;
-      transition:.3s;
-    }
+.page-hero p{
+  color:#d1d5db;
+  max-width:720px;
+  margin:auto;
+  font-size:1.05rem;
+}
 
-    .mobile-nav{
-      display:none;
-      flex-direction:column;
-      background:var(--white);
-      padding:24px;
-      border-top:1px solid #e5e7eb;
-    }
+/* CONTENT */
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 20px;
+}
 
-    .mobile-nav a{
-      padding:14px 0;
-      font-weight:600;
-      border-bottom:1px solid #f1f5f9;
-    }
+.contact-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+}
 
-    #site-header.open .mobile-nav{display:flex}
-    #site-header.open .nav-toggle span:nth-child(1){transform:rotate(45deg) translateY(8px)}
-    #site-header.open .nav-toggle span:nth-child(2){opacity:0}
-    #site-header.open .nav-toggle span:nth-child(3){transform:rotate(-45deg) translateY(-8px)}
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+}
 
-    body.nav-open{overflow:hidden}
+/* FORM */
+.contact-form{
+  background:#fff;
+  padding:40px;
+  border-radius:var(--radius-md);
+  box-shadow:var(--shadow-sm);
+}
 
-    @media(max-width:900px){
-      .desktop-nav{display:none}
-      .nav-toggle{display:flex}
-    }
+.contact-form h2{
+  font-family:'Playfair Display',serif;
+  margin-bottom:18px;
+}
 
-    /* ===== HERO ===== */
+.contact-form p{
+  margin-bottom:28px;
+  color:var(--gray);
+}
 
-    .hero{
-      margin-top:90px;
-      background:
-        linear-gradient(rgba(0,34,68,.9),rgba(0,34,68,.9)),
-        url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
-      color:var(--white);
-      text-align:center;
-      padding:110px 20px;
-    }
+.contact-form label{
+  display:block;
+  font-weight:600;
+  margin-bottom:6px;
+}
 
-    .hero-logo{
-      width:180px;
-      margin:0 auto 24px;
-      background:var(--white);
-      padding:14px;
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow-md);
-    }
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:14px;
+  border-radius:var(--radius-sm);
+  border:1px solid #e5e7eb;
+  margin-bottom:20px;
+  font-family:inherit;
+}
 
-    .offer-badge{
-      display:inline-block;
-      background:var(--green);
-      color:var(--white);
-      padding:12px 24px;
-      border-radius:999px;
-      font-weight:700;
-      margin:28px 0;
-      box-shadow:var(--shadow-sm);
-    }
+.contact-form textarea{
+  min-height:140px;
+  resize:vertical;
+}
 
-    .cta-buttons{
-      display:flex;
-      justify-content:center;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:20px;
-    }
+/* INFO PANEL */
+.contact-info{
+  background:#f0fdf4;
+  border-left:5px solid var(--green);
+  padding:40px;
+  border-radius:var(--radius-md);
+}
 
-    section{max-width:1200px;margin:0 auto;padding:90px 20px}
-    footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px;font-size:.85rem}
-  </style>
+.contact-info h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:18px;
+}
+
+.contact-info p{
+  margin-bottom:16px;
+}
+
+.contact-info strong{
+  color:var(--navy);
+}
+
+.contact-actions{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  margin-top:24px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--navy-dark);
+  color:var(--gray-light);
+  text-align:center;
+  padding:26px;
+  font-size:.85rem;
+}
+
+/* FLOATING TEXT BUTTON */
+.floating-text-btn{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  background:var(--green);
+  color:#fff;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  z-index:9999;
+}
+@media(min-width:900px){.floating-text-btn{display:none}}
+</style>
 </head>
 
-<body class="home">
+<body>
 
 <header id="site-header">
   <div class="header-inner">
     <a href="/index.html" class="logo" aria-label="Go to homepage">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP">
+      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
     </a>
 
     <nav class="desktop-nav">
@@ -193,7 +278,7 @@
       <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
       <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html"><strong>Contact</strong></a>
     </nav>
 
     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -210,102 +295,75 @@
   </nav>
 </header>
 
-<section class="hero">
-  <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" class="hero-logo">
-  <h1>We Clean It. We Paint It. You Relax.</h1>
-  <p>Husband-and-wife team delivering trusted cleaning & painting services in Bellevue, Kirkland, and the Eastside.</p>
-  <div class="offer-badge">FREE Deep Cleaning with Any Full Repaint</div>
-  <div class="cta-buttons">
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-    <a href="tel:2065711092" class="btn btn-secondary">(206) 571-1092</a>
+<section class="page-hero">
+  <h1>Let’s Talk About Your Home</h1>
+  <p>Tell us what you need — cleaning, painting, or both — and we’ll get you a clear, honest quote with zero pressure.</p>
+</section>
+
+<section>
+  <div class="contact-grid">
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Request a Free Quote</h2>
+      <p>Fill this out and we’ll respond quickly — usually the same day.</p>
+
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" placeholder="Best number to reach you" required>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Optional, but helpful">
+
+        <label for="message">How can we help?</label>
+        <textarea id="message" placeholder="Tell us about your project — size, timing, questions, etc."></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Request</button>
+      </form>
+    </div>
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h3>Prefer a Faster Option?</h3>
+      <p><strong>Call or text us directly.</strong> Many quotes can be handled without an on-site visit.</p>
+
+      <p>
+        <strong>Phone:</strong><br>
+        <a href="tel:2065711092">(206) 571-1092</a>
+      </p>
+
+      <p>
+        <strong>Service Area:</strong><br>
+        Seattle · Kirkland · Eastside
+      </p>
+
+      <p>
+        Family-owned. No rotating crews. No upsells. Just honest work and clear communication.
+      </p>
+
+      <div class="contact-actions">
+        <a href="tel:2065711092" class="btn btn-secondary">Call Now</a>
+        <a href="sms:12065711092" class="btn btn-primary">Text Us</a>
+      </div>
+    </div>
+
   </div>
 </section>
-<body>
-
-<header class="quote-hero">
-  <a href="index.html" class="logo-home">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Home">
-  </a>
-  <h1>Schedule Your Free Estimate Today</h1>
-  <p>House cleaning, deep cleaning, move-outs, painting & power washing in Bellevue, Kirkland, Redmond & Eastside King County.</p>
-  <p class="trust-line">Licensed • Insured • Family-Owned • Eco-Friendly Options</p>
-</header>
-
-<main>
-  <!-- Work Samples Gallery -->
-  <section class="work-samples">
-    <h2>Our Recent Work</h2>
-    <div class="gallery-grid">
-      <img src="IMG_1402.jpeg" alt="Kitchen cleaning Bellevue">
-      <img src="IMG_1562.jpeg" alt="Move out cleaning Bellevue">
-      <img src="IMG_2552.jpeg" alt="Interior painting Bellevue">
-      <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Exterior house painting Eastside">
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <div class="testimonials">
-    <div class="testimonial">
-      <p>⭐⭐⭐⭐⭐ “Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”</p>
-      <p><strong>— J.S., Bellevue</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>⭐⭐⭐⭐⭐ “Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”</p>
-      <p><strong>— M.T., Kirkland</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>⭐⭐⭐⭐⭐ “Professional, reliable, and super friendly. Our exterior painting looks amazing!”</p>
-      <p><strong>— R.L., Redmond</strong></p>
-    </div>
-  </div>
-
-  <!-- Contact Form -->
-  <form action="https://formspree.io/f/xkowrqyq" method="POST">
-    <input type="hidden" name="_next" value="https://www.brushandbroomllp.com/thank-you">
-    <input type="hidden" name="_subject" value="New Quote Request – Brush & Broom LLP">
-    <input type="hidden" name="_captcha" value="false">
-
-    <label for="name">Full Name *</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="phone">Phone Number *</label>
-    <input type="tel" id="phone" name="phone" required>
-
-    <label for="service">Type of Service *</label>
-    <select id="service" name="service" required>
-      <option value="" disabled selected>Select a service</option>
-      <option value="House Cleaning">House Cleaning</option>
-      <option value="Deep Cleaning">Deep Cleaning</option>
-      <option value="Move-In / Move-Out">Move-In / Move-Out</option>
-      <option value="Interior Painting">Interior Painting</option>
-      <option value="Exterior Painting">Exterior Painting</option>
-      <option value="Power Washing">Power Washing</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address">
-
-    <label for="details">Details / Special Requests</label>
-    <textarea id="details" name="details" rows="5"></textarea>
-
-    <button type="submit">Request Your Free Quote</button>
-  </form>
-
-  <!-- Alternative Contact -->
-  <div class="contact-methods">
-    <p>Prefer to talk directly?</p>
-    <p>Phone: <a href="tel:2065711092">(206) 571-1092</a></p>
-    <p>Email: <a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a></p>
-  </div>
-</main>
 
 <footer>
-  <p>© Brush & Broom LLP — Serving Bellevue, Kirkland, Redmond & Eastside King County</p>
+  © 2026 Brush & Broom LLP · Seattle, Kirkland & Eastside
 </footer>
+
+<a href="sms:12065711092" class="floating-text-btn">Text Us</a>
+
+<script>
+const header = document.getElementById("site-header");
+const toggle = document.querySelector(".nav-toggle");
+toggle.addEventListener("click",()=>header.classList.toggle("open"));
+</script>
 
 </body>
 </html>
