@@ -1,280 +1,804 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>interior-exterior-house-painting-bellevue-seattle.html</title>
-<meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Seattle, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior & Exterior House Painting | Bellevue, Seattle & Eastside</title>
+  <meta name="description" content="Brush & Broom LLP provides interior and exterior house painting in Seattle, Bellevue, Kirkland & the Eastside. Husband-and-wife team, clean lines, clear communication, and honest pricing." />
+  <link rel="canonical" href="https://www.brushandbroomllp.com/interior-exterior-house-painting-bellevue-seattle.html" />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #002244;
+      --green: #69be28;
+      --gray: #6b7280;
+      --gray-light: #9ca3af;
+      --bg-light: #f5f7fb;
+      --white: #ffffff;
+      --max-width: 1120px;
+      --radius-md: 16px;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
 
-<style>
-:root{
-  --navy:#002244;
-  --navy-dark:#001a33;
-  --green:#69be28;
-  --green-dark:#5aa81f;
-  --gray:#6b7280;
-  --gray-light:#9ca3af;
-  --white:#fff;
-  --bg-light:#f8fafc;
-  --radius-sm:6px;
-  --radius-md:14px;
-  --radius-lg:20px;
-  --shadow-sm:0 6px 15px rgba(0,0,0,.06);
-  --shadow-md:0 10px 25px rgba(0,0,0,.10);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Roboto',sans-serif;background:var(--bg-light);color:var(--navy);line-height:1.7;scroll-behavior:smooth}
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: #111827;
+      line-height: 1.7;
+    }
 
-/* BUTTONS */
-.btn{padding:14px 28px;border-radius:var(--radius-sm);font-weight:700;transition:.2s;text-align:center;display:inline-block}
-.btn-primary{background:var(--green);color:#fff}
-.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
-.btn-secondary{border:2px solid var(--green);color:var(--green)}
-.btn-secondary:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* HEADER */
-#site-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:9999;
-  transition:.35s;
-  padding:18px 0;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-body.home #site-header{
-  background:transparent;
-}
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top left, rgba(105, 190, 40, 0.12), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(0, 34, 68, 0.18), transparent 55%);
+    }
 
-body:not(.home) #site-header{
-  background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-  url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/220px no-repeat;
-}
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
-#site-header.scrolled{
-  background:rgba(255,255,255,.96);
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
-}
+    /* Header (match homepage) */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
 
-.header-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
 
-.logo img{height:46px;transition:.3s}
-#site-header.scrolled .logo img{height:38px;opacity:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.15))}
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-body.home .logo img{opacity:1}
-body:not(.home) .logo img{opacity:.85}
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
 
-/* NAV */
-.desktop-nav{display:flex;gap:22px;font-weight:500}
-.nav-toggle{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer}
-.nav-toggle span{width:26px;height:3px;background:var(--navy);border-radius:3px}
-.mobile-nav{display:none;flex-direction:column;background:#fff;padding:20px}
-#site-header.open .mobile-nav{display:flex}
-@media(max-width:900px){.desktop-nav{display:none}.nav-toggle{display:flex}}
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
 
-/* HERO */
-.hero{
-  margin-top:90px;
-  background:linear-gradient(rgba(0,34,68,.9),rgba(0,34,68,.9)),
-  url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
-  color:#fff;
-  text-align:center;
-  padding:110px 20px;
-}
-.hero-logo{
-  width:180px;
-  background:#fff;
-  padding:14px;
-  border-radius:var(--radius-lg);
-  margin:0 auto 24px;
-  box-shadow:var(--shadow-md);
-}
-.cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
 
-/* SECTIONS */
-section{max-width:1200px;margin:auto;padding:90px 20px}
-.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
-.before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
-.before-after img{width:100%;height:340px;object-fit:cover}
-.ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
 
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.service-card{background:#fff;padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform .25s ease}
-.service-card:hover{transform:translateY(-6px)}
-.service-card h3{color:var(--green);margin-bottom:16px}
-.service-card ul{padding-left:18px;margin-bottom:24px}
-.service-card li{margin-bottom:8px}
-.bonus{background:#f0fdf4;border-left:4px solid var(--green);padding:12px 16px;border-radius:var(--radius-sm);font-weight:500;margin-bottom:18px}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
 
-.about{max-width:850px;margin:auto;text-align:center}
-.reviews{max-width:900px;margin:auto;display:grid;gap:22px}
-.review{background:#fff;padding:26px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);font-style:italic}
-.review strong{display:block;margin-top:10px;font-style:normal;color:var(--navy)}
+    .nav-links a {
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 2px;
+    }
 
-.final-cta{background:var(--navy);color:#fff;text-align:center;padding:95px 20px}
-.final-cta p{color:#d1d5db;margin-bottom:30px;font-size:1.05rem}
+    .nav-links a:hover {
+      color: var(--navy);
+    }
 
-/* FOOTER */
-footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px;font-size:.85rem}
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width 0.2s ease-out;
+    }
 
-/* FLOATING TEXT BUTTON */
-.floating-text-btn{
-  position:fixed;
-  bottom:18px;
-  right:18px;
-  background:var(--green);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:999px;
-  font-weight:700;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-  z-index:9999;
-  transition:.3s;
-}
-.floating-text-btn:hover{transform:translateY(-2px);background:var(--green-dark)}
-@media(min-width:900px){.floating-text-btn{display:none}}
-@media(max-width:768px){.before-after img{height:260px}}
-</style>
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .phone-link {
+      font-size: 0.85rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .phone-link span {
+      color: var(--green);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green), #8fd94a);
+      color: var(--navy);
+      box-shadow: 0 8px 18px rgba(39, 174, 96, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.96);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(39, 174, 96, 0.38);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border-color: rgba(15, 23, 42, 0.12);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: var(--navy);
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      margin: 4px 0;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .nav-menu-open .nav-links,
+      .nav-menu-open .nav-cta {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 12px 16px 16px;
+        background: rgba(255, 255, 255, 0.97);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+      .nav-menu-open .nav-links {
+        align-items: flex-start;
+      }
+      .nav-menu-open .nav-cta {
+        align-items: flex-start;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      color: var(--gray);
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .hero-lead {
+      font-size: 0.98rem;
+      color: var(--gray);
+      max-width: 36rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      font-size: 0.9rem;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 18px 18px 14px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+    }
+
+    .hero-card-tag {
+      font-size: 0.76rem;
+      color: var(--green);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      margin-top: 6px;
+    }
+
+    .hero-card-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Sections */
+    .section {
+      padding: 30px 0;
+    }
+
+    .section-alt {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 620px;
+    }
+
+    /* Interior / exterior cards */
+    .paint-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 18px;
+    }
+
+    .paint-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 14px 16px 12px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .paint-card h3 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .paint-card ul {
+      margin-top: 6px;
+      padding-left: 16px;
+    }
+
+    .paint-card li {
+      margin-bottom: 4px;
+    }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .process-step {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 12px 14px 10px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.84rem;
+      color: var(--gray);
+    }
+
+    .process-step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(105, 190, 40, 0.15);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .process-step-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    /* Benefits strip */
+    .benefits-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 16px;
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .benefit-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    /* Areas */
+    .areas-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .areas-list {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    .areas-chip {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .cta-text {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 18px 0 24px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      background: rgba(255, 255, 255, 0.96);
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a {
+      color: var(--gray);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .paint-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .process-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
-<body class="home">
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" id="mainNav">
+          <div class="nav-left">
+            <a href="index.html" aria-label="Brush & Broom LLP home">
+              <img src="logo.png" alt="Brush & Broom LLP logo" class="logo-img" />
+            </a>
+            <div class="brand-text">
+              <span class="brand-name">Brush &amp; Broom LLP</span>
+              <span class="brand-tagline">We clean it. We paint it. You relax.</span>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
+            <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a href="tel:12065711092" class="phone-link">
+              Call us: <span>(206) 571-1092</span>
+            </a>
+            <a href="contact.html" class="btn btn-primary">Request a free quote</a>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('nav-menu-open');">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-<header id="site-header">
-  <div class="header-inner">
-    <a href="/index.html" class="logo" aria-label="Go to homepage">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
-    </a>
-    <nav class="desktop-nav">
-      <a href="index.html">Home</a>
-      <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
-      <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Interior &amp; exterior house painting in Seattle, Bellevue &amp; the Eastside
+              </div>
+              <h1>Fresh paint that makes your home feel new again.</h1>
+              <p class="hero-lead">
+                We help homeowners in Seattle, Kirkland, Bellevue, and the Eastside refresh their spaces with clean lines, thoughtful prep, and colors that actually fit their life—not just a trend.
+              </p>
+              <p class="hero-highlight">
+                As a husband-and-wife team, we take on a limited number of painting projects at a time so we can give each home the attention it deserves—from the first tape line to the final walkthrough.
+              </p>
+              <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Schedule a painting quote</a>
+                <a href="tel:12065711092" class="btn btn-outline">Talk through your project</a>
+              </div>
+              <p class="hero-note">
+                We’ll walk your space, discuss colors and goals, and give you a clear written estimate—no vague ranges or surprise add-ons.
+              </p>
+            </div>
+
+            <aside class="hero-card">
+              <div class="hero-card-tag">Good to know</div>
+              <div class="hero-card-title">What you get with Brush &amp; Broom painting</div>
+              <ul class="hero-card-list">
+                <li>• Interior &amp; exterior painting for houses, condos, and rentals.</li>
+                <li>• Careful prep: protection, patching, sanding, and caulking.</li>
+                <li>• Respectful, no-drama experience from a family-run team.</li>
+                <li>• Honest pricing and realistic timelines.</li>
+              </ul>
+              <p style="margin-top:10px;">
+                We also offer optional add-on cleaning so your home feels fresh when the last wall is dry.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interior & Exterior -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">What we paint</div>
+            <h2 class="section-title">Interior &amp; exterior painting built for Pacific Northwest homes</h2>
+            <p class="section-subtitle">
+              From lived-in living rooms to weather-beaten siding, we focus on durable finishes and careful prep that stand up to Seattle’s rain, kids, and everyday life.
+            </p>
+          </div>
+
+          <div class="paint-grid">
+            <article class="paint-card">
+              <h3>Interior house painting</h3>
+              <p>
+                For spaces you live in every day—living rooms, bedrooms, kitchens, halls—we focus on smooth walls, crisp edges, and colors that fit how you actually use each room.
+              </p>
+              <ul>
+                <li>Walls, ceilings, trim, doors, and baseboards.</li>
+                <li>Color updates before moving in or listing your home.</li>
+                <li>Touch-ups and full repaints after tenants move out.</li>
+                <li>Simple, modern color palettes that keep rooms feeling bright.</li>
+              </ul>
+            </article>
+
+            <article class="paint-card">
+              <h3>Exterior house painting</h3>
+              <p>
+                Your exterior is the first thing people see—and the first thing our weather attacks. We help protect and refresh siding, trim, and doors so your home looks sharp and stays protected.
+              </p>
+              <ul>
+                <li>Prep that includes washing, scraping, sanding, and caulking.</li>
+                <li>Quality paints suited to Pacific Northwest rain and seasons.</li>
+                <li>Exterior doors, fascia, trim, and small outbuildings.</li>
+                <li>Color refreshes for curb appeal and HOA-friendly updates.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Our painting process</div>
+            <h2 class="section-title">A simple, clear path from “we should repaint” to “I love this”</h2>
+            <p class="section-subtitle">
+              We’re big believers in communication and prep. Most paint jobs fail before the first coat goes on—not on our watch.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <div class="process-step-number">1</div>
+              <div class="process-step-title">Walk-through &amp; quote</div>
+              <p>
+                We visit your home, walk each area with you, talk colors and goals, and send a clear written estimate with everything spelled out.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">2</div>
+              <div class="process-step-title">Colors &amp; scheduling</div>
+              <p>
+                We confirm your colors, finishes, and timing so you know what’s happening when—and how long we’ll need in your space.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">3</div>
+              <div class="process-step-title">Prep &amp; protection</div>
+              <p>
+                We protect floors and furniture, repair minor wall issues, sand and caulk as needed, and make sure surfaces are ready for paint.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">4</div>
+              <div class="process-step-title">Painting &amp; cleanup</div>
+              <p>
+                We apply quality paint with care, keep you updated as we go, and clean up thoroughly so you’re not left with a mess.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why choose us for painting -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Why homeowners choose us</div>
+            <h2 class="section-title">You’re not just a “project number” to us</h2>
+            <p class="section-subtitle">
+              We’re the ones actually in your home, rolling paint and cleaning up—not a rotating crew you’ve never met.
+            </p>
+          </div>
+
+          <div class="benefits-row">
+            <div class="benefit-pill">Husband-and-wife team on every job</div>
+            <div class="benefit-pill">Clear, written estimates (no surprise fees)</div>
+            <div class="benefit-pill">Respectful of your schedule and routines</div>
+            <div class="benefit-pill">Optional deep cleaning with full repaints</div>
+            <div class="benefit-pill">Local to Seattle, Kirkland &amp; Bellevue</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" style="text-align:center;">
+            <div class="section-kicker">Where we paint</div>
+            <h2 class="section-title">Interior &amp; exterior painting in Seattle &amp; the Eastside</h2>
+          </div>
+
+          <div class="areas-wrap">
+            <p>
+              We focus on neighborhoods where we can show up reliably and give each project the time it needs. 
+              If you’re near these areas, there’s a good chance we can help—just ask.
+            </p>
+            <div class="areas-list">
+              <span class="areas-chip">Seattle</span>
+              <span class="areas-chip">Kirkland</span>
+              <span class="areas-chip">Bellevue</span>
+              <span class="areas-chip">Redmond</span>
+              <span class="areas-chip">Renton</span>
+              <span class="areas-chip">Eastside King County</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="cta-section">
+            <h2 class="cta-title">Ready to talk about your painting project?</h2>
+            <p class="cta-text">
+              Whether you’re repainting a single room or your whole home, we’ll help you choose a plan that makes sense for your budget, timeline, and life.
+            </p>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary">Request a painting quote</a>
+              <a href="tel:12065711092" class="btn btn-outline">Call (206) 571-1092</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-row">
+          <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
+          <div class="footer-links">
+            <span>Serving Seattle, Kirkland, Bellevue &amp; Eastside King County.</span>
+            <a href="mailto:Seabnbllp@icloud.com">Seabnbllp@icloud.com</a>
+            <a href="tel:12065711092">(206) 571-1092</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
-  <nav class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
-    <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-<section class="hero">
-  <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" class="hero-logo" alt="">
-  <h1>We Clean It. We Paint It. You Relax.</h1>
-  <p>Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
-  <div class="offer-badge">FREE Deep Cleaning with Any Full Repaint</div>
-  <div class="cta-buttons">
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-    <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
-  </div>
-</section>
-  <div class="header-inner">
-    <a href="index.html" class="logo-wrap">
-      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
-    </a>
-
-    <h1>Interior & Exterior Painting</h1>
-    <p class="section-lead">
-      Precision painting for homes across Bellevue, Seattle, and the Eastside.
-      Clean prep, durable finishes, and zero shortcuts.
-    </p>
-
-    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-    <a href="sms:+1XXXXXXXXXX" class="btn btn-outline">Send a Text</a>
-  </div>
-</header>
-
-<section>
-  <h2>Painting Services</h2>
-  <p class="section-lead">
-    From prep to final walkthrough, every detail is handled so your home looks better — and stays that way.
-  </p>
-
-  <div class="services">
-    <div class="service-card">
-      <h3>Interior Painting</h3>
-      <ul>
-        <li>Walls, ceilings, trim, doors, cabinets</li>
-        <li>Smooth, low-odor finishes</li>
-        <li>Careful masking and protection</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <h3>Exterior Painting</h3>
-      <ul>
-        <li>Siding, trim, fences, decks</li>
-        <li>Weather-resistant coatings</li>
-        <li>PNW-tested durability</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <h3>Prep & Repairs</h3>
-      <ul>
-        <li>Sanding, patching, caulking</li>
-        <li>Problem areas addressed first</li>
-      </ul>
-    </div>
-
-    <div class="service-card">
-      <h3>Repaints & Refreshes</h3>
-      <ul>
-        <li>Move-in / move-out painting</li>
-        <li>Rental and resale prep</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Why Brush & Broom</h2>
-  <div class="about">
-    <p><strong>Prep-first mindset.</strong> We fix what others paint over.</p>
-    <p><strong>Clean job sites.</strong> Daily cleanup and respect for your space.</p>
-    <p><strong>Straightforward pricing.</strong> No games, no surprise add-ons.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Recent Work</h2>
-  <div class="gallery">
-    <img src="IMG_2552.jpeg" alt="Interior painting project">
-    <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Exterior repaint">
-    <img src="Grey and Beige Minimalist Collage Before & After Fashion Style YouTube Thumbnail.png" alt="Detail painting">
-    <img src="Side by side before and after.png" alt="Home transformation">
-  </div>
-</section>
-
-<section class="final-cta">
-  <h2>Ready to Upgrade Your Space?</h2>
-  <p>Single rooms or full repaints — done clean, done right.</p>
-  <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
-</section>
-
-<footer>
-  © 2026 Brush & Broom LLP · Seattle, Bellevue & the Eastside
-</footer>
-
+  <!-- Tiny nav toggle script -->
+  <script>
+    // matches homepage behavior if you want to expand it later
+  </script>
 </body>
 </html>
