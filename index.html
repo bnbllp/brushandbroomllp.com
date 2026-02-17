@@ -91,6 +91,126 @@ a{text-decoration:none;color:inherit}
 @media(max-width:900px){.desktop-nav{display:none}.nav-toggle{display:flex}}
 
 /* HERO SPLIT */
+  <section class="hero-split" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(rgba(0,34,68,0.9), rgba(0,34,68,0.9)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;color:#fff;padding:80px 20px;">
+  
+  <!-- Left Column -->
+  <div class="hero-left" style="flex:1;min-width:320px;max-width:500px;padding:20px;">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:0 10px 25px rgba(0,0,0,.25);">
+    <h1 style="font-size:2.2rem;margin-bottom:12px;">We Clean It. We Paint It. You Relax.</h1>
+    <p style="font-size:1.1rem;margin-bottom:20px;">Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
+    <div class="cta-buttons" style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+      <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
+    </div>
+  </div>
+
+  <!-- Right Column: Quote Form -->
+  <div class="hero-right" style="flex:1;min-width:320px;max-width:450px;padding:20px;background:#fff;color:#002244;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.25);">
+    <h2 style="text-align:center;color:#002244;margin-bottom:24px;">📋 Get Your Instant Quote</h2>
+    <!-- Embed the same quote form HTML we created -->
+    <div id="instant-quote-form">
+      <!-- Step 1: Service Selection -->
+      <div class="form-step">
+        <label><input type="radio" name="service-hero" value="cleaning"> 🧹 Cleaning</label><br>
+        <label><input type="radio" name="service-hero" value="painting"> 🎨 Painting</label>
+      </div>
+
+      <!-- Step 2: Packages -->
+      <div class="form-step" id="packages-step-hero" style="margin-top:16px; display:none;">
+        <select id="package-select-hero" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;font-size:1rem;">
+          <option value="" selected disabled>Select a package</option>
+        </select>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="form-step" id="addons-step-hero" style="margin-top:16px;display:none;">
+        <label><input type="checkbox" class="addon-hero" data-price-min="40" data-price-max="60"> Inside Oven (+$40–$60)</label><br>
+        <label><input type="checkbox" class="addon-hero" data-price-min="40" data-price-max="60"> Inside Fridge (+$40–$60)</label><br>
+        <label><input type="checkbox" class="addon-hero" data-price-min="60" data-price-max="120"> Inside Cabinets (+$60–$120)</label><br>
+        <label><input type="checkbox" class="addon-hero" data-price-min="60" data-price-max="60"> Interior Windows (+$60)</label>
+      </div>
+
+      <!-- Estimate -->
+      <div class="form-step" id="estimate-hero" style="margin-top:16px;display:none;">
+        <p>Estimated Total Range: <span id="total-range-hero" style="font-weight:bold;">$0</span></p>
+      </div>
+
+      <!-- Submit -->
+      <div style="margin-top:16px;text-align:center;">
+        <button id="request-quote-hero" class="btn btn-primary">📧 Request Quote</button>
+        <button id="clear-form-hero" class="btn btn-secondary">🔄 Clear Form</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+const serviceRadiosHero = document.querySelectorAll('input[name="service-hero"]');
+const packagesStepHero = document.getElementById('packages-step-hero');
+const addonsStepHero = document.getElementById('addons-step-hero');
+const estimateStepHero = document.getElementById('estimate-hero');
+const packageSelectHero = document.getElementById('package-select-hero');
+const totalRangeHero = document.getElementById('total-range-hero');
+const addonsHero = document.querySelectorAll('.addon-hero');
+
+const cleaningPackages = [
+  {name:'Standard Recurring - Studio / 1 Bed', min:150, max:190},
+  {name:'Standard Recurring - 2 Bedroom', min:180, max:230},
+  {name:'Standard Recurring - 3 Bedroom', min:210, max:280},
+  {name:'Standard Recurring - 4+ Bedroom', min:260, max:340},
+  {name:'Move-Out / Key-Ready - Up to 700 sq ft', min:240, max:320},
+  {name:'Move-Out / Deposit Saver - 700–1,300 sq ft', min:320, max:480},
+  {name:'Move-Out / Full Turnover - 1,300–2,000 sq ft', min:420, max:650},
+  {name:'Move-Out / Top-to-Bottom - 2,000–3,000+ sq ft', min:600, max:900}
+];
+
+serviceRadiosHero.forEach(radio=>{
+  radio.addEventListener('change', e=>{
+    packagesStepHero.style.display='block';
+    addonsStepHero.style.display='block';
+    estimateStepHero.style.display='block';
+    packageSelectHero.innerHTML = '<option value="" selected disabled>Select a package</option>';
+    if(e.target.value==='cleaning'){
+      cleaningPackages.forEach(p=>{
+        let opt = document.createElement('option');
+        opt.value=`${p.min}-${p.max}`;
+        opt.textContent=`${p.name} ($${p.min}–$${p.max})`;
+        packageSelectHero.appendChild(opt);
+      });
+    } else {
+      let paintingOpt = document.createElement('option');
+      paintingOpt.value='500-1200';
+      paintingOpt.textContent='Standard Painting Package ($500–$1,200)';
+      packageSelectHero.appendChild(paintingOpt);
+    }
+    updateTotalHero();
+  });
+});
+
+packageSelectHero.addEventListener('change',updateTotalHero);
+addonsHero.forEach(a=>a.addEventListener('change',updateTotalHero));
+
+function updateTotalHero(){
+  let [min=0,max=0] = packageSelectHero.value? packageSelectHero.value.split('-').map(Number):[0,0];
+  addonsHero.forEach(a=>{
+    if(a.checked){
+      min+=Number(a.dataset.priceMin);
+      max+=Number(a.dataset.priceMax);
+    }
+  });
+  totalRangeHero.textContent = `$${min} – $${max}`;
+}
+
+document.getElementById('clear-form-hero').addEventListener('click',()=>{
+  serviceRadiosHero.forEach(r=>r.checked=false);
+  packageSelectHero.innerHTML = '';
+  addonsHero.forEach(a=>a.checked=false);
+  totalRangeHero.textContent='$0';
+  packagesStepHero.style.display='none';
+  addonsStepHero.style.display='none';
+  estimateStepHero.style.display='none';
+});
+</script>
 .hero-split{
   display:flex;
   flex-wrap:wrap;
