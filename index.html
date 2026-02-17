@@ -6,10 +6,10 @@
 <title>Brush & Broom LLP | Cleaning & Painting in Seattle & Eastside</title>
 <meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Seattle, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint.">
 
-<!-- Fonts -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -49,31 +49,40 @@ a{text-decoration:none;color:inherit}
   z-index:9999;
   transition:.35s;
   padding:18px 0;
-  background:var(--white);
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95));
+  display:flex;
+  justify-content:center;
 }
 .header-inner{
   max-width:1200px;
-  margin:auto;
-  padding:16px 24px;
+  width:100%;
   display:flex;
+  align-items:center;
   justify-content:space-between;
-  align-items:center;
-}
-.logo-container{
-  display:flex;
-  align-items:center;
+  padding:0 20px;
   gap:12px;
 }
 .logo img{height:46px;transition:.3s}
-.brand-text{
-  font-family:'Playfair Display', serif;
-  font-weight:700;
-  font-size:1.5rem;
-  color:var(--green);
-}
+#site-header.scrolled .logo img{height:38px;opacity:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.15))}
 
-/* NAV */
+/* Brand Name in Paint Font */
+.brand-name{
+  font-family:'Permanent Marker',cursive;
+  font-size:1.8rem;
+  color:var(--green);
+  margin-left:12px;
+  white-space:nowrap;
+  position:relative;
+  top:-4px;
+  transition:transform 0.3s ease;
+}
+#site-header.scrolled .brand-name{
+  top:0;
+  transform:scale(0.95);
+}
+@media(max-width:900px){.brand-name{display:none}}
+
+/* NAVIGATION */
 .desktop-nav{display:flex;gap:22px;font-weight:500}
 .nav-toggle{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer}
 .nav-toggle span{width:26px;height:3px;background:var(--navy);border-radius:3px}
@@ -81,79 +90,53 @@ a{text-decoration:none;color:inherit}
 #site-header.open .mobile-nav{display:flex}
 @media(max-width:900px){.desktop-nav{display:none}.nav-toggle{display:flex}}
 
-/* HERO */
-.hero{
-  margin-top:90px;
-  background:linear-gradient(rgba(0,34,68,.9),rgba(0,34,68,.9)),
-  url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
-  color:#fff;
-  text-align:center;
-  padding:100px 20px;
-}
-.hero-container{
+/* HERO SPLIT */
+.hero-split{
   display:flex;
-  flex-direction:column;
+  flex-wrap:wrap;
   align-items:center;
-  max-width:1100px;
-  margin:auto;
-}
-.hero h1{font-size:2.5rem;margin-bottom:16px;font-weight:700}
-.hero p{font-size:1.2rem;margin-bottom:24px}
-.hero-form{
-  background:rgba(255,255,255,.95);
-  padding:24px;
-  border-radius:var(--radius-md);
-  box-shadow:var(--shadow-md);
-  width:100%;
-  max-width:600px;
-  text-align:left;
-  color:var(--navy);
-}
-.hero-form h3{margin-bottom:16px}
-.hero-form label{display:block;margin-top:12px;font-weight:500}
-.hero-form select,input,button{
-  width:100%;
-  padding:10px 12px;
-  margin-top:6px;
-  border-radius:var(--radius-sm);
-  border:1px solid #ccc;
-  font-size:1rem;
-}
-.hero-form button{
-  margin-top:16px;
-  background:var(--green);
+  justify-content:center;
+  background:linear-gradient(rgba(0,34,68,0.9), rgba(0,34,68,0.9)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
   color:#fff;
-  font-weight:700;
-  cursor:pointer;
+  padding:80px 20px;
 }
-.hero-form button:hover{background:var(--green-dark)}
+.hero-left{flex:1;min-width:320px;max-width:500px;padding:20px;text-align:left}
+.hero-left h1{font-size:2.2rem;margin-bottom:12px}
+.hero-left p{font-size:1.1rem;margin-bottom:20px}
+.hero-right{flex:1;min-width:320px;max-width:450px;padding:20px;background:#fff;color:var(--navy);border-radius:16px;box-shadow:var(--shadow-md)}
 
-/* SECTIONS */
-section{max-width:1200px;margin:auto;padding:80px 20px}
+/* Before/After */
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
+.before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
+.before-after img{width:100%;height:340px;object-fit:cover}
+.ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
+
+/* Services */
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
 .service-card{background:#fff;padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform .25s ease}
 .service-card:hover{transform:translateY(-6px)}
 .service-card h3{color:var(--green);margin-bottom:16px}
 .service-card ul{padding-left:18px;margin-bottom:24px}
 .service-card li{margin-bottom:8px}
-.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
-.before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
-.before-after img{width:100%;height:340px;object-fit:cover}
-.ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
+.bonus{background:#f0fdf4;border-left:4px solid var(--green);padding:12px 16px;border-radius:var(--radius-sm);font-weight:500;margin-bottom:18px}
+
+/* About */
+.about{max-width:850px;margin:auto;text-align:center}
+
+/* Reviews Slider */
+#reviews-slider{max-width:900px;margin:0 auto;display:grid;gap:22px;padding:2rem 1rem}
+.slide{flex:0 0 100%;padding:1rem}
+blockquote{font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem}
+blockquote + p{font-weight:bold;margin-top:0.5rem}
+
+/* Final CTA */
 .final-cta{background:var(--navy);color:#fff;text-align:center;padding:95px 20px}
 .final-cta p{color:#d1d5db;margin-bottom:30px;font-size:1.05rem}
 
-/* FOOTER */
+/* Footer */
 footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px;font-size:.85rem}
 
-/* REVIEWS SLIDER */
-.slider-container{position:relative;overflow:hidden}
-.slides{display:flex;transition:transform 0.5s ease-in-out}
-.slide{flex:0 0 100%;padding:1rem;background:#fff;margin-bottom:12px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}
-.slide blockquote{font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem}
-.slide p{font-weight:bold;margin-top:0.5rem}
-
-/* FLOATING TEXT BUTTON */
+/* Floating Text Button */
 .floating-text-btn{
   position:fixed;
   bottom:18px;
@@ -168,18 +151,14 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   transition:.3s;
 }
 .floating-text-btn:hover{transform:translateY(-2px);background:var(--green-dark)}
-@media(max-width:768px){.before-after img{height:260px}}
 </style>
-
 </head>
-<body>
+<body class="home">
 
 <header id="site-header">
   <div class="header-inner">
-    <div class="logo-container">
-      <a href="/index.html" class="logo"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo"></a>
-      <span class="brand-text">Brush & Broom LLP</span>
-    </div>
+    <a href="/index.html" class="logo"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo"></a>
+    <span class="brand-name">Brush & Broom</span>
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
@@ -198,69 +177,42 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-container">
+<!-- HERO SPLIT -->
+<section class="hero-split">
+  <div class="hero-left">
+    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:var(--shadow-md);">
     <h1>We Clean It. We Paint It. You Relax.</h1>
     <p>Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
-    
-    <!-- Quote Form (Formspree) -->
-    <form class="hero-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <h3>Request a Quote</h3>
-      <label for="service">What Service Are You Interested In?</label>
-      <select id="service" name="service" required>
-        <option value="" disabled selected>Select Service</option>
-        <option value="Cleaning">Cleaning</option>
-        <option value="Painting">Painting</option>
-      </select>
-
-      <label for="room">Room / Area</label>
-      <select id="room" name="room" required>
-        <option value="" disabled selected>Select Room Type</option>
-        <option value="Kitchen">Kitchen (Walls, Ceiling, Cabinets, Trim)</option>
-        <option value="Bedroom">Bedroom (Walls, Ceiling, Trim)</option>
-        <option value="Bathroom">Bathroom (Walls, Ceiling, Trim, Vanity/Cabinets)</option>
-        <option value="Accent Wall">Accent Wall / Feature Painting</option>
-        <option value="DoorsWindowsTrim">Doors, Windows, or Trim</option>
-        <option value="FullInteriorRepaint">Complete Interior Repaint (FREE Cleaning)</option>
-      </select>
-
-      <label for="addons">Add-Ons / Quantity (Optional)</label>
-      <input type="text" id="addons" name="addons" placeholder="E.g., 3 doors, 2 windows, fridge cleaning">
-
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="_replyto" required>
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <label for="city">City / Area</label>
-      <select id="city" name="city" required>
-        <option value="" disabled selected>Select your area</option>
-        <option value="Seattle">Seattle</option>
-        <option value="Bellevue">Bellevue</option>
-        <option value="Kirkland">Kirkland</option>
-        <option value="Tacoma">Tacoma</option>
-        <option value="Other King County">Other King County</option>
-      </select>
-
-      <label for="notes">Additional Notes or Questions</label>
-      <input type="text" id="notes" name="notes">
-
-      <button type="submit">Request Quote</button>
-    </form>
+    <div class="cta-buttons" style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+      <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">📋 Get Your Instant Quote</h2>
+    <!-- INSERT FULL INTERACTIVE QUOTE FORM HERE -->
   </div>
 </section>
 
-<!-- SERVICES -->
+<!-- Before/After -->
+<section class="before-after">
+  <div class="before">
+    <img src="Colorful Photos Plain Collage Instagram Post.png" alt="Cleaning Before">
+    <div class="ba-label">Cleaning</div>
+  </div>
+  <div class="after">
+    <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Painting After">
+    <div class="ba-label">Painting</div>
+  </div>
+</section>
+
+<!-- Services -->
 <section>
-  <h2>Our Services</h2>
+  <h2>Services Built for Real Life</h2>
   <div class="services">
     <div class="service-card">
       <h3>Professional Cleaning</h3>
+      <div class="bonus">FREE with any full interior or exterior repaint</div>
       <ul>
         <li>Deep cleaning & resets</li>
         <li>Move-in / move-out</li>
@@ -273,79 +225,86 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
       <h3>Painting & Repaints</h3>
       <ul>
         <li>Interior & exterior painting</li>
-        <li>Accent walls & feature painting</li>
-        <li>Doors, windows & trim</li>
         <li>PNW-weather durability</li>
+        <li>Behr paint standard</li>
+        <li>Perfect for listings & refreshes</li>
       </ul>
       <a href="interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-secondary">Explore Painting</a>
     </div>
   </div>
 </section>
 
-<!-- BEFORE & AFTER -->
-<section class="before-after">
-  <div class="before">
-    <img src="Colorful Photos Plain Collage Instagram Post.png" alt="Cleaning Before">
-    <div class="ba-label">Cleaning</div>
-  </div>
-  <div class="after">
-    <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Painting After">
-    <div class="ba-label">Painting</div>
+<!-- About -->
+<section>
+  <h2>Meet the People Behind the Work</h2>
+  <div class="about">
+    <p>Brush & Broom LLP is run by a husband-and-wife team who understand life gets messy — kids, pets, moves, and work. <a href="about.html" style="color: var(--green); text-decoration:underline;">Learn more about us</a>.</p>
+    <p>No rotating crews. No strangers in your home. Just the same reliable faces who show up on time, communicate clearly, and take pride in doing things right.</p>
   </div>
 </section>
 
-<!-- REVIEWS -->
+<!-- Reviews Slider -->
 <section id="reviews-slider">
-  <h2 style="text-align:center;margin-bottom:1rem;">What Your Neighbors Are Saying ⭐️</h2>
-  <div class="slider-container">
-    <div class="slides">
-      <div class="slide"><blockquote>“Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”</blockquote><p>— J.S., Bellevue ⭐⭐⭐⭐⭐</p></div>
-      <div class="slide"><blockquote>“Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”</blockquote><p>— M.T., Kirkland ⭐⭐⭐⭐⭐</p></div>
-      <div class="slide"><blockquote>“Professional, reliable, and super friendly. Our exterior painting looks amazing!”</blockquote><p>— R.L., Redmond ⭐⭐⭐⭐⭐</p></div>
-      <div class="slide"><blockquote>“Same day booking, above and beyond service. I couldn’t believe how easy it was.”</blockquote><p>— Nextdoor Neighbor ⭐⭐⭐⭐⭐</p></div>
-      <div class="slide"><blockquote>“Friendly, professional, and even tackled a few extra things they didn’t have to.”</blockquote><p>— D.T., Nextdoor ⭐⭐⭐⭐⭐</p></div>
+  <h2 style="text-align:center;font-size:2rem;margin-bottom:1rem;">What Your Neighbors Are Saying ⭐️</h2>
+  <div class="slider-container" style="position:relative;overflow:hidden;">
+    <div class="slides" style="display:flex;transition:transform 0.5s ease-in-out;">
+      <div class="slide">
+        <blockquote>“Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”</blockquote>
+        <p>— J.S., Bellevue ⭐⭐⭐⭐⭐</p>
+      </div>
+      <div class="slide">
+        <blockquote>“Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”</blockquote>
+        <p>— M.T., Kirkland ⭐⭐⭐⭐⭐</p>
+      </div>
+      <div class="slide">
+        <blockquote>“Professional, reliable, and super friendly. Our exterior painting looks amazing!”</blockquote>
+        <p>— R.L., Redmond ⭐⭐⭐⭐⭐</p>
+      </div>
     </div>
     <button id="prevSlide" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);background:none;border:none;font-size:2rem;cursor:pointer;">‹</button>
     <button id="nextSlide" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;font-size:2rem;cursor:pointer;">›</button>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- Final CTA -->
 <section class="final-cta">
-  <h2>One Crew. One Quote. A Refreshed Home.</h2>
+  <h2>One crew. One quote. A refreshed home.</h2>
   <p>Book a full repaint and we’ll handle the deep cleaning — on us.</p>
   <div class="cta-buttons">
     <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
     <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
   </div>
+  <a href="areas-we-serve.html" class="btn btn-secondary" style="margin-top:20px;">What Areas Do We Serve?</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 Brush & Broom LLP · Seattle, Kirkland & Eastside
 </footer>
 
-<!-- FLOATING TEXT BUTTON -->
 <a href="sms:12065711092" class="floating-text-btn" aria-label="Text Brush & Broom LLP">Text Us</a>
 
 <script>
 const header = document.getElementById("site-header");
 const toggle = document.querySelector(".nav-toggle");
 toggle.addEventListener("click",()=>{header.classList.toggle("open")});
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>40){header.classList.add("scrolled")}
+  else{header.classList.remove("scrolled")}
+});
 
-// Review Slider
+// Reviews slider
 const slides = document.querySelector("#reviews-slider .slides");
 const totalSlides = slides.children.length;
 let index = 0;
-document.getElementById('nextSlide').addEventListener('click',()=>{
-  index=(index+1)%totalSlides;
-  slides.style.transform=`translateX(-${index*100}%)`;
+document.getElementById('nextSlide').addEventListener('click', () => {
+  index = (index + 1) % totalSlides;
+  slides.style.transform = `translateX(-${index * 100}%)`;
 });
-document.getElementById('prevSlide').addEventListener('click',()=>{
-  index=(index-1+totalSlides)%totalSlides;
-  slides.style.transform=`translateX(-${index*100}%)`;
+document.getElementById('prevSlide').addEventListener('click', () => {
+  index = (index - 1 + totalSlides) % totalSlides;
+  slides.style.transform = `translateX(-${index * 100}%)`;
 });
-setInterval(()=>{index=(index+1)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`;},5000);
+setInterval(() => { index = (index + 1) % totalSlides; slides.style.transform = `translateX(-${index * 100}%)`; }, 5000);
 </script>
 
 </body>
