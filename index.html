@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Brush & Broom LLP | Cleaning & Painting in Seattle & Eastside</title>
-<meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Seattle, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint.">
+<meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Seattle, Bellevue, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint.">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,157 +91,34 @@ a{text-decoration:none;color:inherit}
 @media(max-width:900px){.desktop-nav{display:none}.nav-toggle{display:flex}}
 
 /* HERO SPLIT */
-  <section class="hero-split" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(rgba(0,34,68,0.9), rgba(0,34,68,0.9)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;color:#fff;padding:80px 20px;">
-  
-  <!-- Left Column -->
-  <div class="hero-left" style="flex:1;min-width:320px;max-width:500px;padding:20px;">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:0 10px 25px rgba(0,0,0,.25);">
-    <h1 style="font-size:2.2rem;margin-bottom:12px;">We Clean It. We Paint It. You Relax.</h1>
-    <p style="font-size:1.1rem;margin-bottom:20px;">Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
-    <div class="cta-buttons" style="display:flex;gap:12px;flex-wrap:wrap;">
-      <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
-      <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
-    </div>
-  </div>
-
-  <!-- Right Column: Quote Form -->
-  <div class="hero-right" style="flex:1;min-width:320px;max-width:450px;padding:20px;background:#fff;color:#002244;border-radius:16px;box-shadow:0 10px 25px rgba(0,0,0,.25);">
-    <h2 style="text-align:center;color:#002244;margin-bottom:24px;">📋 Get Your Instant Quote</h2>
-    <!-- Embed the same quote form HTML we created -->
-    <div id="instant-quote-form">
-      <!-- Step 1: Service Selection -->
-      <div class="form-step">
-        <label><input type="radio" name="service-hero" value="cleaning"> 🧹 Cleaning</label><br>
-        <label><input type="radio" name="service-hero" value="painting"> 🎨 Painting</label>
-      </div>
-
-      <!-- Step 2: Packages -->
-      <div class="form-step" id="packages-step-hero" style="margin-top:16px; display:none;">
-        <select id="package-select-hero" style="width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;font-size:1rem;">
-          <option value="" selected disabled>Select a package</option>
-        </select>
-      </div>
-
-      <!-- Add-ons -->
-      <div class="form-step" id="addons-step-hero" style="margin-top:16px;display:none;">
-        <label><input type="checkbox" class="addon-hero" data-price-min="40" data-price-max="60"> Inside Oven (+$40–$60)</label><br>
-        <label><input type="checkbox" class="addon-hero" data-price-min="40" data-price-max="60"> Inside Fridge (+$40–$60)</label><br>
-        <label><input type="checkbox" class="addon-hero" data-price-min="60" data-price-max="120"> Inside Cabinets (+$60–$120)</label><br>
-        <label><input type="checkbox" class="addon-hero" data-price-min="60" data-price-max="60"> Interior Windows (+$60)</label>
-      </div>
-
-      <!-- Estimate -->
-      <div class="form-step" id="estimate-hero" style="margin-top:16px;display:none;">
-        <p>Estimated Total Range: <span id="total-range-hero" style="font-weight:bold;">$0</span></p>
-      </div>
-
-      <!-- Submit -->
-      <div style="margin-top:16px;text-align:center;">
-        <button id="request-quote-hero" class="btn btn-primary">📧 Request Quote</button>
-        <button id="clear-form-hero" class="btn btn-secondary">🔄 Clear Form</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-const serviceRadiosHero = document.querySelectorAll('input[name="service-hero"]');
-const packagesStepHero = document.getElementById('packages-step-hero');
-const addonsStepHero = document.getElementById('addons-step-hero');
-const estimateStepHero = document.getElementById('estimate-hero');
-const packageSelectHero = document.getElementById('package-select-hero');
-const totalRangeHero = document.getElementById('total-range-hero');
-const addonsHero = document.querySelectorAll('.addon-hero');
-
-const cleaningPackages = [
-  {name:'Standard Recurring - Studio / 1 Bed', min:150, max:190},
-  {name:'Standard Recurring - 2 Bedroom', min:180, max:230},
-  {name:'Standard Recurring - 3 Bedroom', min:210, max:280},
-  {name:'Standard Recurring - 4+ Bedroom', min:260, max:340},
-  {name:'Move-Out / Key-Ready - Up to 700 sq ft', min:240, max:320},
-  {name:'Move-Out / Deposit Saver - 700–1,300 sq ft', min:320, max:480},
-  {name:'Move-Out / Full Turnover - 1,300–2,000 sq ft', min:420, max:650},
-  {name:'Move-Out / Top-to-Bottom - 2,000–3,000+ sq ft', min:600, max:900}
-];
-
-serviceRadiosHero.forEach(radio=>{
-  radio.addEventListener('change', e=>{
-    packagesStepHero.style.display='block';
-    addonsStepHero.style.display='block';
-    estimateStepHero.style.display='block';
-    packageSelectHero.innerHTML = '<option value="" selected disabled>Select a package</option>';
-    if(e.target.value==='cleaning'){
-      cleaningPackages.forEach(p=>{
-        let opt = document.createElement('option');
-        opt.value=`${p.min}-${p.max}`;
-        opt.textContent=`${p.name} ($${p.min}–$${p.max})`;
-        packageSelectHero.appendChild(opt);
-      });
-    } else {
-      let paintingOpt = document.createElement('option');
-      paintingOpt.value='500-1200';
-      paintingOpt.textContent='Standard Painting Package ($500–$1,200)';
-      packageSelectHero.appendChild(paintingOpt);
-    }
-    updateTotalHero();
-  });
-});
-
-packageSelectHero.addEventListener('change',updateTotalHero);
-addonsHero.forEach(a=>a.addEventListener('change',updateTotalHero));
-
-function updateTotalHero(){
-  let [min=0,max=0] = packageSelectHero.value? packageSelectHero.value.split('-').map(Number):[0,0];
-  addonsHero.forEach(a=>{
-    if(a.checked){
-      min+=Number(a.dataset.priceMin);
-      max+=Number(a.dataset.priceMax);
-    }
-  });
-  totalRangeHero.textContent = `$${min} – $${max}`;
-}
-
-document.getElementById('clear-form-hero').addEventListener('click',()=>{
-  serviceRadiosHero.forEach(r=>r.checked=false);
-  packageSelectHero.innerHTML = '';
-  addonsHero.forEach(a=>a.checked=false);
-  totalRangeHero.textContent='$0';
-  packagesStepHero.style.display='none';
-  addonsStepHero.style.display='none';
-  estimateStepHero.style.display='none';
-});
-</script>
-.hero-split{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(rgba(0,34,68,0.9), rgba(0,34,68,0.9)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
-  color:#fff;
-  padding:80px 20px;
-}
+.hero-split{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;background:linear-gradient(rgba(0,34,68,0.85), rgba(0,34,68,0.85)), url('placeholder-hero.jpg') center/cover no-repeat;color:#fff;padding:100px 20px}
 .hero-left{flex:1;min-width:320px;max-width:500px;padding:20px;text-align:left}
-.hero-left h1{font-size:2.2rem;margin-bottom:12px}
+.hero-left h1{font-size:2.4rem;margin-bottom:12px}
 .hero-left p{font-size:1.1rem;margin-bottom:20px}
-.hero-right{flex:1;min-width:320px;max-width:450px;padding:20px;background:#fff;color:var(--navy);border-radius:16px;box-shadow:var(--shadow-md)}
+.hero-right{flex:1;min-width:320px;max-width:500px;padding:20px;background:#fff;color:var(--navy);border-radius:16px;box-shadow:var(--shadow-md)}
+
+/* FORM STEPS */
+.form-step{margin-bottom:16px}
+#instant-quote-form select,input[type=text],input[type=number],input[type=email]{width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;font-size:1rem;margin-top:6px}
 
 /* Before/After */
-.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:60px 0}
 .before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
 .before-after img{width:100%;height:340px;object-fit:cover}
 .ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
 
 /* Services */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-bottom:60px}
 .service-card{background:#fff;padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform .25s ease}
 .service-card:hover{transform:translateY(-6px)}
 .service-card h3{color:var(--green);margin-bottom:16px}
 .service-card ul{padding-left:18px;margin-bottom:24px}
 .service-card li{margin-bottom:8px}
-.bonus{background:#f0fdf4;border-left:4px solid var(--green);padding:12px 16px;border-radius:var(--radius-sm);font-weight:500;margin-bottom:18px}
 
-/* About */
-.about{max-width:850px;margin:auto;text-align:center}
+/* How It Works / Process */
+.process{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:center;margin-bottom:60px}
+.process-step{background:#fff;padding:24px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}
+.process-step h3{color:var(--green);margin-bottom:12px}
 
 /* Reviews Slider */
 #reviews-slider{max-width:900px;margin:0 auto;display:grid;gap:22px;padding:2rem 1rem}
@@ -257,19 +134,7 @@ blockquote + p{font-weight:bold;margin-top:0.5rem}
 footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;padding:26px;font-size:.85rem}
 
 /* Floating Text Button */
-.floating-text-btn{
-  position:fixed;
-  bottom:18px;
-  right:18px;
-  background:var(--green);
-  color:#fff;
-  padding:14px 22px;
-  border-radius:999px;
-  font-weight:700;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
-  z-index:9999;
-  transition:.3s;
-}
+.floating-text-btn{position:fixed;bottom:18px;right:18px;background:var(--green);color:#fff;padding:14px 22px;border-radius:999px;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:9999;transition:.3s}
 .floating-text-btn:hover{transform:translateY(-2px);background:var(--green-dark)}
 </style>
 </head>
@@ -277,7 +142,7 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
 
 <header id="site-header">
   <div class="header-inner">
-    <a href="/index.html" class="logo"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo"></a>
+    <a href="/index.html" class="logo"><img src="placeholder-logo.png" alt="Brush & Broom LLP Logo"></a>
     <span class="brand-name">Brush & Broom</span>
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
@@ -300,35 +165,66 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
 <!-- HERO SPLIT -->
 <section class="hero-split">
   <div class="hero-left">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:var(--shadow-md);">
+    <img src="placeholder-logo.png" alt="Brush & Broom Logo" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:var(--shadow-md);">
     <h1>We Clean It. We Paint It. You Relax.</h1>
     <p>Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
-    <div class="cta-buttons" style="display:flex;gap:12px;flex-wrap:wrap;">
+    <div class="cta-buttons">
       <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
       <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
     </div>
   </div>
+
+  <!-- Quote Form Right Column -->
   <div class="hero-right">
     <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">📋 Get Your Instant Quote</h2>
-    <!-- INSERT FULL INTERACTIVE QUOTE FORM HERE -->
+    <form id="instant-quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-step">
+        <label><input type="radio" name="service" value="cleaning" required> 🧹 Cleaning</label><br>
+        <label><input type="radio" name="service" value="painting"> 🎨 Painting</label>
+      </div>
+
+      <div class="form-step" id="package-step" style="display:none;">
+        <label>Select Room / Service:</label>
+        <select name="package" id="package-select" required>
+          <option value="" disabled selected>Select...</option>
+          <!-- Packages populated dynamically -->
+        </select>
+      </div>
+
+      <div class="form-step" id="details-step" style="display:none;">
+        <label>Number of Doors:</label>
+        <input type="number" name="doors" min="0" value="0">
+        <label>Number of Windows:</label>
+        <input type="number" name="windows" min="0" value="0">
+      </div>
+
+      <div class="form-step" id="estimate-step" style="margin-top:16px;display:none;">
+        <p>Estimated Total Range: <span id="total-range" style="font-weight:bold;">$0</span></p>
+      </div>
+
+      <div style="margin-top:16px;text-align:center;">
+        <button type="submit" class="btn btn-primary">📧 Request Quote</button>
+        <button type="button" id="clear-form" class="btn btn-secondary">🔄 Clear Form</button>
+      </div>
+    </form>
   </div>
 </section>
 
 <!-- Before/After -->
 <section class="before-after">
   <div class="before">
-    <img src="Colorful Photos Plain Collage Instagram Post.png" alt="Cleaning Before">
+    <img src="placeholder-before.jpg" alt="Cleaning Before">
     <div class="ba-label">Cleaning</div>
   </div>
   <div class="after">
-    <img src="Neutral Modern Before and After Progress Instagram Post.png" alt="Painting After">
+    <img src="placeholder-after.jpg" alt="Painting After">
     <div class="ba-label">Painting</div>
   </div>
 </section>
 
 <!-- Services -->
 <section>
-  <h2>Services Built for Real Life</h2>
+  <h2 style="text-align:center;margin-bottom:40px;">Services Built for Real Life</h2>
   <div class="services">
     <div class="service-card">
       <h3>Professional Cleaning</h3>
@@ -354,12 +250,19 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </div>
 </section>
 
-<!-- About -->
-<section>
-  <h2>Meet the People Behind the Work</h2>
-  <div class="about">
-    <p>Brush & Broom LLP is run by a husband-and-wife team who understand life gets messy — kids, pets, moves, and work. <a href="about.html" style="color: var(--green); text-decoration:underline;">Learn more about us</a>.</p>
-    <p>No rotating crews. No strangers in your home. Just the same reliable faces who show up on time, communicate clearly, and take pride in doing things right.</p>
+<!-- Process / How It Works -->
+<section class="process">
+  <div class="process-step">
+    <h3>1. Schedule</h3>
+    <p>Book online or call — we respond fast.</p>
+  </div>
+  <div class="process-step">
+    <h3>2. Service</h3>
+    <p>Same trusted crew shows up with all supplies.</p>
+  </div>
+  <div class="process-step">
+    <h3>3. Relax</h3>
+    <p>Enjoy your refreshed home — we handle the mess.</p>
   </div>
 </section>
 
@@ -394,7 +297,6 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
     <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
     <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
   </div>
-  <a href="areas-we-serve.html" class="btn btn-secondary" style="margin-top:20px;">What Areas Do We Serve?</a>
 </section>
 
 <footer>
@@ -404,28 +306,34 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
 <a href="sms:12065711092" class="floating-text-btn" aria-label="Text Brush & Broom LLP">Text Us</a>
 
 <script>
+// Header scroll
 const header = document.getElementById("site-header");
 const toggle = document.querySelector(".nav-toggle");
 toggle.addEventListener("click",()=>{header.classList.toggle("open")});
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>40){header.classList.add("scrolled")}
-  else{header.classList.remove("scrolled")}
-});
+window.addEventListener("scroll",()=>{window.scrollY>40?header.classList.add("scrolled"):header.classList.remove("scrolled")});
 
 // Reviews slider
 const slides = document.querySelector("#reviews-slider .slides");
 const totalSlides = slides.children.length;
 let index = 0;
-document.getElementById('nextSlide').addEventListener('click', () => {
-  index = (index + 1) % totalSlides;
-  slides.style.transform = `translateX(-${index * 100}%)`;
-});
-document.getElementById('prevSlide').addEventListener('click', () => {
-  index = (index - 1 + totalSlides) % totalSlides;
-  slides.style.transform = `translateX(-${index * 100}%)`;
-});
-setInterval(() => { index = (index + 1) % totalSlides; slides.style.transform = `translateX(-${index * 100}%)`; }, 5000);
-</script>
+document.getElementById('nextSlide').addEventListener('click',()=>{index=(index+1)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`});
+document.getElementById('prevSlide').addEventListener('click',()=>{index=(index-1+totalSlides)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`});
+setInterval(()=>{index=(index+1)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`},5000);
 
-</body>
-</html>
+// Quote Form Logic
+const serviceRadios = document.querySelectorAll('input[name="service"]');
+const packageStep = document.getElementById('package-step');
+const detailsStep = document.getElementById('details-step');
+const estimateStep = document.getElementById('estimate-step');
+const packageSelect = document.getElementById('package-select');
+const totalRange = document.getElementById('total-range');
+
+const cleaningPackages = [
+  {name:'Kitchen', min:150,max:250},
+  {name:'Bathroom', min:120,max:200},
+  {name:'Bedroom', min:100,max:180},
+  {name:'Living Room', min:130,max:220}
+];
+
+const paintingPackages = [
+  {name:'Interior
