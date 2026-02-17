@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brush & Broom LLP | Cleaning & Painting in Seattle & Eastside</title>
-<meta name="description" content="Brush & Broom LLP provides professional cleaning and painting services in Seattle, Kirkland, and the Eastside. Family-owned, honest work — FREE deep clean with any full repaint.">
+<title>Brush & Broom LLP | Seattle Painting & Cleaning Experts</title>
+<meta name="description" content="Brush & Broom LLP offers professional interior/exterior painting, cleaning, and power washing services in Seattle, Bellevue, Kirkland, and the Eastside. Family-owned, reliable, and honest.">
 
-<!-- Google Fonts -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -50,39 +50,21 @@ a{text-decoration:none;color:inherit}
   transition:.35s;
   padding:18px 0;
   background:linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95));
-  display:flex;
-  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
 }
+
 .header-inner{
   max-width:1200px;
-  width:100%;
+  margin:auto;
+  padding:16px 24px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding:0 20px;
-  gap:12px;
+  align-items:center;
 }
+
 .logo img{height:46px;transition:.3s}
-#site-header.scrolled .logo img{height:38px;opacity:1;filter:drop-shadow(0 2px 6px rgba(0,0,0,.15))}
 
-/* Brand Name in Paint Font */
-.brand-name{
-  font-family:'Permanent Marker',cursive;
-  font-size:1.8rem;
-  color:var(--green);
-  margin-left:12px;
-  white-space:nowrap;
-  position:relative;
-  top:-4px;
-  transition:transform 0.3s ease;
-}
-#site-header.scrolled .brand-name{
-  top:0;
-  transform:scale(0.95);
-}
-@media(max-width:900px){.brand-name{display:none}}
-
-/* NAVIGATION */
+/* NAV */
 .desktop-nav{display:flex;gap:22px;font-weight:500}
 .nav-toggle{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer}
 .nav-toggle span{width:26px;height:3px;background:var(--navy);border-radius:3px}
@@ -90,41 +72,67 @@ a{text-decoration:none;color:inherit}
 #site-header.open .mobile-nav{display:flex}
 @media(max-width:900px){.desktop-nav{display:none}.nav-toggle{display:flex}}
 
-/* HERO SPLIT */
-.hero-split{
+/* HERO */
+.hero{
   display:flex;
   flex-wrap:wrap;
+  justify-content:space-between;
   align-items:center;
-  justify-content:center;
-  background:linear-gradient(rgba(0,34,68,0.9), rgba(0,34,68,0.9)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
+  padding:120px 20px 60px 20px;
+  background:linear-gradient(rgba(0,34,68,.85),rgba(0,34,68,.85)), url('F2635366-F577-497F-87F2-DAF4138C1243.png') center/cover no-repeat;
   color:#fff;
-  padding:80px 20px;
 }
-.hero-left{flex:1;min-width:320px;max-width:500px;padding:20px;text-align:left}
-.hero-left h1{font-size:2.2rem;margin-bottom:12px}
-.hero-left p{font-size:1.1rem;margin-bottom:20px}
-.hero-right{flex:1;min-width:320px;max-width:450px;padding:20px;background:#fff;color:var(--navy);border-radius:16px;box-shadow:var(--shadow-md)}
+.hero-left{
+  flex:1 1 450px;
+  max-width:500px;
+}
+.hero-left h1{font-family:'Playfair Display', serif;font-size:2.6rem;margin-bottom:18px}
+.hero-left p{margin-bottom:24px;font-size:1.1rem}
+.hero-left .cta-buttons{display:flex;gap:16px;flex-wrap:wrap}
 
-/* Sections */
+/* Quote Form Section */
+.hero-right{
+  flex:1 1 350px;
+  background:var(--white);
+  color:var(--navy);
+  border-radius:var(--radius-lg);
+  padding:24px;
+  box-shadow:var(--shadow-md);
+}
+.hero-right h3{text-align:center;margin-bottom:16px}
+.hero-right input, .hero-right select, .hero-right textarea{width:100%;padding:10px;margin-bottom:12px;border-radius:var(--radius-sm);border:1px solid var(--gray-light)}
+.hero-right textarea{resize:none}
+.hero-right .estimate{font-weight:700;margin-top:12px;text-align:center}
+
+/* SECTIONS */
 section{max-width:1200px;margin:auto;padding:90px 20px}
-.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
-.before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
-.before-after img{width:100%;height:340px;object-fit:cover}
-.ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
+.section-title{text-align:center;font-size:2rem;margin-bottom:30px}
 
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-bottom:60px}
 .service-card{background:#fff;padding:36px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);transition:transform .25s ease}
 .service-card:hover{transform:translateY(-6px)}
 .service-card h3{color:var(--green);margin-bottom:16px}
 .service-card ul{padding-left:18px;margin-bottom:24px}
 .service-card li{margin-bottom:8px}
-.bonus{background:#f0fdf4;border-left:4px solid var(--green);padding:12px 16px;border-radius:var(--radius-sm);font-weight:500;margin-bottom:18px}
 
-.about{max-width:850px;margin:auto;text-align:center}
+/* PROCESS / HOW IT WORKS */
+.process-step{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px}
+.process-step img{width:60px;height:60px;object-fit:contain}
+.process-step p{flex:1}
+
+/* GALLERY */
+.before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:60px}
+.before-after div{position:relative;overflow:hidden;border-radius:var(--radius-md)}
+.before-after img{width:100%;height:340px;object-fit:cover}
+.ba-label{position:absolute;bottom:14px;left:14px;background:rgba(0,0,0,.75);color:#fff;padding:6px 12px;border-radius:var(--radius-sm);font-size:14px;font-weight:700}
+
+/* TESTIMONIALS */
 .reviews{max-width:900px;margin:auto;display:grid;gap:22px}
 .review{background:#fff;padding:26px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);font-style:italic}
 .review strong{display:block;margin-top:10px;font-style:normal;color:var(--navy)}
 
+/* FINAL CTA */
 .final-cta{background:var(--navy);color:#fff;text-align:center;padding:95px 20px}
 .final-cta p{color:#d1d5db;margin-bottom:30px;font-size:1.05rem}
 
@@ -148,14 +156,16 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
 .floating-text-btn:hover{transform:translateY(-2px);background:var(--green-dark)}
 @media(max-width:768px){.before-after img{height:260px}}
 </style>
-
 </head>
-<body class="home">
+
+<body>
 
 <header id="site-header">
   <div class="header-inner">
-    <a href="/index.html" class="logo"><img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo"></a>
-    <span class="brand-name">Brush & Broom</span>
+    <a href="/index.html" class="logo" aria-label="Go to homepage">
+      <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP Logo">
+    </a>
+    <span style="font-family:'Playfair Display', serif;font-weight:700;color:var(--green);margin-left:16px;font-size:1.4rem;">Brush & Broom LLP</span>
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
@@ -174,187 +184,114 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </nav>
 </header>
 
-<!-- Hero Split -->
-<section class="hero-split">
+<!-- HERO + Quote Form -->
+<section class="hero">
   <div class="hero-left">
-    <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="" style="width:180px;border-radius:16px;margin-bottom:24px;box-shadow:var(--shadow-md);">
-    <h1>We Clean It. We Paint It. You Relax.</h1>
-    <p>Trusted husband-and-wife team serving Seattle, Kirkland & the Eastside.</p>
-    <div class="cta-buttons" style="display:flex;gap:12px;flex-wrap:wrap;">
+    <h1>Seattle’s Trusted Painting & Cleaning Crew</h1>
+    <p>Family-owned, honest work — FREE deep clean with every full interior repaint. Same crew every time, no strangers in your home.</p>
+    <div class="cta-buttons">
       <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
       <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
     </div>
   </div>
-  <div class="hero-right">
-    <section class="hero-quote">
-  <div class="hero-left">
-    <h1>Seattle’s Trusted Painting & Cleaning Crew</h1>
-    <p>Family-owned, honest work — FREE deep clean with every full interior repaint.</p>
-  </div>
+
   <div class="hero-right">
     <h3>Get Your Instant Quote</h3>
-    
-    <!-- Step 1: Service Selection -->
-    <div class="step step-service">
-      <button class="service-btn" data-service="painting">🎨 Painting</button>
-      <button class="service-btn" data-service="cleaning">🧹 Cleaning</button>
+    <!-- Quote form here (we can integrate the interactive painting/cleaning form next) -->
+    <p>Select your service to get started!</p>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section>
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Professional Cleaning</h3>
+      <ul>
+        <li>Move-in / Move-out</li>
+        <li>Recurring Maintenance</li>
+        <li>Deep Cleaning & Resets</li>
+        <li>Eco-Friendly Options</li>
+      </ul>
+      <a href="house-cleaning-bellevue-seattle.html" class="btn btn-primary">Explore Cleaning</a>
     </div>
-
-    <!-- Step 2: Painting Rooms -->
-    <div class="step step-painting" style="display:none;">
-      <h4>Select Rooms to Paint</h4>
-
-      <!-- Kitchen -->
-      <div class="room" data-room="kitchen">
-        <label><input type="checkbox" class="room-check"> Kitchen</label>
-        <div class="room-options" style="display:none; margin-left:20px;">
-          <label><input type="checkbox" class="option-check" data-price="120"> Walls</label>
-          <label><input type="checkbox" class="option-check" data-price="80"> Ceiling</label>
-          <label><input type="checkbox" class="option-check" data-price="150"> Cabinets</label>
-          <label><input type="checkbox" class="option-check" data-price="50"> Trim/Baseboards</label>
-        </div>
-      </div>
-
-      <!-- Bedrooms -->
-      <div class="room" data-room="bedroom">
-        <label><input type="checkbox" class="room-check"> Bedrooms</label>
-        <div class="room-options" style="display:none; margin-left:20px;">
-          <label><input type="checkbox" class="option-check" data-price="100"> Walls</label>
-          <label><input type="checkbox" class="option-check" data-price="80"> Ceiling</label>
-          <label><input type="checkbox" class="option-check" data-price="50"> Trim/Baseboards</label>
-        </div>
-      </div>
-
-      <!-- Bathrooms -->
-      <div class="room" data-room="bathroom">
-        <label><input type="checkbox" class="room-check"> Bathrooms</label>
-        <div class="room-options" style="display:none; margin-left:20px;">
-          <label><input type="checkbox" class="option-check" data-price="80"> Walls</label>
-          <label><input type="checkbox" class="option-check" data-price="60"> Ceiling</label>
-          <label><input type="checkbox" class="option-check" data-price="40"> Trim/Baseboards</label>
-          <label><input type="checkbox" class="option-check" data-price="70"> Vanity/Cabinets</label>
-        </div>
-      </div>
-
-      <!-- Accent & Doors -->
-      <div class="room" data-room="other">
-        <label><input type="checkbox" class="room-check"> Accent Walls / Feature Painting</label>
-        <label><input type="checkbox" class="room-check"> Doors, Windows, or Trim</label>
-        <div class="room-options doors-options" style="display:none; margin-left:20px;">
-          <label>Number of Doors: <input type="number" class="door-count" min="0" value="0" data-price="50"></label>
-          <label>Number of Windows: <input type="number" class="window-count" min="0" value="0" data-price="40"></label>
-          <label>Linear Feet of Trim: <input type="number" class="trim-length" min="0" value="0" data-price="5"></label>
-        </div>
-      </div>
-
-      <!-- Full Interior Repaint -->
-      <div>
-        <label><input type="checkbox" class="full-interior" data-price="1200"> Complete Interior Repaint (Includes FREE Cleaning)</label>
-      </div>
-    </div>
-
-    <!-- Step 3: Customer Info -->
-    <div class="step step-info" style="display:none; margin-top:20px;">
-      <input type="text" placeholder="Full Name" class="customer-name">
-      <input type="email" placeholder="Email" class="customer-email">
-      <input type="tel" placeholder="Phone Number" class="customer-phone">
-      <select class="customer-area">
-        <option value="">Select Your Area...</option>
-        <option>Seattle</option>
-        <option>Bellevue</option>
-        <option>Kirkland</option>
-        <option>Tacoma</option>
-        <option>Other King County</option>
-      </select>
-      <input type="text" placeholder="Street Address" class="customer-address">
-      <textarea placeholder="Additional Notes or Questions" class="customer-notes"></textarea>
-    </div>
-
-    <!-- Step 4: Estimated Total -->
-    <div class="step step-total" style="display:none; margin-top:10px;">
-      <h4>Estimated Total: $<span id="estimate">0</span></h4>
-      <button class="btn btn-primary submit-quote">Request Quote</button>
-      <button class="btn btn-secondary reset-quote">Clear Form</button>
+    <div class="service-card">
+      <h3>Interior & Exterior Painting</h3>
+      <ul>
+        <li>Wall, Ceiling, Cabinets, Trim</li>
+        <li>Feature Walls / Accent Painting</li>
+        <li>Full Repaints (FREE Cleaning Included)</li>
+        <li>Weather-Resistant Finish</li>
+      </ul>
+      <a href="interior-exterior-house-painting-bellevue-seattle.html" class="btn btn-secondary">Explore Painting</a>
     </div>
   </div>
 </section>
 
-<script>
-  // Step 1: Show Painting or Cleaning
-  const serviceBtns = document.querySelectorAll('.service-btn');
-  serviceBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelector('.step-painting').style.display = btn.dataset.service === 'painting' ? 'block' : 'none';
-      document.querySelector('.step-info').style.display = 'block';
-      document.querySelector('.step-total').style.display = 'block';
-    });
-  });
-
-  // Expand room options
-  const roomChecks = document.querySelectorAll('.room-check');
-  roomChecks.forEach(rc => {
-    rc.addEventListener('change', () => {
-      const optionsDiv = rc.parentElement.querySelector('.room-options');
-      if (optionsDiv) optionsDiv.style.display = rc.checked ? 'block' : 'none';
-    });
-  });
-
-  // Special: Doors/Windows expansion
-  const otherChecks = document.querySelectorAll('.room-check');
-  otherChecks.forEach(rc => {
-    rc.addEventListener('change', () => {
-      const doorsDiv = rc.parentElement.querySelector('.doors-options');
-      if (doorsDiv) doorsDiv.style.display = rc.checked ? 'block' : 'none';
-    });
-  });
-
-  // Calculate Estimate
-  const estimateEl = document.getElementById('estimate');
-  function calculateEstimate() {
-    let total = 0;
-    document.querySelectorAll('.option-check:checked').forEach(opt => total += parseInt(opt.dataset.price));
-    document.querySelectorAll('.door-count').forEach(d => total += parseInt(d.value)*parseInt(d.dataset.price));
-    document.querySelectorAll('.window-count').forEach(w => total += parseInt(w.value)*parseInt(w.dataset.price));
-    document.querySelectorAll('.trim-length').forEach(t => total += parseInt(t.value)*parseInt(t.dataset.price));
-    document.querySelectorAll('.full-interior:checked').forEach(f => total += parseInt(f.dataset.price));
-    estimateEl.innerText = total;
-  }
-  document.querySelectorAll('input').forEach(inp => inp.addEventListener('input', calculateEstimate));
-  document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.addEventListener('change', calculateEstimate));
-
-  // Reset Form
-  document.querySelector('.reset-quote').addEventListener('click', () => {
-    document.querySelectorAll('input').forEach(i => { i.checked = false; if(i.type==='number') i.value = 0; });
-    document.querySelectorAll('textarea').forEach(t => t.value='');
-    estimateEl.innerText = '0';
-    document.querySelectorAll('.room-options').forEach(ro => ro.style.display='none');
-    document.querySelectorAll('.doors-options').forEach(doo => doo.style.display='none');
-  });
-</script>
-    <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">📋 Get Your Instant Quote</h2>
-    <!-- Quote form code will go here, same as previous interactive script -->
-    <!-- Paste the full interactive quote form HTML + JS from earlier here -->
+<!-- PROCESS / HOW IT WORKS -->
+<section>
+  <h2 class="section-title">How It Works</h2>
+  <div class="process-step">
+    <img src="icons/step1.png" alt="Step 1">
+    <p>Request a free quote online or via text. Select Painting or Cleaning services.</p>
+  </div>
+  <div class="process-step">
+    <img src="icons/step2.png" alt="Step 2">
+    <p>Schedule at your convenience. We arrive on time, same crew every time.</p>
+  </div>
+  <div class="process-step">
+    <img src="icons/step3.png" alt="Step 3">
+    <p>We complete the job professionally, leaving your home spotless.</p>
   </div>
 </section>
 
-<!-- Before/After, Services, About, Reviews, Final CTA, Floating Button -->
-<!-- You can reuse the code from your previous homepage sections, they integrate perfectly -->
+<!-- PROJECT GALLERY -->
+<section>
+  <h2 class="section-title">Before & After Gallery</h2>
+  <div class="before-after">
+    <div><img src="gallery1.jpg" alt="Cleaning Before"><div class="ba-label">Cleaning</div></div>
+    <div><img src="gallery2.jpg" alt="Painting After"><div class="ba-label">Painting</div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <h2 class="section-title">What Your Neighbors Are Saying</h2>
+  <div class="reviews">
+    <div class="review">“Dustin and his team were incredible — on time, thorough, and friendly.” <strong>— J.S., Bellevue ⭐⭐⭐⭐⭐</strong></div>
+    <div class="review">“Brush & Broom made moving out stress-free. They cleaned every corner perfectly.” <strong>— M.T., Kirkland ⭐⭐⭐⭐⭐</strong></div>
+    <div class="review">“Professional, reliable, and super friendly. Our exterior painting looks amazing!” <strong>— R.L., Redmond ⭐⭐⭐⭐⭐</strong></div>
+  </div>
+</section>
+
+<!-- AREAS WE SERVE -->
+<section>
+  <h2 class="section-title">Areas We Serve</h2>
+  <p>Seattle, Bellevue, Kirkland, Redmond, Shoreline, Renton, Lynnwood, Everett, Tacoma, and surrounding Eastside neighborhoods.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>One Crew. One Quote. A Refreshed Home.</h2>
+  <p>Book a full repaint and we’ll handle the deep cleaning — on us.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn btn-primary">Request a Free Quote</a>
+    <a href="sms:12065711092" class="btn btn-secondary">Text Us</a>
+  </div>
+</section>
 
 <footer>
   © 2026 Brush & Broom LLP · Seattle, Kirkland & Eastside
 </footer>
 
+<!-- FLOATING TEXT BUTTON -->
 <a href="sms:12065711092" class="floating-text-btn" aria-label="Text Brush & Broom LLP">Text Us</a>
 
 <script>
 const header = document.getElementById("site-header");
 const toggle = document.querySelector(".nav-toggle");
 toggle.addEventListener("click",()=>{header.classList.toggle("open")});
-window.addEventListener("scroll",()=>{
-  if(window.scrollY>40){header.classList.add("scrolled")}
-  else{header.classList.remove("scrolled")}
-});
 </script>
-
 </body>
 </html>
