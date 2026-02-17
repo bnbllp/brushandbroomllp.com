@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Move-In & Move-Out Cleaning | Seattle, Bellevue & Eastside</title>
+  <meta name="description" content="Brush & Broom LLP provides detailed move-in and move-out cleaning in Seattle, Bellevue, Kirkland & the Eastside. Husband-and-wife team, inspection-ready results, and clear pricing." />
+  <link rel="canonical" href="https://www.brushandbroomllp.com/move-in-move-out-cleaning-bellevue-seattle.html" />
+
+  <style>
+    :root {
+      --navy: #002244;
+      --green: #69be28;
+      --gray: #6b7280;
+      --gray-light: #9ca3af;
+      --bg-light: #f5f7fb;
+      --white: #ffffff;
+      --max-width: 1120px;
+      --radius-md: 16px;
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg-light);
+      color: #111827;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    img { max-width: 100%; display: block; }
+
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top left, rgba(105, 190, 40, 0.12), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(0, 34, 68, 0.18), transparent 55%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--gray);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--gray);
+      font-weight: 500;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a:hover { color: var(--navy); }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+    }
+
+    .phone-link {
+      font-size: 0.85rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .phone-link span { color: var(--green); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.18s ease-out;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--green), #8fd94a);
+      color: var(--navy);
+      box-shadow: 0 8px 18px rgba(39, 174, 96, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(0.96);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(39, 174, 96, 0.38);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--navy);
+      border-color: rgba(15, 23, 42, 0.12);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.9);
+      border-color: var(--navy);
+    }
+
+    .nav-toggle {
+      display: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--navy);
+      margin: 4px 0;
+      border-radius: 999px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links,
+      .nav-cta { display: none; }
+      .nav-toggle { display: block; }
+      .nav-menu-open .nav-links,
+      .nav-menu-open .nav-cta {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        padding: 12px 16px 16px;
+        background: rgba(255, 255, 255, 0.97);
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      }
+      .nav-menu-open .nav-links { align-items: flex-start; }
+      .nav-menu-open .nav-cta { align-items: flex-start; }
+    }
+
+    /* Hero */
+    .hero {
+      padding: 48px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      color: var(--gray);
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--green);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+
+    .hero-lead {
+      font-size: 0.98rem;
+      color: var(--gray);
+      max-width: 36rem;
+      margin-bottom: 16px;
+    }
+
+    .hero-highlight {
+      font-size: 0.9rem;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 18px 18px 14px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 0.96rem;
+    }
+
+    .hero-card-tag {
+      font-size: 0.76rem;
+      color: var(--green);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      margin-top: 6px;
+    }
+
+    .hero-card-list li { margin-bottom: 4px; }
+
+    /* Sections */
+    .section { padding: 30px 0; }
+
+    .section-alt { background: rgba(255, 255, 255, 0.95); }
+
+    .section-header { margin-bottom: 18px; }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--green);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--gray);
+      max-width: 620px;
+    }
+
+    /* Checklist grid */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .checklist-card {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 14px 16px 12px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .checklist-card h3 {
+      font-size: 1rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .checklist-card ul {
+      margin-top: 6px;
+      padding-left: 16px;
+    }
+
+    .checklist-card li { margin-bottom: 4px; }
+
+    /* Process */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .process-step {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: var(--radius-md);
+      padding: 12px 14px 10px;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.84rem;
+      color: var(--gray);
+    }
+
+    .process-step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(105, 190, 40, 0.15);
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .process-step-title {
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    /* Benefits row */
+    .benefits-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 16px;
+      font-size: 0.86rem;
+      color: var(--gray);
+    }
+
+    .benefit-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    /* Areas */
+    .areas-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .areas-list {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+
+    .areas-chip {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: 1.3rem;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .cta-text {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 18px 0 24px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      background: rgba(255, 255, 255, 0.96);
+      margin-top: 28px;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .footer-links a { color: var(--gray); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: minmax(0, 1fr); }
+      .checklist-grid { grid-template-columns: minmax(0, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 640px) {
+      .process-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <nav class="nav" id="mainNav">
+          <div class="nav-left">
+            <a href="index.html" aria-label="Brush & Broom LLP home">
+              <img src="logo.png" alt="Brush & Broom LLP logo" class="logo-img" />
+            </a>
+            <div class="brand-text">
+              <span class="brand-name">Brush &amp; Broom LLP</span>
+              <span class="brand-tagline">We clean it. We paint it. You relax.</span>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
+            <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <a href="tel:12065711092" class="phone-link">
+              Call us: <span>(206) 571-1092</span>
+            </a>
+            <a href="contact.html" class="btn btn-primary">Request a free quote</a>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('nav-menu-open');">
+            <span></span><span></span><span></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Move-in &amp; move-out cleaning in Seattle, Bellevue &amp; the Eastside
+              </div>
+              <h1>Move on with your life. We’ll handle the clean.</h1>
+              <p class="hero-lead">
+                Moving is stressful enough. We make sure your old place is inspection-ready and your new place feels like a fresh start—not someone else’s leftovers.
+              </p>
+              <p class="hero-highlight">
+                Whether you’re a renter, landlord, or property manager, we handle the deep, detailed cleaning so you can focus on packing, paperwork, and the next chapter.
+              </p>
+              <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Get a move-out quote</a>
+                <a href="tel:12065711092" class="btn btn-outline">Call to talk timing</a>
+              </div>
+              <p class="hero-note">
+                Tell us where you’re moving, your move date, and the size of the place. We’ll build a quote that fits your timeline and what your landlord (or buyer) expects.
+              </p>
+            </div>
+
+            <aside class="hero-card">
+              <div class="hero-card-tag">Designed for moves</div>
+              <div class="hero-card-title">What’s different about move-in / move-out cleaning?</div>
+              <ul class="hero-card-list">
+                <li>• We clean inside appliances, cabinets, and drawers on request.</li>
+                <li>• We focus on corners, trim, and “checklist items” landlords look at.</li>
+                <li>• We work around movers and schedules as best we can.</li>
+                <li>• We can pair cleaning with a repaint if walls need a reset too.</li>
+              </ul>
+              <p style="margin-top:10px;">
+                Our goal: leave things so clean that you don’t have to think about that address again when you turn in the keys.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Checklist style section -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">What we clean</div>
+            <h2 class="section-title">A full reset from kitchen to baseboards</h2>
+            <p class="section-subtitle">
+              Move-out and move-in cleans go deeper than our standard visit. We’re aiming for “inspection-ready” and “photo-ready,” not just “picked up.”
+            </p>
+          </div>
+
+          <div class="checklist-grid">
+            <article class="checklist-card">
+              <h3>Kitchen</h3>
+              <ul>
+                <li>Counters, sinks, and backsplashes cleaned and sanitized.</li>
+                <li>Outside of cabinets, drawers, and appliances wiped.</li>
+                <li>Inside fridge, oven, and microwave available on request.</li>
+                <li>Floors swept and mopped, baseboards wiped.</li>
+              </ul>
+            </article>
+
+            <article class="checklist-card">
+              <h3>Bathrooms</h3>
+              <ul>
+                <li>Toilets, tubs/showers, and sinks scrubbed and sanitized.</li>
+                <li>Mirrors, fixtures, and glass polished.</li>
+                <li>Cabinet fronts wiped; inside on request.</li>
+                <li>Floors cleaned, corners and grout lines addressed as needed.</li>
+              </ul>
+            </article>
+
+            <article class="checklist-card">
+              <h3>Living areas &amp; bedrooms</h3>
+              <ul>
+                <li>Dusting of reachable surfaces, ledges, and window sills.</li>
+                <li>Doors, door frames, light switches, and handles wiped.</li>
+                <li>Baseboards wiped where accessible.</li>
+                <li>Floors vacuumed and/or mopped throughout.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process for move cleans -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">How it works</div>
+            <h2 class="section-title">Move-out cleaning that actually fits your timeline</h2>
+            <p class="section-subtitle">
+              Moves are chaotic. We keep this part simple and predictable so you can focus on everything else that has to happen that week.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <div class="process-step-number">1</div>
+              <div class="process-step-title">Share your move plan</div>
+              <p>
+                Tell us your address, move-out date (or move-in date), size of the home, and whether it’s a rental or sale.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">2</div>
+              <div class="process-step-title">Estimate &amp; checklist</div>
+              <p>
+                We send a clear quote based on your space and any special requests—inside appliances, inside cabinets, or add-on painting.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">3</div>
+              <div class="process-step-title">Cleaning day</div>
+              <p>
+                We arrive with supplies, work systematically room by room, and communicate if anything unexpected comes up.
+              </p>
+            </article>
+
+            <article class="process-step">
+              <div class="process-step-number">4</div>
+              <div class="process-step-title">Final walkthrough</div>
+              <p>
+                When possible, we walk the space with you or send photos so you can feel confident handing over keys or listing photos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why choose us for move cleans -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Why people call us for moves</div>
+            <h2 class="section-title">We treat your move like it’s our own</h2>
+            <p class="section-subtitle">
+              We’ve done the frantic “one more thing before we hand over the keys” move ourselves. That’s why we built a service that actually helps.
+            </p>
+          </div>
+
+          <div class="benefits-row">
+            <div class="benefit-pill">Husband-and-wife team you can text directly</div>
+            <div class="benefit-pill">Detailed work aimed at deposits and inspections</div>
+            <div class="benefit-pill">Flexible scheduling when possible around movers</div>
+            <div class="benefit-pill">Option to add painting for scuffed or bold walls</div>
+            <div class="benefit-pill">Local to Seattle, Bellevue, Kirkland &amp; Eastside</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header" style="text-align:center;">
+            <div class="section-kicker">Where we help people move</div>
+            <h2 class="section-title">Move-in &amp; move-out cleaning in Seattle &amp; the Eastside</h2>
+          </div>
+
+          <div class="areas-wrap">
+            <p>
+              We focus on Seattle and Eastside King County so we can be realistic about timing and show up when we say we will.
+            </p>
+            <div class="areas-list">
+              <span class="areas-chip">Seattle</span>
+              <span class="areas-chip">Kirkland</span>
+              <span class="areas-chip">Bellevue</span>
+              <span class="areas-chip">Redmond</span>
+              <span class="areas-chip">Renton</span>
+              <span class="areas-chip">Eastside King County</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-alt">
+        <div class="container">
+          <div class="cta-section">
+            <h2 class="cta-title">Want one less thing to worry about on moving day?</h2>
+            <p class="cta-text">
+              Share your move dates and a few details about the home, and we’ll put together a quote for move-out or move-in cleaning that fits your plan.
+            </p>
+            <div class="cta-actions">
+              <a href="contact.html" class="btn btn-primary">Request a move-out quote</a>
+              <a href="tel:12065711092" class="btn btn-outline">Call (206) 571-1092</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-row">
+          <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
+          <div class="footer-links">
+            <span>Serving Seattle, Kirkland, Bellevue &amp; Eastside King County.</span>
+            <a href="mailto:Seabnbllp@icloud.com">Seabnbllp@icloud.com</a>
+            <a href="tel:12065711092">(206) 571-1092</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tiny nav toggle script -->
+  <script>
+    // Matches homepage behavior if you want to expand it later
+  </script>
+</body>
+</html>
