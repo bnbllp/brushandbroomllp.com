@@ -236,14 +236,82 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </div>
 </section>
 
-<section>
-  <h2>What Clients Say</h2>
-  <div class="reviews">
-    <div class="review">“Same-day booking, above and beyond service. I couldn’t believe how easy it was.” <strong>– Nextdoor Neighbor</strong></div>
-    <div class="review">“Professional, polite, and excellent work. Highly recommend.” <strong>– Google Review</strong></div>
-    <div class="review">“Prompt, efficient, and genuinely kind people.” <strong>– Local Client</strong></div>
+<!-- Reviews Slider Section -->
+<section id="reviews-slider" style="max-width:800px;margin:0 auto;padding:2rem 1rem;">
+  <h2 style="text-align:center;font-size:2rem;margin-bottom:1rem;">What Your Neighbors Are Saying ⭐️</h2>
+  
+  <div class="slider-container" style="position:relative;overflow:hidden;">
+    <div class="slides" style="display:flex;transition:transform 0.5s ease-in-out;">
+
+      <!-- Review 1 -->
+      <div class="slide" style="flex:0 0 100%;padding:1rem;">
+        <blockquote style="font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem;">
+          “Dustin and his team were incredible — on time, thorough, and friendly. My house has never looked better!”
+        </blockquote>
+        <p style="font-weight:bold;margin-top:0.5rem;">— J.S., Bellevue ⭐⭐⭐⭐⭐</p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="slide" style="flex:0 0 100%;padding:1rem;">
+        <blockquote style="font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem;">
+          “Brush & Broom made moving out stress-free. They cleaned every corner perfectly. Highly recommend!”
+        </blockquote>
+        <p style="font-weight:bold;margin-top:0.5rem;">— M.T., Kirkland ⭐⭐⭐⭐⭐</p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="slide" style="flex:0 0 100%;padding:1rem;">
+        <blockquote style="font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem;">
+          “Professional, reliable, and super friendly. Our exterior painting looks amazing!”
+        </blockquote>
+        <p style="font-weight:bold;margin-top:0.5rem;">— R.L., Redmond ⭐⭐⭐⭐⭐</p>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="slide" style="flex:0 0 100%;padding:1rem;">
+        <blockquote style="font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem;">
+          “Same day booking, above and beyond service. I couldn’t believe how easy it was.”
+        </blockquote>
+        <p style="font-weight:bold;margin-top:0.5rem;">— Nextdoor Neighbor ⭐⭐⭐⭐⭐</p>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="slide" style="flex:0 0 100%;padding:1rem;">
+        <blockquote style="font-style:italic;border-left:4px solid #ffcc00;padding-left:1rem;">
+          “Friendly, professional, and even tackled a few extra things they didn’t have to.”
+        </blockquote>
+        <p style="font-weight:bold;margin-top:0.5rem;">— D.T., Nextdoor ⭐⭐⭐⭐⭐</p>
+      </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <button id="prevSlide" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);background:none;border:none;font-size:2rem;cursor:pointer;">‹</button>
+    <button id="nextSlide" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;font-size:2rem;cursor:pointer;">›</button>
   </div>
 </section>
+
+<script>
+  const slides = document.querySelector("#reviews-slider .slides");
+  const totalSlides = slides.children.length;
+  let index = 0;
+
+  document.getElementById('nextSlide').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  document.getElementById('prevSlide').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  });
+
+  // Auto-rotate every 5s
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }, 5000);
+</script>
 
 <section class="final-cta">
   <h2>One crew. One quote. A refreshed home.</h2>
