@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -164,41 +164,6 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </nav>
 </header>
 
-<!-- Quote Form -->
-<div class="hero-right">
-  <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">Get Your Instant Quote</h2>
-  <form id="instant-quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <div class="form-step">
-      <label><input type="radio" name="service" value="cleaning" required> Cleaning</label><br>
-      <label><input type="radio" name="service" value="painting"> Painting</label>
-    </div>
-
-    <div class="form-step" id="package-step" style="display:none;">
-      <label>Select Room / Service:</label>
-      <select name="package" id="package-select" required>
-        <option value="" disabled selected>Select...</option>
-        <!-- Packages populated dynamically -->
-      </select>
-    </div>
-
-    <div class="form-step" id="details-step" style="display:none;">
-      <label>Number of Doors:</label>
-      <input type="number" name="doors" min="0" value="0">
-      <label>Number of Windows:</label>
-      <input type="number" name="windows" min="0" value="0">
-    </div>
-
-    <div class="form-step" id="estimate-step" style="margin-top:16px;display:none;">
-      <p>Estimated Total Range: <span id="total-range" style="font-weight:bold;">$0</span></p>
-    </div>
-
-    <div style="margin-top:16px;text-align:center;">
-      <button type="submit" class="btn btn-primary">Request Quote</button>
-      <button type="button" id="clear-form" class="btn btn-secondary">Clear Form</button>
-    </div>
-  </form>
-</div>
-  
 <!-- HERO SPLIT -->
 <section class="hero-split">
   <div class="hero-left">
@@ -211,13 +176,12 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
     </div>
   </div>
 
-  <!-- Quote Form Right Column -->
   <div class="hero-right">
-    <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">📋 Get Your Instant Quote</h2>
+    <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">Get Your Instant Quote</h2>
     <form id="instant-quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-step">
-        <label><input type="radio" name="service" value="cleaning" required> 🧹 Cleaning</label><br>
-        <label><input type="radio" name="service" value="painting"> 🎨 Painting</label>
+        <label><input type="radio" name="service" value="cleaning" required> Cleaning</label><br>
+        <label><input type="radio" name="service" value="painting"> Painting</label>
       </div>
 
       <div class="form-step" id="package-step" style="display:none;">
@@ -240,8 +204,8 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
       </div>
 
       <div style="margin-top:16px;text-align:center;">
-        <button type="submit" class="btn btn-primary">📧 Request Quote</button>
-        <button type="button" id="clear-form" class="btn btn-secondary">🔄 Clear Form</button>
+        <button type="submit" class="btn btn-primary">Request Quote</button>
+        <button type="button" id="clear-form" class="btn btn-secondary">Clear Form</button>
       </div>
     </form>
   </div>
@@ -356,21 +320,7 @@ let index = 0;
 document.getElementById('nextSlide').addEventListener('click',()=>{index=(index+1)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`});
 document.getElementById('prevSlide').addEventListener('click',()=>{index=(index-1+totalSlides)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`});
 setInterval(()=>{index=(index+1)%totalSlides;slides.style.transform=`translateX(-${index*100}%)`},5000);
+</script>
 
-// Quote Form Logic
-const serviceRadios = document.querySelectorAll('input[name="service"]');
-const packageStep = document.getElementById('package-step');
-const detailsStep = document.getElementById('details-step');
-const estimateStep = document.getElementById('estimate-step');
-const packageSelect = document.getElementById('package-select');
-const totalRange = document.getElementById('total-range');
-
-const cleaningPackages = [
-  {name:'Kitchen', min:150,max:250},
-  {name:'Bathroom', min:120,max:200},
-  {name:'Bedroom', min:100,max:180},
-  {name:'Living Room', min:130,max:220}
-];
-
-const paintingPackages = [
-  {name:'Interior
+</body>
+</html>
