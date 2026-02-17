@@ -142,8 +142,10 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
 
 <header id="site-header">
   <div class="header-inner">
-    <a href="/index.html" class="logo"><img src="placeholder-logo.png" alt="Brush & Broom LLP Logo"></a>
-    <span class="brand-name">Brush & Broom</span>
+    <a href="/index.html" class="logo">
+      <img src="placeholder-logo.png" alt="Brush & Broom LLP Logo">
+    </a>
+    <span class="brand-name">Brush And Broom</span>
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
@@ -162,6 +164,41 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
   </nav>
 </header>
 
+<!-- Quote Form -->
+<div class="hero-right">
+  <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">Get Your Instant Quote</h2>
+  <form id="instant-quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-step">
+      <label><input type="radio" name="service" value="cleaning" required> Cleaning</label><br>
+      <label><input type="radio" name="service" value="painting"> Painting</label>
+    </div>
+
+    <div class="form-step" id="package-step" style="display:none;">
+      <label>Select Room / Service:</label>
+      <select name="package" id="package-select" required>
+        <option value="" disabled selected>Select...</option>
+        <!-- Packages populated dynamically -->
+      </select>
+    </div>
+
+    <div class="form-step" id="details-step" style="display:none;">
+      <label>Number of Doors:</label>
+      <input type="number" name="doors" min="0" value="0">
+      <label>Number of Windows:</label>
+      <input type="number" name="windows" min="0" value="0">
+    </div>
+
+    <div class="form-step" id="estimate-step" style="margin-top:16px;display:none;">
+      <p>Estimated Total Range: <span id="total-range" style="font-weight:bold;">$0</span></p>
+    </div>
+
+    <div style="margin-top:16px;text-align:center;">
+      <button type="submit" class="btn btn-primary">Request Quote</button>
+      <button type="button" id="clear-form" class="btn btn-secondary">Clear Form</button>
+    </div>
+  </form>
+</div>
+  
 <!-- HERO SPLIT -->
 <section class="hero-split">
   <div class="hero-left">
