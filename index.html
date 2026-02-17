@@ -186,6 +186,151 @@ footer{background:var(--navy-dark);color:var(--gray-light);text-align:center;pad
     </div>
   </div>
   <div class="hero-right">
+    <section class="hero-quote">
+  <div class="hero-left">
+    <h1>Seattle’s Trusted Painting & Cleaning Crew</h1>
+    <p>Family-owned, honest work — FREE deep clean with every full interior repaint.</p>
+  </div>
+  <div class="hero-right">
+    <h3>Get Your Instant Quote</h3>
+    
+    <!-- Step 1: Service Selection -->
+    <div class="step step-service">
+      <button class="service-btn" data-service="painting">🎨 Painting</button>
+      <button class="service-btn" data-service="cleaning">🧹 Cleaning</button>
+    </div>
+
+    <!-- Step 2: Painting Rooms -->
+    <div class="step step-painting" style="display:none;">
+      <h4>Select Rooms to Paint</h4>
+
+      <!-- Kitchen -->
+      <div class="room" data-room="kitchen">
+        <label><input type="checkbox" class="room-check"> Kitchen</label>
+        <div class="room-options" style="display:none; margin-left:20px;">
+          <label><input type="checkbox" class="option-check" data-price="120"> Walls</label>
+          <label><input type="checkbox" class="option-check" data-price="80"> Ceiling</label>
+          <label><input type="checkbox" class="option-check" data-price="150"> Cabinets</label>
+          <label><input type="checkbox" class="option-check" data-price="50"> Trim/Baseboards</label>
+        </div>
+      </div>
+
+      <!-- Bedrooms -->
+      <div class="room" data-room="bedroom">
+        <label><input type="checkbox" class="room-check"> Bedrooms</label>
+        <div class="room-options" style="display:none; margin-left:20px;">
+          <label><input type="checkbox" class="option-check" data-price="100"> Walls</label>
+          <label><input type="checkbox" class="option-check" data-price="80"> Ceiling</label>
+          <label><input type="checkbox" class="option-check" data-price="50"> Trim/Baseboards</label>
+        </div>
+      </div>
+
+      <!-- Bathrooms -->
+      <div class="room" data-room="bathroom">
+        <label><input type="checkbox" class="room-check"> Bathrooms</label>
+        <div class="room-options" style="display:none; margin-left:20px;">
+          <label><input type="checkbox" class="option-check" data-price="80"> Walls</label>
+          <label><input type="checkbox" class="option-check" data-price="60"> Ceiling</label>
+          <label><input type="checkbox" class="option-check" data-price="40"> Trim/Baseboards</label>
+          <label><input type="checkbox" class="option-check" data-price="70"> Vanity/Cabinets</label>
+        </div>
+      </div>
+
+      <!-- Accent & Doors -->
+      <div class="room" data-room="other">
+        <label><input type="checkbox" class="room-check"> Accent Walls / Feature Painting</label>
+        <label><input type="checkbox" class="room-check"> Doors, Windows, or Trim</label>
+        <div class="room-options doors-options" style="display:none; margin-left:20px;">
+          <label>Number of Doors: <input type="number" class="door-count" min="0" value="0" data-price="50"></label>
+          <label>Number of Windows: <input type="number" class="window-count" min="0" value="0" data-price="40"></label>
+          <label>Linear Feet of Trim: <input type="number" class="trim-length" min="0" value="0" data-price="5"></label>
+        </div>
+      </div>
+
+      <!-- Full Interior Repaint -->
+      <div>
+        <label><input type="checkbox" class="full-interior" data-price="1200"> Complete Interior Repaint (Includes FREE Cleaning)</label>
+      </div>
+    </div>
+
+    <!-- Step 3: Customer Info -->
+    <div class="step step-info" style="display:none; margin-top:20px;">
+      <input type="text" placeholder="Full Name" class="customer-name">
+      <input type="email" placeholder="Email" class="customer-email">
+      <input type="tel" placeholder="Phone Number" class="customer-phone">
+      <select class="customer-area">
+        <option value="">Select Your Area...</option>
+        <option>Seattle</option>
+        <option>Bellevue</option>
+        <option>Kirkland</option>
+        <option>Tacoma</option>
+        <option>Other King County</option>
+      </select>
+      <input type="text" placeholder="Street Address" class="customer-address">
+      <textarea placeholder="Additional Notes or Questions" class="customer-notes"></textarea>
+    </div>
+
+    <!-- Step 4: Estimated Total -->
+    <div class="step step-total" style="display:none; margin-top:10px;">
+      <h4>Estimated Total: $<span id="estimate">0</span></h4>
+      <button class="btn btn-primary submit-quote">Request Quote</button>
+      <button class="btn btn-secondary reset-quote">Clear Form</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Step 1: Show Painting or Cleaning
+  const serviceBtns = document.querySelectorAll('.service-btn');
+  serviceBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelector('.step-painting').style.display = btn.dataset.service === 'painting' ? 'block' : 'none';
+      document.querySelector('.step-info').style.display = 'block';
+      document.querySelector('.step-total').style.display = 'block';
+    });
+  });
+
+  // Expand room options
+  const roomChecks = document.querySelectorAll('.room-check');
+  roomChecks.forEach(rc => {
+    rc.addEventListener('change', () => {
+      const optionsDiv = rc.parentElement.querySelector('.room-options');
+      if (optionsDiv) optionsDiv.style.display = rc.checked ? 'block' : 'none';
+    });
+  });
+
+  // Special: Doors/Windows expansion
+  const otherChecks = document.querySelectorAll('.room-check');
+  otherChecks.forEach(rc => {
+    rc.addEventListener('change', () => {
+      const doorsDiv = rc.parentElement.querySelector('.doors-options');
+      if (doorsDiv) doorsDiv.style.display = rc.checked ? 'block' : 'none';
+    });
+  });
+
+  // Calculate Estimate
+  const estimateEl = document.getElementById('estimate');
+  function calculateEstimate() {
+    let total = 0;
+    document.querySelectorAll('.option-check:checked').forEach(opt => total += parseInt(opt.dataset.price));
+    document.querySelectorAll('.door-count').forEach(d => total += parseInt(d.value)*parseInt(d.dataset.price));
+    document.querySelectorAll('.window-count').forEach(w => total += parseInt(w.value)*parseInt(w.dataset.price));
+    document.querySelectorAll('.trim-length').forEach(t => total += parseInt(t.value)*parseInt(t.dataset.price));
+    document.querySelectorAll('.full-interior:checked').forEach(f => total += parseInt(f.dataset.price));
+    estimateEl.innerText = total;
+  }
+  document.querySelectorAll('input').forEach(inp => inp.addEventListener('input', calculateEstimate));
+  document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.addEventListener('change', calculateEstimate));
+
+  // Reset Form
+  document.querySelector('.reset-quote').addEventListener('click', () => {
+    document.querySelectorAll('input').forEach(i => { i.checked = false; if(i.type==='number') i.value = 0; });
+    document.querySelectorAll('textarea').forEach(t => t.value='');
+    estimateEl.innerText = '0';
+    document.querySelectorAll('.room-options').forEach(ro => ro.style.display='none');
+    document.querySelectorAll('.doors-options').forEach(doo => doo.style.display='none');
+  });
+</script>
     <h2 style="text-align:center;margin-bottom:20px;color:var(--navy)">📋 Get Your Instant Quote</h2>
     <!-- Quote form code will go here, same as previous interactive script -->
     <!-- Paste the full interactive quote form HTML + JS from earlier here -->
