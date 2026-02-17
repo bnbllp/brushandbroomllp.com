@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Areas We Serve | Brush & Broom LLP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #1e3a5f;
+    }
+    header, footer {
+      background-color: #1e3a5f;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      color: #1e3a5f;
+    }
+    h1 { font-size: 36px; margin-bottom: 20px; }
+    h2 { font-size: 28px; margin-top: 40px; margin-bottom: 20px; }
+    h3 { font-size: 22px; margin-bottom: 15px; }
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    ul { list-style: none; padding: 0; }
+    li { margin-bottom: 8px; }
+    .cta-button {
+      display: inline-block;
+      background-color: #1e3a5f;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #ffcc00;
+      color: #1e3a5f;
+    }
+    .testimonial {
+      background-color: #f9f9f9;
+      border-left: 4px solid #ffcc00;
+      padding: 15px 20px;
+      margin: 20px 0;
+      font-style: italic;
+    }
+    .testimonial p { margin: 0; font-weight: bold; color: #1e3a5f; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Brush & Broom LLP</h1>
+  <p>Seattle & Eastside Painting, Cleaning, & Power Washing</p>
+</header>
+
+<section>
+  <h2>Areas We Serve</h2>
+  <p>Brush & Broom LLP proudly serves homes and businesses across Seattle, Bellevue, Kirkland, and surrounding Eastside communities. From interior painting to exterior refreshes, power washing, and deep cleaning, our family-style service brings unbeatable quality to every project.</p>
+
+  <h3>North Seattle</h3>
+  <ul>
+    <li>Ballard</li>
+    <li>Greenwood</li>
+    <li>Phinney Ridge</li>
+    <li>Fremont</li>
+    <li>Wallingford</li>
+    <li>Green Lake</li>
+    <li>Ravenna</li>
+    <li>University District</li>
+    <li>Maple Leaf</li>
+  </ul>
+
+  <div class="testimonial">
+    “Dustin and the team painted our home in Green Lake — absolutely flawless work!” – J.S., Green Lake
+  </div>
+
+  <h3>Central Seattle</h3>
+  <ul>
+    <li>Capitol Hill</li>
+    <li>Eastlake</li>
+    <li>Montlake</li>
+    <li>Madrona</li>
+    <li>Madison Park</li>
+    <li>South Lake Union</li>
+    <li>Belltown</li>
+    <li>Downtown</li>
+  </ul>
+
+  <div class="testimonial">
+    “Professional, reliable, and super friendly. Our exterior painting looks amazing!” – R.L., Redmond
+  </div>
+
+  <h3>West Seattle & Magnolia</h3>
+  <ul>
+    <li>Magnolia</li>
+    <li>Alki</li>
+    <li>Admiral District</li>
+    <li>Highland Park</li>
+    <li>West Seattle Residential</li>
+  </ul>
+
+  <h3>South / Rainier Valley</h3>
+  <ul>
+    <li>Georgetown</li>
+    <li>Rainier Valley</li>
+    <li>Columbia City</li>
+    <li>Beacon Hill</li>
+    <li>Mount Baker</li>
+  </ul>
+
+  <h3>East / North-East Seattle</h3>
+  <ul>
+    <li>Lake City</li>
+    <li>Northgate</li>
+    <li>Wedgwood</li>
+    <li>Ravenna / Roosevelt</li>
+    <li>University District</li>
+  </ul>
+
+  <p>Wherever you are in Seattle or the surrounding Eastside neighborhoods, Brush & Broom LLP provides professional painting, power washing, and cleaning services you can trust.</p>
+
+  <a href="/contact.html" class="cta-button">Schedule Your Free Estimate Today</a>
+</section>
+
+<footer>
+  <p>© 2026 Brush & Broom LLP | Serving Seattle & Eastside</p>
+</footer>
+
+</body>
+</html>
