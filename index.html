@@ -3,47 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brush & Broom LLP | House Cleaning & Painting in Seattle, Kirkland & Bellevue</title>
-  <meta name="description" content="Brush & Broom LLP is a husband-and-wife team providing detailed house cleaning and professional painting across Seattle, Kirkland, Bellevue, and the Eastside. We clean it. We paint it. You relax." />
+  <title>Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting</title>
+  <meta
+    name="description"
+    content="Brush & Broom LLP is a family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, and interior painting with clear quotes and real communication."
+  />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.brushandbroomllp.com/" />
-
-  <!-- Basic SEO / Open Graph -->
-  <meta property="og:title" content="Brush & Broom LLP | We Clean It. We Paint It. You Relax." />
-  <meta property="og:description" content="Husband-and-wife team for detailed cleaning & quality painting in Seattle, Kirkland & Bellevue. Free quotes, honest pricing, and spotless cleanup." />
-  <meta property="og:url" content="https://www.brushandbroomllp.com/" />
+  <meta property="og:title" content="Brush &amp; Broom LLP | Seattle Cleaning &amp; Painting" />
+  <meta
+    property="og:description"
+    content="Seattle house cleaning and painting with clear quotes, good communication, and work done right."
+  />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/" />
+  <meta name="theme-color" content="#0b2239" />
 
-  <!-- Styles -->
   <style>
     :root {
-      --navy: #002244;
-      --green: #69be28;
-      --gray: #a5acaf;
-      --light-bg: #f5f7fb;
-      --text-dark: #1f2933;
-      --text-muted: #6b7280;
+      --navy: #0b2239;
+      --navy-2: #102c47;
+      --green: #2db36c;
+      --green-dark: #23935a;
       --white: #ffffff;
-      --max-width: 1120px;
-      --radius: 10px;
-      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.12);
+      --offwhite: #f6f8fb;
+      --border: #dde5ee;
+      --text: #1f2937;
+      --muted: #667085;
+      --shadow: 0 16px 40px rgba(11, 34, 57, 0.10);
+      --radius: 18px;
+      --max: 1180px;
     }
 
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text-dark);
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
       line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     img {
@@ -51,1127 +56,750 @@
       display: block;
     }
 
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: radial-gradient(circle at top left, rgba(105, 190, 40, 0.11), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(0, 34, 68, 0.2), transparent 55%);
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     .container {
-      width: 100%;
-      max-width: var(--max-width);
+      width: min(92%, var(--max));
       margin: 0 auto;
-      padding: 0 16px;
     }
 
-    /* Header / Nav */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.86);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    .section {
+      padding: 76px 0;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-img {
-      height: 40px;
-      width: auto;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-weight: 700;
-      letter-spacing: 0.03em;
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 0.82rem;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      font-size: 0.9rem;
-      color: var(--navy);
+      font-weight: 800;
+      color: var(--green-dark);
+      background: #e8fbf1;
+      padding: 6px 10px;
+      border-radius: 999px;
     }
 
-    .brand-tagline {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+    h1, h2, h3 {
+      line-height: 1.15;
+      margin: 0 0 14px;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: 0.95rem;
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
     }
 
-    .nav-links a {
-      color: var(--text-muted);
-      font-weight: 500;
-      position: relative;
-      padding-bottom: 2px;
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
     }
 
-    .nav-links a:hover {
-      color: var(--navy);
+    h3 {
+      font-size: 1.18rem;
     }
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--green);
-      transition: width 0.2s ease-out;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 9px 16px;
+      gap: 8px;
+      padding: 14px 22px;
       border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid transparent;
+      font-weight: 700;
+      transition: 0.2s ease;
+      border: none;
       cursor: pointer;
-      transition: all 0.18s ease-out;
-      white-space: nowrap;
+      font: inherit;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--green), #8fd94a);
-      color: var(--navy);
-      box-shadow: 0 8px 18px rgba(39, 174, 96, 0.35);
+      background: var(--green);
+      color: var(--white);
+      box-shadow: var(--shadow);
     }
 
     .btn-primary:hover {
-      filter: brightness(0.96);
+      background: var(--green-dark);
       transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(39, 174, 96, 0.38);
     }
 
-    .btn-outline {
+    .btn-secondary {
       background: transparent;
-      color: var(--navy);
-      border-color: rgba(15, 23, 42, 0.12);
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, 0.25);
     }
 
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.9);
-      border-color: var(--navy);
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.08);
     }
 
-    .phone-link {
-      font-size: 0.85rem;
-      color: var(--navy);
-      font-weight: 600;
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 34, 57, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .phone-link span {
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 78px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.12rem;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .brand span {
       color: var(--green);
     }
 
     .nav-toggle {
       display: none;
-      cursor: pointer;
-      padding: 6px;
+      background: transparent;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font: inherit;
     }
 
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--navy);
-      margin: 4px 0;
-      border-radius: 999px;
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    /* Hero */
+    .nav a {
+      color: rgba(255,255,255,0.92);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+
     .hero {
-      padding: 48px 0 40px;
+      background:
+        linear-gradient(rgba(11,34,57,0.83), rgba(11,34,57,0.83)),
+        radial-gradient(circle at top right, rgba(45,179,108,0.22), transparent 30%);
+      color: var(--white);
+      padding: 92px 0 80px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 36px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(15, 23, 42, 0.05);
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      margin-bottom: 10px;
-    }
-
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--green);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 3vw, 3rem);
-      line-height: 1.08;
-      margin-bottom: 12px;
-      color: var(--navy);
-    }
-
-    .hero h1 span {
-      color: var(--green);
-    }
-
-    .hero-sub {
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      max-width: 34rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .badge {
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.95);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .badge span {
-      color: var(--green);
-      font-weight: 600;
+    .hero p {
+      color: rgba(255,255,255,0.90);
+      max-width: 62ch;
+      font-size: 1.04rem;
     }
 
     .hero-actions {
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 16px;
+      margin-top: 24px;
     }
 
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--text-muted);
+    .hero-card,
+    .card,
+    .quote-box,
+    .faq-item,
+    .cta-band {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
 
     .hero-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 18px;
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(15, 23, 42, 0.05);
+      color: var(--text);
+      padding: 28px;
     }
 
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 12px;
+    .hero-card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
     }
 
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--navy);
+    .hero-card li + li {
+      margin-top: 10px;
     }
 
-    .hero-card-tag {
-      font-size: 0.7rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(105, 190, 40, 0.15);
-      color: var(--navy);
-      font-weight: 600;
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 30px;
     }
 
-    .hero-form {
+    .grid-3 {
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 10px;
-      margin-bottom: 8px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
-    .form-row {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
-    label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-      font-weight: 600;
+    .card,
+    .quote-box,
+    .faq-item {
+      padding: 26px;
     }
 
-    input, select, textarea {
-      border-radius: 999px;
-      border: 1px solid rgba(15, 23, 42, 0.12);
-      padding: 8px 11px;
-      font-size: 0.85rem;
-      font-family: inherit;
+    .card p:last-child,
+    .quote-box p:last-child,
+    .faq-item p:last-child {
+      margin-bottom: 0;
     }
 
-    textarea {
-      border-radius: 10px;
-      min-height: 70px;
+    .soft {
+      background: var(--offwhite);
+    }
+
+    .steps {
+      counter-reset: step;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 68px;
+      min-height: 54px;
+    }
+
+    .step::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      font-weight: 800;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+    }
+
+    .checklist li {
+      position: relative;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .checklist li + li {
+      margin-top: 10px;
+    }
+
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .quote-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .quote-form input,
+    .quote-form select,
+    .quote-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #d5dee8;
+      border-radius: 12px;
+      font: inherit;
+      color: var(--text);
+      background: var(--white);
+    }
+
+    .quote-form textarea {
+      min-height: 130px;
       resize: vertical;
     }
 
-    .form-helper {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-      margin-bottom: 4px;
+    .quote-form button {
+      justify-self: start;
     }
 
-    .form-disclaimer {
-      font-size: 0.65rem;
-      color: var(--text-muted);
+    .faq-list {
+      display: grid;
+      gap: 16px;
     }
 
-    /* Stats / Social Proof */
-    .section {
-      padding: 30px 0;
-    }
-
-    .section-light {
-      background: rgba(255, 255, 255, 0.9);
-    }
-
-    .stats-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.9rem;
-    }
-
-    .stats-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .stat {
-      min-width: 120px;
-    }
-
-    .stat-number {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--navy);
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    .stats-quote {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      max-width: 280px;
-    }
-
-    /* Process */
-    .section-header {
+    .cta-band {
+      background: var(--navy);
+      color: var(--white);
+      border: none;
       text-align: center;
-      margin-bottom: 22px;
+      padding: 38px 26px;
     }
 
-    .section-kicker {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--green);
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .process-step {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 14px;
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.85rem;
-    }
-
-    .process-step-number {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      background: rgba(105, 190, 40, 0.15);
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.75rem;
-      margin-bottom: 6px;
-    }
-
-    .process-step-title {
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-bottom: 4px;
-      color: var(--navy);
-    }
-
-    .process-step-text {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    /* Services */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .service-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 14px;
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      box-shadow: 0 6px 15px rgba(15, 23, 42, 0.06);
-      font-size: 0.86rem;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .service-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.13em;
-      color: var(--green);
-      font-weight: 700;
-    }
-
-    .service-title {
-      font-weight: 700;
-      color: var(--navy);
-      font-size: 1rem;
-    }
-
-    .service-text {
-      color: var(--text-muted);
-      font-size: 0.84rem;
-    }
-
-    .service-link {
-      font-size: 0.8rem;
-      color: var(--navy);
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 2px;
-    }
-
-    .service-link span {
-      color: var(--green);
-    }
-
-    /* Why Us */
-    .why-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 30px;
-      align-items: center;
-    }
-
-    .why-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .why-point {
-      background: rgba(255, 255, 255, 0.96);
-      border-radius: 14px;
-      padding: 12px 12px 10px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.86rem;
-    }
-
-    .why-point-title {
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .why-point-text {
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    .why-callout {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin-top: 12px;
-    }
-
-    /* Service Areas */
-    .areas-wrap {
+    .cta-band p {
+      color: rgba(255,255,255,0.86);
       max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-muted);
+      margin: 0 auto 18px;
     }
 
-    .areas-list {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
-      font-size: 0.85rem;
+    .footer {
+      background: #071727;
+      color: rgba(255,255,255,0.88);
+      padding: 30px 0 40px;
     }
 
-    .areas-chip {
-      padding: 5px 11px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.98);
-      border: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    /* Reviews */
-    .reviews-grid {
+    .footer-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 24px;
     }
 
-    .review-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: 14px;
-      padding: 14px 14px 10px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.85rem;
+    .footer p,
+    .footer a {
+      color: rgba(255,255,255,0.82);
     }
 
-    .review-stars {
-      color: #f5a623;
-      margin-bottom: 4px;
-      font-size: 0.8rem;
+    .footer a:hover {
+      color: #b9f5d5;
     }
 
-    .review-text {
-      color: var(--text-muted);
-      margin-bottom: 8px;
+    .footer-title {
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .review-author {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    /* Final CTA */
-    .cta-final {
-      text-align: center;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .cta-final-title {
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .cta-final-text {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .cta-final-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    /* Footer */
-    .site-footer {
-      padding: 18px 0 24px;
-      border-top: 1px solid rgba(15, 23, 42, 0.08);
-      background: rgba(255, 255, 255, 0.96);
-      margin-top: 26px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    .footer-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-    }
-
-    /* Responsive */
     @media (max-width: 900px) {
       .hero-grid,
-      .why-grid {
-        grid-template-columns: minmax(0, 1fr);
+      .grid-3,
+      .grid-2,
+      .split,
+      .footer-grid {
+        grid-template-columns: 1fr;
       }
-      .hero {
-        padding-top: 32px;
-      }
-      .process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .services-grid,
-      .reviews-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .why-points {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      .nav-menu-open .nav-links,
-      .nav-menu-open .nav-cta {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 12px 16px 16px;
-        background: rgba(255, 255, 255, 0.97);
-        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-      }
-      .nav-menu-open .nav-links {
-        align-items: flex-start;
-      }
-      .nav-menu-open .nav-cta {
-        align-items: flex-start;
-      }
-    }
 
-    @media (max-width: 640px) {
-      .hero-card {
-        margin-top: 4px;
+      .nav-toggle {
+        display: inline-flex;
       }
-      .hero-form {
-        grid-template-columns: minmax(0, 1fr);
+
+      .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 18px;
       }
-      .process-grid,
-      .services-grid,
-      .reviews-grid {
-        grid-template-columns: minmax(0, 1fr);
+
+      .nav.open {
+        display: flex;
+      }
+
+      .nav-wrap {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .hero {
+        padding-top: 78px;
       }
     }
   </style>
 
-  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Brush & Broom LLP",
-    "image": "https://www.brushandbroomllp.com/logo.png",
-    "description": "Husband-and-wife team for detailed house cleaning and quality painting in Seattle.",
-    "url": "https://www.brushandbroomllp.com/",
-    "telephone": "+1-206-571-1092",
-    "areaServed": [
-      "Seattle WA"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Seattle",
-      "addressRegion": "WA",
-      "addressCountry": "US"
-    },
-    "priceRange": "$$",
-    "founder": "Husband-and-wife team",
-    "serviceType": [
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Brush & Broom LLP",
+    "url":"https://www.brushandbroomllp.com/",
+    "telephone":"+1-206-571-1092",
+    "email":"seabnbllp@icloud.com",
+    "areaServed":"Seattle, Washington",
+    "description":"Family-run Seattle cleaning and painting company offering house cleaning, move-out cleaning, and interior painting.",
+    "serviceType":[
       "House cleaning",
+      "Apartment cleaning",
       "Move-out cleaning",
       "Interior painting",
-      "Exterior painting"
+      "Residential painting"
     ]
   }
   </script>
 </head>
 <body>
-  <div class="page-wrapper">
-    <header class="site-header">
-      <div class="container">
-        <nav class="nav" id="mainNav">
-          <div class="nav-left">
-            <a href="/" aria-label="Brush & Broom LLP home">
-              <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP logo" class="logo-img" />
-            </a>
-            <div class="brand-text">
-              <span class="brand-name">Brush &amp; Broom LLP</span>
-              <span class="brand-tagline">We clean it. We paint it. You relax.</span>
-            </div>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#quote" class="btn btn-primary">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Seattle cleaning and painting</span>
+          <h1>Good work, clear communication, and no runaround.</h1>
+          <p>
+            We help Seattle homeowners, renters, and landlords with the kind of work
+            that actually changes how a place feels. Whether you need a serious clean,
+            fresh paint, or both, the goal is simple: make the process easier and leave
+            the place better than we found it.
+          </p>
+          <div class="hero-actions">
+            <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+            <a href="tel:2065711092" class="btn btn-secondary">Call (206) 571-1092</a>
           </div>
-          <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#process">How it works</a>
-            <a href="#about">About us</a>
-            <a href="#areas">Service areas</a>
-            <a href="#reviews">Reviews</a>
-          </div>
-          <div class="nav-cta">
-            <a href="tel:12065711092" class="phone-link">
-              Call us: <span>(206) 571-1092</span>
-            </a>
-            <a href="#quote" class="btn btn-primary">Get a free quote</a>
-          </div>
-          <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('nav-menu-open');">
-            <span></span><span></span><span></span>
-          </button>
-        </nav>
+        </div>
+
+        <aside class="hero-card">
+          <h3>What people usually need help with</h3>
+          <ul>
+            <li>House and apartment cleaning that feels thorough, not rushed.</li>
+            <li>Move-out cleaning when you need the place looking ready to hand off.</li>
+            <li>Interior painting that makes tired rooms feel fresh again.</li>
+            <li>One team handling both cleaning and painting so you are not juggling multiple companies.</li>
+          </ul>
+        </aside>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="container">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <div class="eyebrow">
-                <span class="eyebrow-dot"></span>
-                Trusted husband and wife team in Seattle.
-              </div>
-              <h1>
-                Fresh paint. Detailed cleaning.<br />
-                <span>You relax.</span>
-              </h1>
-              <p class="hero-sub">
-                Brush &amp; Broom LLP is a family-run cleaning and painting company serving Seattle. 
-                One team that deep-cleans your home and delivers sharp, professional paint jobs—with zero drama and spotless cleanup.
-              </p>
-
-              <div class="hero-badges">
-                <div class="badge">
-                  <span>5.0★</span> Local clients on Google &amp; Facebook
-                </div>
-                <div class="badge">
-                  <span>Seattle</span>
-                </div>
-                <div class="badge">
-                  <span>No</span> rotating crews. Just us.
-                </div>
-              </div>
-
-              <div class="hero-actions">
-                <a href="#quote" class="btn btn-primary">Get a free quote</a>
-                <a href="tel:12065711092" class="btn btn-outline">Call to chat</a>
-              </div>
-              <p class="hero-note">
-                Tell us about your home in 60 seconds. We’ll follow up with clear pricing—no surprise add-ons.
-              </p>
-            </div>
-
-            <div class="hero-card" id="quote">
-              <div class="hero-card-header">
-                <div class="hero-card-title">Request your free quote</div>
-                <div class="hero-card-tag">Cleaning &amp; painting</div>
-              </div>
-              <form class="hero-form" action="https://formspree.io/f/xkowrqyq" method="POST">
-                <div class="form-row">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" placeholder="First &amp; last name" required />
-                </div>
-                <div class="form-row">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(206) 555-1234" required />
-                </div>
-                <div class="form-row">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
-                </div>
-                <div class="form-row">
-                  <label for="city">City</label>
-                  <select id="city" name="city" required>
-                    <option value="">Select your city</option>
-                    <option>Seattle</option>
-                    <option>Kirkland</option>
-                    <option>Bellevue</option>
-                    <option>Redmond</option>
-                    <option>Other Eastside</option>
-                  </select>
-                </div>
-                <div class="form-row">
-                  <label for="service">What do you need?</label>
-                  <select id="service" name="service" required>
-                    <option value="">Choose a service</option>
-                    <option>House cleaning</option>
-                    <option>Move-in / move-out cleaning</option>
-                    <option>Interior painting</option>
-                    <option>Exterior painting</option>
-                    <option>Cleaning + painting</option>
-                    <option>Other (tell us below)</option>
-                  </select>
-                </div>
-                <div class="form-row" style="grid-column: 1 / -1;">
-                  <label for="details">Tell us about your project</label>
-                  <textarea id="details" name="details" placeholder="Sq ft, number of rooms, timeline, and anything special we should know."></textarea>
-                </div>
-                <div class="form-row" style="grid-column: 1 / -1;">
-                  <button type="submit" class="btn btn-primary" style="width: 100%;">Submit my request</button>
-                </div>
-              </form>
-              <p class="form-helper">
-                Prefer to talk it through? Call us at <a href="tel:12065711092">(206) 571-1092</a>.
-              </p>
-              <p class="form-disclaimer">
-                We respect your time and privacy. No spam, no endless follow-up—just real prices and honest answers.
-              </p>
-            </div>
-          </div>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>What we do</h2>
+          <p>
+            We keep our service list straightforward because most people are not looking
+            for ten packages and a bunch of upsells. They just want the job done right.
+          </p>
         </div>
-      </section>
 
-      <!-- Stats / Social Proof -->
-      <section class="section section-light">
-        <div class="container">
-          <div class="stats-row">
-            <div class="stats-metrics">
-              <div class="stat">
-                <div class="stat-number">50+ homes</div>
-                <div class="stat-label">Cleaned &amp; painted across Seattle &amp; the Eastside</div>
-              </div>
-              <div class="stat">
-                <div class="stat-number">5.0★ rating</div>
-                <div class="stat-label">Friendly, detailed service clients recommend</div>
-              </div>
-              <div class="stat">
-                <div class="stat-number">Since 2025</div>
-                <div class="stat-label">Family-owned, licensed &amp; insured</div>
-              </div>
-            </div>
-            <div class="stats-quote">
-              “Brush &amp; Broom made our move-out completely painless—deep clean + new paint in one go. The place looked better than when we moved in.”
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Process -->
-      <section class="section" id="process">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">How it works</div>
-            <h2 class="section-title">One simple plan for cleaning &amp; painting</h2>
-            <p class="section-subtitle">
-              Whether you’re refreshing your own home or turning over a rental, we keep the process clear and low-stress—from first call to final walkthrough.
-            </p>
-          </div>
-          <div class="process-grid">
-            <div class="process-step">
-              <div class="process-step-number">1</div>
-              <div class="process-step-title">Quick call or form</div>
-              <p class="process-step-text">
-                Share your address, timeline, and what you need help with: cleaning, painting, or both.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="process-step-number">2</div>
-              <div class="process-step-title">We walk your space</div>
-              <p class="process-step-text">
-                We review rooms, surfaces, and any problem areas so your quote is accurate and realistic.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="process-step-number">3</div>
-              <div class="process-step-title">Clear, written quote</div>
-              <p class="process-step-text">
-                No vague ranges. You’ll know exactly what’s included, what it costs, and when we can start.
-              </p>
-            </div>
-            <div class="process-step">
-              <div class="process-step-number">4</div>
-              <div class="process-step-title">We clean it. We paint it.</div>
-              <p class="process-step-text">
-                We handle prep, protect your home, finish the work, and leave everything cleaner than we found it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section class="section section-light" id="services">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Services</div>
-            <h2 class="section-title">Cleaning &amp; painting for real life</h2>
-            <p class="section-subtitle">
-              From weekly house cleaning to full interior repaints, we help Seattle and Eastside homeowners keep their spaces fresh, bright, and easy to love.
-            </p>
-          </div>
-          <div class="services-grid">
-            <article class="service-card">
-              <div class="service-label">Cleaning</div>
-              <h3 class="service-title">House &amp; apartment cleaning</h3>
-              <p class="service-text">
-                Routine, deep, and maintenance cleaning for busy homes. We focus on kitchens, baths, floors, baseboards, and the details that actually make it feel clean.
-              </p>
-              <a href="routine-deep-maintenance-cleaning-bellevue-seattle.html" class="service-link">
-                Learn more <span>&rarr;</span>
-              </a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-label">Move-outs</div>
-              <h3 class="service-title">Move-in &amp; move-out cleaning</h3>
-              <p class="service-text">
-                Perfect for tenants, landlords, and property managers. Top-to-bottom cleaning so you can hand over keys with confidence—and photos that impress.
-              </p>
-              <a href="move-in-move-out-bellevue-seattle.html" class="service-link">
-                Move-out cleaning details <span>&rarr;</span>
-              </a>
-            </article>
-
-            <article class="service-card">
-              <div class="service-label">Painting</div>
-              <h3 class="service-title">Interior &amp; exterior painting</h3>
-              <p class="service-text">
-                Walls, trim, doors, and exteriors with sharp lines and durable finishes. We help you choose colors, handle prep, and protect floors and furniture.
-              </p>
-              <a href="interior-exterior-house-painting-bellevue-seattle.html" class="service-link">
-                Painting services <span>&rarr;</span>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Us -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="why-grid">
-            <div>
-              <div class="section-kicker">Why Brush &amp; Broom</div>
-              <h2 class="section-title">You’re not just hiring “a crew”</h2>
-              <p class="section-subtitle" style="margin-bottom: 10px;">
-                You work directly with the two of us—the owners—on every project. That means better communication, better quality, and people in your home you actually know by name.
-              </p>
-              <p class="why-callout">
-                We’re local, friendly, and a little bit obsessive about the details—because we know what it’s like to live in the homes we work in.
-              </p>
-            </div>
-            <div class="why-points">
-              <div class="why-point">
-                <div class="why-point-title">Husband-and-wife team</div>
-                <p class="why-point-text">
-                  No mystery techs. The same two faces show up, treat your home with respect, and stand behind the work.
-                </p>
-              </div>
-              <div class="why-point">
-                <div class="why-point-title">Cleaning + painting, together</div>
-                <p class="why-point-text">
-                  Get your deep clean and fresh paint from one team. Fewer vendors, fewer headaches, smoother scheduling.
-                </p>
-              </div>
-              <div class="why-point">
-                <div class="why-point-title">Clear, honest pricing</div>
-                <p class="why-point-text">
-                  We walk your space, explain options, and give written quotes. No surprise fees when the job is done.
-                </p>
-              </div>
-              <div class="why-point">
-                <div class="why-point-title">Eastside-focused</div>
-                <p class="why-point-text">
-              We’re based in the Seattle / Eastside area and focus on neighborhoods we actually know—Seattle, Kirkland, Bellevue, Redmond, and nearby.
-                    <a href="about.html" class="btn btn-outline">Read our full story</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Service Areas -->
-      <section class="section section-light" id="areas">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Service areas</div>
-            <h2 class="section-title">Seattle &amp; Eastside neighborhoods we serve</h2>
-          </div>
-          <div class="areas-wrap">
+        <div class="grid-3">
+          <article class="card">
+            <h3>House cleaning</h3>
             <p>
-              We provide cleaning and painting across Seattle and Eastside King County. If you’re near these areas, there’s a good chance we can help—just ask.
+              Regular cleaning, deep cleaning, and reset cleaning for homes that need
+              more than a quick wipe-down. Kitchens, bathrooms, floors, baseboards, and
+              the details people actually notice.
             </p>
-            <div class="areas-list">
-              <span class="areas-chip">Seattle</span>
-              <span class="areas-chip">Ballard &amp; Greenwood</span>
-              <span class="areas-chip">Capitol Hill &amp; Central</span>
-              <span class="areas-chip">Kirkland</span>
-              <span class="areas-chip">Bellevue</span>
-              <span class="areas-chip">Redmond</span>
-              <span class="areas-chip">Renton</span>
-              <span class="areas-chip">Eastside King County</span>
-            </div>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <!-- Reviews -->
-      <section class="section" id="reviews">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Reviews</div>
-            <h2 class="section-title">Neighbors who trust Brush &amp; Broom</h2>
-            <p class="section-subtitle">
-              Real feedback from local clients who let us into their homes for cleaning, painting, or both.
+          <article class="card">
+            <h3>Move-out cleaning</h3>
+            <p>
+              Helpful for renters, landlords, and turnovers when the place needs to look
+              clean, cared for, and ready for the next person walking through the door.
             </p>
-          </div>
-          <div class="reviews-grid">
-            <article class="review-card">
-              <div class="review-stars">★★★★★</div>
-              <p class="review-text">
-                “They handled our move-out cleaning and repaint in the same visit. The place looked better than move-in day and we got our full deposit back.”
-              </p>
-              <div class="review-author">J. – Bellevue move-out</div>
-            </article>
-            <article class="review-card">
-              <div class="review-stars">★★★★★</div>
-              <p class="review-text">
-                “Super friendly, on time, and incredibly detailed. Our walls, trim, and baseboards look brand new—and they cleaned everything before they left.”
-              </p>
-              <div class="review-author">M. – Kirkland interior repaint</div>
-            </article>
-            <article class="review-card">
-              <div class="review-stars">★★★★★</div>
-              <p class="review-text">
-                “Love that it’s a husband-and-wife team. Communication was easy, pricing was clear, and the house actually felt like home again when they finished.”
-              </p>
-              <div class="review-author">S. – Seattle house cleaning</div>
-            </article>
-          </div>
-        </div>
-      </section>
+          </article>
 
-      <!-- Final CTA -->
-      <section class="section section-light">
-        <div class="container">
-          <div class="cta-final">
-            <h2 class="cta-final-title">Ready when you are.</h2>
-            <p class="cta-final-text">
-              Whether it’s a one-time deep clean, a full repaint, or getting a rental ready for new tenants, we’re here to make it easier—and a lot less stressful.
+          <article class="card">
+            <h3>Interior painting</h3>
+            <p>
+              Walls, trim, doors, touch-ups, and full-room repaints with proper prep,
+              clean lines, and cleanup handled the way it should be.
             </p>
-            <div class="cta-final-actions">
-              <a href="#quote" class="btn btn-primary">Start my free quote</a>
-              <a href="tel:12065711092" class="btn btn-outline">Call (206) 571-1092</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <div class="footer-row">
-          <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
-          <div class="footer-links">
-            <span>Serving Seattle, Kirkland, Bellevue, Redmond &amp; Eastside King County.</span>
-            <a href="mailto:Seabnbllp@icloud.com">Seabnbllp@icloud.com</a>
-            <a href="tel:12065711092">(206) 571-1092</a>
-          </div>
+          </article>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <!-- Minimal inline script for nav toggle (no external JS needed) -->
+    <section id="why-us" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why us</span>
+          <h2>A smaller company can be a better fit.</h2>
+          <p>
+            A lot of people are tired of calling a company and feeling like they are
+            talking to a system. We keep it personal, clear, and easy to deal with.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>You deal with real people</h3>
+            <p>
+              No bouncing between sales, scheduling, and random crews. You know who you
+              are talking to, what the plan is, and what the job includes.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>The work should feel worth it</h3>
+            <p>
+              The whole point is for your home to look better, feel cleaner, and take
+              stress off your plate instead of adding more to it.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>Simple from start to finish</h2>
+          <p>
+            You do not need a complicated booking process. Just tell us what is going on,
+            and we will help you figure out the next step.
+          </p>
+        </div>
+
+        <div class="grid-2 steps">
+          <article class="card step">
+            <h3>Reach out</h3>
+            <p>
+              Send a message, call, or fill out the form with the basics. Photos help,
+              but they are not required.
+            </p>
+          </article>
+
+          <article class="card step">
+            <h3>Get a clear quote</h3>
+            <p>
+              We look at the details and send pricing that makes sense, so you know what
+              is included before anything starts.
+            </p>
+          </article>
+
+          <article class="card step">
+            <h3>We handle the work</h3>
+            <p>
+              We show up, protect the space, do the job properly, and keep communication
+              easy while it is happening.
+            </p>
+          </article>
+
+          <article class="card step">
+            <h3>You get the result</h3>
+            <p>
+              A cleaner home, fresher rooms, or a property that feels ready for the next
+              chapter without the usual headache.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft">
+      <div class="container split">
+        <div class="card">
+          <span class="eyebrow">Good fit jobs</span>
+          <h2>When people usually call us</h2>
+          <ul class="checklist">
+            <li>The home has gotten behind and needs a real reset.</li>
+            <li>A rental or apartment needs to be turned over fast.</li>
+            <li>Rooms feel beat up, dull, or overdue for fresh paint.</li>
+            <li>Someone wants cleaning and painting handled by one team instead of two.</li>
+            <li>The customer wants straightforward communication instead of a sales routine.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">What matters to us</span>
+          <h2>Respect for your home and your time</h2>
+          <p>
+            People remember how a company made them feel just as much as the finished job.
+            That is why we try to keep things clear, show respect for the space, and leave
+            things in better shape than we found them.
+          </p>
+          <p>
+            It sounds basic, but basic things done well are what most people actually want.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote" class="section">
+      <div class="container split">
+        <div class="quote-box">
+          <span class="eyebrow">Free quote</span>
+          <h2>Tell us what you need</h2>
+          <p>
+            Keep it simple. Send the address, timeline, and what kind of help you need.
+            We will take it from there.
+          </p>
+
+          <form class="quote-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+            <input type="email" name="email" placeholder="Email address" required />
+            <input type="text" name="address" placeholder="Seattle property address" />
+            <select name="service" required>
+              <option value="">What do you need help with?</option>
+              <option>House cleaning</option>
+              <option>Move-out cleaning</option>
+              <option>Interior painting</option>
+              <option>Cleaning and painting</option>
+            </select>
+            <textarea name="details" placeholder="Tell us about the job, your timeline, and anything important we should know."></textarea>
+            <button type="submit" class="btn btn-primary">Request Quote</button>
+          </form>
+        </div>
+
+        <div class="quote-box">
+          <span class="eyebrow">Contact</span>
+          <h2>Want to talk first?</h2>
+          <p>
+            Some people would rather just call, and that is completely fine.
+          </p>
+          <p>
+            Phone: <a href="tel:2065711092">(206) 571-1092</a><br />
+            Email: <a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a>
+          </p>
+
+          <div style="height: 12px;"></div>
+
+          <h3>Seattle only</h3>
+          <p>
+            We keep our focus on Seattle so scheduling stays tighter and service stays more consistent.
+          </p>
+
+          <div style="height: 12px;"></div>
+
+          <h3>Clear next steps</h3>
+          <p>
+            If it is a fit, we will tell you what the job includes, what it costs, and what timing looks like.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions people usually ask</h2>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>Do you handle both cleaning and painting?</h3>
+            <p>
+              Yes. A lot of customers like getting both handled by one team because it keeps the project simpler.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Do you give written quotes?</h3>
+            <p>
+              Yes. We want people to know what they are agreeing to before the work starts.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Do you focus on Seattle?</h3>
+            <p>
+              Yes. We keep our main focus on Seattle jobs.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Can I reach out even if I am not sure what I need yet?</h3>
+            <p>
+              Yes. You do not need to have every detail figured out before contacting us.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-band">
+          <h2>If your place needs attention, we can help.</h2>
+          <p>
+            Cleaning, painting, or both. Tell us what is going on and we will give you a straight answer.
+          </p>
+          <a href="#quote" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-title">Brush &amp; Broom LLP</div>
+        <p>Seattle cleaning and painting with clear quotes, solid work, and good communication.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:2065711092">(206) 571-1092</a></p>
+        <p><a href="mailto:seabnbllp@icloud.com">seabnbllp@icloud.com</a></p>
+      </div>
+
+      <div>
+        <div class="footer-title">Links</div>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#quote">Get a Quote</a></p>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    // This is intentionally tiny just to open/close the mobile nav.
-    // If your platform strips JS, we can redo the nav without this.
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   </script>
 </body>
 </html>
