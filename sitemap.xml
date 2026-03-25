@@ -3,12 +3,44 @@
 
   <url>
     <loc>https://www.brushandbroomllp.com/</loc>
+    <lastmod>2026-03-25</lastmod>
     <priority>1.0</priority>
   </url>
 
-<url><loc>/move-out-cleaning.html</loc><lastmod>2025-10-17</lastmod></url>
-<url><loc>/commercial-flooring.html</loc><lastmod>2025-10-17</lastmod></url>
-<url><loc>/bathroom-kitchen-remodeling.html</loc><lastmod>2025-10-17</lastmod></url>
-<url><loc>/handyman.html</loc><lastmod>2025-10-17</lastmod></url>
-<url><loc>/thank-you.html</loc><lastmod>2025-10-17</lastmod></url>
+  <url>
+    <loc>https://www.brushandbroomllp.com/about.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.brushandbroomllp.com/areas-we-serve.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.brushandbroomllp.com/interior-exterior-house-painting-bellevue-seattle.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.brushandbroomllp.com/move-in-move-out-bellevue-seattle.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.brushandbroomllp.com/routine-deep-maintenance-cleaning-bellevue-seattle.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.brushandbroomllp.com/thank-you.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
