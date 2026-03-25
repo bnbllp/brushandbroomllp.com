@@ -3,799 +3,351 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Brush & Broom LLP – Husband-and-Wife Cleaning & Painting Team</title>
-  <meta name="description" content="Brush & Broom LLP is a husband-and-wife cleaning and painting team serving Seattle, Kirkland & Bellevue. Learn how a small-town work ethic, second chances, and a love for homes built our business." />
+  <title>About Us | Brush & Broom LLP – Seattle Cleaning & Painting</title>
+  <meta
+    name="description"
+    content="Learn about Brush & Broom LLP, a family-run Seattle cleaning and painting company built on hard work, clear communication, and a commitment to doing the job right."
+  />
+  <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.brushandbroomllp.com/about.html" />
+  <meta property="og:title" content="About Us | Brush & Broom LLP" />
+  <meta
+    property="og:description"
+    content="The story behind Brush & Broom LLP: Seattle house cleaning and painting with a personal touch."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.brushandbroomllp.com/about.html" />
+  <meta name="theme-color" content="#1a3c2a" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet" />
 
   <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN: Pacific Northwest Craftsman (About Page)
+       ═══════════════════════════════════════════════ */
+
     :root {
-      --navy: #002244;
-      --green: #69be28;
-      --gray: #6b7280;
-      --gray-light: #9ca3af;
-      --bg-light: #f5f7fb;
+      --forest: #1a3c2a;
+      --forest-light: #2a5c3f;
+      --forest-dark: #122a1e;
+      --cream: #f5f0e8;
+      --cream-dark: #e8dfd2;
+      --amber: #d4943a;
+      --amber-dark: #b87a2a;
+      --charcoal: #2c2a26;
+      --charcoal-light: #6b6860;
+      --warm-white: #faf8f5;
       --white: #ffffff;
-      --max-width: 1120px;
-      --radius-md: 16px;
-      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.12);
+      --shadow-sm: 0 2px 8px rgba(26, 60, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(26, 60, 42, 0.08);
+      --shadow-lg: 0 16px 40px rgba(26, 60, 42, 0.10);
+      --shadow-xl: 0 24px 56px rgba(26, 60, 42, 0.14);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --max: 1200px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg-light);
-      color: #111827;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
       line-height: 1.7;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      background: radial-gradient(circle at top left, rgba(105, 190, 40, 0.12), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(0, 34, 68, 0.18), transparent 55%);
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
     }
 
     .container {
-      width: 100%;
-      max-width: var(--max-width);
+      width: min(92%, var(--max));
       margin: 0 auto;
-      padding: 0 16px;
     }
 
-    /* Header (match homepage) */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.9);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-img {
-      height: 40px;
-      width: auto;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .brand-name {
-      font-weight: 700;
-      letter-spacing: 0.03em;
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      font-size: 0.9rem;
-      color: var(--navy);
-    }
-
-    .brand-tagline {
-      font-size: 0.75rem;
-      color: var(--gray);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      color: var(--gray);
-      font-weight: 500;
-      position: relative;
-      padding-bottom: 2px;
-    }
-
-    .nav-links a:hover {
-      color: var(--navy);
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: var(--green);
-      transition: width 0.2s ease-out;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.85rem;
-    }
-
-    .phone-link {
-      font-size: 0.85rem;
-      color: var(--navy);
-      font-weight: 600;
-    }
-
-    .phone-link span {
-      color: var(--green);
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: var(--forest);
+      background: rgba(26, 60, 42, 0.1);
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 9px 16px;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all 0.18s ease-out;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--green), #8fd94a);
-      color: var(--navy);
-      box-shadow: 0 8px 18px rgba(39, 174, 96, 0.35);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(0.96);
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(39, 174, 96, 0.38);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--navy);
-      border-color: rgba(15, 23, 42, 0.12);
-    }
-
-    .btn-outline:hover {
-      background: rgba(255, 255, 255, 0.9);
-      border-color: var(--navy);
-    }
-
-    .nav-toggle {
-      display: none;
-      cursor: pointer;
-      padding: 6px;
-    }
-
-    .nav-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--navy);
-      margin: 4px 0;
-      border-radius: 999px;
-    }
-
-    @media (max-width: 900px) {
-      .nav-links,
-      .nav-cta {
-        display: none;
-      }
-      .nav-toggle {
-        display: block;
-      }
-      .nav-menu-open .nav-links,
-      .nav-menu-open .nav-cta {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 12px 16px 16px;
-        background: rgba(255, 255, 255, 0.97);
-        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-      }
-      .nav-menu-open .nav-links {
-        align-items: flex-start;
-      }
-      .nav-menu-open .nav-cta {
-        align-items: flex-start;
-      }
-    }
-
-    /* Hero / Intro */
-    .hero-about {
-      padding: 48px 0 32px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
       gap: 8px;
-      padding: 4px 10px;
+      padding: 14px 28px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      color: var(--gray);
-      font-size: 0.75rem;
-      margin-bottom: 10px;
-    }
-
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--green);
-    }
-
-    .hero-about h1 {
-      font-size: clamp(2rem, 3vw, 2.6rem);
-      line-height: 1.15;
-      margin-bottom: 12px;
-      color: var(--navy);
-    }
-
-    .hero-lead {
-      font-size: 0.98rem;
-      color: var(--gray);
-      max-width: 36rem;
-      margin-bottom: 16px;
-    }
-
-    .hero-highlight {
-      font-size: 0.9rem;
-      color: #111827;
-      margin-bottom: 18px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    .hero-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: var(--radius-md);
-      padding: 18px 18px 14px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.88rem;
-      color: var(--gray);
-    }
-
-    .hero-card-title {
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 6px;
-      font-size: 0.98rem;
-    }
-
-    .hero-card-tag {
-      font-size: 0.76rem;
-      color: var(--green);
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 8px;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
     }
 
-    .hero-card p + p {
-      margin-top: 8px;
+    .btn-amber {
+      background: var(--amber);
+      color: var(--charcoal);
+      box-shadow: var(--shadow-lg);
     }
 
-    /* Story section */
+    .btn-amber:hover {
+      background: var(--amber-dark);
+      transform: translateY(-2px);
+    }
+
+    /* ─── Header ─── */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+      background: rgba(26, 60, 42, 0.97);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.15rem;
+      text-decoration: none;
+    }
+
+    .brand span { color: var(--amber); }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav a {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    /* ─── Content ─── */
+    .page-hero {
+      padding: 160px 0 80px;
+      background: var(--forest-dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 24px;
+    }
+
     .section {
-      padding: 30px 0;
+      padding: 100px 0;
     }
 
     .section-alt {
-      background: rgba(255, 255, 255, 0.95);
+      background: var(--warm-white);
     }
 
-    .section-header {
-      margin-bottom: 18px;
-    }
-
-    .section-kicker {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--green);
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 1.4rem;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--gray);
-      max-width: 620px;
-    }
-
-    .story-grid {
+    .grid-2 {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 28px;
-      align-items: flex-start;
-    }
-
-    .story-text p + p {
-      margin-top: 10px;
-    }
-
-    .story-callout {
-      margin-top: 12px;
-      padding: 10px 12px;
-      border-left: 3px solid var(--green);
-      background: rgba(249, 250, 251, 0.95);
-      font-size: 0.88rem;
-      color: var(--gray);
-    }
-
-    .story-aside {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: var(--radius-md);
-      padding: 14px 16px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.86rem;
-      color: var(--gray);
-    }
-
-    .story-aside h3 {
-      font-size: 0.95rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .story-aside ul {
-      list-style: none;
-      margin-top: 8px;
-    }
-
-    .story-aside li {
-      margin-bottom: 6px;
-    }
-
-    /* Founders section */
-    .founders-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      margin-top: 12px;
-    }
-
-    .founder-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: var(--radius-md);
-      padding: 14px 16px 12px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.86rem;
-      color: var(--gray);
-    }
-
-    .founder-name {
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    .founder-role {
-      font-size: 0.8rem;
-      color: var(--gray-light);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* Values section */
-    .values-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 16px;
-    }
-
-    .value-card {
-      background: rgba(255, 255, 255, 0.98);
-      border-radius: var(--radius-md);
-      padding: 12px 14px 10px;
-      border: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.86rem;
-      color: var(--gray);
-    }
-
-    .value-title {
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 4px;
-    }
-
-    /* CTA */
-    .cta-section {
-      text-align: center;
-      max-width: 540px;
-      margin: 0 auto;
-    }
-
-    .cta-title {
-      font-size: 1.3rem;
-      color: var(--navy);
-      margin-bottom: 6px;
-    }
-
-    .cta-text {
-      font-size: 0.9rem;
-      color: var(--gray);
-      margin-bottom: 16px;
-    }
-
-    .cta-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    /* Footer */
-    .site-footer {
-      padding: 18px 0 24px;
-      border-top: 1px solid rgba(15, 23, 42, 0.08);
-      background: rgba(255, 255, 255, 0.96);
-      margin-top: 28px;
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    .footer-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
       align-items: center;
     }
 
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
+    .story-content h2 {
+      font-size: 2.4rem;
+      margin-bottom: 24px;
     }
 
-    .footer-links a {
-      color: var(--gray);
+    .story-content p {
+      margin-bottom: 20px;
+      color: var(--charcoal-light);
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .story-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .founders-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .values-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .founder-card {
+      background: var(--white);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--cream-dark);
     }
 
-    @media (max-width: 640px) {
-      .values-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
+    .founder-card h3 {
+      margin-bottom: 8px;
+      color: var(--forest);
+    }
+
+    .founder-role {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+
+    /* ─── Footer ─── */
+    .footer {
+      padding: 80px 0 40px;
+      background: var(--forest-dark);
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand { font-weight: 800; font-size: 1.2rem; margin-bottom: 16px; }
+    .footer-brand span { color: var(--amber); }
+    .footer-title { font-weight: 700; margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+    .footer-links a { display: block; margin-bottom: 12px; color: rgba(255, 255, 255, 0.7); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .grid-2, .footer-grid { grid-template-columns: 1fr; }
+      .nav { display: none; }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
-    <!-- Header -->
-    <header class="site-header">
-      <div class="container">
-        <nav class="nav" id="mainNav">
-          <div class="nav-left">
-            <a href="/" aria-label="Brush & Broom LLP home">
-              <img src="F2635366-F577-497F-87F2-DAF4138C1243.png" alt="Brush & Broom LLP logo" class="logo-img" />
-            </a>
-            <div class="brand-text">
-              <span class="brand-name">Brush &amp; Broom LLP</span>
-              <span class="brand-tagline">We clean it. We paint it. You relax.</span>
-            </div>
-          </div>
-          <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="house-cleaning-bellevue-seattle.html">Cleaning</a>
-            <a href="interior-exterior-house-painting-bellevue-seattle.html">Painting</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-          </div>
-          <div class="nav-cta">
-            <a href="tel:12065711092" class="phone-link">
-              Call us: <span>(206) 571-1092</span>
-            </a>
-            <a href="contact.html" class="btn btn-primary">Request a free quote</a>
-          </div>
-          <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('mainNav').classList.toggle('nav-menu-open');">
-            <span></span><span></span><span></span>
-          </button>
+
+  <header class="header" id="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a href="/" class="brand">Brush <span>&amp;</span> Broom LLP</a>
+        <nav class="nav">
+          <a href="/#services">Services</a>
+          <a href="/about.html">About</a>
+          <a href="/areas-we-serve.html">Areas</a>
+          <a href="/#quote" class="btn btn-amber">Get a Quote</a>
         </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <!-- About Hero -->
-      <section class="hero-about">
-        <div class="container">
-          <div class="hero-grid">
-            <div>
-              <div class="eyebrow">
-                <span class="eyebrow-dot"></span>
-                Family-owned cleaning &amp; painting in Seattle &amp; the Eastside
-              </div>
-              <h1>Two people, one promise: treat your home like it’s ours.</h1>
-              <p class="hero-lead">
-                Brush &amp; Broom LLP started as a simple idea at our own kitchen table: what if hiring help for your home actually felt easy, honest, and human?
-              </p>
-              <p class="hero-highlight">
-                No revolving crews. No disappearing contractors. Just a husband-and-wife team who show up, do what we say we will, and leave your place better than we found it.
-              </p>
-              <div class="hero-actions">
-                <a href="contact.html" class="btn btn-primary">Get to know us in person</a>
-                <a href="tel:12065711092" class="btn btn-outline">Call to chat with us</a>
-              </div>
-              <p class="hero-note">
-                When you reach out, you’re talking directly to the two of us—not a call center or an app.
-              </p>
-            </div>
-
-            <aside class="hero-card">
-              <div class="hero-card-tag">Our story in a snapshot</div>
-              <div class="hero-card-title">From “side hustle” to full-time calling</div>
-              <p>
-                We started Brush &amp; Broom LLP by helping friends and neighbors who were overwhelmed by life—kids, moves, pets, work, all happening at once.
-              </p>
-              <p>
-                One deep clean turned into “can you also paint this room?” and then into “can you help my sister before she lists her house?”
-              </p>
-              <p>
-                At some point, we realized this wasn’t just a side gig. It was the work we loved most: walking into a space that feels tired and walking out knowing we made life lighter for someone.
-              </p>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <!-- Our Story -->
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Our story</div>
-            <h2 class="section-title">Built on small-town work ethic, in the middle of a busy city</h2>
-            <p class="section-subtitle">
-              We didn’t build this company with investors or fancy software. We built it with elbow grease, honest conversations, and the belief that showing up and caring still matters.
-            </p>
-          </div>
-
-          <div class="story-grid">
-            <div class="story-text">
-              <p>
-                Like a lot of families, we hit a point where we were juggling everything at once—work, kids, rent increases, and trying to keep our own home from falling apart in the chaos of real life.
-              </p>
-              <p>
-                We saw neighbors going through the same thing. They either did everything themselves and burned out, or they hired people who were late, rushed, or treated their homes like just another job on a busy schedule.
-              </p>
-              <p>
-                So we asked a simple question: what if we created the kind of company we wished we could hire—one that respected people’s time, budgets, and homes as much as they do?
-              </p>
-              <p>
-                We cleaned our first few houses the way we would want our own cleaned. Then we started repainting trim, walls, and rentals for friends who trusted us. Word spread. One referral turned into the next, and pretty soon, weekends weren’t enough anymore.
-              </p>
-              <p>
-                That’s how Brush &amp; Broom LLP was born: not from a business plan, but from real people asking for real help, and from us deciding to say “yes” and show up with everything we had.
-              </p>
-              <div class="story-callout">
-                Today, every time we walk into a home in Seattle, Kirkland, Bellevue, or anywhere on the Eastside, we remember those first clients who took a chance on us. 
-                We still work like we’re earning that trust for the very first time.
-              </div>
-            </div>
-
-            <aside class="story-aside">
-              <h3>What hasn’t changed since day one</h3>
-              <ul>
-                <li>• We still answer our own phone.</li>
-                <li>• We still do the work ourselves instead of sending strangers.</li>
-                <li>• We still believe “good enough” isn’t actually good enough.</li>
-                <li>• We still measure success in texts that say “wow” and “thank you,” not just invoices.</li>
-              </ul>
-              <p style="margin-top:8px;">
-                If you care about who you let into your home, you’re our kind of person.
-              </p>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <!-- Meet the Founders -->
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Who we are</div>
-            <h2 class="section-title">Meet the team behind the mop and the paint brush</h2>
-            <p class="section-subtitle">
-              We’re not a giant crew or a franchise. We’re a wife-and-husband team who care about the homes we step into and the people who live in them.
-            </p>
-          </div>
-
-          <div class="founders-grid">
-            <article class="founder-card">
-              <div class="founder-name">Brittany</div>
-              <div class="founder-role">Cleaning &amp; client experience</div>
-              <p>
-                Brittany leads the cleaning side of Brush &amp; Broom LLP and is the reason baseboards, corners, and “forgotten” spots don’t get missed.
-              </p>
-              <p>
-                She loves the feeling of walking a client through their home after a deep clean and seeing them relax for the first time in a while. 
-                Her goal is simple: when you open your front door, you feel lighter just standing there.
-              </p>
-            </article>
-
-            <article class="founder-card">
-              <div class="founder-name">Dustin</div>
-              <div class="founder-role">Painting &amp; operations</div>
-              <p>
-                Dustin runs the painting and project side—everything from color chats and estimates to making sure the last drop cloth is folded and packed up.
-              </p>
-              <p>
-                He’s obsessed with clean lines, long-lasting finishes, and communication that never leaves you wondering what’s happening next. 
-                If he wouldn’t be proud to show it off as his own house, it’s not finished.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- What we believe / Values -->
-      <section class="section section-alt">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">What we believe</div>
-            <h2 class="section-title">Our work is about more than clean floors and fresh paint</h2>
-            <p class="section-subtitle">
-              A home that feels taken care of can change how you move through your day. We never forget that behind every project is a real life, not just a job ticket.
-            </p>
-          </div>
-
-          <div class="values-grid">
-            <article class="value-card">
-              <div class="value-title">People over speed</div>
-              <p>
-                We book what we can do well, not as much as we can squeeze in. We’d rather spend the extra 30 minutes to get it right than rush to the next job.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <div class="value-title">Homes, not job sites</div>
-              <p>
-                We remove shoes, protect your space, and clean up after ourselves. When we leave, you should see a home you’re excited to live in—not a work zone.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <div class="value-title">Straightforward pricing</div>
-              <p>
-                We explain what things cost and why. No surprise add-ons halfway through, no last-minute pressure, just clear numbers and clear expectations.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <div class="value-title">Second chances &amp; fresh starts</div>
-              <p>
-                We believe in giving people and spaces a chance to start over—whether that’s a scuffed-up rental or a room that’s seen a lot of life.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <div class="value-title">Local roots</div>
-              <p>
-                We live, work, and raise our family here. When we say we care about Seattle and the Eastside, it’s because this is home for us too.
-              </p>
-            </article>
-
-            <article class="value-card">
-              <div class="value-title">Pride in the details</div>
-              <p>
-                The little things—straight lines, wiped trim, tidy edges—are what actually make a room feel finished. We’re not satisfied until those are right.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-section">
-            <h2 class="cta-title">If you’re looking for “our kind of people,” we might be yours.</h2>
-            <p class="cta-text">
-              Whether you need a deep clean, a fresh coat of paint, or both, we’d love to hear your story, walk your space, and see how we can help.
-            </p>
-            <div class="cta-actions">
-              <a href="contact.html" class="btn btn-primary">Request a free quote</a>
-              <a href="tel:12065711092" class="btn btn-outline">Call (206) 571-1092</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
+  <main>
+    <section class="page-hero">
       <div class="container">
-        <div class="footer-row">
-          <p>&copy; Brush &amp; Broom LLP. All rights reserved.</p>
-          <div class="footer-links">
-            <span>Serving Seattle, Kirkland, Bellevue &amp; Eastside King County.</span>
-            <a href="mailto:Seabnbllp@icloud.com">Seabnbllp@icloud.com</a>
-            <a href="tel:12065711092">(206) 571-1092</a>
+        <span class="eyebrow" style="background: rgba(255,255,255,0.1); color: var(--white);">Our Story</span>
+        <h1>Built on hard work and second chances.</h1>
+        <p style="max-width: 700px; margin: 0 auto; color: rgba(255,255,255,0.8);">
+          Brush & Broom LLP is a family-run Seattle cleaning and painting company. We believe in doing the job right the first time and keeping communication simple.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div class="story-content">
+            <span class="eyebrow">Who We Are</span>
+            <h2>A husband-and-wife team with a small-town work ethic.</h2>
+            <p>
+              We started Brush & Broom LLP because we saw a gap in the Seattle home services market. People were tired of being treated like a number by large franchises. They wanted someone they could trust in their home—someone who actually cared about the finished result.
+            </p>
+            <p>
+              Our background is rooted in hard work and a commitment to our community. We bring that same dedication to every home we clean and every wall we paint.
+            </p>
+          </div>
+          <div class="founders-grid" style="display: grid; gap: 20px;">
+            <div class="founder-card">
+              <h3>Dustin</h3>
+              <div class="founder-role">Painting & Operations</div>
+              <p>With years of experience in home maintenance and painting, Dustin ensures every job meets our high standards for prep and finish.</p>
+            </div>
+            <div class="founder-card">
+              <h3>The Team</h3>
+              <div class="founder-role">Cleaning & Management</div>
+              <p>Our cleaning crews are trained to focus on the details that matter, ensuring your home feels truly refreshed.</p>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <!-- Tiny nav toggle script -->
-  <script>
-    // matches the homepage behavior
-  </script>
+    <section class="section section-alt">
+      <div class="container" style="text-align: center;">
+        <span class="eyebrow">Our Values</span>
+        <h2 style="margin-bottom: 40px;">What matters to us</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+          <div class="founder-card">
+            <h3>Real Communication</h3>
+            <p>No runaround. We give clear quotes and keep you updated throughout the process.</p>
+          </div>
+          <div class="founder-card">
+            <h3>Respect for Your Home</h3>
+            <p>We treat your space like our own, ensuring it's protected and left better than we found it.</p>
+          </div>
+          <div class="founder-card">
+            <h3>Work Done Right</h3>
+            <p>We don't cut corners. Whether it's a deep clean or a full repaint, we focus on quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Brush <span>&amp;</span> Broom LLP</div>
+        <p>Seattle cleaning and painting with clear quotes, solid work, and good communication.</p>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <p><a href="tel:2065711092" style="color: white; text-decoration: none;">(206) 571-1092</a></p>
+        <p><a href="mailto:seabnbllp@icloud.com" style="color: white; text-decoration: none;">seabnbllp@icloud.com</a></p>
+      </div>
+      <div>
+        <div class="footer-title">Links</div>
+        <div class="footer-links">
+          <a href="/#services">Services</a>
+          <a href="/about.html">About Us</a>
+          <a href="/areas-we-serve.html">Areas We Serve</a>
+          <a href="/#quote">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: rgba(255,255,255,0.5);">
+      <p>&copy; 2026 Brush &amp; Broom LLP. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
