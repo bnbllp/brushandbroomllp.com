@@ -1,155 +1,60 @@
-# Brush & Broom LLP - Seattle Cleaning & Painting
+# brushandbroomllp.com — Redirect Repository
 
-A professional website for Brush & Broom LLP, a family-run Seattle-based cleaning and painting company specializing in house cleaning, move-out cleaning, interior painting, and exterior painting services.
+This repository serves **redirect stubs only**. It is hosted at `brushandbroomllp.com` via GitHub Pages and exists solely to forward legacy traffic to the primary site at **[brushnbroom.com](https://brushnbroom.com)**.
 
-## Overview
+> **Do not add real content here.** All website content lives in [`bnbllp/brushnbroom`](https://github.com/bnbllp/brushnbroom).
 
-This is a static website built with HTML, CSS, and JavaScript. The site features a modern "Pacific Northwest Craftsman" design system with responsive layouts and smooth scroll animations.
+## How It Works
 
-## Project Structure
+Each HTML file performs an instant `meta http-equiv="refresh"` redirect to the matching page on `brushnbroom.com`, and includes a `<link rel="canonical">` tag so Google treats `brushnbroom.com` as the authoritative URL. This prevents duplicate content and passes any link equity to the primary domain.
+
+## File Structure
 
 ```
-animated-doodle/
-├── index.html                                          # Homepage
-├── about.html                                          # About us page
-├── areas-we-serve.html                                # Service areas page
-├── interior-exterior-house-painting-bellevue-seattle.html  # Painting services page
-├── move-in-move-out-bellevue-seattle.html            # Move-out cleaning services page
-├── routine-deep-maintenance-cleaning-bellevue-seattle.html # Routine cleaning services page
-├── thank-you.html                                      # Form submission confirmation page
-├── styles.css                                          # Global stylesheet
-├── script.js                                           # JavaScript for interactive features
-├── sitemap.xml                                         # XML sitemap for search engines
-├── robots.txt                                          # Search engine crawler instructions
-└── README.md                                           # This file
+brush andbroomllp.com/
+├── index.html                                                   # → https://brushnbroom.com/
+├── about.html                                                   # → https://brushnbroom.com/about.html
+├── areas-we-serve.html                                          # → https://brushnbroom.com/areas-we-serve.html
+├── move-in-move-out-bellevue-seattle.html                       # → https://brushnbroom.com/move-in-move-out-bellevue-seattle.html
+├── routine-deep-maintenance-cleaning-bellevue-seattle.html      # → https://brushnbroom.com/routine-deep-maintenance-cleaning-bellevue-seattle.html
+├── interior-exterior-house-painting-bellevue-seattle.html       # → https://brushnbroom.com/ (no equivalent page)
+├── thank-you.html                                               # → https://brushnbroom.com/thank-you.html
+├── sitemap.xml                                                  # References brushnbroom.com URLs
+├── robots.txt                                                   # Points to brushnbroom.com/sitemap.xml
+├── CNAME                                                        # Custom domain: brushandbroomllp.com
+└── README.md                                                    # This file
 ```
 
-## Features
+## Redirect Template
 
-- **Responsive Design**: Mobile-first approach with responsive grid layouts
-- **Smooth Animations**: Scroll-triggered fade-up animations for visual engagement
-- **Form Integration**: Contact form powered by Formspree for quote requests
-- **SEO Optimized**: Proper meta tags, structured data (JSON-LD), and XML sitemap
-- **Accessibility**: Semantic HTML and ARIA labels for screen readers
-- **Modern Typography**: Custom fonts (DM Serif Display and DM Sans) from Google Fonts
+Each stub follows this pattern:
 
-## Design System
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=https://brushnbroom.com/page.html">
+  <link rel="canonical" href="https://brushnbroom.com/page.html">
+</head>
+<body>
+  <p>This page has moved to <a href="https://brushnbroom.com/page.html">brushnbroom.com</a>.</p>
+</body>
+</html>
+```
 
-### Color Palette
-- **Forest Green**: `#1a3c2a` (primary brand color)
-- **Amber**: `#d4943a` (accent color)
-- **Charcoal**: `#2c2a26` (text color)
-- **Cream**: `#f5f0e8` (background color)
+## Adding a New Redirect
 
-### Typography
-- **Headings**: DM Serif Display
-- **Body**: DM Sans
+1. Create a new `.html` file matching the old URL slug
+2. Use the template above, updating the destination URL
+3. Add the destination URL (on `brushnbroom.com`) to `sitemap.xml` if not already present
 
-## Services Offered
+## Primary Repository
 
-1. **House Cleaning**: Regular, deep, and reset cleaning services
-2. **Move-Out Cleaning**: Turnover cleaning for renters and landlords
-3. **Interior Painting**: Wall painting, trim work, and full-room repaints
-4. **Exterior Painting**: Curb appeal and home protection services
-
-## Contact Information
-
-- **Phone**: (206) 571-1092
-- **Email**: seabnbllp@icloud.com
-- **Service Area**: Seattle and the Eastside
-
-## Getting Started
-
-### Local Development
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Bnbllp/animated-doodle.git
-   cd animated-doodle
-   ```
-
-2. Open `index.html` in your web browser or use a local server:
-   ```bash
-   python3 -m http.server 8000
-   # Then navigate to http://localhost:8000
-   ```
-
-### Deployment
-
-This is a static website and can be deployed to any static hosting service such as:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3 + CloudFront
-
-Ensure the `CNAME` file is configured correctly for custom domain deployment.
-
-## File Descriptions
-
-### HTML Files
-- **index.html**: Main landing page with hero section, services overview, process explanation, FAQ, and contact form
-- **about.html**: Company story, team members, and core values
-- **areas-we-serve.html**: Service area map and neighborhood listings
-- **Service Pages**: Detailed pages for each service offering with specific information and CTAs
-
-### CSS
-- **styles.css**: Centralized stylesheet containing all design system styles, responsive breakpoints, and animations
-
-### JavaScript
-- **script.js**: Mobile navigation toggle, sticky header behavior, scroll animations, and FAQ accordion functionality
-
-### SEO & Configuration
-- **sitemap.xml**: XML sitemap listing all pages for search engine crawling
-- **robots.txt**: Instructions for search engine bots
-- **CNAME**: Custom domain configuration file
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Performance Considerations
-
-- External CSS file for better caching
-- Optimized images hosted on CDN (Cloudfront)
-- Minimal JavaScript for fast page load
-- Responsive images and lazy loading ready
-
-## Maintenance
-
-### Adding New Pages
-1. Create a new HTML file with the same structure as existing pages
-2. Ensure it links to `/styles.css`
-3. Update `sitemap.xml` with the new page URL
-4. Update navigation links across all pages
-
-### Updating Styles
-All styles are centralized in `styles.css`. Make changes there and they will apply across all pages.
-
-### Form Submissions
-The contact form uses Formspree. Submissions are sent to the configured email address. To change the form endpoint, update the `action` attribute in the form tag.
-
-## Future Enhancements
-
-- Add blog section for home maintenance tips
-- Implement photo gallery for before/after comparisons
-- Add online booking system
-- Implement customer testimonials section
-- Add team member profiles with photos
-
-## License
-
-This project is proprietary to Brush & Broom LLP.
-
-## Support
-
-For issues or questions about the website, please contact:
-- Email: seabnbllp@icloud.com
-- Phone: (206) 571-1092
+All real content, styling, and development happens in:
+**[github.com/bnbllp/brushnbroom](https://github.com/bnbllp/brushnbroom)**
 
 ---
 
-**Last Updated**: March 25, 2026
+**Last Updated**: April 24, 2026
