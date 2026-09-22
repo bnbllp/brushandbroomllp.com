@@ -1,6 +1,13 @@
 # brushandbroomllp.com — Redirect Repository
 
-This repository serves **redirect stubs only**. It is hosted at `brushandbroomllp.com` via GitHub Pages and exists solely to forward legacy traffic to the primary site at **[brushnbroom.com](https://brushnbroom.com)**.
+This repository serves **redirect stubs only**. It is meant to be hosted at `www.brushandbroomllp.com` via GitHub Pages and exists solely to forward legacy traffic to **[brushnbroom.com](https://brushnbroom.com)**.
+
+As of September 22, 2026, `brushandbroomllp.com` does not resolve in DNS, so these redirects never run. To turn them back on, set GitHub Pages DNS and leave the `CNAME` file as `www.brushandbroomllp.com`:
+
+- `www` CNAME → `bnbllp.github.io`
+- apex A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+
+Also update the website URL on the GitHub profile, which still points at the dead domain.
 
 > **Do not add real content here.** All website content lives in [`bnbllp/brushnbroom`](https://github.com/bnbllp/brushnbroom).
 
@@ -16,8 +23,8 @@ brush andbroomllp.com/
 ├── about.html                                                   # → https://brushnbroom.com/about.html
 ├── areas-we-serve.html                                          # → https://brushnbroom.com/areas-we-serve.html
 ├── move-in-move-out-mount-vernon.html                       # → https://brushnbroom.com/move-in-move-out-mount-vernon.html
-├── routine-deep-maintenance-cleaning-mount-vernon.html      # → https://brushnbroom.com/routine-deep-maintenance-cleaning-mount-vernon.html
-├── interior-exterior-house-painting-bellevue-seattle.html       # → https://brushnbroom.com/ (no equivalent page)
+├── routine-deep-maintenance-cleaning-mount-vernon.html      # → https://brushnbroom.com/routine-house-cleaning-mount-vernon.html
+├── interior-exterior-house-painting-bellevue-seattle.html       # → https://brushnbroom.com/interior-exterior-painting-mount-vernon.html
 ├── thank-you.html                                               # → https://brushnbroom.com/thank-you.html
 ├── sitemap.xml                                                  # References brushnbroom.com URLs
 ├── robots.txt                                                   # Points to brushnbroom.com/sitemap.xml
