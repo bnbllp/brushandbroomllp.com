@@ -1,13 +1,6 @@
 # brushandbroomllp.com — Redirect Repository
 
-This repository serves **redirect stubs only**. It is meant to be hosted at `www.brushandbroomllp.com` via GitHub Pages and exists solely to forward legacy traffic to **[brushnbroom.com](https://brushnbroom.com)**.
-
-As of September 22, 2026, `brushandbroomllp.com` does not resolve in DNS, so these redirects never run. To turn them back on, set GitHub Pages DNS and leave the `CNAME` file as `www.brushandbroomllp.com`:
-
-- `www` CNAME → `bnbllp.github.io`
-- apex A records → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-
-Also update the website URL on the GitHub profile, which still points at the dead domain.
+This repository is retired. Brush & Broom does not use `brushandbroomllp.com` anymore. Clients should use [brushnbroom.com](https://brushnbroom.com) (`www` already redirects there). Do not restore DNS for the old domain.
 
 > **Do not add real content here.** All website content lives in [`bnbllp/brushnbroom`](https://github.com/bnbllp/brushnbroom).
 
