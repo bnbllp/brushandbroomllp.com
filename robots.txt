@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Old domain. Keep crawl so Google can see the redirects, then drop these URLs.
 Sitemap: https://brushnbroom.com/sitemap.xml
